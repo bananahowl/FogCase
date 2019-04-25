@@ -36,4 +36,18 @@ public class CalcPartList {
         return 0;
     }
     
+    private static double calcShed()
+    {
+        /*
+        double length = DataMapper.getLength;
+        double width = DataMapper.getWidth;
+        double heigth = 200;
+        
+        double areaLength = (length*heigth) * 2;
+        double areaWidth = (width*heigth)* 2;
+        
+        */
+        return 0;
+    }
+    
 }
