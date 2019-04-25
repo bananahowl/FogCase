@@ -67,19 +67,19 @@ insert into degrees (degreeValue) values(45);
  
  select * from degrees;
 
-/*
-select * from arearoof;
 
-insert into roof (roofmaterialFK, areaFK) values ();
+
+
+insert into roof (roofmaterialFK, areaFK) values (1,1);
 select * from arearoof;
-insert into arearoof (width,length,height,degree) values (2,4,1,40);
+insert into arearoof (widthFK,lengthFK,height,degree) values (2,4,1,2);
 
 select * from carport;
-insert into carport (width, length, height, materialFK) values (2,3,1,2);
+insert into carport (widthFK, lengthFK, height, materialFK) values (2,3,1,2);
 
 
 select * from shed;
-insert into shed (width,length, height, materialFK) values(1,1,1,1);
+insert into shed (width,length, materialFK) values(1,1,1);
 #REname table arearoof to area;
 
 select * from roof;
@@ -97,5 +97,5 @@ select * from height;
 insert into height (heightValue) values(200);
 
 select * from degrees;
-*/
+*
 
