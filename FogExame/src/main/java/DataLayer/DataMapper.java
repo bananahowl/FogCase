@@ -173,7 +173,7 @@ public class DataMapper {
 
         try {
             Connection conn = Connector.connection();
-            String query = "SELECT ROOFMATERIALNAME FROM ROOFMATERIAL WHERE ID = " + id + ";";
+            String query = "Select roofmaterialname from roofmaterial where roofmaterialid = " + id + ";";
             PreparedStatement ps = conn.prepareStatement(query);
             ResultSet rs = ps.executeQuery(query);
 
