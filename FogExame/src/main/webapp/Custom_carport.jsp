@@ -19,7 +19,7 @@
             <input type="hidden" name="action" value="order">
             <table class ="table table-striped">
                 <h1>Roof:<h1>
-                <thred><tr><th>Flat or angle </th><th>Angle</th><th>Roof-material</th><th>Roof-color</th></tr></thred>
+                <thred><tr><th>Flat or angle </th><th>Angle</th><th>Roof-type/color</th></tr></thred>
                 <tr>  
                     <td><select name=flat id="option">
                             <option value=flat></option><option value=flat>Flat</option><option value=" flat">Angle</option></td>
@@ -28,10 +28,7 @@
                             <option value=angles>30</option><option value=angles>35</option></td>
                     <td><select name=rmaterials id="option">
                             <option value=rmaterials></option><option value=1><%= dm.getRoofMaterial(1) %></option><option value=2><%= dm.getRoofMaterial(2) %></option>
-                            <option value=3><%= dm.getRoofMaterial(3) %></option></td>
-                    <td><select name=rcolor id="option">
-                            <option value=rcolor></option><option value="rcolor">Black</option><option value="rcolor">Red</option>
-                            <option value="rcolor">Brown</option><option value="rcolor">Grey</option></td>                
+                            <option value=3><%= dm.getRoofMaterial(3) %></option></td>          
                 </tr>
                 </table><hr>
                 <tr><tr><tr>
@@ -50,10 +47,11 @@
                     <table class="table table-striped">
                 <thead><tr><th>Heigth</th><th>Length</th><th>Width</th><th></th></tr></thead>
                 <tbody><tr>
-                <td><input type="text" name="heigth" id="heigthInput"></td>
-                <td><input type="text" name="length" id="lengthInput"></td>
-                <td><input type="text" name="width"  id="widthInput"></td>
-                <td><input type="submit" value="Confirm"></td><td></td>
+                          
+                        <td><select name=length id="option">
+                                <option value=1><%= dm.getShedlength(1) %></option><option value=2><%= dm.getShedlength(2) %></option></td>     
+                        <td><select name=width id="option">
+                                <option value=1><%= dm.getShedwidth(1) %></option><option value=2><%= dm.getShedwidth(2) %></option></td>     
                 </tr>
 
             </table>
