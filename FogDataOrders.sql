@@ -26,9 +26,9 @@ heightID int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
 heightValue int(11) NOT NULL
 );
 
-CREATE TABLE if not exists angles(
-anglesID int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-anglesValue int(11) NOT NULL
+CREATE TABLE if not exists degrees(
+degreeID int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+degreeValue int(11) NOT NULL
 );
 
 CREATE TABLE if not exists roofmaterial(
@@ -45,7 +45,8 @@ lengthFK int(11),
 height int(11),
 degree int(11),
 FOREIGN KEY (lengthFK) REFERENCES length(lengthID),
-FOREIGN KEY (widthFK) REFERENCES width(widthID)
+FOREIGN KEY (widthFK) REFERENCES width(widthID),
+FOREIGN KEY (degree) REFERENCES degrees(degreeID)
 
 );
 #rename table area to arearoof; 
@@ -66,7 +67,7 @@ materialFK int(11),
 FOREIGN KEY (materialFK) REFERENCES materials(materialID),
 FOREIGN KEY (lengthFK) REFERENCES length(lengthID),
 FOREIGN KEY (widthFK) REFERENCES width(widthID),
-FOREIGN KEY (heightFK) REFERENCES length(heightID)
+FOREIGN KEY (heightFK) REFERENCES height(heightID)
 );
 
 
