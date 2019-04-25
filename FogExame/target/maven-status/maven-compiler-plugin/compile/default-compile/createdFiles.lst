@@ -8,6 +8,5 @@ DataLayer\Carport.class
 Presentation\Frontcontroller.class
 DataLayer\Connector.class
 DataLayer\Shed.class
-Logic\Roof.class
 Presentation\Command.class
 Logic\CalcPartList.class
