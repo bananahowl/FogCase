@@ -188,15 +188,15 @@ public class DataMapper {
         }
     }
     
-    public int getShedHeigth(int id) throws CarportException, SQLException {
+    public int getShedHeigth(int id) throws CarportException, SQLException { // VIRKER IKKE ENDNU DA DER IKKE ER VÆRDIER I DATABASEN.
         try {
             Connection conn = Connector.connection();
-            String query = "Select roofmaterialname from roofmaterial where roofmaterialid = " + id + ";"; //BEMÆRK !!!! DENNE ER IKKE RIGTIG (PS. SLET DENNE KOMMENTAR NÅR DU HAR RETTET!!!)
+            String query = "select heightvalue from height where heightid =" + id + ";"; 
             PreparedStatement ps = conn.prepareStatement(query);
             ResultSet rs = ps.executeQuery(query);
 
             if (rs.next()) {
-                int heigth = rs.getInt("MANGLER"); //BEMÆRK !!!! DENNE ER IKKE RIGTIG (PS. SLET DENNE KOMMENTAR NÅR DU HAR RETTET!!!)
+                int heigth = rs.getInt("heightvalue"); 
                 return heigth;
             } else {
                 throw new CarportException("Error");
@@ -209,12 +209,12 @@ public class DataMapper {
     public int getShedwidth(int id) throws CarportException, SQLException {
         try {
             Connection conn = Connector.connection();
-            String query = "Select roofmaterialname from roofmaterial where roofmaterialid = " + id + ";"; //BEMÆRK !!!! DENNE ER IKKE RIGTIG (PS. SLET DENNE KOMMENTAR NÅR DU HAR RETTET!!!)
+            String query = "select widthvalue from width where widthid =" + id + ";"; 
             PreparedStatement ps = conn.prepareStatement(query);
             ResultSet rs = ps.executeQuery(query);
 
             if (rs.next()) {
-                int width = rs.getInt("MANGLER"); //BEMÆRK !!!! DENNE ER IKKE RIGTIG (PS. SLET DENNE KOMMENTAR NÅR DU HAR RETTET!!!)
+                int width = rs.getInt("widthvalue"); 
                 return width;
             } else {
                 throw new CarportException("Error");
@@ -227,12 +227,12 @@ public class DataMapper {
     public int getShedlength(int id) throws CarportException, SQLException {
         try {
             Connection conn = Connector.connection();
-            String query = "Select roofmaterialname from roofmaterial where roofmaterialid = " + id + ";"; //BEMÆRK !!!! DENNE ER IKKE RIGTIG (PS. SLET DENNE KOMMENTAR NÅR DU HAR RETTET!!!)
+            String query = "select lengthvalue from length where lengthid =" + id + ";"; 
             PreparedStatement ps = conn.prepareStatement(query);
             ResultSet rs = ps.executeQuery(query);
 
             if (rs.next()) {
-                int length = rs.getInt("MANGLER"); //BEMÆRK !!!! DENNE ER IKKE RIGTIG (PS. SLET DENNE KOMMENTAR NÅR DU HAR RETTET!!!)
+                int length = rs.getInt("lengthvalue"); 
                 return length;
             } else {
                 throw new CarportException("Error");
