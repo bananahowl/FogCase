@@ -21,7 +21,7 @@ public class dataTest {
         System.out.println(datatest.getMaterials(1));
         
         System.out.println("simone");
-        System.out.println(datatest.getRoofMaterial(2));
+        System.out.println(datatest.getRoofMaterial(3));
         System.out.println("simone");
     }
     
