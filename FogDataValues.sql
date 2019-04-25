@@ -1,4 +1,4 @@
-select * from materials;
+select * from materials where materialID = 1;	
 # the price values is for a meter 
 #insert into materials (materialPrice, materialName) values (100, "bøg");
 
