@@ -11,6 +11,25 @@ USE Fogdatabase;
 
 ##DROP TABLE IF EXISTS 'order';
 
+CREATE TABLE if not exists width(
+widthID int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+widthValue int(11) NOT NULL
+);
+
+CREATE TABLE if not exists length(
+lengthID int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+lengthValue int(11) NOT NULL
+);
+
+CREATE TABLE if not exists height(
+heightID int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+heightValue int(11) NOT NULL
+);
+
+CREATE TABLE if not exists angles(
+anglesID int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+anglesValue int(11) NOT NULL
+);
 
 CREATE TABLE if not exists roofmaterial(
 roofmaterialID int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -47,11 +66,13 @@ FOREIGN KEY (materialFK) REFERENCES materials(materialID)
 
 CREATE TABLE if not exists shed(
 shedID int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-width int(11) ,
-length int(11),
-heigth int(11),
+widthFK int(11) ,
+lengthFK int(11),
 materialFK int(11),
-FOREIGN KEY (materialFK) REFERENCES materials(materialID)
+FOREIGN KEY (materialFK) REFERENCES materials(materialID),
+FOREIGN KEY (lengthFK) REFERENCES length(lengthID),
+FOREIGN KEY (widthFK) REFERENCES width(widthID)
+
 );
 
 
