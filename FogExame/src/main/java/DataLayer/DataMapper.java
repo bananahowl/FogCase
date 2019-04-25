@@ -173,13 +173,85 @@ public class DataMapper {
 
         try {
             Connection conn = Connector.connection();
-            String query = "Select roofmaterialname from roofmaterial where roofmaterialid = " + id + ";";
+            String query = "Select roofmaterialname from roofmaterial where roofmaterialid = " + id + ";"; 
             PreparedStatement ps = conn.prepareStatement(query);
             ResultSet rs = ps.executeQuery(query);
 
             if (rs.next()) {
-                String name = rs.getString("roofmaterialname");
+                String name = rs.getString("roofmaterialname"); 
                 return name;
+            } else {
+                throw new CarportException("Error");
+            }
+        } catch (ClassNotFoundException ex) {
+            throw new CarportException(ex.getMessage());
+        }
+    }
+    
+    public int getShedHeigth(int id) throws CarportException, SQLException {
+        try {
+            Connection conn = Connector.connection();
+            String query = "Select roofmaterialname from roofmaterial where roofmaterialid = " + id + ";"; //BEMÆRK !!!! DENNE ER IKKE RIGTIG (PS. SLET DENNE KOMMENTAR NÅR DU HAR RETTET!!!)
+            PreparedStatement ps = conn.prepareStatement(query);
+            ResultSet rs = ps.executeQuery(query);
+
+            if (rs.next()) {
+                int heigth = rs.getInt("MANGLER"); //BEMÆRK !!!! DENNE ER IKKE RIGTIG (PS. SLET DENNE KOMMENTAR NÅR DU HAR RETTET!!!)
+                return heigth;
+            } else {
+                throw new CarportException("Error");
+            }
+        } catch (ClassNotFoundException ex) {
+            throw new CarportException(ex.getMessage());
+        }
+    }
+    
+    public int getShedwidth(int id) throws CarportException, SQLException {
+        try {
+            Connection conn = Connector.connection();
+            String query = "Select roofmaterialname from roofmaterial where roofmaterialid = " + id + ";"; //BEMÆRK !!!! DENNE ER IKKE RIGTIG (PS. SLET DENNE KOMMENTAR NÅR DU HAR RETTET!!!)
+            PreparedStatement ps = conn.prepareStatement(query);
+            ResultSet rs = ps.executeQuery(query);
+
+            if (rs.next()) {
+                int width = rs.getInt("MANGLER"); //BEMÆRK !!!! DENNE ER IKKE RIGTIG (PS. SLET DENNE KOMMENTAR NÅR DU HAR RETTET!!!)
+                return width;
+            } else {
+                throw new CarportException("Error");
+            }
+        } catch (ClassNotFoundException ex) {
+            throw new CarportException(ex.getMessage());
+        }
+    }
+    
+    public int getShedlength(int id) throws CarportException, SQLException {
+        try {
+            Connection conn = Connector.connection();
+            String query = "Select roofmaterialname from roofmaterial where roofmaterialid = " + id + ";"; //BEMÆRK !!!! DENNE ER IKKE RIGTIG (PS. SLET DENNE KOMMENTAR NÅR DU HAR RETTET!!!)
+            PreparedStatement ps = conn.prepareStatement(query);
+            ResultSet rs = ps.executeQuery(query);
+
+            if (rs.next()) {
+                int length = rs.getInt("MANGLER"); //BEMÆRK !!!! DENNE ER IKKE RIGTIG (PS. SLET DENNE KOMMENTAR NÅR DU HAR RETTET!!!)
+                return length;
+            } else {
+                throw new CarportException("Error");
+            }
+        } catch (ClassNotFoundException ex) {
+            throw new CarportException(ex.getMessage());
+        }
+    }
+    
+    public int getRoofAngle(int id) throws CarportException, SQLException {
+        try {
+            Connection conn = Connector.connection();
+            String query = "Select roofmaterialname from roofmaterial where roofmaterialid = " + id + ";"; //BEMÆRK !!!! DENNE ER IKKE RIGTIG (PS. SLET DENNE KOMMENTAR NÅR DU HAR RETTET!!!)
+            PreparedStatement ps = conn.prepareStatement(query);
+            ResultSet rs = ps.executeQuery(query);
+
+            if (rs.next()) {
+                int angle = rs.getInt("MANGLER"); //BEMÆRK !!!! DENNE ER IKKE RIGTIG (PS. SLET DENNE KOMMENTAR NÅR DU HAR RETTET!!!)
+                return angle;
             } else {
                 throw new CarportException("Error");
             }
