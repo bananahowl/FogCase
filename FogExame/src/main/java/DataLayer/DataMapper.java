@@ -268,7 +268,6 @@ public class DataMapper {
         }
     }
     public String getRoofMaterial(int id) throws CarportException, SQLException {
-
         try {
             Connection conn = Connector.connection();
             String query = "Select roofmaterialname from roofmaterial where roofmaterialid = " + id + ";"; 
@@ -285,7 +284,6 @@ public class DataMapper {
             throw new CarportException(ex.getMessage());
         }
     }
-    
     
     public int getShedwidth(int id) throws CarportException, SQLException {
         try {
@@ -305,7 +303,7 @@ public class DataMapper {
         }
     }
     
-    public int getShedlength(int id) throws CarportException, SQLException {
+    public static int getShedlength(int id) throws CarportException, SQLException {
         try {
             Connection conn = Connector.connection();
             String query = "select lengthvalue from length where lengthid =" + id + ";"; 
@@ -323,7 +321,7 @@ public class DataMapper {
         }
     }
     
-    public int getRoofAngle(int id) throws CarportException, SQLException {
+    public static int getRoofAngle(int id) throws CarportException, SQLException {
         try {
             Connection conn = Connector.connection();
             String query = "select degreevalue from degrees where degreeid =" + id + ";"; //BEMÆRK !!!! DENNE ER IKKE RIGTIG (PS. SLET DENNE KOMMENTAR NÅR DU HAR RETTET!!!)
