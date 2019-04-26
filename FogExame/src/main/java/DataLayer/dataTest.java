@@ -30,6 +30,7 @@ public class dataTest {
         System.out.println("simone ");
         System.out.println(datatest.getShedwidth(1));
         System.out.println("simone ");
+        System.out.println(datatest.getMaxAngles());
         
     }
     
