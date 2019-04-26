@@ -148,7 +148,7 @@ public class DataMapper {
     }*/
 
 
-    public String getMatiralName(int id) throws CarportException {
+    public static String getMatiralName(int id) throws CarportException {
         try {
             Connection con = Connector.connection();
             String SQL = "SELECT materialName FROM materials " + "WHERE materialID = " + id + "; ";
@@ -178,7 +178,7 @@ public class DataMapper {
         }
     }
 
-    public int getmaxmatiralnum() throws CarportException {
+    public static int getmaxmatiralnum() throws CarportException {
         try {
             Connection con = Connector.connection();
             String SQL = "SELECT max(materialID) FROM materials;";
@@ -196,7 +196,7 @@ public class DataMapper {
         }
     }
     
-    public int getMaxLength() throws CarportException {
+    public static int getMaxLength() throws CarportException {
         try {
             Connection con = Connector.connection();
             String SQL = "select max(lengthid) from length;";
@@ -214,7 +214,7 @@ public class DataMapper {
         }
     }
     
-    public int getMaxAngles() throws CarportException {
+    public static int getMaxAngles() throws CarportException {
         try {
             Connection con = Connector.connection();
             String SQL = "select max(degreeid) from degrees;";
@@ -232,7 +232,7 @@ public class DataMapper {
         }
     }
     
-    public int getMaxWidth() throws CarportException {
+    public static int getMaxWidth() throws CarportException {
         try {
             Connection con = Connector.connection();
             String SQL = "select max(widthid) from width;";
@@ -250,7 +250,7 @@ public class DataMapper {
         }
     }
     
-    public int getMaxRoofMaterial() throws CarportException {
+    public static int getMaxRoofMaterial() throws CarportException {
         try {
             Connection con = Connector.connection();
             String SQL = "select max(roofmaterialid) from roofmaterial";
@@ -267,7 +267,7 @@ public class DataMapper {
             throw new CarportException(ex.getMessage());
         }
     }
-    public String getRoofMaterial(int id) throws CarportException, SQLException {
+    public static String getRoofMaterial(int id) throws CarportException, SQLException {
         try {
             Connection conn = Connector.connection();
             String query = "Select roofmaterialname from roofmaterial where roofmaterialid = " + id + ";"; 
@@ -285,7 +285,7 @@ public class DataMapper {
         }
     }
     
-    public int getShedwidth(int id) throws CarportException, SQLException {
+    public static int getShedwidth(int id) throws CarportException, SQLException {
         try {
             Connection conn = Connector.connection();
             String query = "select widthvalue from width where widthid =" + id + ";"; 

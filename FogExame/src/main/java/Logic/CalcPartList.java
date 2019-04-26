@@ -5,53 +5,59 @@
  */
 package Logic;
 
+import DataLayer.DataMapper;
+import java.sql.SQLException;
+
 /**
  *
  * @author frizz
  */
 public class CalcPartList {
     
-    private static double calcArealRoof()
+    private static int calcArealRoof() throws CarportException, SQLException
     {
         //Til udregningen af selve taget på en carport
-        /*
-        double angleTop = 180 - DataMapper.getAngle() - DataMapper.getAngle();
-        double width = DataMapper.getWidth
-        double length = DataMapper.getLength
-        double angleInDegree = DataMapper.getAngle;
-        double angleInRadian = Math.toRadians(angleInDegree);
-        double cos = Math.cos(angleInRadian);
         
-        double angle = Math.toDegree(Math.asin(angleInDegree));
-        double sideB = (width/Math.toDegree(Math.csin(sinuscInDegree)))*Math.toDegree(Math.bsin(sinusbInDegree))
-        double areaOfRoof = (length*sideB)*2
+        int angleInDegree = DataMapper.getRoofAngle(1);
+        int angleTop = 180 - angleInDegree - angleInDegree;
+        int width = DataMapper.getShedwidth(1);
+        int length = DataMapper.getShedlength(1);
+        int angleInRadian = (int) Math.toRadians(angleInDegree);
+        int cos = (int) Math.cos(angleInRadian);
         
-        double heigthOfRoof = sideB * (Math.cos((1/2) * angleTop))
-        double areaOfFrontBack = ((1/2) * heigthOfRoof * width) * 2;
+        int angle = (int) Math.toDegrees(Math.asin(angleInDegree));
+        int sideB = (int) ((width / Math.toDegrees(Math.sin(angleTop)))* Math.toDegrees(Math.sin(angleInDegree)));
+        int areaOfRoof = (length*sideB)*2;
+        
+        int heigthOfRoof = (int) (sideB * (Math.cos((1/2) * angleTop)));
+        int areaOfFrontBack = ((1/2) * heigthOfRoof * width) * 2;
         
         
         //areaOfSide og areaOfFrontBack er de to tal vi skal bruge til udregning af pris for taget
+        return areaOfRoof;
         
-        */
-        return 0;
+        
     }
     
-    private static double calcShed()
+    private static int calcShed() throws CarportException, SQLException
     {
-        /*
-        double length = DataMapper.getLength;
-        double width = DataMapper.getWidth;
-        double heigth = 200;
         
-        double areaLength = (length*heigth) * 2;
-        double areaWidth = (width*heigth)* 2;
+        int length = DataMapper.getShedlength(1);
+        int width = DataMapper.getShedwidth(1);
+        int heigth = 200;
+        
+        int areaLength = (length*heigth) * 2;
+        int areaWidth = (width*heigth)* 2;
         
         // arealength + areawidth er i kvadrat meter. hvis vi har en pris i kvardrat meter er det let at regne.
-        shedm2 = arealength + areawidth;
+        int shedcm2 = areaLength + areaWidth;
         
-        return shedm2;
-        */
-        return 0;
+        return shedcm2;   
+    }
+    
+    private static int calcPrice()
+    {
+        int length = DataMapper.get
     }
     
 }
