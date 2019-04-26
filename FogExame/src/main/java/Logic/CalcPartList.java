@@ -46,6 +46,10 @@ public class CalcPartList {
         double areaLength = (length*heigth) * 2;
         double areaWidth = (width*heigth)* 2;
         
+        // arealength + areawidth er i kvadrat meter. hvis vi har en pris i kvardrat meter er det let at regne.
+        shedm2 = arealength + areawidth;
+        
+        return shedm2;
         */
         return 0;
     }
