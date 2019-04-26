@@ -92,7 +92,7 @@ public class CalcPartList {
     amount = len / gap;
     }
     else{
-    
+    // code some dank here
     
     }
    
