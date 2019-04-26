@@ -169,7 +169,7 @@ public class DataMapper {
         return carportMaterial;
     }
     
-    public String getRoofMaterial(int id) throws CarportException, SQLException {
+    public static String getRoofMaterial(int id) throws CarportException, SQLException {
 
         try {
             Connection conn = Connector.connection();
@@ -188,7 +188,7 @@ public class DataMapper {
         }
     }
     
-    public int getShedHeigth(int id) throws CarportException, SQLException { // VIRKER IKKE ENDNU DA DER IKKE ER VÆRDIER I DATABASEN.
+    public static int getShedHeigth(int id) throws CarportException, SQLException { // VIRKER IKKE ENDNU DA DER IKKE ER VÆRDIER I DATABASEN.
         try {
             Connection conn = Connector.connection();
             String query = "select heightvalue from height where heightid =" + id + ";"; 
@@ -206,7 +206,7 @@ public class DataMapper {
         }
     }
     
-    public int getShedwidth(int id) throws CarportException, SQLException {
+    public static int getShedwidth(int id) throws CarportException, SQLException {
         try {
             Connection conn = Connector.connection();
             String query = "select widthvalue from width where widthid =" + id + ";"; 
@@ -224,7 +224,7 @@ public class DataMapper {
         }
     }
     
-    public int getShedlength(int id) throws CarportException, SQLException {
+    public static int getShedlength(int id) throws CarportException, SQLException {
         try {
             Connection conn = Connector.connection();
             String query = "select lengthvalue from length where lengthid =" + id + ";"; 
@@ -242,7 +242,7 @@ public class DataMapper {
         }
     }
     
-    public int getRoofAngle(int id) throws CarportException, SQLException {
+    public static int getRoofAngle(int id) throws CarportException, SQLException {
         try {
             Connection conn = Connector.connection();
             String query = "Select roofmaterialname from roofmaterial where roofmaterialid = " + id + ";"; //BEMÆRK !!!! DENNE ER IKKE RIGTIG (PS. SLET DENNE KOMMENTAR NÅR DU HAR RETTET!!!)
