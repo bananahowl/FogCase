@@ -5,6 +5,9 @@
  */
 package Logic;
 
+import DataLayer.DataMapper;
+import java.sql.SQLException;
+
 /**
  *
  * @author frizz
@@ -36,22 +39,22 @@ public class CalcPartList {
         return 0;
     }
     
-    private static double calcShed()
+    private static int calcShed() throws CarportException, SQLException
     {
-        /*
-        double length = DataMapper.getLength;
-        double width = DataMapper.getWidth;
-        double heigth = 200;
         
-        double areaLength = (length*heigth) * 2;
-        double areaWidth = (width*heigth)* 2;
+        int length = DataMapper.getShedlength(1);
+        int width = DataMapper.getShedwidth(1);
+        int heigth = 200;
+        
+        int areaLength = (length*heigth) * 2;
+        int areaWidth = (width*heigth)* 2;
         
         // arealength + areawidth er i kvadrat meter. hvis vi har en pris i kvardrat meter er det let at regne.
-        shedm2 = arealength + areawidth;
+        int shedcm2 = areaLength + areaWidth;
         
-        return shedm2;
-        */
-        return 0;
+        return shedcm2;
+        
+        
     }
     
 }
