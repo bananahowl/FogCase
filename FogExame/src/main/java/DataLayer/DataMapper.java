@@ -147,26 +147,53 @@ public class DataMapper {
         return orders;
     }*/
 
-    public static ArrayList<Materials> getMaterials(int id) throws Exception {
 
-        ArrayList<Materials> carportMaterial = new ArrayList();
-        try{
+    public String getMatiralName(int id) throws CarportException {
+        try {
             Connection con = Connector.connection();
-            String SQLStatemt = "SELECT * FROM materials WHERE materialID = ?;";
-            PreparedStatement ps = con.prepareStatement(SQLStatemt);
-            ps.setInt(1,id );
+            String SQL = "SELECT materialName FROM materials " + "WHERE materialID = " + id + "; ";
+            PreparedStatement ps = con.prepareStatement(SQL);
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) {
+                String nr = rs.getString("materialName");
+                return nr;
+            } else {
+                throw new CarportException("Could not validate user");
+            }
+        } catch (ClassNotFoundException | SQLException ex) {
+            throw new CarportException(ex.getMessage());
+        }
+    }
+
+    public static void createUser(User user) throws CarportException {
+        try {
+            Connection con = Connector.connection();
+            String SQL = "INSERT INTO users (email, password) VALUES (?, ?)";
+            PreparedStatement ps = con.prepareStatement(SQL, Statement.RETURN_GENERATED_KEYS);
+            ps.setString(1, user.getEmail());
+            ps.setString(2, user.getPassword());
+            ps.executeUpdate();
+        } catch (SQLException | ClassNotFoundException ex) {
+            throw new CarportException(ex.getMessage());
+        }
+    }
+
+    public int getmaxmatiralnum() throws CarportException {
+        try {
+            Connection con = Connector.connection();
+            String SQL = "SELECT max(materialID) FROM materials;";
+            PreparedStatement ps = con.prepareStatement(SQL);
             ResultSet rs = ps.executeQuery();
             
-            while(rs.next() ){
-            int price = rs.getInt("materialPrice");
-            String name = rs.getString("materialName");
-            carportMaterial.add(new Materials(id, price, name));
+            if (rs.next()) {
+                int nr = rs.getInt("max(materialID)");
+                return nr;
+            } else {
+                throw new CarportException("Could not validate user");
             }
+        } catch (ClassNotFoundException | SQLException ex) {
+            throw new CarportException(ex.getMessage());
         }
-        catch(Exception e){
-        e.printStackTrace();
-        }
-        return carportMaterial;
     }
     
     public String getRoofMaterial(int id) throws CarportException, SQLException {
@@ -187,6 +214,15 @@ public class DataMapper {
             throw new CarportException(ex.getMessage());
         }
     }
+    /*                                <% for (int i = 1; i < acc.getmaxmatiralname()-1; i++) {
+                        %><option value=2><%= acc.getMatiralName(i)%> </option>
+                                   <% } %>
     
+    
+    <option value=1><%= acc.getMatiralName(1)%></option>
+                                <option value=2><%= acc.getMatiralName(1)%></option><option value=3><%= acc.getMatiralName(2)%></option>
+                                <option value=4><%= acc.getMatiralName(3)%></option<option value=5><%= acc.getMatiralName(4)%></option><option value=6><%= acc.getMatiralName(5)%></option><option value=7><%= acc.getMatiralName(6)%></option>
+                                <option value=8><%= acc.getMatiralName(7)%></option><option value=9><%= acc.getMatiralName(8)%></option>
+*/
     
 }
