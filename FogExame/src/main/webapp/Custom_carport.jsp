@@ -13,7 +13,7 @@
         <title>createOrder</title>
     </head>
     <body>
-        <%DataMapper dm = new DataMapper(); %>
+        <%DataMapper acc = new DataMapper(); %>
         
         <form id="addRoof" action ="Frontcontroller" method="POST">
             <input type="hidden" name="action" value="order">
@@ -23,12 +23,16 @@
                 <tr>  
                     <td><select name=flat id="option">
                             <option value=flat></option><option value=flat>Flat</option><option value=" flat">Angle</option></td>
-                    <td><select name=angles id="option">
-                            <option value=angles></option><option value=angles>15</option><option value=" flat">20</option><option value=angles>25</option>
-                            <option value=angles>30</option><option value=angles>35</option></td>
+                    
+                    <td><select name=angle id="option">
+                            <% for(int i = 1; i < acc.getMaxAngles() + 1; i++)  {%>
+                           <option value=2><%= acc.getRoofAngle(i) %></option><% }%></td>  
+                    
                     <td><select name=rmaterials id="option">
-                            <option value=rmaterials></option><option value=1><%= dm.getRoofMaterial(1) %></option><option value=2><%= dm.getRoofMaterial(2) %></option>
-                            <option value=3><%= dm.getRoofMaterial(3) %></option></td>          
+                            <% for(int i = 1; i < acc.getMaxRoofMaterial() + 1; i++)  {
+                            %> <option value=2><%= acc.getRoofMaterial(i) %></option>
+                            <% }%>
+                    </td>          
                 </tr>
                 </table><hr>
                 <tr><tr><tr>
@@ -48,10 +52,19 @@
                 <thead><tr><th>Heigth</th><th>Length</th><th>Width</th><th></th></tr></thead>
                 <tbody><tr>
                           
+                        <td><select name=heigth id =option><option>220 cm</option></td>
+                        
                         <td><select name=length id="option">
-                                <option value=1><%= dm.getShedlength(1) %></option><option value=2><%= dm.getShedlength(2) %></option></td>     
+                            <% for(int i = 1; i < acc.getMaxLength() + 1; i++)  {%>
+                            <option value=1><%= acc.getShedlength(i) %></option><% }%></td>  
+                        
                         <td><select name=width id="option">
-                                <option value=1><%= dm.getShedwidth(1) %></option><option value=2><%= dm.getShedwidth(2) %></option></td>     
+                            <% for(int i = 1; i < acc.getMaxWidth()+ 1; i++)  {%>
+                            <option value=1><%= acc.getShedwidth(i) %></option><% }%></td>  
+                        
+                        <td><select name=rmaterials id="option">
+                            <% for(int i = 1; i < acc.getMaxRoofMaterial() + 1; i++)  {%>
+                           <option value=1><%= acc.getRoofAngle(i) %></option><% }%></td>     
                 </tr>
 
             </table>
