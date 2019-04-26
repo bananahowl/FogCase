@@ -17,8 +17,9 @@ public class dataTest {
         ArrayList<Materials> material = new ArrayList();
         
         DataMapper datatest = new DataMapper();
-        
-        System.out.println(datatest.getMaterials(1));
+        System.out.println("hello world");
+        System.out.println(datatest.getMatiralName(2));
+       
         
         System.out.println("simone");
         System.out.println(datatest.getRoofMaterial(3));
