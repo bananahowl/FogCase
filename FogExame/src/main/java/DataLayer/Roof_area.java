@@ -24,4 +24,10 @@ public class Roof_area {
         this.height = height;
         this.degree = degree;
     }
+
+    @Override
+    public String toString() {
+        return "Roof_area{" + "id=" + id + ", width=" + width + ", length=" + length + ", height=" + height + ", degree=" + degree + '}';
+    }
+    
 }

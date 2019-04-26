@@ -9,6 +9,5 @@ Presentation\Frontcontroller.class
 DataLayer\Roof_material.class
 DataLayer\Connector.class
 DataLayer\Shed.class
-Logic\Roof.class
 Presentation\Command.class
 Logic\CalcPartList.class

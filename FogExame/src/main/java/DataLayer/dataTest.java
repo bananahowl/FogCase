@@ -19,8 +19,18 @@ public class dataTest {
         DataMapper datatest = new DataMapper();
         System.out.println("hello world");
         System.out.println(datatest.getMatiralName(2));
-        
        
+        
+        System.out.println("simone");
+        System.out.println(datatest.getRoofMaterial(3));
+        System.out.println("simone");
+        // System.out.println(datatest.getShedHeigth(1));
+        System.out.println("simone");
+        System.out.println(datatest.getShedlength(1));
+        System.out.println("simone ");
+        System.out.println(datatest.getShedwidth(1));
+        System.out.println("simone ");
+        
     }
     
 }

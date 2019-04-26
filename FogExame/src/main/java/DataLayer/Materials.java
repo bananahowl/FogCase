@@ -19,5 +19,24 @@ public class Materials {
         this.price = price;
         this.name = name;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public String getName() {
+        return name;
+    }
+    
+
+    @Override
+    public String toString() {
+        return "Materials{" + "id=" + id + ", price=" + price + ", name=" + name + '}';
+    }
+    
     
 }

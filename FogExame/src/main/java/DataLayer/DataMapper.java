@@ -200,12 +200,12 @@ public class DataMapper {
 
         try {
             Connection conn = Connector.connection();
-            String query = "SELECT ROOFMATERIALNAME FROM ROOFMATERIAL WHERE ID = " + id + ";";
+            String query = "Select roofmaterialname from roofmaterial where roofmaterialid = " + id + ";"; 
             PreparedStatement ps = conn.prepareStatement(query);
             ResultSet rs = ps.executeQuery(query);
 
             if (rs.next()) {
-                String name = rs.getString("roofmaterialname");
+                String name = rs.getString("roofmaterialname"); 
                 return name;
             } else {
                 throw new CarportException("Error");
@@ -214,15 +214,77 @@ public class DataMapper {
             throw new CarportException(ex.getMessage());
         }
     }
-    /*                                <% for (int i = 1; i < acc.getmaxmatiralname()-1; i++) {
-                        %><option value=2><%= acc.getMatiralName(i)%> </option>
-                                   <% } %>
     
+    public int getShedHeigth(int id) throws CarportException, SQLException { // VIRKER IKKE ENDNU DA DER IKKE ER VÆRDIER I DATABASEN.
+        try {
+            Connection conn = Connector.connection();
+            String query = "select heightvalue from height where heightid =" + id + ";"; 
+            PreparedStatement ps = conn.prepareStatement(query);
+            ResultSet rs = ps.executeQuery(query);
+
+            if (rs.next()) {
+                int heigth = rs.getInt("heightvalue"); 
+                return heigth;
+            } else {
+                throw new CarportException("Error");
+            }
+        } catch (ClassNotFoundException ex) {
+            throw new CarportException(ex.getMessage());
+        }
+    }
     
-    <option value=1><%= acc.getMatiralName(1)%></option>
-                                <option value=2><%= acc.getMatiralName(1)%></option><option value=3><%= acc.getMatiralName(2)%></option>
-                                <option value=4><%= acc.getMatiralName(3)%></option<option value=5><%= acc.getMatiralName(4)%></option><option value=6><%= acc.getMatiralName(5)%></option><option value=7><%= acc.getMatiralName(6)%></option>
-                                <option value=8><%= acc.getMatiralName(7)%></option><option value=9><%= acc.getMatiralName(8)%></option>
-*/
+    public int getShedwidth(int id) throws CarportException, SQLException {
+        try {
+            Connection conn = Connector.connection();
+            String query = "select widthvalue from width where widthid =" + id + ";"; 
+            PreparedStatement ps = conn.prepareStatement(query);
+            ResultSet rs = ps.executeQuery(query);
+
+            if (rs.next()) {
+                int width = rs.getInt("widthvalue"); 
+                return width;
+            } else {
+                throw new CarportException("Error");
+            }
+        } catch (ClassNotFoundException ex) {
+            throw new CarportException(ex.getMessage());
+        }
+    }
+    
+    public int getShedlength(int id) throws CarportException, SQLException {
+        try {
+            Connection conn = Connector.connection();
+            String query = "select lengthvalue from length where lengthid =" + id + ";"; 
+            PreparedStatement ps = conn.prepareStatement(query);
+            ResultSet rs = ps.executeQuery(query);
+
+            if (rs.next()) {
+                int length = rs.getInt("lengthvalue"); 
+                return length;
+            } else {
+                throw new CarportException("Error");
+            }
+        } catch (ClassNotFoundException ex) {
+            throw new CarportException(ex.getMessage());
+        }
+    }
+    
+    public int getRoofAngle(int id) throws CarportException, SQLException {
+        try {
+            Connection conn = Connector.connection();
+            String query = "Select roofmaterialname from roofmaterial where roofmaterialid = " + id + ";"; //BEMÆRK !!!! DENNE ER IKKE RIGTIG (PS. SLET DENNE KOMMENTAR NÅR DU HAR RETTET!!!)
+            PreparedStatement ps = conn.prepareStatement(query);
+            ResultSet rs = ps.executeQuery(query);
+
+            if (rs.next()) {
+                int angle = rs.getInt("MANGLER"); //BEMÆRK !!!! DENNE ER IKKE RIGTIG (PS. SLET DENNE KOMMENTAR NÅR DU HAR RETTET!!!)
+                return angle;
+            } else {
+                throw new CarportException("Error");
+            }
+        } catch (ClassNotFoundException ex) {
+            throw new CarportException(ex.getMessage());
+        }
+    }
     
 }
