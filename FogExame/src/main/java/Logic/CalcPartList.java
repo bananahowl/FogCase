@@ -5,10 +5,13 @@
  */
 package Logic;
 
+import DataLayer.DataMapper;
+
 /**
  *
  * @author frizz
  */
+
 public class CalcPartList {
     
     private static double calcArealRoof()
@@ -48,6 +51,17 @@ public class CalcPartList {
         
         */
         return 0;
+    }
+    
+    public static int calculatPortFrame(int width, int length, int material){
+    /*int valueMat = DataMapper.getMaterialPrice(material);
+    int height = DataMapper.getHeight(1);
+    int width = DataMapper.getWidth(width);*/
+    //int length = DataMapper.getLength(length);
+    int gap = 50;
+    //for(int i =length,)
+    
+    return 0;
     }
     
 }
