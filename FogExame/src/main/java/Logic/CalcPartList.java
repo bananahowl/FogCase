@@ -6,12 +6,16 @@
 package Logic;
 
 import DataLayer.DataMapper;
+<<<<<<< HEAD
+=======
 import java.sql.SQLException;
+>>>>>>> 212772dc7deae1aece256b0d9ae948610d73ee64
 
 /**
  *
  * @author frizz
  */
+
 public class CalcPartList {
     
     private static int calcRoofSides() throws CarportException, SQLException
@@ -68,6 +72,31 @@ public class CalcPartList {
         int shedcm2 = areaLength + areaWidth;
         
         return shedcm2;   
+    }
+    
+    public static int calculatPortFrame(int width, int length, int material){
+    /*int valueMat = DataMapper.getMaterialPrice(material);
+    int height = DataMapper.getHeight(1);
+    int width = DataMapper.getWidth(width);*/
+    //int length = DataMapper.getLength(length);
+    
+    int gap = 50;
+    int len = 480;
+    int wid = 180;
+    int amount = 0;
+    
+   // for(int i = leng){}
+    
+    if(len % gap == 0){
+    
+    amount = len / gap;
+    }
+    else{
+    // code some dank here
+    
+    }
+   
+    return 0;
     }
     
 }
