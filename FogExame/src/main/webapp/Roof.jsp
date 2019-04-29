@@ -4,7 +4,7 @@
     Author     : fskn
 --%>
 
-<%@page import="DataLayer.DataMapper"%>
+<%@page import="Logic.CarportFacade"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -14,7 +14,7 @@
         <link href ="styling.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <%DataMapper acc = new DataMapper(); %>
+        <%CarportFacade cf = new CarportFacade(); %>
 
         <form id="addRoof" action ="Frontcontroller" method="POST">
             <input type="hidden" name="action" value="order">
@@ -27,13 +27,13 @@
                             </td>
 
                             <td><select name=angle id="option">
-                                    <% for (int i = 1; i < acc.getMaxAngles() + 1; i++) {%>
-                                    <option value=2><%= acc.getRoofAngle(i)%></option><% }%>
+                                    <% for (int i = 1; i < cf.getMaxAngles() + 1; i++) {%>
+                                    <option value=2><%= cf.getRoofAngle(i)%></option><% }%>
                             </td>  
 
                             <td><select name=rmaterials id="option">
-                                    <% for (int i = 1; i < acc.getMaxRoofMaterial() + 1; i++) {
-                                    %> <option value=2><%= acc.getRoofMaterial(i)%></option><% }%>
+                                    <% for (int i = 1; i < cf.getMaxRoofMaterial() + 1; i++) {
+                                    %> <option value=2><%= cf.getRoofMaterial(i)%></option><% }%>
                             </td>       
                             <td><input type ='submit' name ="okbutton" value ="Check Out"></td>
                             <td><input type ='submit' name ="calculate" value ="Calculate"></td>
