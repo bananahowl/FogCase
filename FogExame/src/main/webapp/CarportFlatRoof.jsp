@@ -17,37 +17,38 @@
     <body>
         <% CarportFacade cf = new CarportFacade();%>    
         <h1></h1>
-    <p2>The selected carport has a flat roof.</p2><br><br>
-    <p2><b>Choose the size of your carport<b></p2>
-        <form>
-            <table class="table table-striped">
-                <thead><tr><th>Height</th><th>Length</th><th>Width</th><th>Material</th><th></th></tr></thead>
-                <tbody><tr>
-                
-                <td><select name=heigth id =option><option>220 cm</option></td>
+    <p2><b>Carport efter egne mål</b></p2><br><br>
 
-                <td><select name=length id="option">                        
-                        <% for (int i = 1; i < cf.getMaxLength() + 1; i++) {%>
-                        <option value=1><%= cf.getShedlength(i)%></option><% }%>
-                </td>                          
+    <p1>Den valgte carport har flat tag</p1>
+    <br>
+    <p1>Vi gør vores kunder opmærksomhed på, at alle vores carporte leveres, som et byg-selv-sæt, usamlet og ubehandlet</p1>
+    <br><br><br><br>
 
-                <td><select name=width id="option">
-                        <% for (int i = 1; i < cf.getMaxWidth() + 1; i++) {%>
-                        <option value=1><%= cf.getShedwidth(i)%></option><% }%>
-                </td> 
+    <p2>Choose the size of your carport:</p2>
+    <form>
+        <table class="table table-striped">
+            <thead><tr><th>Height</th><th>Length</th><th>Width</th><th></th></tr></thead>
+            <tbody><tr>
 
-                <td> <select name=materialName id="option">
-                        <% for (int i = 1; i < cf.getmaxmatiralnum() + 1; i++) {
-                        %><option value=2><%= cf.getMatiralName(i)%> </option>
-                        <% }%>
-                </td> 
+                    <td>220 cm</td>
 
-                <td><input type="submit" name="action" value="Add Carport to shoppingcart"></td><td><span id="errorContainer"></span></td>
-                </tr>
-            </table>
-        </form>
-        <div class="back">
-            <a type="button" class="btn btn-primary test" href ="FlatAngle.jsp">Back</a>
-        </div>
-    </body>
+                    <td><select name=length id="option">                        
+                            <% for (int i = 1; i < cf.getMaxLength() + 1; i++) {%>
+                            <option value=1><%= cf.getShedlength(i)%></option><% }%>
+                    </td>                          
+
+                    <td><select name=width id="option">
+                            <% for (int i = 1; i < cf.getMaxWidth() + 1; i++) {%>
+                            <option value=1><%= cf.getShedwidth(i)%></option><% }%>
+                    </td> 
+
+                    <td><a type="button" class="btn btn-primary test" href ="Shed.jsp">Next</a></td>
+            
+            </tr>
+        </table>
+    </form>
+    <div class="back">
+        <a type="button" class="btn btn-primary test" href ="FlatAngle.jsp">Back</a>
+    </div>
+</body>
 </html>

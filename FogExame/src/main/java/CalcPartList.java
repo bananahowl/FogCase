@@ -1,3 +1,4 @@
+<<<<<<< HEAD:FogExame/src/main/java/CalcPartList.java
 
 
 
@@ -5,12 +6,16 @@ import DataLayer.DataMapper;
 import Logic.CarportException;
 import Logic.CarportFacade;
 
+=======
+package Logic;
+import DataLayer.DataMapper;
+>>>>>>> e164984e054f36197b29aafd4b2a0a03c5a0980f:FogExame/src/main/java/Logic/CalcPartList.java
 import java.sql.SQLException;
-
+import Logic.CarportException;
+import Logic.CarportFacade;
+import java.sql.SQLException;
+import java.sql.SQLException;
 import java.util.ArrayList;
-
-
-
 
 /**
  *
