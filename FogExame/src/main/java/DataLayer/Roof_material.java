@@ -13,9 +13,9 @@ public class Roof_material {
     
     private int id;
     private String name;
-    private Double price;
+    private int price;
 
-    public Roof_material(int id, String name, Double price) {
+    public Roof_material(int id, String name, int price) {
         this.id = id;
         this.name = name;
         this.price = price;
