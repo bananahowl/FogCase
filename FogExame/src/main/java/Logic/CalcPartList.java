@@ -1,12 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Logic;
-
 import DataLayer.DataMapper;
+import Logic.CarportException;
+import Logic.CarportFacade;
 import java.sql.SQLException;
+import java.sql.SQLException;
+import java.util.ArrayList;
 
 /**
  *
@@ -71,6 +69,21 @@ public class CalcPartList {
         return shedcm2;   
     }
     
+    private static ArrayList flatRoof() throws CarportException, SQLException
+    {
+        ArrayList flatRoofMats = new ArrayList();
+        int length = CarportFacade.getShedlength(1);
+        int width = CarportFacade.getShedwidth(1);
+        
+        int amountOfLumber = length / 55;
+        int lengthOfLumber = width + 30;
+        
+        flatRoofMats.add(amountOfLumber);
+        flatRoofMats.add(lengthOfLumber);
+        
+        return flatRoofMats;
+    }
+    
     public static int calculatPortFrame(int width, int length, int material){
     /*int valueMat = DataMapper.getMaterialPrice(material);
     int height = DataMapper.getHeight(1);
@@ -96,4 +109,13 @@ public class CalcPartList {
     return 0;
     }
     
+    public static ArrayList goodsNeeded() throws CarportException, SQLException
+    {
+        //rooftiles on one M^2 = 15
+        ArrayList goods = new ArrayList();
+        int rooftiles = calcRoofSides() / 15;
+        
+        
+        return goods;
+    }
 }
