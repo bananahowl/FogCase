@@ -97,5 +97,56 @@ select * from height;
 insert into height (heightValue) values(200);
 
 select * from degrees;
-*
+
+select max(degreeValue) from degrees;
+
+select degreeValue from degrees where degreeid = 6;
+
+
+select * from width;
+
+
+#insert into length(lengthValue) values(240);
+insert into shedlength(shedlengthValue) values(150);
+insert into shedlength(shedlengthValue) values(180);
+insert into shedlength(shedlengthValue) values(210);
+insert into shedlength(shedlengthValue) values(240);
+insert into shedlength(shedlengthValue) values(270);
+insert into shedlength(shedlengthValue) values(300);
+insert into shedlength(shedlengthValue) values(330);
+insert into shedlength(shedlengthValue) values(360);
+insert into shedlength(shedlengthValue) values(390);
+insert into shedlength(shedlengthValue) values(420);
+insert into shedlength(shedlengthValue) values(450);
+insert into shedlength(shedlengthValue) values(480);
+insert into shedlength(shedlengthValue) values(510);
+insert into shedlength(shedlengthValue) values(540);
+insert into shedlength(shedlengthValue) values(570);
+insert into shedlength(shedlengthValue) values(600);
+insert into shedlength(shedlengthValue) values(630);
+insert into shedlength(shedlengthValue) values(660);
+insert into shedlength(shedlengthValue) values(690);
+
+	# shedwidth  shedwidthValue
+insert into shedwidth(shedwidthValue) values(210);
+insert into shedwidth(shedwidthValue) values(240);
+insert into shedwidth(shedwidthValue) values(270);
+insert into shedwidth(shedwidthValue) values(300);
+insert into shedwidth(shedwidthValue) values(330);
+insert into shedwidth(shedwidthValue) values(360);
+insert into shedwidth(shedwidthValue) values(390);
+insert into shedwidth(shedwidthValue) values(420);
+insert into shedwidth(shedwidthValue) values(450);
+insert into shedwidth(shedwidthValue) values(480);
+insert into shedwidth(shedwidthValue) values(510);
+insert into shedwidth(shedwidthValue) values(540);
+insert into shedwidth(shedwidthValue) values(570);
+insert into shedwidth(shedwidthValue) values(600);
+insert into shedwidth(shedwidthValue) values(630);
+insert into shedwidth(shedwidthValue) values(660);
+insert into shedwidth(shedwidthValue) values(690);
+insert into shedwidth(shedwidthValue) values(720);
+
+select * from shedwidth;
+
 
