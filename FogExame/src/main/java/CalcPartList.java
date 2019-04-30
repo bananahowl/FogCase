@@ -1,5 +1,6 @@
-package Logic;
+﻿package Logic;
 import DataLayer.DataMapper;
+
 import java.sql.SQLException;
 import Logic.CarportException;
 import Logic.CarportFacade;
@@ -14,7 +15,7 @@ import java.util.ArrayList;
 
 public class CalcPartList {
     
-    private static int calcRoofSides() throws CarportException, SQLException
+    public static int calcRoofSides() throws CarportException, SQLException
     {
         //Til udregningen af selve taget på en carport
         
@@ -35,7 +36,7 @@ public class CalcPartList {
         
     }
     
-    private static int calcRoofFronts() throws CarportException, SQLException
+    public static int calcRoofFronts() throws CarportException, SQLException
     {
         int angleInDegree = DataMapper.getRoofAngle(1);
         int angleTop = 180 - angleInDegree - angleInDegree;
@@ -54,12 +55,41 @@ public class CalcPartList {
         return areaOfFrontBack;
     }
     
-    private static int calcShed() throws CarportException, SQLException
+    public static ArrayList<MaterialList> calcShedMats() throws CarportException, SQLException
+    {
+        //Planks 200cm in heigth(length), 55cm width, thickness idk 
+        ArrayList<MaterialList> list1 = new ArrayList<MaterialList>();
+        
+        
+        ArrayList shedMats = new ArrayList();
+        int length = CarportFacade.getShedlength(1);
+        int heigth = 220;
+        int width = CarportFacade.getShedwidth(1);
+        
+        int amountOfLumberLength = (length / 55) * 2;
+        int amountOfLumberWidth = (width / 55) * 2;
+        
+        
+        
+        int result = amountOfLumberLength + amountOfLumberWidth;
+        
+        
+        /*
+        shedMats.add(amountOfLumberLength);
+        shedMats.add(amountOfLumberWidth);
+        
+        return shedMats;
+        */
+        
+        return null;
+    }
+    
+    public static int calcShed() throws CarportException, SQLException
     {
         
         int length = DataMapper.getShedlength(1);
         int width = DataMapper.getShedwidth(1);
-        int heigth = 200;
+        int heigth = 220;
         
         int areaLength = (length*heigth) * 2;
         int areaWidth = (width*heigth)* 2;
@@ -70,44 +100,48 @@ public class CalcPartList {
         return shedcm2;   
     }
     
-    private static ArrayList flatRoof() throws CarportException, SQLException
+    public static ArrayList flatRoof() throws CarportException, SQLException
     {
         ArrayList flatRoofMats = new ArrayList();
         int length = CarportFacade.getShedlength(1);
         int width = CarportFacade.getShedwidth(1);
         
-        int amountOfLumber = length / 55;
+        int amountOfLumber = Math.round((length / 55));
         int lengthOfLumber = width + 30;
+        
+        
+        
         
         flatRoofMats.add(amountOfLumber);
         flatRoofMats.add(lengthOfLumber);
         
         return flatRoofMats;
+        
     }
     
-    public static int calculatPortFrame(int width, int length, int material){
+    public static int calculatPortPost(int width, int length, int material){
     /*int valueMat = DataMapper.getMaterialPrice(material);
     int height = DataMapper.getHeight(1);
     int width = DataMapper.getWidth(width);*/
     //int length = DataMapper.getLength(length);
     
-    int gap = 50;
+    int gap = 70;
     int len = 480;
     int wid = 180;
-    int amount = 0;
+    int postamount = 0;
     
    // for(int i = leng){}
     
     if(len % gap == 0){
     
-    amount = len / gap;
+    postamount = len / gap;
     }
     else{
+        postamount = Math.round(len/gap) + 1;
     // code some dank here
-    
     }
    
-    return 0;
+    return postamount;
     }
     
     public static ArrayList goodsNeeded() throws CarportException, SQLException
@@ -115,7 +149,9 @@ public class CalcPartList {
         //rooftiles on one M^2 = 15
         ArrayList goods = new ArrayList();
         int rooftiles = calcRoofSides() / 15;
+        //int shedLumber = calcShedMats();
         
+        //goods.add(shedLumber);
         
         return goods;
     }

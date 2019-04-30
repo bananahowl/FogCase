@@ -13,8 +13,8 @@ insert into roofmaterial (roofmaterialname, roofmaterialprice) values ("aluminiu
 insert into roofmaterial (roofmaterialname, roofmaterialprice) values ("tagsten", 175);
 insert into roofmaterial (roofmaterialname, roofmaterialprice) values ("plast", 100);
 
-select * from roofmaterial;
-
+insert into height ( heightValue) values (220);
+select * from height;
 
 insert into width(widthValue) values(240);
 insert into width(widthValue) values(270);
