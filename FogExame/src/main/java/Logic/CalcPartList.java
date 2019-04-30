@@ -1,11 +1,10 @@
-﻿/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Logic;
 
 import DataLayer.DataMapper;
+import DataLayer.MaterialList;
+import Logic.CarportException;
+
 
 import java.sql.SQLException;
 
@@ -21,7 +20,7 @@ import java.util.ArrayList;
 
 public class CalcPartList {
     
-    private static int calcRoofSides() throws CarportException, SQLException
+    public static int calcRoofSides() throws CarportException, SQLException
     {
         //Til udregningen af selve taget på en carport
         
@@ -42,7 +41,7 @@ public class CalcPartList {
         
     }
     
-    private static int calcRoofFronts() throws CarportException, SQLException
+    public static int calcRoofFronts() throws CarportException, SQLException
     {
         int angleInDegree = DataMapper.getRoofAngle(1);
         int angleTop = 180 - angleInDegree - angleInDegree;
@@ -61,12 +60,41 @@ public class CalcPartList {
         return areaOfFrontBack;
     }
     
-    private static int calcShed() throws CarportException, SQLException
+    public static ArrayList<MaterialList> calcShedMats() throws CarportException, SQLException
+    {
+        //Planks 200cm in heigth(length), 55cm width, thickness idk 
+        ArrayList<MaterialList> list1 = new ArrayList<MaterialList>();
+        
+        
+        ArrayList shedMats = new ArrayList();
+        int length = CarportFacade.getShedlength(1);
+        int heigth = 220;
+        int width = CarportFacade.getShedwidth(1);
+        
+        int amountOfLumberLength = (length / 55) * 2;
+        int amountOfLumberWidth = (width / 55) * 2;
+        
+        
+        
+        int result = amountOfLumberLength + amountOfLumberWidth;
+        
+        
+        /*
+        shedMats.add(amountOfLumberLength);
+        shedMats.add(amountOfLumberWidth);
+        
+        return shedMats;
+        */
+        
+        return null;
+    }
+    
+    public static int calcShed() throws CarportException, SQLException
     {
         
         int length = DataMapper.getShedlength(1);
         int width = DataMapper.getShedwidth(1);
-        int heigth = 200;
+        int heigth = 220;
         
         int areaLength = (length*heigth) * 2;
         int areaWidth = (width*heigth)* 2;
@@ -77,19 +105,23 @@ public class CalcPartList {
         return shedcm2;   
     }
     
-    private static ArrayList flatRoof() throws CarportException, SQLException
+    public static ArrayList flatRoof() throws CarportException, SQLException
     {
         ArrayList flatRoofMats = new ArrayList();
         int length = CarportFacade.getShedlength(1);
         int width = CarportFacade.getShedwidth(1);
         
-        int amountOfLumber = length / 55;
+        int amountOfLumber = Math.round((length / 55));
         int lengthOfLumber = width + 30;
+        
+        
+        
         
         flatRoofMats.add(amountOfLumber);
         flatRoofMats.add(lengthOfLumber);
         
         return flatRoofMats;
+        
     }
     
     public static int calculatPortFrame(int width, int length, int material){
@@ -122,7 +154,9 @@ public class CalcPartList {
         //rooftiles on one M^2 = 15
         ArrayList goods = new ArrayList();
         int rooftiles = calcRoofSides() / 15;
+        //int shedLumber = calcShedMats();
         
+        //goods.add(shedLumber);
         
         return goods;
     }
