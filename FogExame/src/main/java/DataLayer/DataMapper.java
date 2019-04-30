@@ -1,8 +1,6 @@
 package DataLayer;
 
 import Logic.CarportException;
-//import Logic.Order;
-//import Logic.User;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -148,7 +146,7 @@ public class DataMapper {
     }*/
 
 
-    public String getMatiralName(int id) throws CarportException {
+    public String getMaterialName(int id) throws CarportException {
         try {
             Connection con = Connector.connection();
             String SQL = "SELECT materialName FROM materials " + "WHERE materialID = " + id + "; ";
@@ -178,7 +176,7 @@ public class DataMapper {
         }
     }
 
-    public int getmaxmatiralnum() throws CarportException {
+    public int getMaxMaterialNum() throws CarportException {
         try {
             Connection con = Connector.connection();
             String SQL = "SELECT max(materialID) FROM materials;";
