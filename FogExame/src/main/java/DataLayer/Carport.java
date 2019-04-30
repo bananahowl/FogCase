@@ -23,5 +23,45 @@ public class Carport {
         this.shed = shed;
         this.roofangle = roofangle;
     }
+
+    public int getLength() {
+        return length;
+    }
+
+    public void setLength(int length) {
+        this.length = length;
+    }
+
+    public int getHeigth() {
+        return heigth;
+    }
+
+    public void setHeigth(int heigth) {
+        this.heigth = heigth;
+    }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public void setWidth(int width) {
+        this.width = width;
+    }
+
+    public boolean isShed() {
+        return shed;
+    }
+
+    public void setShed(boolean shed) {
+        this.shed = shed;
+    }
+
+    public boolean isRoofangle() {
+        return roofangle;
+    }
+
+    public void setRoofangle(boolean roofangle) {
+        this.roofangle = roofangle;
+    }
     
 }

@@ -5,7 +5,7 @@
  */
 package Logic;
 
-import DataLayer.CustomCarport;
+import DataLayer.Carport;
 import DataLayer.DataMapper;
 import DataLayer.Roof_material;
 import DataLayer.Shed;
@@ -66,8 +66,8 @@ public class CarportFacade {
         return DataMapper.getRoofAngle(id);
     }
 
-    public static CustomCarport createCustomCarport(int length, int width) {
-        CustomCarport carport = new CustomCarport(length, width);
+    public static Carport createCustomCarport(int length, int width) {
+        Carport carport = new Carport(length, 220, width, false, false);
         return carport;
     }
 

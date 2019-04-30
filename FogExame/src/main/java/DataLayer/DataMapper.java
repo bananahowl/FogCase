@@ -324,7 +324,7 @@ public class DataMapper {
     public static int getShedwidth(int id) throws CarportException, SQLException {
         try {
             Connection conn = Connector.connection();
-            String query = "select shedwidthvalue from width where shedwidthid =" + id + ";"; 
+            String query = "select shedwidthvalue from shedwidth where shedwidthid =" + id + ";"; 
             PreparedStatement ps = conn.prepareStatement(query);
             ResultSet rs = ps.executeQuery(query);
 
@@ -342,7 +342,7 @@ public class DataMapper {
     public static int getShedlength(int id) throws CarportException, SQLException {
         try {
             Connection conn = Connector.connection();
-            String query = "select shedlengthvalue from length where shedlengthid =" + id + ";"; 
+            String query = "select shedlengthvalue from shedlength where shedlengthid =" + id + ";"; 
             PreparedStatement ps = conn.prepareStatement(query);
             ResultSet rs = ps.executeQuery(query);
 

@@ -5,7 +5,7 @@
  */
 package Presentation;
 
-import DataLayer.CustomCarport;
+import DataLayer.Carport;
 import Logic.CarportException;
 import Logic.CarportFacade;
 import javax.servlet.http.HttpServletRequest;
@@ -21,9 +21,9 @@ public class CalculateCustomCarport extends Command{
     String execute(HttpServletRequest request, HttpServletResponse response) throws CarportException {
         int length = Integer.parseInt(request.getParameter("length")) ;
         int width = Integer.parseInt(request.getParameter("width"));
-        CustomCarport ls = CarportFacade.createCustomCarport(length, width);
+        Carport ls = CarportFacade.createCarport(length, width);
         request.getSession().setAttribute("customcarport", ls);
-        return "legohousepage";
+        return "shoppingcart";
     }
 
 }

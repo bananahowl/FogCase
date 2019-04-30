@@ -31,6 +31,18 @@ public class Materials {
     public String getName() {
         return name;
     }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
     
 
     @Override
