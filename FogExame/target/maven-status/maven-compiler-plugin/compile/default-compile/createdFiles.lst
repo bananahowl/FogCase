@@ -2,12 +2,9 @@ DataLayer\User.class
 DataLayer\Materials.class
 Logic\CarportException.class
 DataLayer\Roof_area.class
-DataLayer\DataMapper.class
 Presentation\UnknownCommand.class
 DataLayer\Carport.class
 Presentation\Frontcontroller.class
 DataLayer\Roof_material.class
 DataLayer\Connector.class
 DataLayer\Shed.class
-Presentation\Command.class
-Logic\CalcPartList.class

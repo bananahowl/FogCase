@@ -21,20 +21,32 @@
                 <%
                     DataMapper acc = new DataMapper();
                 %>
-                <p>Select your goals </p>
+                <p>Height is always 2 meter </p>
                 <form id="addProduct" action="?action=order" method="POST">
                     <input type="hidden" name="action" value="order">
                     <table class="table table-striped">
-                        <thead><tr><th>Height</th><th>Length</th><th>Width</th><th>Material</th><th>Confirm</th><th></th></tr></thead>
+                        <thead><tr><%//<th>Height</th>%><th>Length</th><th>Width</th><th>Material</th><th>Confirm</th><th></th></tr></thead>
                         <tbody>
 
 
-                        <td><input type="text" name="hight" placeholder="Hight in cm" id="hightInput"></td>
+                        <%--//<td><input type="text" name="height" placeholder="Height in cm" id="heightInput"></td>
+                        
+                        
+                        <td><select name=length id="option">
+                                <% for (int i = 1; i < acc.getMaxLength() + 1; i++) {%>
+                                <option value=1><%= acc.getShedlength(i)%></option><% }%>
+                        </td>                          
+
+                        <td><select name=width id="option">
+                                <% for (int i = 1; i < acc.getMaxWidth() + 1; i++) {%>
+                                <option value=1><%= acc.getShedwidth(i)%></option><% }%>
+                        </td>--%>
+                        
                         <td><input type="text" name="length" placeholder="Length in cm" id="lengthInput"></td>
                         <td><input type="text" name="width" placeholder="Width in cm" id="withInput"></td>
-                        <td> <select name=bottom id="option">
-                                <% for (int i = 1; i < acc.getmaxmatiralnum() + 1; i++) {
-                                %><option value=2><%= acc.getMatiralName(i)%> </option>
+                        <td> <select name=matiral id="option">
+                                <% for (int i = 1; i < acc.getMaxMatiralNum() + 1; i++) {
+                                %><option value=2><%= acc.getMaterialName(i)%> </option>
                             <% }%>
                         </td> 
 
@@ -49,3 +61,4 @@
 
     </body>
 </html>
+x

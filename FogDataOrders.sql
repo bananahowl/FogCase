@@ -80,8 +80,8 @@ widthFK int(11) ,
 lengthFK int(11),
 materialFK int(11),
 FOREIGN KEY (materialFK) REFERENCES materials(materialID),
-FOREIGN KEY (lengthFK) REFERENCES length(lengthID),
-FOREIGN KEY (widthFK) REFERENCES width(widthID)
+FOREIGN KEY (lengthFK) REFERENCES sheedlength(sheedlengthID),
+FOREIGN KEY (widthFK) REFERENCES sheedwidth(sheedwidthID)
 
 );
 
@@ -106,7 +106,16 @@ FOREIGN KEY (shedFK) REFERENCES shed (shedID),
 FOREIGN KEY (roofFK) REFERENCES arearoof (arearoofID)
 );
 
+CREATE TABLE IF NOT exists shedwidth(
+shedwidthID int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+shedwidthValue int(11) NOT NULL
 
+);
+
+CREATE TABLE if not exists shedlength(
+shedlengthID int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+shedlengthValue int(11) NOT NULL
+);
 
 
 
