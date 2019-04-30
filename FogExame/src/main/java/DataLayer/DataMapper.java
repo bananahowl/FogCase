@@ -250,6 +250,41 @@ public class DataMapper {
             throw new CarportException(ex.getMessage());
         }
     }
+    public static int getMaxShedWidth() throws CarportException {
+        try {
+            Connection con = Connector.connection();
+            String SQL = "select max(shedwidthid) from shedwidth;";
+            PreparedStatement ps = con.prepareStatement(SQL);
+            ResultSet rs = ps.executeQuery();
+            
+            if (rs.next()) {
+                int nr = rs.getInt("max(shedwidthid)");
+                return nr;
+            } else {
+                throw new CarportException("Could not validate user");
+            }
+        } catch (ClassNotFoundException | SQLException ex) {
+            throw new CarportException(ex.getMessage());
+        }
+    }
+    
+    public static int getMaxShedLength() throws CarportException { // IKKE FÆRDIG
+        try {
+            Connection con = Connector.connection();
+            String SQL = "select max(shedlengthid) from shedlength;";
+            PreparedStatement ps = con.prepareStatement(SQL);
+            ResultSet rs = ps.executeQuery();
+            
+            if (rs.next()) {
+                int nr = rs.getInt("max(shedlengthid)");
+                return nr;
+            } else {
+                throw new CarportException("Could not validate user");
+            }
+        } catch (ClassNotFoundException | SQLException ex) {
+            throw new CarportException(ex.getMessage());
+        }
+    }
     
     public static int getMaxRoofMaterial() throws CarportException {
         try {

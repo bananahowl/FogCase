@@ -25,6 +25,13 @@ public class CarportFacade {
         DataMapper.getShedlength(0);
         return shed;
     }
+    public static int getCarportLength (int id) throws CarportException, SQLException {
+        return DataMapper.getlength(id);
+    }
+    
+    public static int getCarportWidth (int id) throws CarportException, SQLException {
+        return DataMapper.getwidth(id);
+    }
 
     public static String getRoofMaterial(int id) throws CarportException, SQLException {
         return DataMapper.getRoofMaterial(id);
@@ -57,7 +64,15 @@ public class CarportFacade {
     public static int getShedwidth(int id) throws CarportException, SQLException {
         return DataMapper.getShedwidth(id);
     }
-
+    
+    public static int getMaxShedLength() throws CarportException {
+        return DataMapper.getMaxShedLength();
+    }
+    
+    public static int getMaxShedWidth()throws CarportException{
+        return DataMapper.getMaxShedWidth();
+    }
+    
     public static int getShedlength(int id) throws CarportException, SQLException {
         return DataMapper.getShedlength(id);
     }
