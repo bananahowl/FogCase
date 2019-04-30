@@ -6,10 +6,7 @@
 package Logic;
 
 import DataLayer.DataMapper;
-<<<<<<< HEAD
-=======
 import java.sql.SQLException;
->>>>>>> 212772dc7deae1aece256b0d9ae948610d73ee64
 
 /**
  *
@@ -98,5 +95,7 @@ public class CalcPartList {
    
     return 0;
     }
+    
+    
     
 }
