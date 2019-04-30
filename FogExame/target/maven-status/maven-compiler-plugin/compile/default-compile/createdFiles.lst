@@ -3,6 +3,7 @@ DataLayer\Materials.class
 Logic\CarportException.class
 DataLayer\Roof_area.class
 DataLayer\DataMapper.class
+DataLayer\dataTest.class
 Presentation\UnknownCommand.class
 DataLayer\Carport.class
 Presentation\Frontcontroller.class
