@@ -12,7 +12,7 @@ abstract class Command {
     private static void initCommands() {
      /*   commands = new HashMap<>();
         commands.put( "login", new Login() );
-        commands.put( "register", new Register() );
+        */commands.put( "register", new Register() );/*
         commands.put( "backdoorLogin", new backdoorLogin());
       */commands.put( "createLegohouse", new CalculateCustomCarport());/*
         commands.put( "createOrder", new createOrder());

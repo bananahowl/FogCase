@@ -146,7 +146,8 @@ public class DataMapper {
     }*/
 
 
-    public String getMaterialName(int id) throws CarportException {
+
+    public static String getMatiralName(int id) throws CarportException {
         try {
             Connection con = Connector.connection();
             String SQL = "SELECT materialName FROM materials " + "WHERE materialID = " + id + "; ";
@@ -176,7 +177,9 @@ public class DataMapper {
         }
     }
 
-    public int getMaxMaterialNum() throws CarportException {
+
+    public static int getmaxmatiralnum() throws CarportException {
+
         try {
             Connection con = Connector.connection();
             String SQL = "SELECT max(materialID) FROM materials;";
@@ -194,8 +197,78 @@ public class DataMapper {
         }
     }
     
-    public String getRoofMaterial(int id) throws CarportException, SQLException {
-
+    public static int getMaxLength() throws CarportException {
+        try {
+            Connection con = Connector.connection();
+            String SQL = "select max(lengthid) from length;";
+            PreparedStatement ps = con.prepareStatement(SQL);
+            ResultSet rs = ps.executeQuery();
+            
+            if (rs.next()) {
+                int nr = rs.getInt("max(lengthid)");
+                return nr;
+            } else {
+                throw new CarportException("Could not validate user");
+            }
+        } catch (ClassNotFoundException | SQLException ex) {
+            throw new CarportException(ex.getMessage());
+        }
+    }
+    
+    public static int getMaxAngles() throws CarportException {
+        try {
+            Connection con = Connector.connection();
+            String SQL = "select max(degreeid) from degrees;";
+            PreparedStatement ps = con.prepareStatement(SQL);
+            ResultSet rs = ps.executeQuery();
+            
+            if (rs.next()) {
+                int nr = rs.getInt("max(degreeid)");
+                return nr;
+            } else {
+                throw new CarportException("Could not validate user");
+            }
+        } catch (ClassNotFoundException | SQLException ex) {
+            throw new CarportException(ex.getMessage());
+        }
+    }
+    
+    public static int getMaxWidth() throws CarportException {
+        try {
+            Connection con = Connector.connection();
+            String SQL = "select max(widthid) from width;";
+            PreparedStatement ps = con.prepareStatement(SQL);
+            ResultSet rs = ps.executeQuery();
+            
+            if (rs.next()) {
+                int nr = rs.getInt("max(widthid)");
+                return nr;
+            } else {
+                throw new CarportException("Could not validate user");
+            }
+        } catch (ClassNotFoundException | SQLException ex) {
+            throw new CarportException(ex.getMessage());
+        }
+    }
+    
+    public static int getMaxRoofMaterial() throws CarportException {
+        try {
+            Connection con = Connector.connection();
+            String SQL = "select max(roofmaterialid) from roofmaterial";
+            PreparedStatement ps = con.prepareStatement(SQL);
+            ResultSet rs = ps.executeQuery();
+            
+            if (rs.next()) {
+                int nr = rs.getInt("max(roofmaterialid)");
+                return nr;
+            } else {
+                throw new CarportException("Could not validate user");
+            }
+        } catch (ClassNotFoundException | SQLException ex) {
+            throw new CarportException(ex.getMessage());
+        }
+    }
+    public static String getRoofMaterial(int id) throws CarportException, SQLException {
         try {
             Connection conn = Connector.connection();
             String query = "Select roofmaterialname from roofmaterial where roofmaterialid = " + id + ";"; 
@@ -213,25 +286,7 @@ public class DataMapper {
         }
     }
     
-    public int getShedHeigth(int id) throws CarportException, SQLException { // VIRKER IKKE ENDNU DA DER IKKE ER VÆRDIER I DATABASEN.
-        try {
-            Connection conn = Connector.connection();
-            String query = "select heightvalue from height where heightid =" + id + ";"; 
-            PreparedStatement ps = conn.prepareStatement(query);
-            ResultSet rs = ps.executeQuery(query);
-
-            if (rs.next()) {
-                int heigth = rs.getInt("heightvalue"); 
-                return heigth;
-            } else {
-                throw new CarportException("Error");
-            }
-        } catch (ClassNotFoundException ex) {
-            throw new CarportException(ex.getMessage());
-        }
-    }
-    
-    public int getShedwidth(int id) throws CarportException, SQLException {
+    public static int getShedwidth(int id) throws CarportException, SQLException {
         try {
             Connection conn = Connector.connection();
             String query = "select widthvalue from width where widthid =" + id + ";"; 
@@ -249,7 +304,7 @@ public class DataMapper {
         }
     }
     
-    public int getShedlength(int id) throws CarportException, SQLException {
+    public static int getShedlength(int id) throws CarportException, SQLException {
         try {
             Connection conn = Connector.connection();
             String query = "select lengthvalue from length where lengthid =" + id + ";"; 
@@ -267,15 +322,15 @@ public class DataMapper {
         }
     }
     
-    public int getRoofAngle(int id) throws CarportException, SQLException {
+    public static int getRoofAngle(int id) throws CarportException, SQLException {
         try {
             Connection conn = Connector.connection();
-            String query = "Select roofmaterialname from roofmaterial where roofmaterialid = " + id + ";"; //BEMÆRK !!!! DENNE ER IKKE RIGTIG (PS. SLET DENNE KOMMENTAR NÅR DU HAR RETTET!!!)
+            String query = "select degreevalue from degrees where degreeid =" + id + ";"; //BEMÆRK !!!! DENNE ER IKKE RIGTIG (PS. SLET DENNE KOMMENTAR NÅR DU HAR RETTET!!!)
             PreparedStatement ps = conn.prepareStatement(query);
             ResultSet rs = ps.executeQuery(query);
 
             if (rs.next()) {
-                int angle = rs.getInt("MANGLER"); //BEMÆRK !!!! DENNE ER IKKE RIGTIG (PS. SLET DENNE KOMMENTAR NÅR DU HAR RETTET!!!)
+                int angle = rs.getInt("degreevalue"); //BEMÆRK !!!! DENNE ER IKKE RIGTIG (PS. SLET DENNE KOMMENTAR NÅR DU HAR RETTET!!!)
                 return angle;
             } else {
                 throw new CarportException("Error");

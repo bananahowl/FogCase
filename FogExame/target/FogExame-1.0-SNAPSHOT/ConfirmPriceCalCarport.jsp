@@ -14,10 +14,6 @@
 
     String length = request.getParameter("Length");
     String width = request.getParameter("Width");
-
-    String username = request.getParameter("bottom");
-    String password = request.getParameter("topping");
-    String quant = request.getParameter("material");
    /* //int bot = Integer.parseInt(length);
     int top = Integer.parseInt(width);
     int quanti = Integer.parseInt(quant);
@@ -40,7 +36,10 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
     </head>
+    <a href="ConfirmPriceCalCarport.jsp"></a>
     <body>
-        <h1> <%= width%></h1>
+        <h1> <%=request.getParameter("length")%></h1>
+        
+        
     </body>
 </html>

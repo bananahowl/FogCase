@@ -15,10 +15,9 @@ public class CustomCarport {
     private final int heigth = 200;
     private String material;
 
-    public CustomCarport(int length, int width, String material) {
+    public CustomCarport(int length, int width) {
         this.length = length;
         this.width = width;
-        this.material = material;
     }
 
     public int getLength() {

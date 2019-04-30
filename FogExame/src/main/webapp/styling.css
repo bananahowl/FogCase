@@ -1,1 +1,39 @@
 
+body{
+    background-color: white;
+    margin: 20px;
+    width: 1450px;
+    padding: 20px;
+}
+h1{
+    font-size:30px;
+    font-family:tahoma;
+    text-align:center;
+    color:black;
+}
+
+p2{
+    font-size: 20px;
+    font-family: tahoma;
+    text-align: center;
+    color:black;
+}
+
+p3{
+  font-size: 15px;
+    font-family: tahoma;
+    text-align: center;
+    color:black;  
+}
+
+.AngleOrFlat {
+    text-align: center;
+    text-size:20px;
+    margin-left: 10px;
+}
+
+form{
+    font-size: 20px;
+    font-family: tahoma;
+    text-align: center;
+}

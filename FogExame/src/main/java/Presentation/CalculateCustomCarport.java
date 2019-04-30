@@ -7,6 +7,7 @@ package Presentation;
 
 import DataLayer.CustomCarport;
 import Logic.CarportException;
+import Logic.CarportFacade;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -20,13 +21,8 @@ public class CalculateCustomCarport extends Command{
     String execute(HttpServletRequest request, HttpServletResponse response) throws CarportException {
         int length = Integer.parseInt(request.getParameter("length")) ;
         int width = Integer.parseInt(request.getParameter("width"));
-        String material =(request.getParameter("material"));
-
-        
-        CustomCarport ls = DataLayer.CustomCarport(length, width, material);
-        String html = HtmlConverter.legohouseToHtml(ls);
-        request.getSession().setAttribute("legohouse", ls);
-        request.setAttribute("pcelist", html);
+        CustomCarport ls = CarportFacade.createCustomCarport(length, width);
+        request.getSession().setAttribute("customcarport", ls);
         return "legohousepage";
     }
 
