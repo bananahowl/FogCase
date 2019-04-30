@@ -284,8 +284,7 @@ public class DataMapper {
             throw new CarportException(ex.getMessage());
         }
     }
-    
-    public static int getShedwidth(int id) throws CarportException, SQLException {
+    public static int getwidth(int id) throws CarportException, SQLException {
         try {
             Connection conn = Connector.connection();
             String query = "select widthvalue from width where widthid =" + id + ";"; 
@@ -303,7 +302,7 @@ public class DataMapper {
         }
     }
     
-    public static int getShedlength(int id) throws CarportException, SQLException {
+    public static int getlength(int id) throws CarportException, SQLException {
         try {
             Connection conn = Connector.connection();
             String query = "select lengthvalue from length where lengthid =" + id + ";"; 
@@ -312,6 +311,42 @@ public class DataMapper {
 
             if (rs.next()) {
                 int length = rs.getInt("lengthvalue"); 
+                return length;
+            } else {
+                throw new CarportException("Error");
+            }
+        } catch (ClassNotFoundException ex) {
+            throw new CarportException(ex.getMessage());
+        }
+    }
+    
+    public static int getShedwidth(int id) throws CarportException, SQLException {
+        try {
+            Connection conn = Connector.connection();
+            String query = "select shedwidthvalue from width where shedwidthid =" + id + ";"; 
+            PreparedStatement ps = conn.prepareStatement(query);
+            ResultSet rs = ps.executeQuery(query);
+
+            if (rs.next()) {
+                int width = rs.getInt("shedwidthvalue"); 
+                return width;
+            } else {
+                throw new CarportException("Error");
+            }
+        } catch (ClassNotFoundException ex) {
+            throw new CarportException(ex.getMessage());
+        }
+    }
+    
+    public static int getShedlength(int id) throws CarportException, SQLException {
+        try {
+            Connection conn = Connector.connection();
+            String query = "select shedlengthvalue from length where shedlengthid =" + id + ";"; 
+            PreparedStatement ps = conn.prepareStatement(query);
+            ResultSet rs = ps.executeQuery(query);
+
+            if (rs.next()) {
+                int length = rs.getInt("shedlengthvalue"); 
                 return length;
             } else {
                 throw new CarportException("Error");
