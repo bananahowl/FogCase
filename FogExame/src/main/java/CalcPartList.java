@@ -1,17 +1,12 @@
-
-package Logic;
-
+﻿package Logic;
 import DataLayer.DataMapper;
-import DataLayer.MaterialList;
-import Logic.CarportException;
-
 
 import java.sql.SQLException;
-
+import Logic.CarportException;
+import Logic.CarportFacade;
+import java.sql.SQLException;
+import java.sql.SQLException;
 import java.util.ArrayList;
-
-
-
 
 /**
  *
@@ -124,29 +119,29 @@ public class CalcPartList {
         
     }
     
-    public static int calculatPortFrame(int width, int length, int material){
+    public static int calculatPortPost(int width, int length, int material){
     /*int valueMat = DataMapper.getMaterialPrice(material);
     int height = DataMapper.getHeight(1);
     int width = DataMapper.getWidth(width);*/
     //int length = DataMapper.getLength(length);
     
-    int gap = 50;
+    int gap = 70;
     int len = 480;
     int wid = 180;
-    int amount = 0;
+    int postamount = 0;
     
    // for(int i = leng){}
     
     if(len % gap == 0){
     
-    amount = len / gap;
+    postamount = len / gap;
     }
     else{
+        postamount = Math.round(len/gap) + 1;
     // code some dank here
-    
     }
    
-    return 0;
+    return postamount;
     }
     
     public static ArrayList goodsNeeded() throws CarportException, SQLException
