@@ -33,10 +33,18 @@ public class CalcPartListtest {
           
         ArrayList<MaterialList> superlist = CalcPartList.totalMaterial(shedtest, flattest, posttest);
         System.out.println(superlist);
+        //tostring
+          for(int i = 0; i< superlist.size(); i++){
+               System.out.println( superlist.get(i));
            
-            
+          }
+          CalcPrice test = new CalcPrice();
+          
+          
+      
+        System.out.println("______________________ \n");
         
-        System.out.println("______________________");
+        System.out.println(test.woodPrice(superlist));
     }
     
 }
