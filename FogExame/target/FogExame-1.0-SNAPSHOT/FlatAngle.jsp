@@ -16,6 +16,7 @@
     <body>
         <h1><b>Customize your own carport here!</b></h1>
         <div class="AngleOrFlat">
+            <a href="FlatAngle.jsp"></a>
         <a type="button" class="btn btn-primary test" href ="CarportFlatRoof.jsp"> Carport with flat roof </a>
         <tr>
         <a type="button" class="btn btn-primary test" href ="CarportWithAngle.jsp"> Carport with angle </a>
