@@ -31,14 +31,24 @@ public class CalcPartListtest {
         MaterialList spertest = CalcPartList.calcSper(600 , 350);
         MaterialList remtest = CalcPartList.calcRem(600, 350);
         MaterialList posttest = CalcPartList.calculatePortPost(350, 780);
-        MaterialList rooftest = CalcPartList.calcRoofSides(350,700);
+        MaterialList rooftest = CalcPartList.calcRoofSides(400,800, 30);
         MaterialList fronttest = CalcPartList.calcRoofFronts(30);
           
         ArrayList<MaterialList> superlist = CalcPartList.totalMaterial(shedtest, spertest, remtest, posttest, rooftest, fronttest);
         System.out.println(superlist);
         
+        for(int i = 0; i < superlist.size(); i++){
         
-
+            System.out.println(superlist.get(i).getAmount());
+            System.out.println(superlist.get(i).getLength());
+            System.out.println(superlist.get(i).getDescription());
+        }
+        CalcPrice test = new CalcPrice();
+        
+        /*
+        
+        
+        
         String shed = shedtest.toString();
         String spær = spertest.toString();
         String rem = remtest.toString();
@@ -53,11 +63,10 @@ public class CalcPartListtest {
         System.out.println(post);
         System.out.println(roof);
         System.out.println(front);
-      
-           
-            
+      */ 
         
         System.out.println("______________________");
+        test.woodPrice(superlist);
     }
     
 }
