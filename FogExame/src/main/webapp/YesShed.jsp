@@ -4,6 +4,7 @@
     Author     : fskn
 --%>
 
+<%@page import="Logic.CalcPrice"%>
 <%@page import="Logic.CalcPartList"%>
 <%@page import="Logic.CarportFacade"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -17,7 +18,7 @@
     </head>
     <body>
         <% CarportFacade cf = new CarportFacade(); %>
-        <%CalcPartList cpl = new CalcPartList(); %>
+        <%CalcPrice price = new CalcPrice(); %>
         <form name ="withShed" action="FrontController" method="POST">
             <p2><b>Choose the measurements here for your shed:<b></p2>
                         <table class="table table-striped">
@@ -39,8 +40,7 @@
 
                         </table>
                                     
-                                            <p2><input type ="text" name="price" value="<%= cpl. %> "></p2>
-                        <td><a type="button" class="btn btn-primary test">Calculate total price</a></td>
+                                            <p2><input type ="text" name="price" value="<%= price.woodPrice(list) %> "></p2>
                         </form>
                         <div class="back">
                             <a type="button" class="btn btn-primary test" href ="FlatAngle.jsp">Back to start</a>
