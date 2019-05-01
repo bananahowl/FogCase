@@ -70,7 +70,7 @@ public class DataMapperTest {
         // Just check that we have a connection.
         assertNotNull( testConnection );
     }
-
+/*
     @Test
     public void testLogin01() throws CarportException {
         // Can we log in
