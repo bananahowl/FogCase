@@ -18,14 +18,13 @@ import java.util.ArrayList;
 
 public class CalcPartList {
     
-    public static int calcRoofSides() throws CarportException, SQLException
+    public static ArrayList<MaterialList> calcRoofSides(int width, int length) throws CarportException, SQLException
     {
         //Til udregningen af selve taget på en carport
         
+        ArrayList<MaterialList> list1 = new ArrayList<MaterialList>();
         int angleInDegree = DataMapper.getRoofAngle(1);
         int angleTop = 180 - angleInDegree - angleInDegree;
-        int width = DataMapper.getShedwidth(1);
-        int length = DataMapper.getShedlength(1);
         int angleInRadian = (int) Math.toRadians(angleInDegree);
         int cos = (int) Math.cos(angleInRadian);
         
@@ -34,14 +33,18 @@ public class CalcPartList {
         int areaOfRoof = (length*sideB)*2;
                 
         //areaOfSide og areaOfFrontBack er de to tal vi skal bruge til udregning af pris for taget
-        return areaOfRoof;
-        
+        //15 tagsten på 1m^2
+        int roofTiles = areaOfRoof * 15;
+        list1.add(new MaterialList (0, roofTiles,"Tagsten"));
+        //return areaOfRoof;
+        return list1;
         
     }
     
-    public static int calcRoofFronts() throws CarportException, SQLException
+    public static ArrayList<MaterialList> calcRoofFronts(int angleInDegree) throws CarportException, SQLException
     {
-        int angleInDegree = DataMapper.getRoofAngle(1);
+        ArrayList<MaterialList> list1 = new ArrayList<MaterialList>();
+        //int angleInDegree = DataMapper.getRoofAngle(1);
         int angleTop = 180 - angleInDegree - angleInDegree;
         int width = DataMapper.getShedwidth(1);
         int length = DataMapper.getShedlength(1);
@@ -55,7 +58,11 @@ public class CalcPartList {
         int heigthOfRoof = (int) (sideB * (Math.cos((1/2) * angleTop)));
         int areaOfFrontBack = ((1/2) * heigthOfRoof * width) * 2;
         
-        return areaOfFrontBack;
+        int amountOfLumber = (width / 55) * 2;
+        list1.add(new MaterialList(heigthOfRoof, amountOfLumber, "Træ til tag gavl 1 og gavl 2"));
+        
+        //return areaOfFrontBack;
+        return list1;
     }
     
     public static ArrayList<MaterialList> calcShedMats(int length) throws CarportException, SQLException
@@ -81,7 +88,7 @@ public class CalcPartList {
         return list1;
     }
     
-    public static ArrayList<MaterialList> totalMaterial(ArrayList<MaterialList> shed, ArrayList<MaterialList> flat, ArrayList<MaterialList> post) throws CarportException, SQLException
+    public static ArrayList<MaterialList> totalMaterial(ArrayList<MaterialList> shed, ArrayList<MaterialList> flat, ArrayList<MaterialList> post,ArrayList<MaterialList> roof, ArrayList<MaterialList> front) throws CarportException, SQLException
     {
     
     ArrayList<MaterialList> list1 = new ArrayList<MaterialList>();
@@ -90,6 +97,8 @@ public class CalcPartList {
     list1.addAll(shed);
     list1.addAll(flat);
     list1.addAll(post);
+    list1.addAll(roof);
+    list1.addAll(front);
     
     return list1;
     
@@ -158,7 +167,7 @@ public class CalcPartList {
     {
         //rooftiles on one M^2 = 15
         ArrayList goods = new ArrayList();
-        int rooftiles = calcRoofSides() / 15;
+        //int rooftilezz = calcRoofSides() / 15;
         //int shedLumber = calcShedMats();
         
         //goods.add(shedLumber);

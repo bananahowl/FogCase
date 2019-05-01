@@ -30,9 +30,12 @@ public class CalcPartListtest {
         ArrayList<MaterialList> shedtest = CalcPartList.calcShedMats(270);
         ArrayList<MaterialList> flattest = CalcPartList.flatRoof(600 , 350);
         ArrayList<MaterialList> posttest = CalcPartList.calculatePortPost(350, 780);
+        ArrayList<MaterialList> rooftest = CalcPartList.calcRoofSides(350,700);
+        ArrayList<MaterialList> fronttest = CalcPartList.calcRoofFronts(30);
           
-        ArrayList<MaterialList> superlist = CalcPartList.totalMaterial(shedtest, flattest, posttest);
+        ArrayList<MaterialList> superlist = CalcPartList.totalMaterial(shedtest, flattest, posttest, rooftest, fronttest);
         System.out.println(superlist);
+        //MaterialList.toString(superlist);
            
             
         
