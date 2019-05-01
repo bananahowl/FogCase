@@ -137,7 +137,7 @@ public class CalcPartList {
         int amountOfLumberRem = Math.round((length / gap));
         int lengthOfLumberRem = width + 30;
         int lengthOfLumberSper = length+60; 
-        int amountOfLumberSper = Math.round(amountOfLumberRem);
+        int amountOfLumberSper = Math.round(2);
         
 
 
