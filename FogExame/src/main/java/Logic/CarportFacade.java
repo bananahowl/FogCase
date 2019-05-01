@@ -7,7 +7,7 @@ package Logic;
 
 import DataLayer.Carport;
 import DataLayer.CarportWithShed;
-import DataLayer.DataMapper;
+import DataLayer.DataMappers.DataMapper;
 import DataLayer.Roof_material;
 import DataLayer.Shed;
 import DataLayer.User;
