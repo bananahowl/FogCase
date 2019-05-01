@@ -6,9 +6,9 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html> 
-<% 
-int width = Integer.parseInt(request.getParameter("w")) ;
-    
+<%
+    int width = Integer.parseInt(request.getParameter("w"));
+
 
 %>
 <html>
@@ -23,12 +23,16 @@ int width = Integer.parseInt(request.getParameter("w")) ;
 
         <rect x="0" y="100mm" width="<%=width%>mm" height="10mm" fill="#0000ff" />
 
-        <% for (int i = 0; i < 10; i++) {
-        if (width >= -1) {
-            %><rect x="<%=width%>mm" y="0"  width="10mm" height="110mm" fill="#ff0000" />  <%
-                width = width -20;
+        <% for (int i = 0; i < 1000; i++) {
+                if (width >= -0) {
+        %><rect x="<%=width%>mm" y="0"  width="10mm" height="110mm" fill="#ff0000" />
+        <rect x="10mm" y="115mm"  width="<%=width-10%>mm" height="1mm" fill="#000000" /> <%
+                width = width -50;
             }
+else{
+break;
+}
     }
-%>
+        %>
     </body>
 </html>

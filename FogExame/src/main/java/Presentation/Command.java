@@ -14,7 +14,7 @@ abstract class Command {
         commands.put( "login", new Login() );
         */commands.put( "register", new Register() );/*
         commands.put( "backdoorLogin", new backdoorLogin());
-      */commands.put( "createLegohouse", new CalculateCustomCarport());/*
+      */commands.put( "createCarport", new CalculateCustomCarport());/*
         commands.put( "createOrder", new createOrder());
         commands.put( "seeMyOrders", new getMyOrders());*/
     }
