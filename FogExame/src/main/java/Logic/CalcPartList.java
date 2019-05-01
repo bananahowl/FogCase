@@ -24,12 +24,13 @@ public class CalcPartList {
         
        
         int angleInDegree = DataMapper.getRoofAngle(1);
-        int angleTop = 180 - angleInDegree - angleInDegree;
         int angleInRadian = (int) Math.toRadians(angleInDegree);
+        int angleTop = 180 - angleInDegree - angleInDegree;
+        int topAngleInRadian = (int) Math.toRadians(angleTop);
         
         
         int angle = (int) Math.toDegrees(Math.asin(angleInDegree));
-        int sideB = (int) ((width / Math.toDegrees(Math.sin(angleTop)))* Math.toDegrees(Math.sin(angleInDegree)));
+        int sideB = (int) ((width / Math.toDegrees(Math.sin(topAngleInRadian)))* Math.toDegrees(Math.sin(angleInRadian)));
         int areaOfRoof = (length*sideB)*2;
                 
         //areaOfSide og areaOfFrontBack er de to tal vi skal bruge til udregning af pris for taget
@@ -46,14 +47,16 @@ public class CalcPartList {
     {
         
         //int angleInDegree = DataMapper.getRoofAngle(1);
-        int angleTop = 180 - angleInDegree - angleInDegree;
+
         int width = DataMapper.getShedwidth(1);
-        int length = DataMapper.getShedlength(1);
+
         int angleInRadian = (int) Math.toRadians(angleInDegree);
-        int cos = (int) Math.cos(angleInRadian);
+        int angleTop = 180 - angleInDegree - angleInDegree;
+        int topAngleInRadian = (int) Math.toRadians(angleTop);
+        
         
         int angle = (int) Math.toDegrees(Math.asin(angleInDegree));
-        int sideB = (int) ((width / Math.toDegrees(Math.sin(angleTop)))* Math.toDegrees(Math.sin(angleInDegree)));
+        int sideB = (int) ((width / Math.toDegrees(Math.sin(topAngleInRadian)))* Math.toDegrees(Math.sin(angleInRadian)));
         
         
         int heigthOfRoof = (int) (sideB * (Math.cos((1/2) * angleTop)));
