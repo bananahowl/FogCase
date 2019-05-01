@@ -37,8 +37,19 @@ public class CalcPartListtest {
         System.out.println(superlist);
         
         
-        //superlist.get()
+
+        String shed = shedtest.toString();
+        String flat = flattest.toString();
+        String post = posttest.toString();
+        String roof = rooftest.toString();
+        String front = fronttest.toString();
         
+        
+        System.out.println(shed);
+        System.out.println(flat);
+        System.out.println(post);
+        System.out.println(roof);
+        System.out.println(front);
       
            
             

@@ -26,7 +26,7 @@ public class CalcPartList {
         int angleInDegree = DataMapper.getRoofAngle(1);
         int angleTop = 180 - angleInDegree - angleInDegree;
         int angleInRadian = (int) Math.toRadians(angleInDegree);
-        int cos = (int) Math.cos(angleInRadian);
+        
         
         int angle = (int) Math.toDegrees(Math.asin(angleInDegree));
         int sideB = (int) ((width / Math.toDegrees(Math.sin(angleTop)))* Math.toDegrees(Math.sin(angleInDegree)));
