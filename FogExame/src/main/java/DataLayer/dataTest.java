@@ -22,15 +22,15 @@ public class dataTest {
         System.out.println(datatest.getMatiralName(2));
        
         
-        System.out.println("simone");
+        System.out.println("simone a");
         System.out.println(datatest.getRoofMaterial(3));
-        System.out.println("simone");
+        System.out.println("simone b");
         // System.out.println(datatest.getShedHeigth(1));
-        System.out.println("simone");
+        System.out.println("simone c");
         System.out.println(datatest.getShedlength(1));
-        System.out.println("simone ");
+        System.out.println("simone d");
         System.out.println(datatest.getShedwidth(1));
-        System.out.println("simone ");
+        System.out.println("simone e");
         System.out.println(datatest.getMaxAngles());
         System.out.println(CarportFacade.getRoofMaterial(1));
         System.out.println(CarportFacade.getRoofMaterial(2));
