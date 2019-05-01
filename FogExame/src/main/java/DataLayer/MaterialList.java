@@ -13,6 +13,12 @@ public class MaterialList {
     private int length;
     private int amount;
     private String description;
+    
+        public MaterialList(int length, int amount, String description) {
+        this.length = length;
+        this.amount = amount;
+        this.description = description;
+    }
 
     @Override
     public String toString() {
@@ -31,10 +37,6 @@ public class MaterialList {
         return description;
     }
 
-    public MaterialList(int length, int amount, String description) {
-        this.length = length;
-        this.amount = amount;
-        this.description = description;
-    }
+
     
 }
