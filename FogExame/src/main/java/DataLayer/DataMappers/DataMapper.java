@@ -1,5 +1,7 @@
-package DataLayer;
+package DataLayer.DataMappers;
 
+import DataLayer.Connector;
+import DataLayer.User;
 import Logic.CarportException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

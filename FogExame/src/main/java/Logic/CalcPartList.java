@@ -1,7 +1,7 @@
 package Logic;
 
-import DataLayer.DataMapper;
-import DataLayer.DataMapper;
+import DataLayer.DataMappers.DataMapper;
+import DataLayer.DataMappers.DataMapper;
 import DataLayer.MaterialList;
 
 import java.sql.SQLException;
@@ -94,14 +94,15 @@ public class CalcPartList {
         
     }
     
-    public static ArrayList<MaterialList> totalMaterial(MaterialList shed, MaterialList flat, MaterialList post, MaterialList roof, MaterialList front) throws CarportException, SQLException
+    public static ArrayList<MaterialList> totalMaterial(MaterialList shed, MaterialList rem, MaterialList spær, MaterialList post, MaterialList roof, MaterialList front) throws CarportException, SQLException
     {
     
     ArrayList<MaterialList> list1 = new ArrayList<MaterialList>();
     
     
     list1.add(shed);
-    list1.add(flat);
+    list1.add(rem);
+    list1.add(spær);
     list1.add(post);
     list1.add(roof);
     list1.add(front);
@@ -126,18 +127,30 @@ public class CalcPartList {
         return shedcm2;   
     }
     
-    public static MaterialList flatRoof(int length , int width) throws CarportException, SQLException
+    public static MaterialList calcSper(int length , int width) throws CarportException, SQLException
     {   
         
         int gap = 55;
         int amountOfLumberRem = Math.round((length / gap));
         int lengthOfLumberRem = width + 30;
-        int lengthOfLumberSper = length; 
-        int amountOfLumberSper = Math.round(2);
+        int lengthOfLumberSper = length+60; 
+        int amountOfLumberSper = Math.round(lengthOfLumberSper);
         
 
 
-        MaterialList list1 = new MaterialList(lengthOfLumberSper, amountOfLumberSper,"til fladt tag");
+        MaterialList list1 = new MaterialList(lengthOfLumberSper, amountOfLumberSper,"til spær som skal bruges ");
+        return list1;
+        
+    }
+     public static MaterialList calcRem(int length , int width) throws CarportException, SQLException
+    {   
+        
+        int gap = 55;
+        int amountOfLumberRem = Math.round((length / gap));
+        int lengthOfLumberRem = width + 30;
+        int lengthOfLumberSper = length+60; 
+
+        MaterialList list1 = new MaterialList(lengthOfLumberRem, amountOfLumberRem,"til rem som skal bruges");
         return list1;
         
     }
