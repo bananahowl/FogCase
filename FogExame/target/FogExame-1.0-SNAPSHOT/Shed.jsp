@@ -26,7 +26,7 @@
         </div>
         </form>
         <div class="back">
-        <a type="button" class="btn btn-primary test" href ="FlatAngle.jsp">Back</a>
+        <a type="button" class="btn btn-primary test" href ="FlatAngle.jsp">Back to start</a>
     </div>
 </body>
 </html>

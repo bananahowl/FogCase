@@ -16,20 +16,20 @@
     </head>
     <body>
         <% CarportFacade cf = new CarportFacade(); %>
-        <form>
-            <p2><b>Choose the mesurements here for your shed:<b></p2>
+        <form name ="withShed" action="FrontController" method="POST">
+            <p2><b>Choose the measurements here for your shed:<b></p2>
             <table class="table table-striped">
                 <thead><tr><th>Heigth</th><th>Length</th><th>Width</th><th></th></tr></thead>
                 <tbody><tr>
-                        <td><select name=heigth id =option><option>220 cm</option></td>
+                        <td>220 cm</td>
 
                         <td><select name=length id="option">
-                                <% for (int i = 1; i < cf.getMaxLength() + 1; i++) {%>
+                                <% for (int i = 1; i < cf.getMaxShedLength() + 1; i++) {%>
                                 <option value=1><%= cf.getShedlength(i)%></option><% }%>
                         </td>                          
 
                         <td><select name=width id="option">
-                                <% for (int i = 1; i < cf.getMaxWidth() + 1; i++) {%>
+                                <% for (int i = 1; i < cf.getMaxShedWidth() + 1; i++) {%>
                                 <option value=1><%= cf.getShedwidth(i)%></option><% }%>
                         </td>  
 
@@ -40,7 +40,7 @@
 
         </form>
         <div class="back">
-            <a type="button" class="btn btn-primary test" href ="FlatAngle.jsp">Back</a>
-        </div>  
+        <a type="button" class="btn btn-primary test" href ="FlatAngle.jsp">Back to start</a>
+    </div>
     </body>
 </html>

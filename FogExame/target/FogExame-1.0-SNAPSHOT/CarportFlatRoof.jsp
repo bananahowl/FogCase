@@ -16,7 +16,7 @@
     </head>
     <body>
         <% CarportFacade cf = new CarportFacade();%>    
-        <h1></h1>
+      
     <p2><b>Carport efter egne mål</b></p2><br><br>
 
     <p1>Den valgte carport har flat tag</p1>
@@ -25,7 +25,7 @@
     <br><br><br><br>
 
     <p2>Choose the size of your carport:</p2>
-    <form>
+    <form name ="withFlat" action="FrontController" method="POST">
         <table class="table table-striped">
             <thead><tr><th>Height</th><th>Length</th><th>Width</th><th></th></tr></thead>
             <tbody><tr>
@@ -34,12 +34,12 @@
 
                     <td><select name=length id="option">                        
                             <% for (int i = 1; i < cf.getMaxLength() + 1; i++) {%>
-                            <option value=1><%= cf.getShedlength(i)%></option><% }%>
+                            <option value=1><%=cf.getCarportLength(i)%></option><% }%>
                     </td>                          
 
                     <td><select name=width id="option">
                             <% for (int i = 1; i < cf.getMaxWidth() + 1; i++) {%>
-                            <option value=1><%= cf.getShedwidth(i)%></option><% }%>
+                            <option value=1><%=cf.getCarportWidth(i) %></option><% }%>
                     </td> 
 
                     <td><a type="button" class="btn btn-primary test" href ="Shed.jsp">Next</a></td>
