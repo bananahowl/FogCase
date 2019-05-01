@@ -42,38 +42,17 @@ public class DataMapperTest {
      */
     @Test
     public void testGetMatiralName() throws Exception {
-        System.out.println("getMatiralName");
-        int id = 0;
-        String expResult = "";
-        String result = DataMapper.getMatiralName(id);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        String result = DataMapper.getMatiralName(1);
+        assertEquals("birk", result);
     }
-
-    /**
-     * Test of createUser method, of class DataMapper.
-     */
-    @Test
-    public void testCreateUser() throws Exception {
-        System.out.println("createUser");
-        User user = null;
-        DataMapper.createUser(user);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
+    
     /**
      * Test of getmaxmatiralnum method, of class DataMapper.
      */
     @Test
     public void testGetmaxmatiralnum() throws Exception {
-        System.out.println("getmaxmatiralnum");
-        int expResult = 0;
         int result = DataMapper.getmaxmatiralnum();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(4, result);
     }
 
     /**
@@ -81,12 +60,8 @@ public class DataMapperTest {
      */
     @Test
     public void testGetMaxLength() throws Exception {
-        System.out.println("getMaxLength");
-        int expResult = 0;
         int result = DataMapper.getMaxLength();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(18, result);
     }
 
     /**
@@ -94,12 +69,8 @@ public class DataMapperTest {
      */
     @Test
     public void testGetMaxAngles() throws Exception {
-        System.out.println("getMaxAngles");
-        int expResult = 0;
         int result = DataMapper.getMaxAngles();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(6, result);
     }
 
     /**
@@ -107,12 +78,8 @@ public class DataMapperTest {
      */
     @Test
     public void testGetMaxWidth() throws Exception {
-        System.out.println("getMaxWidth");
-        int expResult = 0;
         int result = DataMapper.getMaxWidth();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(18, result);
     }
 
     /**
@@ -120,12 +87,8 @@ public class DataMapperTest {
      */
     @Test
     public void testGetMaxShedWidth() throws Exception {
-        System.out.println("getMaxShedWidth");
-        int expResult = 0;
         int result = DataMapper.getMaxShedWidth();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(18, result);
     }
 
     /**
@@ -133,12 +96,8 @@ public class DataMapperTest {
      */
     @Test
     public void testGetMaxShedLength() throws Exception {
-        System.out.println("getMaxShedLength");
-        int expResult = 0;
         int result = DataMapper.getMaxShedLength();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(20,result);
     }
 
     /**
@@ -146,12 +105,8 @@ public class DataMapperTest {
      */
     @Test
     public void testGetMaxRoofMaterial() throws Exception {
-        System.out.println("getMaxRoofMaterial");
-        int expResult = 0;
         int result = DataMapper.getMaxRoofMaterial();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(3, result);
     }
 
     /**
@@ -159,13 +114,8 @@ public class DataMapperTest {
      */
     @Test
     public void testGetRoofMaterial() throws Exception {
-        System.out.println("getRoofMaterial");
-        int id = 0;
-        String expResult = "";
-        String result = DataMapper.getRoofMaterial(id);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        String result = DataMapper.getRoofMaterial(3);
+        assertEquals("plast", result);
     }
 
     /**
@@ -173,13 +123,8 @@ public class DataMapperTest {
      */
     @Test
     public void testGetwidth() throws Exception {
-        System.out.println("getwidth");
-        int id = 0;
-        int expResult = 0;
-        int result = DataMapper.getwidth(id);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        int result = DataMapper.getwidth(2);
+        assertEquals(270, result);
     }
 
     /**
@@ -187,13 +132,8 @@ public class DataMapperTest {
      */
     @Test
     public void testGetlength() throws Exception {
-        System.out.println("getlength");
-        int id = 0;
-        int expResult = 0;
-        int result = DataMapper.getlength(id);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        int result = DataMapper.getlength(1);
+        assertEquals(270, result);
     }
 
     /**
@@ -201,13 +141,8 @@ public class DataMapperTest {
      */
     @Test
     public void testGetShedwidth() throws Exception {
-        System.out.println("getShedwidth");
-        int id = 0;
-        int expResult = 0;
-        int result = DataMapper.getShedwidth(id);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        int result = DataMapper.getShedwidth(4);
+        assertEquals(300, result);
     }
 
     /**
@@ -215,13 +150,8 @@ public class DataMapperTest {
      */
     @Test
     public void testGetShedlength() throws Exception {
-        System.out.println("getShedlength");
-        int id = 0;
-        int expResult = 0;
-        int result = DataMapper.getShedlength(id);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        int result = DataMapper.getShedlength(4);
+        assertEquals(240, result);
     }
 
     /**
@@ -229,13 +159,8 @@ public class DataMapperTest {
      */
     @Test
     public void testGetRoofAngle() throws Exception {
-        System.out.println("getRoofAngle");
-        int id = 0;
-        int expResult = 0;
-        int result = DataMapper.getRoofAngle(id);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        int result = DataMapper.getRoofAngle(4);
+        assertEquals(35, result);
     }
     
 }
