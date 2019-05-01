@@ -133,13 +133,9 @@ public class CalcPartList {
     public static MaterialList calcSper(int length , int width) throws CarportException, SQLException
     {   
         
-        int gap = 55;
-        int amountOfLumberRem = Math.round((length / gap));
-        int lengthOfLumberRem = width + 30;
-        int lengthOfLumberSper = length+60; 
-        int amountOfLumberSper = Math.round(2);
-        
-
+        int gap = 50;
+        int amountOfLumberSper = Math.round((length / gap));
+        int lengthOfLumberSper = width+30; 
 
         MaterialList list1 = new MaterialList(lengthOfLumberSper, amountOfLumberSper,"til spær som skal bruges ");
         return list1;
@@ -148,10 +144,9 @@ public class CalcPartList {
      public static MaterialList calcRem(int length , int width) throws CarportException, SQLException
     {   
         
-        int gap = 55;
-        int amountOfLumberRem = Math.round((length / gap));
-        int lengthOfLumberRem = width + 30;
-        int lengthOfLumberSper = length+60; 
+        int amountOfLumberRem = Math.round(2);
+        int lengthOfLumberRem = length + 50;
+        //int lengthOfLumberSper = length+60; 
 
         MaterialList list1 = new MaterialList(lengthOfLumberRem, amountOfLumberRem,"til rem som skal bruges");
         return list1;
