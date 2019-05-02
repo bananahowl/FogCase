@@ -67,6 +67,8 @@ public class CalcPartListtest {
         
         System.out.println("______________________");
         test.woodPrice(superlist);
+        
+        test.printList(superlist);
     }
     
 }
