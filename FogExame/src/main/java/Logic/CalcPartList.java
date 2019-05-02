@@ -29,16 +29,21 @@ public class CalcPartList {
         double topAngleInRadian = Math.toRadians(angleTop);
         double width1 = (double) width;
         double length1 = (double) length;
+        double test = angleInRadian * 57.29578;
+        double test1 = topAngleInRadian * 57.29578;
+        
+        //Math.toDegrees(Math.sin(topAngleInRadian))
+        //Math.toDegrees(Math.sin(angleInRadian))
         
         
-        int angle = (int) Math.toDegrees(Math.asin(angleInDegree));
-        double sideB = ((width1 / Math.toDegrees(Math.sin(topAngleInRadian)))* Math.toDegrees(Math.sin(angleInRadian)));
-        double areaOfRoof = (length1*sideB)*2;
+        double sideB = ((width1 / Math.sin(topAngleInRadian ))* Math.sin(angleInRadian));
+        double areaOfRoof = (length1*sideB) / 10000;
+        double areaOfRoofx2 = areaOfRoof * 2;
                 
         //areaOfSide og areaOfFrontBack er de to tal vi skal bruge til udregning af pris for taget
         //15 tagsten på 1m^2
         
-        int roofTiles = (int) (areaOfRoof * 15);
+        int roofTiles = (int) (areaOfRoofx2 * 15);
         
         //return areaOfRoof;
         MaterialList list1 = new MaterialList(15, roofTiles,"Tagsten");
@@ -46,23 +51,27 @@ public class CalcPartList {
         
     }
     
-    public static MaterialList calcRoofFronts(int angleInDegree) throws CarportException, SQLException
+    public static MaterialList calcRoofFronts(int width, int angleInDegree) throws CarportException, SQLException
     {
         
         //int angleInDegree = DataMapper.getRoofAngle(1);
 
-        int width = DataMapper.getShedwidth(1);
+        double width1 = (double) width;
+        double halfWidth = (double) width /2;
 
-        int angleInRadian = (int) Math.toRadians(angleInDegree);
-        int angleTop = 180 - angleInDegree - angleInDegree;
-        int topAngleInRadian = (int) Math.toRadians(angleTop);
+        double angleInRadian = (double) Math.toRadians(angleInDegree);
+        double angleTop = (double) 180 - angleInDegree - angleInDegree;
+        double topAngleInRadian = (double) Math.toRadians(angleTop);
         
         
-        int angle = (int) Math.toDegrees(Math.asin(angleInDegree));
-        int sideB = (int) ((width / Math.toDegrees(Math.sin(topAngleInRadian)))* Math.toDegrees(Math.sin(angleInRadian)));
+        
+        double sideB = ((width1 / Math.sin(topAngleInRadian ))* Math.sin(angleInRadian));
+        
+        //(sideB * (Math.cos((1/2) * angleTop)));
+        double heigthInEx =  (Math.sqrt((sideB * sideB) - (halfWidth * halfWidth)));
+        int heigthOfRoof = (int) heigthInEx;
         
         
-        int heigthOfRoof = (int) (sideB * (Math.cos((1/2) * angleTop)));
         int areaOfFrontBack = ((1/2) * heigthOfRoof * width) * 2;
         
         int amountOfLumber = (width / 55) * 2;

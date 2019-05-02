@@ -20,9 +20,9 @@ public class CreateSVG extends Command{
     String execute(HttpServletRequest request, HttpServletResponse response) throws CarportException {
         int length = Integer.parseInt(request.getParameter("length")) ;
         int width = Integer.parseInt(request.getParameter("width"));
-        Carport ls = CarportFacade.createCarport(length, width);
+        Carport ls = CarportFacade.createCarportFlatRoof(length, width,0,0);
         request.getSession().setAttribute("customcarport", ls);
-        return "shed";
+        return "shoppingcart";
     }
 
 }
