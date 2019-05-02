@@ -14,7 +14,7 @@
     </head>
     <body>
         <div class="header">
-            <h1>FOG - OVERSKRIFT //</h1>
+            <h1>Fog</h1>
         </div>
 
         <div class="row">
@@ -22,7 +22,7 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="Profile.jsp">Profile</a></li>
-                    <li><a href="FlatAngle">Customize</a></li>
+                    <li><a href="FlatAngle.jsp">Customize</a></li>
                     <li style="float:right"><a class="active" href="#about">BRUG TIL LOG IN/LOG UD</a></li>
                 </ul>
             </div>

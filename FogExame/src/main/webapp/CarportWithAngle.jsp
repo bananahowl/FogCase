@@ -11,68 +11,100 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Carport with angle</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link href ="styling.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <%CarportFacade cf = new CarportFacade(); %>
+         <%CarportFacade cf = new CarportFacade(); %>
 
-    <p2><b>Carport efter egne mål</b></p2><br><br>
+        <div class="header">
+            <h1>Fog</h1>
+        </div>
 
-    <p1>Den valgte carport har Angle tag</p1>
-    <br>
-    <p1>Vi gør vores kunder opmærksomhed på, at alle vores carporte leveres, som et byg-selv-sæt, usamlet og ubehandlet</p1>
-    <br><br><br><br>
+        <div class="row">
+            <div class="col-3 col-s-3 menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Profile.jsp">Profile</a></li>
+                    <li><a href="FlatAngle.jsp">Customize</a></li>
+                    <li style="float:right"><a class="active" href="#about">BRUG TIL LOG IN/LOG UD</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class ="grid-container">
+            <div class ='main'>
+                <p1><b>Carport efter egne mål</b></p1><br><br>
 
-    <p2>Choose the size of your carport:</p2>
-    <form name ="withAngle" action="FrontController" method="POST">
-        <table class="table table-striped">
-            <thead><tr><th>Height</th><th>Length</th><th>Width</th><th>Angle for Roof</th><th>Roof Material</th></tr></thead>
-            <tbody><tr>
+                <p1>The chosen carport has an angel roof</p1><br>
+                <p1>Vi gør vores kunder opmærksomhed på, at alle vores carporte leveres, som et byg-selv-sæt, usamlet og ubehandlet</p1><br><br>
+                <hr>
+                <br><p1><b>Choose the measurements for your carport</b></p1><br>
 
-                    <td>220 cm</td>
+                <form name ="withAngle" action="FrontController" method="POST">
 
-                    <td><select name=length id="option">                        
-                            <% for (int i = 1; i < cf.getMaxLength() + 1; i++) {%>
-                            <option value=1><%=cf.getCarportLength(i)%></option><% }%>
-                    </td>                          
+                    <tr><table>
+                        <td>Height:</td><br>
+                        <td>220 cm</td>
+                    </table>
 
-                    <td><select name=width id="option">
-                            <% for (int i = 1; i < cf.getMaxWidth() + 1; i++) {%>
-                            <option value=1><%= cf.getCarportWidth(i) %></option><% }%>
-                    </td> 
-                    <td><select name=angle id="option">
-                            <% for (int i = 1; i < cf.getMaxAngles() + 1; i++) {%>
-                            <option value=2><%= cf.getRoofAngle(i)%></option><% }%>
-                    </td>  
+                    <table>
+                        <td>Length:</td><br>
+                        <td><select name=length id="option">                        
+                                <% for (int i = 1; i < cf.getMaxLength() + 1; i++) {%>
+                                <option value=1><%=cf.getCarportLength(i)%></option><% }%></td>                          
+                    </table>
 
-                    <td><select name=rmaterials id="option">
-                            <% for (int i = 1; i < cf.getMaxRoofMaterial() + 1; i++) {
-                            %> <option value=2><%= cf.getRoofMaterial(i)%></option><% }%>
-                    </td> 
-                </tr>
-        </table>
-                    <h1>shed</h1>
-                    <table class="table table-striped">
-                            <thead><tr><th>Heigth</th><th>Length</th><th>Width</th><th></th></tr></thead>
-                            <tbody><tr>
-                                    <td>220 cm</td>
+                    <table>
+                        <td>Width:</td><br>
+                        <td><select name=width id="option">
+                                <% for (int i = 1; i < cf.getMaxWidth() + 1; i++) {%>
+                                <option value=1><%= cf.getCarportWidth(i)%></option><% }%></td>
+                    </table>
 
-                                    <td><select name=length id="option">
-                                            <% for (int i = 1; i < cf.getMaxShedLength() + 1; i++) {%>
-                                            <option value=1><%= cf.getShedlength(i)%></option><% }%>
-                                    </td>                          
+                    <table>
+                        <td>Angel:</td><br>
+                        <td><select name=angle id="option">
+                                <% for (int i = 1; i < cf.getMaxAngles() + 1; i++) {%>
+                                <option value=2><%= cf.getRoofAngle(i)%></option><% }%></td>  
+                    </table>
 
-                                    <td><select name=width id="option">
-                                            <% for (int i = 1; i < cf.getMaxShedWidth() + 1; i++) {%>
-                                            <option value=1><%= cf.getShedwidth(i)%></option><% }%>
-                                    </td>  
-                                    <td><a type="button" class="btn btn-primary test" href ="Shoppingcart.jsp">Add to shoppingcart</a></td>
-                                </tr>
-                        </table>
-    </form>
-    <div class="back">
-        <a type="button" class="btn btn-primary test" href ="FlatAngle.jsp">Back</a>
-    </div>
+                    <table>
+                        <td>Roof Material:</td><br>
+                        <td><select name=rmaterials id="option">
+                                <% for (int i = 1; i < cf.getMaxRoofMaterial() + 1; i++) {
+                                %> <option value=2><%= cf.getRoofMaterial(i)%></option><% }%></td> 
+                    </table>
+                    </tr>
+                </form>
+                    <hr>
+                    <br><p1><b>Choose the measurements for your shed:</b></p1><br><br>
+                <form name ="shed" action="FrontController" method="POST">
+                    <tr>
+                    <table>
+                        <td>Height:</td><br>
+                        <td>220 cm</td>
+                    </table>
+
+                    <table>
+                        <td>Length:</td><br>
+                        <td><select name=length id="option">
+                                <% for (int i = 1; i < cf.getMaxShedLength() + 1; i++) {%>
+                                <option value=1><%= cf.getShedlength(i)%></option><% }%></td>                          
+                    </table>
+
+                    <table>
+                        <td>Width:</td><br>
+                        <td><select name=width id="option">
+                                <% for (int i = 1; i < cf.getMaxShedWidth() + 1; i++) {%>
+                                <option value=1><%= cf.getShedwidth(i)%></option><% }%></td>
+                    </table>
+                    </tr>
+                </form>
+                    <div class ="right">
+                        <br><br><a type="button" href ="FlatAngle.jsp"> Back </a>
+                <a type="button" float ="right" href ="ShoppingCart.jsp">Add to shoppingcart</a>
+                    </div>
+            </div>
+            <div class="footer">THIS IS A FOOTER </div>
+        </div>
 </body>
 </html> 
