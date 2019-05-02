@@ -38,7 +38,7 @@ public class CalcPrice {
     
     
     public void printList(ArrayList <MaterialList> vals){
-        System.out.println("--------------------");
+        System.out.println("----------------------");
     for(int i= 0; i< vals.size(); i ++ ){
         System.out.println(vals.get(i).toString());
     }
