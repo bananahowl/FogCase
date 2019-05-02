@@ -14,9 +14,9 @@ public class Carport {
     private int heigth;
     private int width;
     private boolean shed;
-    private boolean roofangle;
+    private int roofangle;
 
-    public Carport(int length, int heigth, int width, boolean shed, boolean roofangle) {
+    public Carport(int length, int heigth, int width, boolean shed, int roofangle) {
         this.length = length;
         this.heigth = heigth;
         this.width = width;
@@ -56,12 +56,13 @@ public class Carport {
         this.shed = shed;
     }
 
-    public boolean isRoofangle() {
+    public int getRoofangle() {
         return roofangle;
     }
 
-    public void setRoofangle(boolean roofangle) {
+    public void setRoofangle(int roofangle) {
         this.roofangle = roofangle;
     }
+
     
 }

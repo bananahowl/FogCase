@@ -25,7 +25,9 @@
     <br><br><br><br>
 
     <p2>Choose the size of your carport:</p2>
-    <form name ="withFlat" action="FrontController" method="POST">
+    
+    <form name ="withFlat" action="FrontController" method="GET">
+        <input type="hidden" name="command" value="createCP">
         <table class="table table-striped">
             <thead><tr><th>Height</th><th>Length</th><th>Width</th><th></th></tr></thead>
             <tbody><tr>
@@ -34,13 +36,17 @@
 
                     <td><select name=length id="option">                        
                             <% for (int i = 1; i < cf.getMaxLength() + 1; i++) {%>
-                            <option value=1><%=cf.getCarportLength(i)%></option><% }%>
+                            <option value=<%=i%>><%=cf.getCarportLength(i)%></option><% }%>
                     </td>                          
 
                     <td><select name=width id="option">
                             <% for (int i = 1; i < cf.getMaxWidth() + 1; i++) {%>
-                            <option value=1><%=cf.getCarportWidth(i) %></option><% }%>
-                    </td>    
+
+                            <option value=<%=i%>><%=cf.getCarportWidth(i) %></option><% }%>
+                    </td> 
+                    
+                    
+            
             </tr>
             
             <h1>Shed:</h1>
@@ -52,14 +58,14 @@
 
                                     <td><select name=length id="option">
                                             <% for (int i = 1; i < cf.getMaxShedLength() + 1; i++) {%>
-                                            <option value=1><%= cf.getShedlength(i)%></option><% }%>
+                                            <option value=<%=i%>><%= cf.getShedlength(i)%></option><% }%>
                                     </td>                          
 
                                     <td><select name=width id="option">
                                             <% for (int i = 1; i < cf.getMaxShedWidth() + 1; i++) {%>
-                                            <option value=1><%= cf.getShedwidth(i)%></option><% }%>
+                                            <option value=<%=i%>><%= cf.getShedwidth(i)%></option><% }%>
                                     </td>  
-                                    <td><a type="button" class="btn btn-primary test" href ="Shoppingcart.jsp">Add to shoppingcart</a></td>
+                                    <td><input type="submit" class="btn btn-primary test" value="Add to shoppingcart"></td>
                                 </tr>
                         </table>
     </form>

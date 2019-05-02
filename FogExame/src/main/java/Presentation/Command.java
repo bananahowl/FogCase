@@ -16,7 +16,7 @@ abstract class Command {
         commands.put("register", new Register());/*
         commands.put( "backdoorLogin", new backdoorLogin());
          */
-        commands.put("customCP", new CalculateCustomCarport());/*
+        commands.put("createCP", new CalculateCustomCarport());/*
         commands.put( "createOrder", new CreateOrder());
         commands.put( "seeMyOrders", new GetMyOrders());*/
 

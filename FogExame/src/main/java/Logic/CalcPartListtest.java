@@ -27,14 +27,16 @@ public class CalcPartListtest {
         
         System.out.println("______________________");
            
-        MaterialList shedtest = CalcPartList.calcShedMats(270);
-        MaterialList spertest = CalcPartList.calcSper(600 , 350);
-        MaterialList remtest = CalcPartList.calcRem(600, 350);
-        MaterialList posttest = CalcPartList.calculatePortPost(350, 780);
-        MaterialList rooftest = CalcPartList.calcRoofSides(400,800, 30);
-        MaterialList fronttest = CalcPartList.calcRoofFronts(30);
+        MaterialList shedtest = CalcPartList.calcShedMats(700);
+        MaterialList spertest = CalcPartList.calcSper(700 , 400);
+        MaterialList remtest = CalcPartList.calcRem(700, 400);
+        MaterialList posttest = CalcPartList.calculatePortPost(400, 700);
+        MaterialList rooftest = CalcPartList.calcRoofSides(400,700, 25);
+        MaterialList fronttest = CalcPartList.calcRoofFronts(400, 25);
+        MaterialList verticaltest = CalcPartList.calcAngledVerticalSpær(400, 700, 25);
+        MaterialList horizontaltest = CalcPartList.calcAngledHorizontalSpær(400, 700);
           
-        ArrayList<MaterialList> superlist = CalcPartList.totalMaterial(shedtest, spertest, remtest, posttest, rooftest, fronttest);
+        ArrayList<MaterialList> superlist = CalcPartList.totalMaterial(shedtest, spertest, remtest, posttest, rooftest, fronttest, verticaltest, horizontaltest);
         System.out.println(superlist);
         
         for(int i = 0; i < superlist.size(); i++){
@@ -45,7 +47,7 @@ public class CalcPartListtest {
         }
         CalcPrice test = new CalcPrice();
         
-        /*
+        
         
         
         
@@ -55,7 +57,8 @@ public class CalcPartListtest {
         String post = posttest.toString();
         String roof = rooftest.toString();
         String front = fronttest.toString();
-        
+        String vertical = verticaltest.toString();
+        String horizontal = horizontaltest.toString();
         
         System.out.println(shed);
         System.out.println(spær);
@@ -63,10 +66,17 @@ public class CalcPartListtest {
         System.out.println(post);
         System.out.println(roof);
         System.out.println(front);
-      */ 
+        System.out.println(vertical);
+        System.out.println(horizontal);
         
         System.out.println("______________________");
+
         test.woodPrice(superlist);
+        
+        test.printList(superlist);
+
+        //test.woodPrice(superlist);
+
     }
     
 }

@@ -20,25 +20,20 @@ public class CalcPartList {
     
     public static MaterialList calcRoofSides(int width, int length, int angleInDegree) throws CarportException, SQLException
     {
-        //Til udregningen af selve taget på en carport
-        
-       
-        
         double angleInRadian = Math.toRadians(angleInDegree);
         double angleTop = 180 - angleInDegree - angleInDegree;
         double topAngleInRadian = Math.toRadians(angleTop);
         double width1 = (double) width;
         double length1 = (double) length;
         
-        
-        int angle = (int) Math.toDegrees(Math.asin(angleInDegree));
-        double sideB = ((width1 / Math.toDegrees(Math.sin(topAngleInRadian)))* Math.toDegrees(Math.sin(angleInRadian)));
-        double areaOfRoof = (length1*sideB)*2;
+        double sideB = ((width1 / Math.sin(topAngleInRadian ))* Math.sin(angleInRadian));
+        double areaOfRoof = (length1*sideB) / 10000;
+        double areaOfRoofx2 = areaOfRoof * 2;
                 
         //areaOfSide og areaOfFrontBack er de to tal vi skal bruge til udregning af pris for taget
         //15 tagsten på 1m^2
         
-        int roofTiles = (int) (areaOfRoof * 15);
+        int roofTiles = (int) (areaOfRoofx2 * 15);
         
         //return areaOfRoof;
         MaterialList list1 = new MaterialList(15, roofTiles,"Tagsten");
@@ -46,29 +41,25 @@ public class CalcPartList {
         
     }
     
-    public static MaterialList calcRoofFronts(int angleInDegree) throws CarportException, SQLException
+    public static MaterialList calcRoofFronts(int width, int angleInDegree) throws CarportException, SQLException
     {
-        
         //int angleInDegree = DataMapper.getRoofAngle(1);
 
-        int width = DataMapper.getShedwidth(1);
+        double width1 = (double) width;
+        double halfWidth = (double) width /2;
 
-        int angleInRadian = (int) Math.toRadians(angleInDegree);
-        int angleTop = 180 - angleInDegree - angleInDegree;
-        int topAngleInRadian = (int) Math.toRadians(angleTop);
+        double angleInRadian = (double) Math.toRadians(angleInDegree);
+        double angleTop = (double) 180 - angleInDegree - angleInDegree;
+        double topAngleInRadian = (double) Math.toRadians(angleTop);
         
+        double sideB = ((width1 / Math.sin(topAngleInRadian ))* Math.sin(angleInRadian));
+        double heigthInEx =  (Math.sqrt((sideB * sideB) - (halfWidth * halfWidth)));
+        double heigthOfRoof =  heigthInEx;
         
-        int angle = (int) Math.toDegrees(Math.asin(angleInDegree));
-        int sideB = (int) ((width / Math.toDegrees(Math.sin(topAngleInRadian)))* Math.toDegrees(Math.sin(angleInRadian)));
-        
-        
-        int heigthOfRoof = (int) (sideB * (Math.cos((1/2) * angleTop)));
-        int areaOfFrontBack = ((1/2) * heigthOfRoof * width) * 2;
-        
+        int heigthRounded = (int) Math.round(heigthOfRoof/20) * 20;
         int amountOfLumber = (width / 55) * 2;
+        MaterialList list1 = new MaterialList(heigthRounded, amountOfLumber, "Træ til tag gavl 1 og gavl 2");
         
-        //return areaOfFrontBack;
-        MaterialList list1 = new MaterialList(heigthOfRoof, amountOfLumber, "Træ til tag gavl 1 og gavl 2");
         return list1;
     }
     
@@ -76,47 +67,36 @@ public class CalcPartList {
     {
         //Planks 200cm in heigth(length), 55cm width, thickness idk 
         
-        
-        ArrayList shedMats = new ArrayList();
-        int heigth = 220;
         int width = CarportFacade.getShedwidth(1);
         
         int amountOfLumberLength = (length / 55) * 2;
         int amountOfLumberWidth = (width / 55) * 2;
         
-        
-        
         int result = amountOfLumberLength + amountOfLumberWidth;
-        
-        
-        
         MaterialList list1 = new MaterialList(length,result,"planker til skur");
+        
         return list1;
-        
-        
-        
     }
     
-    public static ArrayList<MaterialList> totalMaterial(MaterialList shed, MaterialList rem, MaterialList spær, MaterialList post, MaterialList roof, MaterialList front) throws CarportException, SQLException
+    public static ArrayList<MaterialList> totalMaterial(MaterialList shed, MaterialList rem, MaterialList spær, MaterialList post, MaterialList roof, MaterialList front, MaterialList vertical, MaterialList horizontal) throws CarportException, SQLException
     {
     
     ArrayList<MaterialList> list1 = new ArrayList<MaterialList>();
     
+        list1.add(shed);
+        list1.add(rem);
+        list1.add(spær);
+        list1.add(post);
+        list1.add(roof);
+        list1.add(front);
+        list1.add(vertical);
+        list1.add(horizontal);
     
-    list1.add(shed);
-    list1.add(rem);
-    list1.add(spær);
-    list1.add(post);
-    list1.add(roof);
-    list1.add(front);
-    
-    return list1;
-    
+        return list1;
     }
     
     public static int calcShed() throws CarportException, SQLException
     {
-        
         int length = DataMapper.getShedlength(1);
         int width = DataMapper.getShedwidth(1);
         int heigth = 220;
@@ -132,63 +112,71 @@ public class CalcPartList {
     
     public static MaterialList calcSper(int length , int width) throws CarportException, SQLException
     {   
-        
         int gap = 50;
+        
         int amountOfLumberSper = Math.round((length / gap));
         int lengthOfLumberSper = width+30; 
 
         MaterialList list1 = new MaterialList(lengthOfLumberSper, amountOfLumberSper,"til spær som skal bruges ");
-        return list1;
         
+        return list1;
     }
      public static MaterialList calcRem(int length , int width) throws CarportException, SQLException
     {   
-        
         int amountOfLumberRem = Math.round(2);
         int lengthOfLumberRem = length + 50;
         //int lengthOfLumberSper = length+60; 
 
         MaterialList list1 = new MaterialList(lengthOfLumberRem, amountOfLumberRem,"til rem som skal bruges");
-        return list1;
         
+        return list1;
     }
     
     public static MaterialList calculatePortPost(int width, int length)throws CarportException, SQLException
     {
-    /*int valueMat = DataMapper.getMaterialPrice(material);
-    int height = DataMapper.getHeight(1);
-    int width = DataMapper.getWidth(width);*/
-    //int length = DataMapper.getLength(length);
-    int gap = 75;
-    int postamount = 0;
-    int postLenght = 220 + 90;
+        int gap = 75;
+        int postamount = 0;
+        int postLenght = 220 + 90;
     
-   // for(int i = leng){}
+        if(length % gap == 0){
     
-    if(length % gap == 0){
+        postamount = length / gap;
+        }
+        else{
+            postamount = Math.round(length/gap) + 1;
+        // code some dank here
+        }
     
-    postamount = length / gap;
-    }
-    else{
-        postamount = Math.round(length/gap) + 1;
-    // code some dank here
-    }
-    
-    MaterialList list1 = new MaterialList(postLenght, postamount, "mængden af stolper der skal bruges");
-    
-   
-    return list1;
+        MaterialList list1 = new MaterialList(postLenght, postamount, "mængden af stolper der skal bruges");
+       
+        return list1;
     }
     
-    public static ArrayList goodsNeeded() throws CarportException, SQLException
-    {
-        //rooftiles on one M^2 = 15
-        ArrayList goods = new ArrayList();
-        //int rooftilezz = calcRoofSides() / 15;
-        //int shedLumber = calcShedMats();
+    public static MaterialList calcAngledVerticalSpær(int width, int length, int angleInDegree) throws CarportException, SQLException
+    {   
+        double angleInRadian = Math.toRadians(angleInDegree);
+        double angleTop = 180 - angleInDegree - angleInDegree;
+        double topAngleInRadian = Math.toRadians(angleTop);
+        double width1 = (double) width;
+
+        int sideB = (int) ((width1 / Math.sin(topAngleInRadian ))* Math.sin(angleInRadian));
         
-        //goods.add(shedLumber);
+        int gap = 50;
+        int amountOfLumberSper = Math.round((length / gap));
         
-        return goods;
+        MaterialList list1 = new MaterialList(sideB, amountOfLumberSper,"vertikale spær til vinklet tag ");
+        
+        return list1;
+    }
+    
+    public static MaterialList calcAngledHorizontalSpær(int width, int length) throws CarportException, SQLException
+    {   
+        int gap = 100;
+        int amountOfLumberSper = Math.round((length / gap));
+        int lengthOfLumberSper = length+60; 
+
+        MaterialList list1 = new MaterialList(lengthOfLumberSper, amountOfLumberSper,"horizontale spær til vinklet tag");
+        
+        return list1;
     }
 }
