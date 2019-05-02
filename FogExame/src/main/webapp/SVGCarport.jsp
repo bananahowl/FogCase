@@ -9,8 +9,8 @@
 <%
     int width = Integer.parseInt(request.getParameter("w"));
 
-
 %>
+
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -19,23 +19,26 @@
     <body>
         <svg height ="120mm" width ="1000mm">
 
-        <rect x="0" y="0" width="<%=width%>mm" height="10mm" fill="#0000ff" />
+        <rect x="0" y="0" width="<%=width+5.5%>mm" height="10mm" fill="#none"
+              style="stroke:rgb(0,0,255);stroke-width:1mm"/>
 
-        <rect x="0" y="100mm" width="<%=width%>mm" height="10mm" fill="#0000ff" />	
-
+        <rect x="0" y="100mm" width="<%=width+5.5%>mm" height="10mm" fill="#none"
+              style="stroke:rgb(0,0,255);stroke-width:1mm"/>	
+                
         <line x1="0" y1="115mm" x2="10mm" y2="110mm "
               style="stroke:rgb(0,0,0);stroke-width:1mm "/>
         <line x1="0" y1="115mm" x2="10mm" y2="120mm "
               style="stroke:rgb(0,0,0);stroke-width:1mm"/>
 
-        <line x1="<%=width + 10%>mm" y1="115mm" x2="<%=width%>mm" y2="110mm "
+        <line x1="<%=width + 10%>mm" y1="115mm" x2="<%=width%>mm" y2="111mm "
               style="stroke:rgb(0,0,0);stroke-width:1mm"/>
-        <line x1="<%=width+10%>mm" y1="115mm" x2="<%=width%>mm" y2="120mm "
+        <line x1="<%=width+10%>mm" y1="115mm" x2="<%=width%>mm" y2="119mm "
               style="stroke:rgb(0,0,0);stroke-width:1mm"/>  
 
         <% for (int i = 0; i < 1000; i++) {
                 if (width >= -0) {
-        %><rect x="<%=width%>mm" y="0"  width="5.5mm" height="110mm" fill="#ff0000" />
+        %><rect x="<%=width%>mm" y="0"  width="5.5mm" height="110mm" fill="none"
+              style="stroke:rgb(255,0,0);stroke-width:1mm"/>
         <rect x="10mm" y="115mm"  width="<%=width - 10%>mm" height="1mm" fill="#000000" /> <%
                     width = width - 50;
                 } else {
