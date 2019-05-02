@@ -223,7 +223,33 @@ public class CalcPartList {
     MaterialList val =new MaterialList(length, total, "metal til stolper");
     return val;
     }
+    /* // idea to calc the seperate parts to in a better way.
+        public static MaterialList calcBolts(int amounts, String type){
+   switch(type){
+       case sperTop:
+           
+       break;
+       
+       case sper:
+           
+       break;
+       
+       case pots:
+           
+       break;
+       default:
+           System.out.println("Error gotta choose a right value");
+           break;
+   }
+    for(int i= 0; i < amounts; i++){
     
+        
+    }
+        System.out.println(total);
+    MaterialList val =new MaterialList(length, total, "metal til stolper");
+    return val;
+    }
+    */
    
     
 }
