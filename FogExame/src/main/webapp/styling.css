@@ -1,29 +1,65 @@
 
+* {
+    box-sizing: border-box;
+}
+
+.header {
+    text-align:left;
+    width:100%;
+    background-color: lightblue;
+    color:white;
+    padding: 15px;
+}
+
+.footer {
+    background-color: lightblue;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    padding: 25px;
+    width:100%;
+}
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.topnav a:white {
+    background-color: #ddd;
+    color: grey;
+}
+
+.main {
+    width: 100%;
+    float: center;
+    padding: 100px;
+}
+
 body{
     background-color: white;
-    margin: 20px;
-    width: 1450px;
-    padding: 20px;
+    margin: 0px;
+    padding: 0px;
 }
 h1{
     font-size:30px;
     font-family:tahoma;
     text-align:center;
-    color:black;
+    color:white;
 }
 
-p2{
-    font-size: 20px;
+p1{
+    font-size: 25px;
     font-family: tahoma;
-    text-align: center;
+    text-align: left;
     color:black;
-}
-
-p3{
-  font-size: 15px;
-    font-family: tahoma;
-    text-align: center;
-    color:black;  
 }
 
 .AngleOrFlat {
@@ -37,3 +73,55 @@ form{
     font-family: tahoma;
     text-align: center;
 }
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: grey;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: lightslategrey;
+}
+.active {
+    background-color: grey;
+}
+select {
+    width: 100%;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+}
+a {
+    background-color: grey;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: right;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+}
+
+.left {
+    text-align: right;
+}
+
+
+
+

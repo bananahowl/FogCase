@@ -35,6 +35,15 @@ public class CalcPrice {
           }
         return total ;
         }
+    
+    
+    public void printList(ArrayList <MaterialList> vals){
+        System.out.println("----------------------");
+    for(int i= 0; i< vals.size(); i ++ ){
+        System.out.println(vals.get(i).toString());
+    }
+        System.out.println("---------- END ----------");
+    }
 
 /* sample for test
 
