@@ -67,15 +67,16 @@ public class CalcPartList {
         
         //(sideB * (Math.cos((1/2) * angleTop)));
         double heigthInEx =  (Math.sqrt((sideB * sideB) - (halfWidth * halfWidth)));
-        int heigthOfRoof = (int) heigthInEx;
+        double heigthOfRoof =  heigthInEx;
         
+        int heigthRounded = (int) Math.round(heigthOfRoof/20) * 20;
         
-        int areaOfFrontBack = ((1/2) * heigthOfRoof * width) * 2;
+        //int areaOfFrontBack = ((1/2) * heigthOfRoof * width) * 2;
         
         int amountOfLumber = (width / 55) * 2;
         
         //return areaOfFrontBack;
-        MaterialList list1 = new MaterialList(heigthOfRoof, amountOfLumber, "Træ til tag gavl 1 og gavl 2");
+        MaterialList list1 = new MaterialList(heigthRounded, amountOfLumber, "Træ til tag gavl 1 og gavl 2");
         return list1;
     }
     
