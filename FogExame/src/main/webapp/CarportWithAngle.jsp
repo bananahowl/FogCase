@@ -50,11 +50,26 @@
                             <% for (int i = 1; i < cf.getMaxRoofMaterial() + 1; i++) {
                             %> <option value=2><%= cf.getRoofMaterial(i)%></option><% }%>
                     </td> 
-
-                    <td><a type="button" class="btn btn-primary test" href ="Shed.jsp">Next</a></td>
-
                 </tr>
         </table>
+                    <h1>shed</h1>
+                    <table class="table table-striped">
+                            <thead><tr><th>Heigth</th><th>Length</th><th>Width</th><th></th></tr></thead>
+                            <tbody><tr>
+                                    <td>220 cm</td>
+
+                                    <td><select name=length id="option">
+                                            <% for (int i = 1; i < cf.getMaxShedLength() + 1; i++) {%>
+                                            <option value=1><%= cf.getShedlength(i)%></option><% }%>
+                                    </td>                          
+
+                                    <td><select name=width id="option">
+                                            <% for (int i = 1; i < cf.getMaxShedWidth() + 1; i++) {%>
+                                            <option value=1><%= cf.getShedwidth(i)%></option><% }%>
+                                    </td>  
+                                    <td><a type="button" class="btn btn-primary test" href ="Shoppingcart.jsp">Add to shoppingcart</a></td>
+                                </tr>
+                        </table>
     </form>
     <div class="back">
         <a type="button" class="btn btn-primary test" href ="FlatAngle.jsp">Back</a>

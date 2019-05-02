@@ -82,8 +82,20 @@ public class CarportFacade {
         return DataMapper.getRoofAngle(id);
     }
 
-    public static Carport createCarport(int length, int width) {
-        Carport carport = new Carport(length, 220, width, false, false);
+    public static Carport createCarportFlatRoof(int length, int width, int widthShed, int lengthShed) {
+        boolean shed = true; 
+        if (widthShed == 1 || lengthShed == 1) {
+            shed = false;
+        }
+        Carport carport = new Carport(length, 220, width, shed, 0);
+        return carport;
+    }
+        public static Carport createCarportAngleRoof(int length, int width, int widthShed, int lengthShed,int angle) {
+        boolean shed = true; 
+        if (widthShed == 1 || lengthShed == 1) {
+            shed = false;
+        }
+        Carport carport = new Carport(length, 220, width, shed, angle);
         return carport;
     }
 
