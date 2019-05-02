@@ -45,7 +45,7 @@
 
 body{
     background-color: white;
-    margin: 0px;
+    margin: auto;
     padding: 0px;
 }
 h1{
@@ -75,8 +75,8 @@ form{
 }
 ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    margin: auto;
+    padding: auto;
     overflow: hidden;
     background-color: grey;
 }
@@ -122,6 +122,8 @@ a {
     text-align: right;
 }
 
-
-
+td{
+   font-family: tahoma;
+   font-size: 20px
+}
 

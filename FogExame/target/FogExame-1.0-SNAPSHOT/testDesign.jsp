@@ -99,9 +99,10 @@
                     </table>
                     </tr>
                 </form>
-                        <br><br><a type="button" float="left" href ="FlatAngle.jsp"> Back </a>
+                    <div class ="right">
+                        <br><br><a type="button" href ="FlatAngle.jsp"> Back </a>
                 <a type="button" float ="right" href ="ShoppingCart.jsp">Add to shoppingcart</a>
-                    
+                    </div>
             </div>
             <div class="footer">THIS IS A FOOTER </div>
         </div>
