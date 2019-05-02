@@ -18,27 +18,30 @@ import java.util.ArrayList;
 
 public class CalcPartList {
     
-    public static MaterialList calcRoofSides(int width, int length) throws CarportException, SQLException
+    public static MaterialList calcRoofSides(int width, int length, int angleInDegree) throws CarportException, SQLException
     {
         //Til udregningen af selve taget på en carport
         
        
-        int angleInDegree = DataMapper.getRoofAngle(1);
-        int angleInRadian = (int) Math.toRadians(angleInDegree);
-        int angleTop = 180 - angleInDegree - angleInDegree;
-        int topAngleInRadian = (int) Math.toRadians(angleTop);
+        
+        double angleInRadian = Math.toRadians(angleInDegree);
+        double angleTop = 180 - angleInDegree - angleInDegree;
+        double topAngleInRadian = Math.toRadians(angleTop);
+        double width1 = (double) width;
+        double length1 = (double) length;
         
         
         int angle = (int) Math.toDegrees(Math.asin(angleInDegree));
-        int sideB = (int) ((width / Math.toDegrees(Math.sin(topAngleInRadian)))* Math.toDegrees(Math.sin(angleInRadian)));
-        int areaOfRoof = (length*sideB)*2;
+        double sideB = ((width1 / Math.toDegrees(Math.sin(topAngleInRadian)))* Math.toDegrees(Math.sin(angleInRadian)));
+        double areaOfRoof = (length1*sideB)*2;
                 
         //areaOfSide og areaOfFrontBack er de to tal vi skal bruge til udregning af pris for taget
         //15 tagsten på 1m^2
-        int roofTiles = areaOfRoof * 15;
+        
+        int roofTiles = (int) (areaOfRoof * 15);
         
         //return areaOfRoof;
-        MaterialList list1 = new MaterialList(0, roofTiles,"Tagsten");
+        MaterialList list1 = new MaterialList(15, roofTiles,"Tagsten");
         return list1;
         
     }
@@ -130,13 +133,9 @@ public class CalcPartList {
     public static MaterialList calcSper(int length , int width) throws CarportException, SQLException
     {   
         
-        int gap = 55;
-        int amountOfLumberRem = Math.round((length / gap));
-        int lengthOfLumberRem = width + 30;
-        int lengthOfLumberSper = length+60; 
-        int amountOfLumberSper = Math.round(lengthOfLumberSper);
-        
-
+        int gap = 50;
+        int amountOfLumberSper = Math.round((length / gap));
+        int lengthOfLumberSper = width+30; 
 
         MaterialList list1 = new MaterialList(lengthOfLumberSper, amountOfLumberSper,"til spær som skal bruges ");
         return list1;
@@ -145,10 +144,9 @@ public class CalcPartList {
      public static MaterialList calcRem(int length , int width) throws CarportException, SQLException
     {   
         
-        int gap = 55;
-        int amountOfLumberRem = Math.round((length / gap));
-        int lengthOfLumberRem = width + 30;
-        int lengthOfLumberSper = length+60; 
+        int amountOfLumberRem = Math.round(2);
+        int lengthOfLumberRem = length + 50;
+        //int lengthOfLumberSper = length+60; 
 
         MaterialList list1 = new MaterialList(lengthOfLumberRem, amountOfLumberRem,"til rem som skal bruges");
         return list1;
