@@ -9,8 +9,8 @@
 <%
     int width = Integer.parseInt(request.getParameter("w"));
 
-
 %>
+
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">

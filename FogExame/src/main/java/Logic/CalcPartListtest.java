@@ -28,17 +28,31 @@ public class CalcPartListtest {
         System.out.println("______________________");
            
         MaterialList shedtest = CalcPartList.calcShedMats(270);
-        MaterialList flattest = CalcPartList.flatRoof(600 , 350);
+        MaterialList spertest = CalcPartList.calcSper(600 , 350);
+        MaterialList remtest = CalcPartList.calcRem(600, 350);
         MaterialList posttest = CalcPartList.calculatePortPost(350, 780);
         MaterialList rooftest = CalcPartList.calcRoofSides(350,700);
         MaterialList fronttest = CalcPartList.calcRoofFronts(30);
           
-        ArrayList<MaterialList> superlist = CalcPartList.totalMaterial(shedtest, flattest, posttest, rooftest, fronttest);
+        ArrayList<MaterialList> superlist = CalcPartList.totalMaterial(shedtest, spertest, remtest, posttest, rooftest, fronttest);
         System.out.println(superlist);
         
         
-        //superlist.get()
+
+        String shed = shedtest.toString();
+        String spær = spertest.toString();
+        String rem = remtest.toString();
+        String post = posttest.toString();
+        String roof = rooftest.toString();
+        String front = fronttest.toString();
         
+        
+        System.out.println(shed);
+        System.out.println(spær);
+        System.out.println(rem);
+        System.out.println(post);
+        System.out.println(roof);
+        System.out.println(front);
       
            
             

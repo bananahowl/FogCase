@@ -4,6 +4,7 @@
     Author     : fskn
 --%>
 
+<%@page import="Logic.CalcPartList"%>
 <%@page import="Logic.CarportFacade"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -16,31 +17,33 @@
     </head>
     <body>
         <% CarportFacade cf = new CarportFacade(); %>
+        <%CalcPartList cpl = new CalcPartList(); %>
         <form name ="withShed" action="FrontController" method="POST">
             <p2><b>Choose the measurements here for your shed:<b></p2>
-            <table class="table table-striped">
-                <thead><tr><th>Heigth</th><th>Length</th><th>Width</th><th></th></tr></thead>
-                <tbody><tr>
-                        <td>220 cm</td>
+                        <table class="table table-striped">
+                            <thead><tr><th>Heigth</th><th>Length</th><th>Width</th><th></th></tr></thead>
+                            <tbody><tr>
+                                    <td>220 cm</td>
 
-                        <td><select name=length id="option">
-                                <% for (int i = 1; i < cf.getMaxShedLength() + 1; i++) {%>
-                                <option value=1><%= cf.getShedlength(i)%></option><% }%>
-                        </td>                          
+                                    <td><select name=length id="option">
+                                            <% for (int i = 1; i < cf.getMaxShedLength() + 1; i++) {%>
+                                            <option value=1><%= cf.getShedlength(i)%></option><% }%>
+                                    </td>                          
 
-                        <td><select name=width id="option">
-                                <% for (int i = 1; i < cf.getMaxShedWidth() + 1; i++) {%>
-                                <option value=1><%= cf.getShedwidth(i)%></option><% }%>
-                        </td>  
+                                    <td><select name=width id="option">
+                                            <% for (int i = 1; i < cf.getMaxShedWidth() + 1; i++) {%>
+                                            <option value=1><%= cf.getShedwidth(i)%></option><% }%>
+                                    </td>  
+                                    <td><a type="button" class="btn btn-primary test" href ="Shoppingcart.jsp">Add to shoppingcart</a></td>
+                                </tr>
 
-                        <td><a type="reset" class="btn btn-primary test" href ="Shoppingcart.jsp">Add to shoppingcart</a></td>
-                    </tr>
-
-            </table>
-
-        </form>
-        <div class="back">
-        <a type="button" class="btn btn-primary test" href ="FlatAngle.jsp">Back to start</a>
-    </div>
-    </body>
-</html>
+                        </table>
+                                    
+                                            <p2><input type ="text" name="price" value="<%= cpl. %> "></p2>
+                        <td><a type="button" class="btn btn-primary test">Calculate total price</a></td>
+                        </form>
+                        <div class="back">
+                            <a type="button" class="btn btn-primary test" href ="FlatAngle.jsp">Back to start</a>
+                        </div>
+                        </body>
+                        </html>
