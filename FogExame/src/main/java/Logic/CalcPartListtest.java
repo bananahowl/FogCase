@@ -47,7 +47,7 @@ public class CalcPartListtest {
         }
         CalcPrice test = new CalcPrice();
         
-        /*
+        
         
         
         
@@ -57,7 +57,8 @@ public class CalcPartListtest {
         String post = posttest.toString();
         String roof = rooftest.toString();
         String front = fronttest.toString();
-        
+        String vertical = verticaltest.toString();
+        String horizontal = horizontaltest.toString();
         
         System.out.println(shed);
         System.out.println(spær);
@@ -65,10 +66,11 @@ public class CalcPartListtest {
         System.out.println(post);
         System.out.println(roof);
         System.out.println(front);
-      */ 
+        System.out.println(vertical);
+        System.out.println(horizontal);
         
         System.out.println("______________________");
-        test.woodPrice(superlist);
+        //test.woodPrice(superlist);
     }
     
 }

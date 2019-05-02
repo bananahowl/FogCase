@@ -119,6 +119,7 @@ public class CalcPartList {
     list1.add(vertical);
     list1.add(horizontal);
     
+    
     return list1;
     
     }
