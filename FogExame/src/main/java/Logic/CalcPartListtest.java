@@ -31,8 +31,8 @@ public class CalcPartListtest {
         MaterialList spertest = CalcPartList.calcSper(600 , 350);
         MaterialList remtest = CalcPartList.calcRem(600, 350);
         MaterialList posttest = CalcPartList.calculatePortPost(350, 780);
-        MaterialList rooftest = CalcPartList.calcRoofSides(400,800, 30);
-        MaterialList fronttest = CalcPartList.calcRoofFronts(30);
+        MaterialList rooftest = CalcPartList.calcRoofSides(400,700, 35);
+        MaterialList fronttest = CalcPartList.calcRoofFronts(400, 25);
           
         ArrayList<MaterialList> superlist = CalcPartList.totalMaterial(shedtest, spertest, remtest, posttest, rooftest, fronttest);
         System.out.println(superlist);
