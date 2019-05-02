@@ -10,27 +10,27 @@ abstract class Command {
     private static HashMap<String, Command> commands;
 
     private static void initCommands() {
-     /*   commands = new HashMap<>();
+        commands = new HashMap<>();/*
         commands.put( "login", new Login() );
-        */commands.put( "register", new Register() );/*
+         */
+        commands.put("register", new Register());/*
         commands.put( "backdoorLogin", new backdoorLogin());
-
-      */commands.put( "createLegohouse", new CalculateCustomCarport());/*
+         */
+        commands.put("customCP", new CalculateCustomCarport());/*
         commands.put( "createOrder", new CreateOrder());
         commands.put( "seeMyOrders", new GetMyOrders());*/
 
     }
 
-    static Command from( HttpServletRequest request ) {
-        String commandName = request.getParameter( "command" );
-        if ( commands == null ) {
+    static Command from(HttpServletRequest request) {
+        String commandName = request.getParameter("command");
+        if (commands == null) {
             initCommands();
         }
-        return commands.getOrDefault(commandName, new UnknownCommand() );
+        return commands.getOrDefault(commandName, new UnknownCommand());
     }
 
-        abstract String execute( HttpServletRequest request, HttpServletResponse response ) 
+    abstract String execute(HttpServletRequest request, HttpServletResponse response)
             throws CarportException;
-
 
 }
