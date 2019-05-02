@@ -179,4 +179,57 @@ public class CalcPartList {
         
         return list1;
     }
+    public static MaterialList calcMetalPost(int amounts){
+    int length = 0;
+    int bolt = 2;
+    int screw = 2;
+    int heng = 2;
+    int total = 0;
+    for(int i= 0; i < amounts; i++){
+    total += bolt +screw + heng;
+        
+    }
+        System.out.println(total);
+    
+    
+    MaterialList val =new MaterialList(length, total, "metal til stolper");
+    return val;
+    }
+    
+    public static MaterialList calcMetalSper(int amounts){
+    int length = 0;
+    int bolt = 9;
+    int screw = 9;
+    int heng = 1;
+    int total = 0;
+    for(int i= 0; i < amounts; i++){
+    total += i +bolt +screw + heng;
+        
+    }
+        System.out.println(total);
+    
+    
+    MaterialList val =new MaterialList(length, total, "metal til stolper");
+    return val;
+    }
+    
+    public static MaterialList meatalTopSper(int amounts){
+    int length = 0;
+    int bolt = 2;
+    int screw = 2;
+    int heng = 2;
+    int total = 0;
+    for(int i= 0; i < amounts; i++){
+    total += i +bolt +screw + heng;
+        
+    }
+        System.out.println(total);
+    
+    
+    MaterialList val =new MaterialList(length, total, "metal til stolper");
+    return val;
+    }
+    
+   
+    
 }

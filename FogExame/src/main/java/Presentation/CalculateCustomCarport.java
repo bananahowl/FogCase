@@ -8,6 +8,9 @@ package Presentation;
 import DataLayer.Carport;
 import Logic.CarportException;
 import Logic.CarportFacade;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -24,14 +27,14 @@ public class CalculateCustomCarport extends Command {
         int lengthShed = Integer.parseInt(request.getParameter("lengthShed"));
         int widthShed = Integer.parseInt(request.getParameter("widthShed"));
         int angle = Integer.parseInt(request.getParameter("angle"));
-        if (angle == 0) {
+        if (angle == 1) {
             Carport ls = CarportFacade.createCarportFlatRoof(length, width, lengthShed, widthShed);
             request.getSession().setAttribute("flatCarport", ls);
-            return "shoppingcart";
+            return "Shed";
         } else {
             Carport ls = CarportFacade.createCarportAngleRoof(length, width, lengthShed, widthShed,angle);
             request.getSession().setAttribute("angleCarport", ls);
-            return "shoppingcart";
+            return "Shed";
 
         }
 

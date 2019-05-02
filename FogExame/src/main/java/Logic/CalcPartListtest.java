@@ -59,6 +59,7 @@ public class CalcPartListtest {
         String front = fronttest.toString();
         String vertical = verticaltest.toString();
         String horizontal = horizontaltest.toString();
+       
         
         System.out.println(shed);
         System.out.println(spær);
@@ -74,6 +75,8 @@ public class CalcPartListtest {
         test.woodPrice(superlist);
         
         test.printList(superlist);
+        
+        System.out.println(verticaltest.getAmount());
 
         //test.woodPrice(superlist);
 

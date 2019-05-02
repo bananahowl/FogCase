@@ -14,6 +14,8 @@ import DataLayer.User;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -26,11 +28,12 @@ public class CarportFacade {
         DataMapper.getShedlength(0);
         return shed;
     }
-    public static int getCarportLength (int id) throws CarportException, SQLException {
+
+    public static int getCarportLength(int id) throws CarportException, SQLException {
         return DataMapper.getlength(id);
     }
-    
-    public static int getCarportWidth (int id) throws CarportException, SQLException {
+
+    public static int getCarportWidth(int id) throws CarportException, SQLException {
         return DataMapper.getwidth(id);
     }
 
@@ -65,15 +68,15 @@ public class CarportFacade {
     public static int getShedwidth(int id) throws CarportException, SQLException {
         return DataMapper.getShedwidth(id);
     }
-    
+
     public static int getMaxShedLength() throws CarportException {
         return DataMapper.getMaxShedLength();
     }
-    
-    public static int getMaxShedWidth()throws CarportException{
+
+    public static int getMaxShedWidth() throws CarportException {
         return DataMapper.getMaxShedWidth();
     }
-    
+
     public static int getShedlength(int id) throws CarportException, SQLException {
         return DataMapper.getShedlength(id);
     }
@@ -83,20 +86,53 @@ public class CarportFacade {
     }
 
     public static Carport createCarportFlatRoof(int length, int width, int widthShed, int lengthShed) {
-        boolean shed = true; 
-        if (widthShed == 1 || lengthShed == 1) {
-            shed = false;
+        try {
+            Shed shed = new Shed(0, 0, 0);
+            if (widthShed != 1 && lengthShed != 1) {
+                try {
+                    shed.setLength(getShedlength(lengthShed));
+                    shed.setWidth(getShedwidth(widthShed));
+                } catch (CarportException ex) {
+                    Logger.getLogger(CarportFacade.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (SQLException ex) {
+                    Logger.getLogger(CarportFacade.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+            int a = getCarportLength(length);
+            int b = getCarportWidth(width);
+            Carport carport = new Carport(a, 220, b, shed, 0);
+            return carport;
+        } catch (CarportException ex) {
+            Logger.getLogger(CarportFacade.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(CarportFacade.class.getName()).log(Level.SEVERE, null, ex);
         }
-        Carport carport = new Carport(length, 220, width, shed, 0);
-        return carport;
+        return null;
     }
-        public static Carport createCarportAngleRoof(int length, int width, int widthShed, int lengthShed,int angle) {
-        boolean shed = true; 
-        if (widthShed == 1 || lengthShed == 1) {
-            shed = false;
+
+    public static Carport createCarportAngleRoof(int length, int width, int widthShed, int lengthShed, int angle) {
+        try {
+            Shed shed = new Shed(0, 0, 0);
+            if (widthShed != 1 && lengthShed != 1) {
+                try {
+                    shed.setLength(getShedlength(lengthShed));
+                    shed.setWidth(getShedwidth(widthShed));
+                } catch (CarportException ex) {
+                    Logger.getLogger(CarportFacade.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (SQLException ex) {
+                    Logger.getLogger(CarportFacade.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+            int a = getCarportLength(length);
+            int b = getCarportWidth(width);
+            Carport carport = new Carport(a, 220, b, shed, angle);
+            return carport;
+        } catch (CarportException ex) {
+            Logger.getLogger(CarportFacade.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(CarportFacade.class.getName()).log(Level.SEVERE, null, ex);
         }
-        Carport carport = new Carport(length, 220, width, shed, angle);
-        return carport;
+        return null;
     }
 
     public static User createUser(String email, String password) throws CarportException {
@@ -104,13 +140,13 @@ public class CarportFacade {
         DataMapper.createUser(user);
         return user;
     }
-    
-    public static CarportWithShed add(Carport carport, Shed shed){
+
+    public static CarportWithShed add(Carport carport, Shed shed) {
         CarportWithShed cws = new CarportWithShed(carport, shed);
         return cws;
     }
-        
-/*
+
+    /*
         public static User login( String email, String password ) throws CarportException {
         return DataMapper.login( email, password );
     } 
