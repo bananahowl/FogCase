@@ -190,8 +190,6 @@ public class CalcPartList {
         
     }
         System.out.println(total);
-    
-    
     MaterialList val =new MaterialList(length, total, "metal til stolper");
     return val;
     }
@@ -207,25 +205,21 @@ public class CalcPartList {
         
     }
         System.out.println(total);
-    
-    
     MaterialList val =new MaterialList(length, total, "metal til stolper");
     return val;
     }
     
     public static MaterialList meatalTopSper(int amounts){
     int length = 0;
-    int bolt = 2;
-    int screw = 2;
-    int heng = 2;
+    int bolt = 36;
+    int screw = 36;
+    int heng = 6;
     int total = 0;
     for(int i= 0; i < amounts; i++){
     total += i +bolt +screw + heng;
         
     }
         System.out.println(total);
-    
-    
     MaterialList val =new MaterialList(length, total, "metal til stolper");
     return val;
     }
