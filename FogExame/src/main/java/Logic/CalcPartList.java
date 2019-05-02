@@ -20,19 +20,11 @@ public class CalcPartList {
     
     public static MaterialList calcRoofSides(int width, int length, int angleInDegree) throws CarportException, SQLException
     {
-        //Til udregningen af selve taget på en carport
-        
-       
-        
         double angleInRadian = Math.toRadians(angleInDegree);
         double angleTop = 180 - angleInDegree - angleInDegree;
         double topAngleInRadian = Math.toRadians(angleTop);
         double width1 = (double) width;
         double length1 = (double) length;
-        
-        //Math.toDegrees(Math.sin(topAngleInRadian))
-        //Math.toDegrees(Math.sin(angleInRadian))
-        
         
         double sideB = ((width1 / Math.sin(topAngleInRadian ))* Math.sin(angleInRadian));
         double areaOfRoof = (length1*sideB) / 10000;
