@@ -13,10 +13,10 @@ public class Carport {
     private int length;
     private int heigth;
     private int width;
-    private boolean shed;
+    private Shed shed;
     private int roofangle;
 
-    public Carport(int length, int heigth, int width, boolean shed, int roofangle) {
+    public Carport(int length, int heigth, int width, Shed shed, int roofangle) {
         this.length = length;
         this.heigth = heigth;
         this.width = width;
@@ -48,11 +48,11 @@ public class Carport {
         this.width = width;
     }
 
-    public boolean isShed() {
+    public Shed getShed() {
         return shed;
     }
 
-    public void setShed(boolean shed) {
+    public void setShed(Shed shed) {
         this.shed = shed;
     }
 

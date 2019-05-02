@@ -26,8 +26,8 @@
 
     <p2>Choose the size of your carport:</p2>
     
-    <form name ="withFlat" action="FrontController" method="GET">
-        <input type="hidden" name="command" value="createCP">
+    <form name ="Shed" action="FrontController" method="GET">
+        <!--<input type="GET" name="command" value="Shed">-->
         <table class="table table-striped">
             <thead><tr><th>Height</th><th>Length</th><th>Width</th><th></th></tr></thead>
             <tbody><tr>
@@ -52,16 +52,17 @@
             <h1>Shed:</h1>
         </table>
                     <table class="table table-striped">
+                        <a href="CarportFlatRoof.jsp"></a>
                             <thead><tr><th>Heigth</th><th>Length</th><th>Width</th><th></th></tr></thead>
                             <tbody><tr>
                                     <td>220 cm</td>
 
-                                    <td><select name=length id="option">
+                                    <td><select name=lengthShed id="option">
                                             <% for (int i = 1; i < cf.getMaxShedLength() + 1; i++) {%>
                                             <option value=<%=i%>><%= cf.getShedlength(i)%></option><% }%>
                                     </td>                          
 
-                                    <td><select name=width id="option">
+                                    <td><select name=widthShed id="option">
                                             <% for (int i = 1; i < cf.getMaxShedWidth() + 1; i++) {%>
                                             <option value=<%=i%>><%= cf.getShedwidth(i)%></option><% }%>
                                     </td>  
