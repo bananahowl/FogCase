@@ -6,13 +6,13 @@
 .header {
     text-align:left;
     width:100%;
-    background-color: lightblue;
+    background-color: midnightblue;
     color:white;
     padding: 15px;
 }
 
 .footer {
-    background-color: lightblue;
+    background-color: graytext;
     color: white;
     text-align: center;
     font-size: 18px;
@@ -45,7 +45,7 @@
 
 body{
     background-color: white;
-    margin: 0px;
+    margin: auto;
     padding: 0px;
 }
 h1{
@@ -56,27 +56,16 @@ h1{
 }
 
 p1{
-    font-size: 25px;
+    font-size: 22px;
     font-family: tahoma;
     text-align: left;
     color:black;
 }
 
-.AngleOrFlat {
-    text-align: center;
-    text-size:20px;
-    margin-left: 10px;
-}
-
-form{
-    font-size: 20px;
-    font-family: tahoma;
-    text-align: center;
-}
 ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    margin: auto;
+    padding: auto;
     overflow: hidden;
     background-color: grey;
 }
@@ -91,12 +80,9 @@ li a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    font-family: tahoma;
 }
 
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-    background-color: lightslategrey;
-}
 .active {
     background-color: grey;
 }
@@ -116,12 +102,11 @@ a {
     text-decoration: none;
     display: inline-block;
     font-size: 18px;
+    font-family: tahoma;
 }
 
-.left {
-    text-align: right;
+td{
+   font-family: tahoma;
+   font-size: 20px
 }
-
-
-
 

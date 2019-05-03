@@ -190,8 +190,6 @@ public class CalcPartList {
         
     }
         System.out.println(total);
-    
-    
     MaterialList val =new MaterialList(length, total, "metal til stolper");
     return val;
     }
@@ -207,29 +205,51 @@ public class CalcPartList {
         
     }
         System.out.println(total);
-    
-    
     MaterialList val =new MaterialList(length, total, "metal til stolper");
     return val;
     }
     
     public static MaterialList meatalTopSper(int amounts){
     int length = 0;
-    int bolt = 2;
-    int screw = 2;
-    int heng = 2;
+    int bolt = 36;
+    int screw = 36;
+    int heng = 6;
     int total = 0;
     for(int i= 0; i < amounts; i++){
     total += i +bolt +screw + heng;
         
     }
         System.out.println(total);
-    
-    
     MaterialList val =new MaterialList(length, total, "metal til stolper");
     return val;
     }
+    /* // idea to calc the seperate parts to in a better way.
+        public static MaterialList calcBolts(int amounts, String type){
+   switch(type){
+       case sperTop:
+           
+       break;
+       
+       case sper:
+           
+       break;
+       
+       case pots:
+           
+       break;
+       default:
+           System.out.println("Error gotta choose a right value");
+           break;
+   }
+    for(int i= 0; i < amounts; i++){
     
+        
+    }
+        System.out.println(total);
+    MaterialList val =new MaterialList(length, total, "metal til stolper");
+    return val;
+    }
+    */
    
     
 }
