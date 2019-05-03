@@ -106,11 +106,6 @@ insert into shedwidth(shedwidthValue) values(690);
 insert into shedwidth(shedwidthValue) values(720);
 insert into shedwidth(shedwidthValue) values(0);
 
-select * from shedlength;
-
-INSERT INTO shedlength VALUES ('20','0');
-delete from shedwidth where shedwidthID =20;
-
 insert into shed (width,length, materialFK) values(1,1,1);
 #REname table arearoof to area;
 
