@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="14" failures="0" name="DataLayer.DataMapperTest" time="1.417" errors="0" skipped="0">
+<testsuite tests="14" failures="0" name="DataLayer.DataMapperTest" time="2.236" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_181\jre\bin"/>
@@ -17,6 +17,7 @@
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="user.dir" value="C:\Users\emils\Desktop\2semester\FogCase\FogExame"/>
     <property name="java.runtime.version" value="1.8.0_181-b13"/>
+    <property name="netbeans.deploy" value="true"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_181\jre\lib\endorsed"/>
     <property name="os.arch" value="amd64"/>
@@ -44,7 +45,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_181\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dmaven.ext.class.path=C:\Program Files\NetBeans 8.2\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 clean install"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dnetbeans.deploy=true -Dnetbeans.deploy.clientUrlPart=/index.jsp -Dmaven.ext.class.path=C:\Program Files\NetBeans 8.2\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 package"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="da"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -58,21 +59,22 @@
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="netbeans.deploy.clientUrlPart" value="/index.jsp"/>
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="DataLayer.DataMapperTest" name="testGetlength" time="1.08"/>
-  <testcase classname="DataLayer.DataMapperTest" name="testGetMatiralName" time="0.013"/>
-  <testcase classname="DataLayer.DataMapperTest" name="testGetShedwidth" time="0.018"/>
-  <testcase classname="DataLayer.DataMapperTest" name="testGetwidth" time="0.018"/>
-  <testcase classname="DataLayer.DataMapperTest" name="testGetShedlength" time="0.018"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetlength" time="1.809"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetMatiralName" time="0.011"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetShedwidth" time="0.019"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetwidth" time="0.019"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetShedlength" time="0.02"/>
   <testcase classname="DataLayer.DataMapperTest" name="testGetRoofAngle" time="0.02"/>
-  <testcase classname="DataLayer.DataMapperTest" name="testGetMaxAngles" time="0.017"/>
-  <testcase classname="DataLayer.DataMapperTest" name="testGetMaxLength" time="0.019"/>
-  <testcase classname="DataLayer.DataMapperTest" name="testGetMaxRoofMaterial" time="0.018"/>
-  <testcase classname="DataLayer.DataMapperTest" name="testGetmaxmatiralnum" time="0.019"/>
-  <testcase classname="DataLayer.DataMapperTest" name="testGetMaxShedWidth" time="0.018"/>
-  <testcase classname="DataLayer.DataMapperTest" name="testGetMaxShedLength" time="0.019"/>
-  <testcase classname="DataLayer.DataMapperTest" name="testGetRoofMaterial" time="0.018"/>
-  <testcase classname="DataLayer.DataMapperTest" name="testGetMaxWidth" time="0.019"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetMaxAngles" time="0.016"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetMaxLength" time="0.021"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetMaxRoofMaterial" time="0.019"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetmaxmatiralnum" time="0.017"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetMaxShedWidth" time="0.02"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetMaxShedLength" time="0.016"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetRoofMaterial" time="0.02"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetMaxWidth" time="0.02"/>
 </testsuite>

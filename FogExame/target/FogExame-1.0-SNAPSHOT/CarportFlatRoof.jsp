@@ -27,7 +27,7 @@
     <p2>Choose the size of your carport:</p2>
 
     <form name ="Shed" action="FrontController" method="hidden">
-        <!--<input type="hidden" name="command" value="Shed">-->
+        <input type="hidden" name="command" value="Shed">
         <table class="table table-striped">
             <thead><tr><th>Height</th><th>Length</th><th>Width</th><th></th></tr></thead>
             <tbody><tr>

@@ -18,8 +18,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author emils
  */
-@WebServlet(urlPatterns = {"/Frontcontroller"})
-public class Frontcontroller extends HttpServlet {
+@WebServlet(urlPatterns = {"/FrontController"})
+public class FrontController extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
