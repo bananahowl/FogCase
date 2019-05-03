@@ -23,7 +23,7 @@
         <div class="row">
             <div class="col-3 col-s-3 menu">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.jsp">Home</a></li>
                     <li><a href="Profile.jsp">Profile</a></li>
                     <li><a href="FlatAngle.jsp">Customize</a></li>
                     <li style="float:right"><a class="active" href="#about">BRUG TIL LOG IN/LOG UD</a></li>
@@ -54,14 +54,16 @@
                         <td>Length:</td><br>
                         <td><select name=length id="option">                        
                                 <% for (int i = 1; i < cf.getMaxLength() + 1; i++) {%>
-                                <option value=1><%=cf.getCarportLength(i)%></option><% }%></td>                          
+                                <option value=<%=i%>><%=cf.getCarportLength(i)%></option><% }%>
+                       </td> 
+                        
                     </table>
 
                     <table>
                         <td>Width:</td><br>
                         <td><select name=width id="option">
                                 <% for (int i = 1; i < cf.getMaxWidth() + 1; i++) {%>
-                                <option value=1><%= cf.getCarportWidth(i)%></option><% }%></td>
+                                <option value=<%=i%>><%= cf.getCarportWidth(i)%></option><% }%></td>
                     </table>
                     </tr>
                
@@ -78,14 +80,14 @@
                         <td>Length:</td><br>
                         <td><select name=length id="option">
                                 <% for (int i = 1; i < cf.getMaxShedLength() + 1; i++) {%>
-                                <option value=1><%= cf.getShedlength(i)%></option><% }%></td>                          
+                                <option value=<%=i%>><%= cf.getShedlength(i)%></option><% }%></td>                          
                     </table>
 
                     <table>
                         <td>Width:</td><br>
                         <td><select name=width id="option">
                                 <% for (int i = 1; i < cf.getMaxShedWidth() + 1; i++) {%>
-                                <option value=1><%= cf.getShedwidth(i)%></option><% }%></td>
+                                <option value=<%=i%>><%= cf.getShedwidth(i)%></option><% }%></td>
                     </table>
                     </tr>
                 </form>
