@@ -55,7 +55,7 @@
                         <td><select name=length id="option">                        
                                 <% for (int i = 1; i < cf.getMaxLength() + 1; i++) {%>
                                 <option value=<%=i%>><%=cf.getCarportLength(i)%></option><% }%>
-                       </td> 
+                         </td> 
                         
                     </table>
 
