@@ -89,7 +89,7 @@ public class DataMapperTest {
     @Test
     public void testGetMaxShedWidth() throws Exception {
         int result = DataMapper.getMaxShedWidth();
-        assertEquals(18, result);
+        assertEquals(19, result);
     }
 
     /**

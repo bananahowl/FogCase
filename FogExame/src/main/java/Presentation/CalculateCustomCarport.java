@@ -29,11 +29,11 @@ public class CalculateCustomCarport extends Command {
         int angle = Integer.parseInt(request.getParameter("angle"));
         if (angle == 1) {
             Carport ls = CarportFacade.createCarportFlatRoof(length, width, lengthShed, widthShed);
-            request.getSession().setAttribute("flatCarport", ls);
+            request.getSession().setAttribute("carport", ls);
             return "Shed";
         } else {
             Carport ls = CarportFacade.createCarportAngleRoof(length, width, lengthShed, widthShed,angle);
-            request.getSession().setAttribute("angleCarport", ls);
+            request.getSession().setAttribute("carport", ls);
             return "Shed";
 
         }
