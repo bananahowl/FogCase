@@ -78,14 +78,14 @@
 
                     <table>
                         <td>Length:</td><br>
-                        <td><select name=length id="option">
+                        <td><select name=length1 id="option">
                                 <% for (int i = 1; i < cf.getMaxShedLength() + 1; i++) {%>
                                 <option value=<%=i%>><%= cf.getShedlength(i)%></option><% }%></td>                          
                     </table>
 
                     <table>
                         <td>Width:</td><br>
-                        <td><select name=width id="option">
+                        <td><select name=width1 id="option">
                                 <% for (int i = 1; i < cf.getMaxShedWidth() + 1; i++) {%>
                                 <option value=<%=i%>><%= cf.getShedwidth(i)%></option><% }%></td>
                     </table>
@@ -94,6 +94,7 @@
                     <div class ="right">
                         <br><br><a type="button" href ="FlatAngle.jsp"> Back </a>
                 <a type="submit" float ="right" >Add to shoppingcart</a>
+                <br><br><a type="button" href ="CalculatePrice.jsp"> Add to shoppingcart1 </a>
                     </div>
             </div>
             <div class="footer">THIS IS A FOOTER </div>
