@@ -32,7 +32,7 @@ public class CalculateCarportCommand extends Command {
         if (angle == 1) {
             Carport ls = CarportFacade.createCarportFlatRoof(length, width, lengthShed, widthShed);
             String html = HtmlConverter.carportFlatRooftoHtml(ls);
-            request.setAttribute("carport", ls);
+            request.setAttribute("carport", ls); // the good stuff
             request.setAttribute("table", html);
             return "Shed";
         } else {
