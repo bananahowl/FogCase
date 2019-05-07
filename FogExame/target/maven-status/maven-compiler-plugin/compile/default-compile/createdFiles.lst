@@ -12,11 +12,9 @@ Logic\CalcPartList.class
 Logic\CarportFacade.class
 DataLayer\User.class
 Logic\CarportException.class
-Presentation\Register.class
 DataLayer\Roof_area.class
 DataLayer\dataTest.class
 Presentation\UnknownCommand.class
-Presentation\CalculateCustomCarport.class
 DataLayer\MaterialList.class
 Presentation\CreateOrder.class
 Presentation\FrontController.class
