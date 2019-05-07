@@ -98,13 +98,10 @@
             </div>
             <div class="footer">THIS IS A FOOTER </div>
         </div>
-        <form id="Shed" action="FrontController" method="GET">
-            <input type="hidden" name="command" value="Shed">
+        <form action="FrontController" method="GET">
             <table class="table table-striped">
                 <thead><tr><th>CPLength</th><th>CPWidth</th><th>ShedLength</th><th>ShedWitdth</th><th></th></tr></thead>
                 <tbody>
-
-
                     <tr>  <td> <select name=length id="option">                        
                                 <% for (int i = 1; i < cf.getMaxLength() + 1; i++) {%>
                                 <option value=<%=i%>><%=cf.getCarportLength(i)%></option><% }%>
@@ -122,12 +119,10 @@
                                 <td><select name=angle id="option">
                                         <% for (int i = 1; i < cf.getMaxShedWidth() + 1; i++) {%>
                                         <option value=<%=i%>><%= cf.getShedwidth(i)%></option><% }%></td>
-                                <td><input type="submit" value="Shed"></td>
+                                <td><button type="submit" name="command" value="calculate">calculate</button></td>
                                 <td><span id="errorContainer"></span></td>
                     </tr>
             </table>
         </form>
-        <form name ="Shed" action="FrontController" method="hidden">
-            <input type="hidden" name="command" value="Shed">
             </body>
             </html>

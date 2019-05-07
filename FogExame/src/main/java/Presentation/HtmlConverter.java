@@ -19,7 +19,7 @@ public class HtmlConverter {
         String cartTable = "<table id=\"carport\">"
                 + "<tr><th>Carport</th><th>Length = </th><th>Width = </th><th>Height = 220</th></tr>"
                 + "<tr><th>Size</th><th>" + carport.getLength() + "</th><th>" + carport.getWidth() + "</th></tr>"
-                + "";
+                + "</table>";
         return cartTable;
 //                 <table class=table table-striped><thead><tr><th>Name</th><th>Quantity</th><th>Price</th>
 //                    <th>Total</th></tr></thead><tbody><tr>

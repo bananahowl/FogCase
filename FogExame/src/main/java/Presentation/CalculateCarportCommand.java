@@ -19,7 +19,7 @@ import javax.servlet.http.HttpSession;
  *
  * @author emils
  */
-public class CalculateCustomCarport extends Command {
+public class CalculateCarportCommand extends Command {
 
     @Override
     String execute(HttpServletRequest request, HttpServletResponse response) throws CarportException {
@@ -32,12 +32,14 @@ public class CalculateCustomCarport extends Command {
         if (angle == 1) {
             Carport ls = CarportFacade.createCarportFlatRoof(length, width, lengthShed, widthShed);
             String html = HtmlConverter.carportFlatRooftoHtml(ls);
-            session.setAttribute("carport", html);
+            request.setAttribute("carport", ls);
+            request.setAttribute("table", html);
             return "Shed";
         } else {
             Carport ls = CarportFacade.createCarportAngleRoof(length, width, lengthShed, widthShed,angle);
             String html = HtmlConverter.carportAnlgeRooftoHtml(ls);
-            session.setAttribute("carport", html);
+            request.setAttribute("carport", ls);
+            request.setAttribute("table", html);
             return "Shed";
 
         }

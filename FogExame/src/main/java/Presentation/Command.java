@@ -13,10 +13,11 @@ abstract class Command {
         commands = new HashMap<>();/*
         commands.put( "login", new Login() );
          */
-        commands.put("register", new Register());/*
+        commands.put("register", new RegisterCommand());/*
         commands.put( "backdoorLogin", new backdoorLogin());
-         */
-        commands.put("Shed", new CalculateCustomCarport());/*
+        
+        */
+        commands.put("calculate", new CalculateCarportCommand());/*
         commands.put( "createOrder", new CreateOrder());
         commands.put( "seeMyOrders", new GetMyOrders());*/
 
