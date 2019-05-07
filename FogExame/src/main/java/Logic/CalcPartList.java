@@ -200,10 +200,11 @@ public class CalcPartList {
         return val;
 
     } 
-    public static int calcSrew(int amountHeng) {
+    // til roof tages antal som tag spær mængden, disse metoder bruges hvis der et et tag med vinkel.
+    public static int calcSrewRoff(int amountHeng) {
 
         int total = 0;
-        int screw = 4;
+        int screw = 6;
         for (int i = 0; i < amountHeng; i++) {
             total += i + screw ;
         }
@@ -211,10 +212,10 @@ public class CalcPartList {
         return total;
         
     } 
-    public static int calBolt(int amount) {
+    public static int calBoltRoof(int amount) {
         
         int total = 0;
-        int bolt = 4;
+        int bolt = 6;
         int screw = 4;
         for (int i = 0; i < amount; i++) {
             total += i + bolt + screw ;
@@ -223,7 +224,7 @@ public class CalcPartList {
         return total;
         
     } 
-    public static int calcHengRoof(int amount) {
+     public static int calcHengRoof(int amount) {
         
         int total = 0;
         int heng = 1;
@@ -234,6 +235,33 @@ public class CalcPartList {
         return total;
 
     }
+     
+    // port delen er tager amount som antalet af spær om der er
+    public static int calcSrewPort(int amountHeng) {
+
+        int total = 0;
+        int screw = 9;
+        for (int i = 0; i < amountHeng; i++) {
+            total += i + screw ;
+        }
+        System.out.println(total);
+        return total;
+        
+    } 
+    
+    public static int calBoltPort(int amount) {
+        
+        int total = 0;
+        int bolt = 9;
+        int screw = 4;
+        for (int i = 0; i < amount; i++) {
+            total += i + bolt + screw ;
+        }
+        System.out.println(total);
+        return total;
+        
+    }
+   
     public static int calcHengPort(int amount) {
         
         int total = 0;
@@ -245,6 +273,7 @@ public class CalcPartList {
         return total;
 
     }
+    // metode som beregner antal søm til mængden af stolper
     public int calcPostNail(int amount){
     
     int total = 0;

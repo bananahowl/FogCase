@@ -35,7 +35,7 @@ public class CalcPartListtest {
         MaterialList horizontaltest = CalcPartList.calcAngledHorizontalSpær(400, 700);
 
         ArrayList<MaterialList> superlist = CalcPartList.totalMaterial(shedtest, spertest, remtest, posttest, rooftest, fronttest, verticaltest, horizontaltest);
-        //System.out.println(superlist);
+        System.out.println(superlist);
 /*
         for (int i = 0; i < superlist.size(); i++) {
 
@@ -54,7 +54,7 @@ public class CalcPartListtest {
         String front = fronttest.toString();
         String vertical = verticaltest.toString();
         String horizontal = horizontaltest.toString();
-/*
+
         System.out.println(shed);
         System.out.println(spær);
         System.out.println(rem);
@@ -69,7 +69,7 @@ public class CalcPartListtest {
         test.woodPrice(superlist);
 
         test.printList(superlist);
-*/
+
         System.out.println(verticaltest.getAmount());
         System.out.println("----------------------------");
         System.out.println(partTest.calcPostNail(3));
