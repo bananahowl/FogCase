@@ -4,6 +4,7 @@
     Author     : fskn
 --%>
 
+<%@page import="DataLayer.Carport"%>
 <%@page import="DataLayer.DataMappers.DataMapper"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -16,9 +17,25 @@
     </head>
     <body>
         <% DataMapper acc = new DataMapper(); 
-        int width = Integer.parseInt(request.getParameter("width"));%>
+        request.getAttribute("carport");
+        int width = acc.getlength(Integer.parseInt(request.getParameter("width")));
+//        int width = acc.getlength(widthh);
+        %>
         <form>
             <h1>Would you like to add a shed to your carport?</h1>
+            
+                    <table class=table table-striped><thead><tr><th>Carport</th><th>Length = </th><th>Width = </th><th>Height = 220</th></tr>
+                <tr><th>Size</th><th><%=acc.getlength(Integer.parseInt(request.getParameter("length"))) %></th><th><%=acc.getlength(Integer.parseInt(request.getParameter("width")))%></th></tr>
+                        <td><form action=Control method=POST>
+                            <input type=hidden name=origin value=removeLine><input type=hidden name=lineId value=473>
+                        </form></td></tr><tr><td></td><td></td><td></td>
+                    <td>
+                        <form id="checkoutForm" action=Control method=POST><input type=hidden name=origin value=submitInvoice/>
+                            <input type=submit value=Check out your order></form></td></tr>
+            </tbody>
+        </table>
+            <table id=\"carport\">
+                
             
             <div class="shedYesNo">
         <a type="button" class="btn btn-primary test" href ="YesShed.jsp">Yes</a>
@@ -60,6 +77,6 @@
         %>
         </svg>
         <h2> 1:10</h2>
-
+<%= request.getAttribute("carport")%>
 </body>
 </html>

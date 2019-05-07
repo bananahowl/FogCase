@@ -14,7 +14,7 @@
     </head>
     <body>
         <% // response.sendRedirect("FlatAngle.jsp"); %>
-        <br><br><a type="button" href ="FlatAngle.jsp"> Next </a>
+        <br><br><a type="button" href ="FlatAngle.jsp"> Next </a>   
          <table>
             <tr><td>Login</td>
                 <td>
