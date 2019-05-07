@@ -223,7 +223,7 @@ public class CalcPartList {
         return total;
         
     } 
-    public static int calcHeng(int amount) {
+    public static int calcHengRoof(int amount) {
         
         int total = 0;
         int heng = 1;
@@ -233,6 +233,28 @@ public class CalcPartList {
         System.out.println(total);
         return total;
 
+    }
+    public static int calcHengPort(int amount) {
+        
+        int total = 0;
+        int heng = 1;
+        for (int i = 0; i < amount; i++) {
+            total += i + heng ;
+        }
+        System.out.println(total);
+        return total;
+
+    }
+    public int calcPostNail(int amount){
+    
+    int total = 0;
+    int postNail = 2;
+    for(int i = 0; i< amount; i++){
+    
+    total += postNail;
+    }
+    
+    return total;
     }
     
     
