@@ -18,7 +18,7 @@ public class HtmlConverter {
         String cartTable = "<form action=\"FrontController\" method=\"GET\">"
                 + "<table id=\"carport\">"
                 + "<tr><th>Carport  </th><th>Length   </th><th>Width    </th><th>Height    </th><th>Angle   </th><th>Price      </th></tr>"
-                + "<tr><th>Size</th><th>" + carport.getLength() + "</th><th>" + carport.getWidth() + "</th><th>220</th><th>none</th><th>Working on it</th></tr>"
+                + "<tr><th>Size</th><th>" + carport.getLength() + "</th><th>" + carport.getWidth() + "</th><th>220</th><th>none</th><th>" +carport.getPrice() +"</th></tr>"
                 + "</table>"
                 + "<button type=\"submit\"  name=\"command\" value=\"Shoppingcart\" >Add to Shoppingcart</button>"
                 + "</form>";
@@ -40,7 +40,7 @@ public class HtmlConverter {
         String cartTable = "<form action=\"FrontController\" method=\"GET\">"
                 + "<table id=\"carport\">"
                 + "<tr><th>Carport  </th><th>Length   </th><th>Width    </th><th>Height    </th><th>Angle   </th><th>Price      </th></tr>"
-                + "<tr><th>Size</th><th>" + carport.getLength() + "</th><th>" + carport.getWidth() + "</th><th>220</th><th>" +carport.getRoofangle()+"</th><th>Working on it</th></tr>"
+                + "<tr><th>Size</th><th>" + carport.getLength() + "</th><th>" + carport.getWidth() + "</th><th>220</th><th>" +carport.getRoofangle()+"</th><th>" +carport.getPrice() +"</th></tr>"
                 + "</table>"
                 + "<button type=\"submit\"  name=\"command\" value=\"Shoppingcart\" >Add to Shoppingcart</button>"
                 + "</form>";

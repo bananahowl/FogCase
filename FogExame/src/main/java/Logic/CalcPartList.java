@@ -10,6 +10,8 @@ import Logic.CarportFacade;
 import java.sql.SQLException;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -248,6 +250,41 @@ public class CalcPartList {
     return val;
     }
     */
+    public static int totaltakesAnything(int shedWidth, int shedLength, int width, int length, int angle)
+    {
+        try {
+            CalcPrice price = new CalcPrice();
+            
+            MaterialList shedtest = calcShedMats(shedWidth,shedLength);
+            MaterialList spertest = calcSper(width , length);
+            MaterialList remtest  = calcRem(width, length);
+            MaterialList posttest = calculatePortPost(width, length);
+            MaterialList rooftest = calcRoofSides(width,length, angle);
+            MaterialList fronttest= calcRoofFronts(width, angle);
+            MaterialList verticaltest = calcAngledVerticalSpær(width, length, angle);
+            MaterialList horizontaltest = calcAngledHorizontalSpær(width, length);
+            
+            ArrayList<MaterialList> duperlist = new ArrayList<>();
+            duperlist.add(shedtest);
+            duperlist.add(spertest);
+            duperlist.add(remtest);
+            duperlist.add(posttest);
+            duperlist.add(rooftest);
+            duperlist.add(fronttest);
+            duperlist.add(verticaltest);
+            duperlist.add(horizontaltest);
+            
+            int pricetotal = price.woodPrice(duperlist);
+            
+            return pricetotal;
+        } catch (CarportException ex) {
+            Logger.getLogger(CalcPartList.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(CalcPartList.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return 0;
+        
+    }
    
     
 }

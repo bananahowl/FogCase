@@ -1,35 +1,3 @@
-<<<<<<< HEAD
-C:\Users\fskn\Documents\2 semester\NetbeansProjekter\Fog-case\FogCase\FogExame\src\main\java\Logic\CalcCarport.java
-C:\Users\fskn\Documents\2 semester\NetbeansProjekter\Fog-case\FogCase\FogExame\src\main\java\DataLayer\DataMappers\CarportMapper.java
-C:\Users\fskn\Documents\2 semester\NetbeansProjekter\Fog-case\FogCase\FogExame\src\main\java\DataLayer\dataTest.java
-C:\Users\fskn\Documents\2 semester\NetbeansProjekter\Fog-case\FogCase\FogExame\src\main\java\DataLayer\Roof_material.java
-C:\Users\fskn\Documents\2 semester\NetbeansProjekter\Fog-case\FogCase\FogExame\src\main\java\Presentation\CalculateCarportCommand.java
-C:\Users\fskn\Documents\2 semester\NetbeansProjekter\Fog-case\FogCase\FogExame\src\main\java\DataLayer\CarportWithShed.java
-C:\Users\fskn\Documents\2 semester\NetbeansProjekter\Fog-case\FogCase\FogExame\src\main\java\Presentation\RegisterCommand.java
-C:\Users\fskn\Documents\2 semester\NetbeansProjekter\Fog-case\FogCase\FogExame\src\main\java\DataLayer\DataMappers\UserMapper.java
-C:\Users\fskn\Documents\2 semester\NetbeansProjekter\Fog-case\FogCase\FogExame\src\main\java\DataLayer\MetalParts.java
-C:\Users\fskn\Documents\2 semester\NetbeansProjekter\Fog-case\FogCase\FogExame\src\main\java\Logic\UserFacade.java
-C:\Users\fskn\Documents\2 semester\NetbeansProjekter\Fog-case\FogCase\FogExame\src\main\java\DataLayer\User.java
-C:\Users\fskn\Documents\2 semester\NetbeansProjekter\Fog-case\FogCase\FogExame\src\main\java\Presentation\HtmlConverter.java
-C:\Users\fskn\Documents\2 semester\NetbeansProjekter\Fog-case\FogCase\FogExame\src\main\java\Presentation\UnknownCommand.java
-C:\Users\fskn\Documents\2 semester\NetbeansProjekter\Fog-case\FogCase\FogExame\src\main\java\DataLayer\Roof_area.java
-C:\Users\fskn\Documents\2 semester\NetbeansProjekter\Fog-case\FogCase\FogExame\src\main\java\Logic\CalcPartList.java
-C:\Users\fskn\Documents\2 semester\NetbeansProjekter\Fog-case\FogCase\FogExame\src\main\java\DataLayer\Connector.java
-C:\Users\fskn\Documents\2 semester\NetbeansProjekter\Fog-case\FogCase\FogExame\src\main\java\Presentation\FrontController.java
-C:\Users\fskn\Documents\2 semester\NetbeansProjekter\Fog-case\FogCase\FogExame\src\main\java\DataLayer\Carport.java
-C:\Users\fskn\Documents\2 semester\NetbeansProjekter\Fog-case\FogCase\FogExame\src\main\java\Presentation\Command.java
-C:\Users\fskn\Documents\2 semester\NetbeansProjekter\Fog-case\FogCase\FogExame\src\main\java\Logic\CarportException.java
-C:\Users\fskn\Documents\2 semester\NetbeansProjekter\Fog-case\FogCase\FogExame\src\main\java\DataLayer\Materials.java
-C:\Users\fskn\Documents\2 semester\NetbeansProjekter\Fog-case\FogCase\FogExame\src\main\java\Logic\CalcPartListtest.java
-C:\Users\fskn\Documents\2 semester\NetbeansProjekter\Fog-case\FogCase\FogExame\src\main\java\Presentation\CreateOrder.java
-C:\Users\fskn\Documents\2 semester\NetbeansProjekter\Fog-case\FogCase\FogExame\src\main\java\Presentation\GetMyOrders.java
-C:\Users\fskn\Documents\2 semester\NetbeansProjekter\Fog-case\FogCase\FogExame\src\main\java\Logic\CalcPrice.java
-C:\Users\fskn\Documents\2 semester\NetbeansProjekter\Fog-case\FogCase\FogExame\src\main\java\Presentation\CreateSVG.java
-C:\Users\fskn\Documents\2 semester\NetbeansProjekter\Fog-case\FogCase\FogExame\src\main\java\Logic\CarportFacade.java
-C:\Users\fskn\Documents\2 semester\NetbeansProjekter\Fog-case\FogCase\FogExame\src\main\java\DataLayer\Shed.java
-C:\Users\fskn\Documents\2 semester\NetbeansProjekter\Fog-case\FogCase\FogExame\src\main\java\Presentation\Login.java
-C:\Users\fskn\Documents\2 semester\NetbeansProjekter\Fog-case\FogCase\FogExame\src\main\java\DataLayer\MaterialList.java
-=======
 C:\Users\emils\Desktop\2semester\FogCase\FogExame\src\main\java\Logic\CarportException.java
 C:\Users\emils\Desktop\2semester\FogCase\FogExame\src\main\java\Logic\UserFacade.java
 C:\Users\emils\Desktop\2semester\FogCase\FogExame\src\main\java\DataLayer\DataMappers\UserMapper.java
@@ -53,6 +21,7 @@ C:\Users\emils\Desktop\2semester\FogCase\FogExame\src\main\java\DataLayer\Roof_m
 C:\Users\emils\Desktop\2semester\FogCase\FogExame\src\main\java\Presentation\FlatAngleCommand.java
 C:\Users\emils\Desktop\2semester\FogCase\FogExame\src\main\java\DataLayer\Carport.java
 C:\Users\emils\Desktop\2semester\FogCase\FogExame\src\main\java\DataLayer\MaterialList.java
+C:\Users\emils\Desktop\2semester\FogCase\FogExame\src\main\java\Presentation\ShoppingCartCommand.java
 C:\Users\emils\Desktop\2semester\FogCase\FogExame\src\main\java\Presentation\CreateOrder.java
 C:\Users\emils\Desktop\2semester\FogCase\FogExame\src\main\java\DataLayer\Connector.java
 C:\Users\emils\Desktop\2semester\FogCase\FogExame\src\main\java\Presentation\Login.java
@@ -63,4 +32,3 @@ C:\Users\emils\Desktop\2semester\FogCase\FogExame\src\main\java\Presentation\Com
 C:\Users\emils\Desktop\2semester\FogCase\FogExame\src\main\java\Logic\CalcPartListtest.java
 C:\Users\emils\Desktop\2semester\FogCase\FogExame\src\main\java\Logic\CarportFacade.java
 C:\Users\emils\Desktop\2semester\FogCase\FogExame\src\main\java\DataLayer\dataTest.java
->>>>>>> be3f9479839c79f65e4cc2b3db91a48a58c429a5

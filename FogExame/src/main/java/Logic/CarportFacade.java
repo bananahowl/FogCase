@@ -85,7 +85,7 @@ public class CarportFacade {
         return CarportMapper.getRoofAngle(id);
     }
 
-    public static Carport createCarportFlatRoof(int length, int width, int widthShed, int lengthShed) {
+    public static Carport createCarportFlatRoof(int length, int width, int widthShed, int lengthShed, int price) {
         try {
             Shed shed = new Shed(0, 0, 0);
             if (widthShed != 1 && lengthShed != 1) {
@@ -100,7 +100,7 @@ public class CarportFacade {
             }
             int a = getCarportLength(length);
             int b = getCarportWidth(width);
-            Carport carport = new Carport(a, 220, b, shed, 0);
+            Carport carport = new Carport(a, 220, b, shed, 0,price);
             return carport;
         } catch (CarportException ex) {
             Logger.getLogger(CarportFacade.class.getName()).log(Level.SEVERE, null, ex);
@@ -110,7 +110,7 @@ public class CarportFacade {
         return null;
     }
 
-    public static Carport createCarportAngleRoof(int length, int width, int widthShed, int lengthShed, int angle) {
+    public static Carport createCarportAngleRoof(int length, int width, int widthShed, int lengthShed, int angle, int price) {
         try {
             Shed shed = new Shed(0, 0, 0);
             if (widthShed != 1 && lengthShed != 1) {
@@ -125,7 +125,7 @@ public class CarportFacade {
             }
             int a = getCarportLength(length);
             int b = getCarportWidth(width);
-            Carport carport = new Carport(a, 220, b, shed, angle);
+            Carport carport = new Carport(a, 220, b, shed, angle,price);
             return carport;
         } catch (CarportException ex) {
             Logger.getLogger(CarportFacade.class.getName()).log(Level.SEVERE, null, ex);
@@ -139,8 +139,39 @@ public class CarportFacade {
         CarportWithShed cws = new CarportWithShed(carport, shed);
         return cws;
     }
+        public static int NumbersFlatRoof(int length, int width, int widthShed, int lengthShed){
+            
+        try {
+            int a = getCarportLength(length);
+            int b = getCarportWidth(width);
+            int c =  getShedlength(lengthShed);
+            int d =    getShedwidth(widthShed);
+            int price = CalcPartList.totaltakesAnything(b, a, d, c, 0);
+            return price;
+        } catch (CarportException ex) {
+            Logger.getLogger(CarportFacade.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(CarportFacade.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return 0;
+    }
+    public static int NumbersAngleRoof(int length, int width, int widthShed, int lengthShed, int angle){
     
-    public static 
+        try {
+            int a = getCarportLength(length);
+            int b = getCarportWidth(width);
+            int c =  getShedlength(lengthShed);
+            int d =    getShedwidth(widthShed);
+            int e = getRoofAngle(angle);
+            int price = CalcPartList.totaltakesAnything(b, a, d, c, e);
+            return price;
+        } catch (CarportException ex) {
+            Logger.getLogger(CarportFacade.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(CarportFacade.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return 0;
+    }
 
     /*
         public static User login( String email, String password ) throws CarportException {

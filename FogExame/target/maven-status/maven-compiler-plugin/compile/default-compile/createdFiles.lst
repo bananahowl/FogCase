@@ -9,11 +9,14 @@ Presentation\GetMyOrders.class
 DataLayer\Carport.class
 Presentation\Login.class
 DataLayer\Connector.class
+Logic\UserFacade.class
 Logic\CalcPartList.class
+DataLayer\DataMappers\UserMapper.class
 Logic\CarportFacade.class
 DataLayer\User.class
 Presentation\HtmlConverter.class
 Logic\CarportException.class
+Presentation\ShoppingCartCommand.class
 DataLayer\Roof_area.class
 Presentation\CarportFlatRoofCommand.class
 Presentation\CarportWithAngleCommand.class
@@ -21,6 +24,7 @@ DataLayer\dataTest.class
 Presentation\UnknownCommand.class
 Presentation\RegisterCommand.class
 Logic\CalcCarport.class
+DataLayer\DataMappers\CarportMapper.class
 DataLayer\MaterialList.class
 Presentation\CreateOrder.class
 Presentation\FrontController.class
