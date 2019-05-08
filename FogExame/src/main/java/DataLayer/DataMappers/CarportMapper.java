@@ -334,6 +334,7 @@ public class CarportMapper {
             String query = "select widthvalue from width where widthid = " + id +""; 
             PreparedStatement ps = conn.prepareStatement(query);
            // ps.setInt(1, id);
+           
             ResultSet rs = ps.executeQuery(query);
 
             if (rs.next()) {
