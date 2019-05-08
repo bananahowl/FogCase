@@ -1,8 +1,10 @@
 DataLayer\Materials.class
+Presentation\CalculateCarportCommand.class
 Presentation\CreateSVG.class
 DataLayer\CarportWithShed.class
 DataLayer\DataMappers\DataMapper.class
 Logic\CalcPrice.class
+Presentation\FlatAngleCommand.class
 DataLayer\MetalParts.class
 Presentation\GetMyOrders.class
 DataLayer\Carport.class
@@ -11,10 +13,15 @@ DataLayer\Connector.class
 Logic\CalcPartList.class
 Logic\CarportFacade.class
 DataLayer\User.class
+Presentation\HtmlConverter.class
 Logic\CarportException.class
 DataLayer\Roof_area.class
+Presentation\CarportFlatRoofCommand.class
+Presentation\CarportWithAngleCommand.class
 DataLayer\dataTest.class
 Presentation\UnknownCommand.class
+Presentation\RegisterCommand.class
+Logic\CalcCarport.class
 DataLayer\MaterialList.class
 Presentation\CreateOrder.class
 Presentation\FrontController.class
