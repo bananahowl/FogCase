@@ -26,7 +26,7 @@ public class CalcCarport {
     
     public ArrayList <MaterialList> calculateCarPortFlat(int sheedlength, int sheedwidth, int portwidth, int portlength, int angleInDegree) throws CarportException, SQLException{
     CalcPartList portlist = new CalcPartList();
-    MaterialList shedtest = CalcPartList.calcShedMats(sheedlength);
+    MaterialList shedtest = CalcPartList.calcShedMats(sheedlength, sheedwidth);
         MaterialList spertest = CalcPartList.calcSper(portlength , portwidth);
         MaterialList remtest = CalcPartList.calcRem(portlength, portwidth);
         MaterialList posttest = CalcPartList.calculatePortPost(portlength, portwidth);
@@ -43,7 +43,7 @@ public class CalcCarport {
  
     public ArrayList <MaterialList> calculateCarPortAngle(int sheedlength, int sheedwidth, int portwidth, int portlength, int angleInDegree) throws CarportException, SQLException{
     CalcPartList portlist = new CalcPartList();
-    MaterialList shedtest = CalcPartList.calcShedMats(sheedlength);
+    MaterialList shedtest = CalcPartList.calcShedMats(sheedlength, sheedwidth);
         MaterialList spertest = CalcPartList.calcSper(portlength , portwidth);
         MaterialList remtest = CalcPartList.calcRem(portlength, portwidth);
         MaterialList posttest = CalcPartList.calculatePortPost(portlength, portwidth);

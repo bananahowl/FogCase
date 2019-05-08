@@ -148,13 +148,15 @@ public class CarportMapper {
     }*/
 
 
-
     public static String getMatiralName(int id) throws CarportException {
         try {
             Connection con = Connector.connection();
-            String SQL = "SELECT materialName FROM materials " + "WHERE materialID = " + id + "; ";
-            PreparedStatement ps = con.prepareStatement(SQL);
-            ResultSet rs = ps.executeQuery();
+            String SQL = "SELECT materialName FROM materials " + "WHERE materialID = ? ";
+
+            PreparedStatement rstt = con.prepareStatement(SQL);
+            rstt.setInt(1, id);
+            ResultSet rs = rstt.executeQuery();
+
             if (rs.next()) {
                 String nr = rs.getString("materialName");
                 return nr;
@@ -293,10 +295,14 @@ public class CarportMapper {
     }
     public static String getRoofMaterial(int id) throws CarportException, SQLException {
         try {
-            Connection conn = Connector.connection();
-            String query = "Select roofmaterialname from roofmaterial where roofmaterialid = " + id + ";"; 
-            PreparedStatement ps = conn.prepareStatement(query);
-            ResultSet rs = ps.executeQuery(query);
+
+            Connection connn = Connector.connection();
+            String queyyyry = "select roofmaterialname from roofmaterial where roofmaterialid = "+ id + ""; 
+            PreparedStatement ps = connn.prepareStatement(queyyyry);
+            
+            //ps.setInt(1, id);
+            ResultSet rs = ps.executeQuery(queyyyry);
+
 
             if (rs.next()) {
                 String name = rs.getString("roofmaterialname"); 
@@ -311,8 +317,9 @@ public class CarportMapper {
     public static int getwidth(int id) throws CarportException, SQLException {
         try {
             Connection conn = Connector.connection();
-            String query = "select widthvalue from width where widthid =" + id + ";"; 
+            String query = "select widthvalue from width where widthid = " + id +""; 
             PreparedStatement ps = conn.prepareStatement(query);
+           // ps.setInt(1, id);
             ResultSet rs = ps.executeQuery(query);
 
             if (rs.next()) {
@@ -331,6 +338,7 @@ public class CarportMapper {
             Connection conn = Connector.connection();
             String query = "select lengthvalue from length where lengthid =" + id + ";"; 
             PreparedStatement ps = conn.prepareStatement(query);
+           //ps.setInt(1, id);
             ResultSet rs = ps.executeQuery(query);
 
             if (rs.next()) {

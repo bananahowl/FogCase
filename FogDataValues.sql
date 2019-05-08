@@ -63,6 +63,8 @@ insert into degrees (degreeValue) values(35);
 insert into degrees (degreeValue) values(40);
 insert into degrees (degreeValue) values(45);
 
+select * from shedwidth;
+
 insert into height (heightValue) values(200);
 
 #insert into length(lengthValue) values(240);
@@ -109,8 +111,13 @@ insert into shedwidth(shedwidthValue) values(690);
 insert into shedwidth(shedwidthValue) values(720);
 
 
-insert into shed (width,length, materialFK) values(1,1,1);
+select * from shedwidth;
+insert into shed (widthFK,lengthFK, materialFK) values(1,1,1);
 #REname table arearoof to area;
+
+insert into arearoof (widthFK,lengthFK,height,degree) values (2,4,1,2);
+
+insert into carport (widthFK, lengthFK, heightFK, materialFK) values (2,3,1,2);
 
 insert into roof (roofmaterialFK, areaFK) values (1,1);
 
@@ -118,6 +125,4 @@ insert into orders (carportFK, shedFK, roofFK) values (1,1,1);
 
 insert into roof (roofmaterialFK, areaFK) values (1,1);
 
-insert into arearoof (widthFK,lengthFK,height,degree) values (2,4,1,2);
 
-insert into carport (widthFK, lengthFK, height, materialFK) values (2,3,1,2);
