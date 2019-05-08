@@ -22,9 +22,8 @@
         int width = cf.getCarportWidth(widthh);
         %>
        X${table}X   
-       ${price}
         <form>
-            <h1>Would you like ${carport.length} to add a shed to your carport?</h1>
+            
                       
             
             <div class="shedYesNo">
