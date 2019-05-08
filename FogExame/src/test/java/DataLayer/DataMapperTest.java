@@ -127,6 +127,12 @@ public class DataMapperTest {
         int result = CarportMapper.getwidth(2);
         assertEquals(270, result);
     }
+    
+    @Test
+    public void testGetwidth2() throws Exception {
+        int result = CarportMapper.getwidth(1);
+        assertEquals(240, result);
+    }
 
     /**
      * Test of getlength method, of class DataMapper.
