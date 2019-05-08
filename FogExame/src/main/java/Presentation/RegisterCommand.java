@@ -24,8 +24,7 @@ public class RegisterCommand extends Command {
         if ( password1.equals( password2 ) ) {
             User user = UserFacade.createUser(firstname, lastname, adress, city, phone, email, password2);
             HttpSession session = request.getSession();
-            session.setAttribute( "user", user );
-            return  "userpage";
+            return "FlatAngle";
         } else {
             throw new CarportException("the two passwords did not match" );
         }
