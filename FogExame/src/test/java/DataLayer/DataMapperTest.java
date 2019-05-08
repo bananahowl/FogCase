@@ -89,7 +89,7 @@ public class DataMapperTest {
     @Test
     public void testGetMaxShedWidth() throws Exception {
         int result = CarportMapper.getMaxShedWidth();
-        assertEquals(19, result);
+        assertEquals(18, result);
     }
 
     /**
@@ -98,7 +98,7 @@ public class DataMapperTest {
     @Test
     public void testGetMaxShedLength() throws Exception {
         int result = CarportMapper.getMaxShedLength();
-        assertEquals(20,result);
+        assertEquals(19,result);
     }
 
     /**
