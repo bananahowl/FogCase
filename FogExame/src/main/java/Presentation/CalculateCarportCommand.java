@@ -14,6 +14,8 @@ import java.util.logging.Logger;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import DataLayer.MaterialList;
+import Logic.CalcPartList;
 
 /**
  *
@@ -29,7 +31,9 @@ public class CalculateCarportCommand extends Command {
         int widthShed = Integer.parseInt(request.getParameter("widthShed"));
         int angle = Integer.parseInt(request.getParameter("angle"));
         HttpSession session = request.getSession();
+        int price = 0;
         if (angle == 1) {
+            
             Carport ls = CarportFacade.createCarportFlatRoof(length, width, lengthShed, widthShed);
             String html = HtmlConverter.carportFlatRooftoHtml(ls);
             request.setAttribute("carport", ls); // the good stuff

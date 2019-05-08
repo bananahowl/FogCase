@@ -63,11 +63,9 @@ public class CalcPartList {
         return list1;
     }
     
-    public static MaterialList calcShedMats(int length) throws CarportException, SQLException
+    public static MaterialList calcShedMats(int length,int width) throws CarportException, SQLException
     {
         //Planks 200cm in heigth(length), 55cm width, thickness idk 
-        
-        int width = CarportFacade.getShedwidth(1);
         
         int amountOfLumberLength = (length / 55) * 2;
         int amountOfLumberWidth = (width / 55) * 2;

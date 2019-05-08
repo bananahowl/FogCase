@@ -5,10 +5,19 @@
  */
 package Logic;
 
+import DataLayer.DataMappers.UserMapper;
+import DataLayer.User;
+
 /**
  *
  * @author fskn
  */
 public class UserFacade {
+    
+    public static User createUser(String firstname, String lastname, String adress, String city, int phone, String email, String password) throws CarportException {
+        User user = new User(firstname, lastname, adress, city, phone, email, password);
+        UserMapper.createUser(user);
+        return user;
+    }
     
 }

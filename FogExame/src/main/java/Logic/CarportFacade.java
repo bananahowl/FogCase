@@ -135,16 +135,12 @@ public class CarportFacade {
         return null;
     }
 
-    public static User createUser(String email, String password) throws CarportException {
-        User user = new User(email, password);
-        CarportMapper.createUser(user);
-        return user;
-    }
-
     public static CarportWithShed add(Carport carport, Shed shed) {
         CarportWithShed cws = new CarportWithShed(carport, shed);
         return cws;
     }
+    
+    public static 
 
     /*
         public static User login( String email, String password ) throws CarportException {
