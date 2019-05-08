@@ -148,14 +148,15 @@ public class CarportMapper {
     }*/
 
 
-
     public static String getMatiralName(int id) throws CarportException {
         try {
             Connection con = Connector.connection();
             String SQL = "SELECT materialName FROM materials " + "WHERE materialID = ? ";
-            PreparedStatement ps = con.prepareStatement(SQL);
-            ps.setInt(1, id);
-            ResultSet rs = ps.executeQuery();
+
+            PreparedStatement rstt = con.prepareStatement(SQL);
+            rstt.setInt(1, id);
+            ResultSet rs = rstt.executeQuery();
+
             if (rs.next()) {
                 String nr = rs.getString("materialName");
                 return nr;
@@ -166,20 +167,6 @@ public class CarportMapper {
             throw new CarportException(ex.getMessage());
         }
     }
-
-    public static void createUser(User user) throws CarportException {
-        try {
-            Connection con = Connector.connection();
-            String SQL = "INSERT INTO users (email, password) VALUES (?, ?)";
-            PreparedStatement ps = con.prepareStatement(SQL, Statement.RETURN_GENERATED_KEYS);
-            ps.setString(1, user.getEmail());
-            ps.setString(2, user.getPassword());
-            ps.executeUpdate();
-        } catch (SQLException | ClassNotFoundException ex) {
-            throw new CarportException(ex.getMessage());
-        }
-    }
-
 
     public static int getmaxmatiralnum() throws CarportException {
 
@@ -308,11 +295,14 @@ public class CarportMapper {
     }
     public static String getRoofMaterial(int id) throws CarportException, SQLException {
         try {
-            Connection conn = Connector.connection();
-            String query = "Select roofmaterialname from roofmaterial where roofmaterialid = " + id + ""; 
-            PreparedStatement ps = conn.prepareStatement(query);
+
+            Connection connn = Connector.connection();
+            String queyyyry = "select roofmaterialname from roofmaterial where roofmaterialid = "+ id + ""; 
+            PreparedStatement ps = connn.prepareStatement(queyyyry);
+            
             //ps.setInt(1, id);
-            ResultSet rs = ps.executeQuery(query);
+            ResultSet rs = ps.executeQuery(queyyyry);
+
 
             if (rs.next()) {
                 String name = rs.getString("roofmaterialname"); 

@@ -7,6 +7,7 @@ package Logic;
 
 import DataLayer.DataMappers.UserMapper;
 import DataLayer.User;
+import java.sql.SQLException;
 
 /**
  *
@@ -20,4 +21,7 @@ public class UserFacade {
         return user;
     }
     
+    public static User getUser(String email, String password) throws CarportException, SQLException {
+        return UserMapper.login(email, password);
+    }
 }

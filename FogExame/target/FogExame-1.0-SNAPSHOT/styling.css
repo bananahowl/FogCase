@@ -37,10 +37,13 @@
     color: grey;
 }
 
-.main {
+.center {
+    margin: auto;
     width: 100%;
     float: center;
     padding: 100px;
+    text-align: center;
+    font-size: 20px;
 }
 
 body{
@@ -52,7 +55,7 @@ h1{
     font-size:30px;
     font-family:tahoma;
     text-align:center;
-    color:white;
+    color:Black;
 }
 
 p1{
@@ -109,4 +112,3 @@ td{
    font-family: tahoma;
    font-size: 20px
 }
-
