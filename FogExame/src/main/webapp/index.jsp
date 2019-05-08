@@ -10,11 +10,14 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
                <link href ="styling.css" rel="stylesheet" type="text/css"/>
-        <title>JSP Page</title>
+        <title>Front page</title>
     </head>
     <body>
         <% // response.sendRedirect("FlatAngle.jsp"); %>
-        <br><br><a type="button" href ="10FlatAngle.jsp"> Next </a>   
+        <!--<br><br><a type="button" href ="FlatAngle.jsp"> Next </a>-->
+        <form action="FrontController" method="GET">
+        <button type="submit"  name="command" value="flatangle" >next</button>
+        </form>
          <table>
             <tr><td>Login</td>
                 <td>

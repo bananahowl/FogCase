@@ -30,12 +30,15 @@
         <div class ="grid-container">
             <div class ='main'>
                 <p1><b>Customize your own carport here!</b></p1><br><br><br>
+                <form action="FrontController" method="GET">
+                    <button type="submit"  name="command" value="carportflatroof" >next</button>
+                    <form action="FrontController" method="GET">
+                        <button type="submit"  name="command" value="carportwithangle" >next</button>
+                        <!--<a type="button" href ="CarportFlatRoof.jsp"> Carport with flat roof </a>-->
+                        <!--<a type="button" href ="CarportWithAngle.jsp"> Carport with angle </a>-->
 
-                <a type="button" href ="CarportFlatRoof.jsp"> Carport with flat roof </a>
-                <a type="button" href ="CarportWithAngle.jsp"> Carport with angle </a>
-
-            </div>
-        </div>
-        <div class="footer">THIS IS A FOOTER </div>
-    </body>
-</html>
+                        </div>
+                        </div>
+                        <div class="footer">THIS IS A FOOTER </div>
+                        </body>
+                        </html>

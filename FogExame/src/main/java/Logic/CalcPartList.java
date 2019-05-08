@@ -1,7 +1,7 @@
 package Logic;
 
-import DataLayer.DataMappers.DataMapper;
-import DataLayer.DataMappers.DataMapper;
+import DataLayer.DataMappers.CarportMapper;
+import DataLayer.DataMappers.CarportMapper;
 import DataLayer.MaterialList;
 
 import java.sql.SQLException;
@@ -95,8 +95,8 @@ public class CalcPartList {
     
     public static int calcShed() throws CarportException, SQLException
     {
-        int length = DataMapper.getShedlength(1);
-        int width = DataMapper.getShedwidth(1);
+        int length = CarportMapper.getShedlength(1);
+        int width = CarportMapper.getShedwidth(1);
         int heigth = 220;
         
         int areaLength = (length*heigth) * 2;

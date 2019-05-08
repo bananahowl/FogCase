@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+<<<<<<< HEAD
 <testsuite tests="14" failures="0" name="DataLayer.DataMapperTest" time="1.984" errors="14" skipped="0">
+=======
+<<<<<<< HEAD
+<testsuite tests="14" failures="0" name="DataLayer.DataMapperTest" time="1.325" errors="0" skipped="0">
+=======
+<<<<<<< HEAD
+<testsuite tests="14" failures="0" name="DataLayer.DataMapperTest" time="2.437" errors="0" skipped="0">
+=======
+<<<<<<< HEAD
+<testsuite tests="14" failures="0" name="DataLayer.DataMapperTest" time="1.016" errors="0" skipped="0">
+=======
+<testsuite tests="14" failures="0" name="DataLayer.DataMapperTest" time="2.205" errors="0" skipped="0">
+>>>>>>> c12f9af208e051f36bbcac35eae7afc8e8e094c0
+>>>>>>> 3cf744002edd497fffa2cf3657497ebf02328199
+>>>>>>> 156d7e3195651edfb996c974b7f6915a47c5b87d
+>>>>>>> b3d73617d69e6cf0c8ef6785f73efe18664443d2
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_181\jre\bin"/>
@@ -62,6 +78,7 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
+<<<<<<< HEAD
   <testcase classname="DataLayer.DataMapperTest" name="testGetlength" time="0.588">
     <error message="Unknown database &apos;Fogdatabase&apos;" type="java.sql.SQLSyntaxErrorException">java.sql.SQLSyntaxErrorException: Unknown database &apos;Fogdatabase&apos;
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
@@ -696,4 +713,70 @@
     <system-out>Hello
 </system-out>
   </testcase>
+=======
+<<<<<<< HEAD
+  <testcase classname="DataLayer.DataMapperTest" name="testGetlength" time="0.997"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetMatiralName" time="0.013"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetShedwidth" time="0.019"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetwidth" time="0.018"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetShedlength" time="0.018"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetRoofAngle" time="0.018"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetMaxAngles" time="0.017"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetMaxLength" time="0.019"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetMaxRoofMaterial" time="0.018"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetmaxmatiralnum" time="0.019"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetMaxShedWidth" time="0.018"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetMaxShedLength" time="0.019"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetRoofMaterial" time="0.018"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetMaxWidth" time="0.021"/>
+=======
+<<<<<<< HEAD
+  <testcase classname="DataLayer.DataMapperTest" name="testGetlength" time="1.984"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetMatiralName" time="0.015"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetShedwidth" time="0.016"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetwidth" time="0.016"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetShedlength" time="0.015"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetRoofAngle" time="0.032"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetMaxAngles" time="0.015"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetMaxLength" time="0.016"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetMaxRoofMaterial" time="0.015"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetmaxmatiralnum" time="0.016"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetMaxShedWidth" time="0.016"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetMaxShedLength" time="0.031"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetRoofMaterial" time="0.015"/>
+=======
+<<<<<<< HEAD
+  <testcase classname="DataLayer.DataMapperTest" name="testGetlength" time="0.724"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetMatiralName" time="0.016"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetShedwidth" time="0.016"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetwidth" time="0.02"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetShedlength" time="0.016"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetRoofAngle" time="0.016"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetMaxAngles" time="0.016"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetMaxLength" time="0.02"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetMaxRoofMaterial" time="0.016"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetmaxmatiralnum" time="0.016"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetMaxShedWidth" time="0.016"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetMaxShedLength" time="0.02"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetRoofMaterial" time="0.016"/>
+>>>>>>> 3cf744002edd497fffa2cf3657497ebf02328199
+  <testcase classname="DataLayer.DataMapperTest" name="testGetMaxWidth" time="0.016"/>
+=======
+  <testcase classname="DataLayer.DataMapperTest" name="testGetlength" time="1.778"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetMatiralName" time="0.013"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetShedwidth" time="0.018"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetwidth" time="0.02"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetShedlength" time="0.019"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetRoofAngle" time="0.019"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetMaxAngles" time="0.018"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetMaxLength" time="0.018"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetMaxRoofMaterial" time="0.021"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetmaxmatiralnum" time="0.018"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetMaxShedWidth" time="0.021"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetMaxShedLength" time="0.021"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetRoofMaterial" time="0.019"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetMaxWidth" time="0.019"/>
+>>>>>>> c12f9af208e051f36bbcac35eae7afc8e8e094c0
+>>>>>>> 156d7e3195651edfb996c974b7f6915a47c5b87d
+>>>>>>> b3d73617d69e6cf0c8ef6785f73efe18664443d2
 </testsuite>
