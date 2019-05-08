@@ -34,12 +34,14 @@ public class CalculateCarportCommand extends Command {
             String html = HtmlConverter.carportFlatRooftoHtml(ls);
             request.setAttribute("carport", ls); // the good stuff
             request.setAttribute("table", html);
+            request.setAttribute("carportwidth", width);
             return "Shed";
         } else {
             Carport ls = CarportFacade.createCarportAngleRoof(length, width, lengthShed, widthShed,angle);
             String html = HtmlConverter.carportAnlgeRooftoHtml(ls);
             request.setAttribute("carport", ls);
             request.setAttribute("table", html);
+            request.setAttribute("carportwidth", width);
             return "Shed";
 
         }
