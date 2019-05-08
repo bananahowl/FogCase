@@ -59,6 +59,17 @@ materialPrice int(11) NOT NULL,
 materialName varchar(90)
 );
 
+CREATE TABLE IF NOT exists shedwidth(
+shedwidthID int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+shedwidthValue int(11) NOT NULL
+
+);
+
+CREATE TABLE if not exists shedlength(
+shedlengthID int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+shedlengthValue int(11) NOT NULL
+);
+
 
 CREATE TABLE if not exists carport (
 carportID int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -80,8 +91,8 @@ widthFK int(11) ,
 lengthFK int(11),
 materialFK int(11),
 FOREIGN KEY (materialFK) REFERENCES materials(materialID),
-FOREIGN KEY (lengthFK) REFERENCES sheedlength(sheedlengthID),
-FOREIGN KEY (widthFK) REFERENCES sheedwidth(sheedwidthID)
+FOREIGN KEY (lengthFK) REFERENCES shedlength(shedlengthID),
+FOREIGN KEY (widthFK) REFERENCES shedwidth(shedwidthID)
 
 );
 
@@ -106,16 +117,24 @@ FOREIGN KEY (shedFK) REFERENCES shed (shedID),
 FOREIGN KEY (roofFK) REFERENCES arearoof (arearoofID)
 );
 
-CREATE TABLE IF NOT exists shedwidth(
-shedwidthID int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-shedwidthValue int(11) NOT NULL
-
+CREATE TABLE IF NOT EXISTS users(
+userID int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+firstname varchar(11) NOT NULL,
+lastname varchar(11) NOT NULL,
+adress varchar(30) NOT NULL,
+city varchar(30) NOT NULL,
+email varchar(35) NOT NULL,
+phonenumber int(8) NOT NULL
 );
 
-CREATE TABLE if not exists shedlength(
-shedlengthID int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-shedlengthValue int(11) NOT NULL
+CREATE TABLE IF NOT EXISTS orderline(
+usersFk int(11) NOT NULL,
+ordersFK int(11) NOT NULL,
+FOREIGN KEY (usersFK) REFERENCES users(userID),
+FOREIGN KEY (ordersFK) REFERENCES orders(orderID)
 );
+
+
 
 
 
