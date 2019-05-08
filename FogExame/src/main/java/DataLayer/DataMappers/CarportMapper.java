@@ -152,9 +152,15 @@ public class CarportMapper {
         try {
             Connection con = Connector.connection();
             String SQL = "SELECT materialName FROM materials " + "WHERE materialID = ? ";
+<<<<<<< HEAD:FogExame/src/main/java/DataLayer/DataMappers/CarportMapper.java
             PreparedStatement rstt = con.prepareStatement(SQL);
             rstt.setInt(1, id);
             ResultSet rs = rstt.executeQuery();
+=======
+            PreparedStatement ps = con.prepareStatement(SQL);
+            ps.setInt(1, id);
+            ResultSet rs = ps.executeQuery();
+>>>>>>> work0705:FogExame/src/main/java/DataLayer/DataMappers/DataMapper.java
             if (rs.next()) {
                 String nr = rs.getString("materialName");
                 return nr;
@@ -307,12 +313,20 @@ public class CarportMapper {
     }
     public static String getRoofMaterial(int id) throws CarportException, SQLException {
         try {
+<<<<<<< HEAD:FogExame/src/main/java/DataLayer/DataMappers/CarportMapper.java
             Connection connn = Connector.connection();
             String queyyyry = "select roofmaterialname from roofmaterial where roofmaterialid = " + id + ""; 
             PreparedStatement ps = connn.prepareStatement(queyyyry);
             
            // ps.setInt(1, id);
             ResultSet rs = ps.executeQuery(queyyyry);
+=======
+            Connection conn = Connector.connection();
+            String query = "Select roofmaterialname from roofmaterial where roofmaterialid = ?"; 
+            PreparedStatement ps = conn.prepareStatement(query);
+            ps.setInt(1, id);
+            ResultSet rs = ps.executeQuery(query);
+>>>>>>> work0705:FogExame/src/main/java/DataLayer/DataMappers/DataMapper.java
 
             if (rs.next()) {
                 String name = rs.getString("roofmaterialname"); 
