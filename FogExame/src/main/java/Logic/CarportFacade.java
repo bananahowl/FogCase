@@ -125,7 +125,8 @@ public class CarportFacade {
             }
             int a = getCarportLength(length);
             int b = getCarportWidth(width);
-            Carport carport = new Carport(a, 220, b, shed, angle,price);
+            int c = getRoofAngle(angle);
+            Carport carport = new Carport(a, 220, b, shed, c,price);
             return carport;
         } catch (CarportException ex) {
             Logger.getLogger(CarportFacade.class.getName()).log(Level.SEVERE, null, ex);
