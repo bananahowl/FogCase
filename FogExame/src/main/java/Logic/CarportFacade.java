@@ -7,7 +7,7 @@ package Logic;
 
 import DataLayer.Carport;
 import DataLayer.CarportWithShed;
-import DataLayer.DataMappers.DataMapper;
+import DataLayer.DataMappers.CarportMapper;
 import DataLayer.Roof_material;
 import DataLayer.Shed;
 import DataLayer.User;
@@ -25,64 +25,64 @@ public class CarportFacade {
 
     public static Shed getLengthShed(int heigth, int length, int width) throws CarportException, SQLException {
         Shed shed = new Shed(heigth, length, width);
-        DataMapper.getShedlength(0);
+        CarportMapper.getShedlength(0);
         return shed;
     }
 
     public static int getCarportLength(int id) throws CarportException, SQLException {
-        return DataMapper.getlength(id);
+        return CarportMapper.getlength(id);
     }
 
     public static int getCarportWidth(int id) throws CarportException, SQLException {
-        return DataMapper.getwidth(id);
+        return CarportMapper.getwidth(id);
     }
 
     public static String getRoofMaterial(int id) throws CarportException, SQLException {
-        return DataMapper.getRoofMaterial(id);
+        return CarportMapper.getRoofMaterial(id);
     }
 
     public static String getMatiralName(int id) throws CarportException {
-        return DataMapper.getMatiralName(id);
+        return CarportMapper.getMatiralName(id);
     }
 
     public static int getmaxmatiralnum() throws CarportException {
-        return DataMapper.getmaxmatiralnum();
+        return CarportMapper.getmaxmatiralnum();
     }
 
     public static int getMaxLength() throws CarportException {
-        return DataMapper.getMaxLength();
+        return CarportMapper.getMaxLength();
     }
 
     public static int getMaxAngles() throws CarportException {
-        return DataMapper.getMaxAngles();
+        return CarportMapper.getMaxAngles();
     }
 
     public static int getMaxWidth() throws CarportException {
-        return DataMapper.getMaxWidth();
+        return CarportMapper.getMaxWidth();
     }
 
     public static int getMaxRoofMaterial() throws CarportException {
-        return DataMapper.getMaxRoofMaterial();
+        return CarportMapper.getMaxRoofMaterial();
     }
 
     public static int getShedwidth(int id) throws CarportException, SQLException {
-        return DataMapper.getShedwidth(id);
+        return CarportMapper.getShedwidth(id);
     }
 
     public static int getMaxShedLength() throws CarportException {
-        return DataMapper.getMaxShedLength();
+        return CarportMapper.getMaxShedLength();
     }
 
     public static int getMaxShedWidth() throws CarportException {
-        return DataMapper.getMaxShedWidth();
+        return CarportMapper.getMaxShedWidth();
     }
 
     public static int getShedlength(int id) throws CarportException, SQLException {
-        return DataMapper.getShedlength(id);
+        return CarportMapper.getShedlength(id);
     }
 
     public static int getRoofAngle(int id) throws CarportException, SQLException {
-        return DataMapper.getRoofAngle(id);
+        return CarportMapper.getRoofAngle(id);
     }
 
     public static Carport createCarportFlatRoof(int length, int width, int widthShed, int lengthShed) {
@@ -137,7 +137,7 @@ public class CarportFacade {
 
     public static User createUser(String email, String password) throws CarportException {
         User user = new User(email, password);
-        DataMapper.createUser(user);
+        CarportMapper.createUser(user);
         return user;
     }
 

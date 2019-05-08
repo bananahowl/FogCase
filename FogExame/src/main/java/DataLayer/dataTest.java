@@ -5,7 +5,7 @@
  */
 package DataLayer;
 
-import DataLayer.DataMappers.DataMapper;
+import DataLayer.DataMappers.CarportMapper;
 import Logic.CarportFacade;
 import java.util.ArrayList;
 
@@ -18,7 +18,7 @@ public class dataTest {
     public static void main(String[] args) throws Exception {
         ArrayList<Materials> material = new ArrayList();
         
-        DataMapper datatest = new DataMapper();
+        CarportMapper datatest = new CarportMapper();
         System.out.println("hello world");
         System.out.println(datatest.getMatiralName(2));
        

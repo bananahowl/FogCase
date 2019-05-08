@@ -18,7 +18,7 @@ import java.util.List;
 import Logic.CarportException;
 
 import java.sql.Connection;
-public class DataMapper {
+public class CarportMapper {
 /*
     public String getMatiralName(int id) throws Exception {
         try {
