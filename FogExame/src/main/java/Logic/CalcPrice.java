@@ -27,10 +27,10 @@ public class CalcPrice {
             total +=(( list.get(i).getAmount() *  list.get(i).getLength()) /lenghtVal ) * price ;
                System.out.println( list.get(i));
 
-               System.out.println("Lenght of material: "+ list.get(i).getLength());
-               System.out.println("Amount of material: "+list.get(i).getAmount());
-               System.out.println("-------------");
-               System.out.println( "current total: " + total);
+               //System.out.println("Lenght of material: "+ list.get(i).getLength());
+               //System.out.println("Amount of material: "+list.get(i).getAmount());
+               //System.out.println("-------------");
+               //System.out.println( "current total: " + total);
 
           }
         return total ;
