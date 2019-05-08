@@ -152,8 +152,9 @@ public class DataMapper {
     public static String getMatiralName(int id) throws CarportException {
         try {
             Connection con = Connector.connection();
-            String SQL = "SELECT materialName FROM materials " + "WHERE materialID = " + id + "; ";
+            String SQL = "SELECT materialName FROM materials " + "WHERE materialID = ? ";
             PreparedStatement ps = con.prepareStatement(SQL);
+            ps.setInt(1, id);
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
                 String nr = rs.getString("materialName");
@@ -308,8 +309,9 @@ public class DataMapper {
     public static String getRoofMaterial(int id) throws CarportException, SQLException {
         try {
             Connection conn = Connector.connection();
-            String query = "Select roofmaterialname from roofmaterial where roofmaterialid = " + id + ";"; 
+            String query = "Select roofmaterialname from roofmaterial where roofmaterialid = ?"; 
             PreparedStatement ps = conn.prepareStatement(query);
+            ps.setInt(1, id);
             ResultSet rs = ps.executeQuery(query);
 
             if (rs.next()) {
