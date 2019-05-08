@@ -13,12 +13,13 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
  * @author emils
  */
-public class CalculateCustomCarport extends Command {
+public class CalculateCarportCommand extends Command {
 
     @Override
     String execute(HttpServletRequest request, HttpServletResponse response) throws CarportException {
@@ -27,13 +28,18 @@ public class CalculateCustomCarport extends Command {
         int lengthShed = Integer.parseInt(request.getParameter("lengthShed"));
         int widthShed = Integer.parseInt(request.getParameter("widthShed"));
         int angle = Integer.parseInt(request.getParameter("angle"));
+        HttpSession session = request.getSession();
         if (angle == 1) {
             Carport ls = CarportFacade.createCarportFlatRoof(length, width, lengthShed, widthShed);
-            request.getSession().setAttribute("flatCarport", ls);
+            String html = HtmlConverter.carportFlatRooftoHtml(ls);
+            request.setAttribute("carport", ls); // the good stuff
+            request.setAttribute("table", html);
             return "Shed";
         } else {
             Carport ls = CarportFacade.createCarportAngleRoof(length, width, lengthShed, widthShed,angle);
-            request.getSession().setAttribute("angleCarport", ls);
+            String html = HtmlConverter.carportAnlgeRooftoHtml(ls);
+            request.setAttribute("carport", ls);
+            request.setAttribute("table", html);
             return "Shed";
 
         }

@@ -23,7 +23,7 @@
         <div class="row">
             <div class="col-3 col-s-3 menu">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.jsp">Home</a></li>
                     <li><a href="Profile.jsp">Profile</a></li>
                     <li><a href="FlatAngle.jsp">Customize</a></li>
                     <li style="float:right"><a class="active" href="#about">BRUG TIL LOG IN/LOG UD</a></li>
@@ -38,59 +38,91 @@
                 <p1>Vi gør vores kunder opmærksomhed på, at alle vores carporte leveres, som et byg-selv-sæt, usamlet og ubehandlet</p1><br><br>
                 <hr>
                 <br><p1><b>Choose the measurements for your carport</b></p1><br>
+                <form name ="Shed" action="FrontController" method="hidden">
+                    <input type="hidden" name="command" value="Shed">
+                    <table class="table table-striped">
+                        <thead><tr><th>Height</th><th>Length</th><th>Width</th><th></th></tr></thead>
+                        <tbody><tr>
 
-                <form name ="withAngle" action="FrontController" method="POST">
 
-                    <tr><table>
-                        <td>Height:</td><br>
-                        <td>220 cm</td>
-                    </table>
+                            <tr><table>
+                            <td>Height:</td><br>
+                            <td>220 cm</td>
+                        </table>
 
-                    <table>
-                        <td>Length:</td><br>
-                        <td><select name=length id="option">                        
-                                <% for (int i = 1; i < cf.getMaxLength() + 1; i++) {%>
-                                <option value=1><%=cf.getCarportLength(i)%></option><% }%></td>                          
-                    </table>
+                        <table>
+                            <td>Length:</td><br>
+                            <td><select name=length id="option">                        
+                                    <% for (int i = 1; i < cf.getMaxLength() + 1; i++) {%>
+                                    <option value=<%=i%>><%=cf.getCarportLength(i)%></option><% }%>
+                            </td> 
 
-                    <table>
-                        <td>Width:</td><br>
-                        <td><select name=width id="option">
-                                <% for (int i = 1; i < cf.getMaxWidth() + 1; i++) {%>
-                                <option value=1><%= cf.getCarportWidth(i)%></option><% }%></td>
-                    </table>
-                    </tr>
+                        </table>
+
+                        <table>
+                            <td>Width:</td><br>
+                            <td><select name=width id="option">
+                                    <% for (int i = 1; i < cf.getMaxWidth() + 1; i++) {%>
+                                    <option value=<%=i%>><%= cf.getCarportWidth(i)%></option><% }%></td>
+                        </table>
+                        </tr>
+
+                        <hr>
+                        <br><p1><b>Choose the measurements for your shed:</b></p1><br><br>
+
+                        <tr>
+                        <table>
+                            <td>Height:</td><br>
+                            <td>220 cm</td>
+                        </table>
+
+                        <table>
+                            <td>Length:</td><br>
+                            <td><select name=length id="option">
+                                    <% for (int i = 1; i < cf.getMaxShedLength() + 1; i++) {%>
+                                    <option value=<%=i%>><%= cf.getShedlength(i)%></option><% }%></td>                          
+                        </table>
+
+                        <table>
+                            <td>Width:</td><br>
+                            <td><select name=width id="option">
+                                    <% for (int i = 1; i < cf.getMaxShedWidth() + 1; i++) {%>
+                                    <option value=<%=i%>><%= cf.getShedwidth(i)%></option><% }%></td>
+                        </table>
+                        </tr>
                 </form>
-                    <hr>
-                    <br><p1><b>Choose the measurements for your shed:</b></p1><br><br>
-                <form name ="shed" action="FrontController" method="POST">
-                    <tr>
-                    <table>
-                        <td>Height:</td><br>
-                        <td>220 cm</td>
-                    </table>
-
-                    <table>
-                        <td>Length:</td><br>
-                        <td><select name=length id="option">
-                                <% for (int i = 1; i < cf.getMaxShedLength() + 1; i++) {%>
-                                <option value=1><%= cf.getShedlength(i)%></option><% }%></td>                          
-                    </table>
-
-                    <table>
-                        <td>Width:</td><br>
-                        <td><select name=width id="option">
-                                <% for (int i = 1; i < cf.getMaxShedWidth() + 1; i++) {%>
-                                <option value=1><%= cf.getShedwidth(i)%></option><% }%></td>
-                    </table>
-                    </tr>
-                </form>
-                    <div class ="right">
-                        <br><br><a type="button" href ="FlatAngle.jsp"> Back </a>
-                <a type="button" float ="right" href ="ShoppingCart.jsp">Add to shoppingcart</a>
-                    </div>
+                <div class ="right">
+                    <br><br><a type="button" href ="FlatAngle.jsp"> Back </a>
+                    <a type="submit" float ="right" >Add to shoppingcart</a>
+                </div>
             </div>
             <div class="footer">THIS IS A FOOTER </div>
         </div>
-</body>
-</html>
+        <form action="FrontController" method="GET">
+            <table class="table table-striped">
+                <thead><tr><th>CPLength</th><th>CPWidth</th><th>ShedLength</th><th>ShedWitdth</th><th></th></tr></thead>
+                <tbody>
+                    <tr>  <td> <select name=length id="option">                        
+                                <% for (int i = 1; i < cf.getMaxLength() + 1; i++) {%>
+                                <option value=<%=i%>><%=cf.getCarportLength(i)%></option><% }%>
+
+                                <td> <select name=width id="option">
+                                        <% for (int i = 1; i < cf.getMaxWidth() + 1; i++) {%>
+                                        <option value=<%=i%>><%= cf.getCarportWidth(i)%></option><% }%></td> 
+
+                                <td><select name=lengthShed id="option">
+                                        <% for (int i = 1; i < cf.getMaxShedLength() + 1; i++) {%>
+                                        <option value=<%=i%>><%= cf.getShedlength(i)%></option><% }%></td>
+                                <td><select name=widthShed id="option">
+                                        <% for (int i = 1; i < cf.getMaxShedWidth() + 1; i++) {%>
+                                        <option value=<%=i%>><%= cf.getShedwidth(i)%></option><% }%></td>
+                                <td><select name=angle id="option">
+                                        <% for (int i = 1; i < cf.getMaxShedWidth() + 1; i++) {%>
+                                        <option value=<%=i%>><%= cf.getShedwidth(i)%></option><% }%></td>
+                                <td><button type="submit" name="command" value="calculate">calculate</button></td>
+                                <td><span id="errorContainer"></span></td>
+                    </tr>
+            </table>
+        </form>
+            </body>
+            </html>

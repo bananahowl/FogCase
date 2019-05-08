@@ -20,7 +20,7 @@
         <div class="row">
             <div class="col-3 col-s-3 menu">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.jsp">Home</a></li>
                     <li><a href="Profile.jsp">Profile</a></li>
                     <li><a href="FlatAngle.jsp">Customize</a></li>
                     <li style="float:right"><a class="active" href="#about">BRUG TIL LOG IN/LOG UD</a></li>

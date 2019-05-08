@@ -18,8 +18,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author emils
  */
-@WebServlet(urlPatterns = {"/Frontcontroller"})
-public class Frontcontroller extends HttpServlet {
+@WebServlet(urlPatterns = {"/FrontController"})
+public class FrontController extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -35,7 +35,7 @@ public class Frontcontroller extends HttpServlet {
         try {
             Command action = Command.from( request );
             String view = action.execute( request, response );
-            request.getRequestDispatcher( "/WEB-INF/" + view + ".jsp" ).forward( request, response );
+            request.getRequestDispatcher(  view + ".jsp" ).forward( request, response );
         } catch ( CarportException ex ) {
             request.setAttribute( "error", ex.getMessage() );
             request.getRequestDispatcher( "index.jsp" ).forward( request, response );
