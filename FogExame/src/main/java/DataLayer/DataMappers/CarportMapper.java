@@ -148,14 +148,13 @@ public class CarportMapper {
     }*/
 
 
-
     public static String getMatiralName(int id) throws CarportException {
         try {
             Connection con = Connector.connection();
             String SQL = "SELECT materialName FROM materials " + "WHERE materialID = ? ";
-            PreparedStatement ps = con.prepareStatement(SQL);
-            ps.setInt(1, id);
-            ResultSet rs = ps.executeQuery();
+            PreparedStatement rstt = con.prepareStatement(SQL);
+            rstt.setInt(1, id);
+            ResultSet rs = rstt.executeQuery();
             if (rs.next()) {
                 String nr = rs.getString("materialName");
                 return nr;
@@ -308,11 +307,12 @@ public class CarportMapper {
     }
     public static String getRoofMaterial(int id) throws CarportException, SQLException {
         try {
-            Connection conn = Connector.connection();
-            String query = "Select roofmaterialname from roofmaterial where roofmaterialid = " + id + ""; 
-            PreparedStatement ps = conn.prepareStatement(query);
-            //ps.setInt(1, id);
-            ResultSet rs = ps.executeQuery(query);
+            Connection connn = Connector.connection();
+            String queyyyry = "select roofmaterialname from roofmaterial where roofmaterialid = " + id + ""; 
+            PreparedStatement ps = connn.prepareStatement(queyyyry);
+            
+           // ps.setInt(1, id);
+            ResultSet rs = ps.executeQuery(queyyyry);
 
             if (rs.next()) {
                 String name = rs.getString("roofmaterialname"); 
