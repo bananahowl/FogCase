@@ -71,7 +71,7 @@ public class DataMapperTest {
     @Test
     public void testGetMaxAngles() throws Exception {
         int result = CarportMapper.getMaxAngles();
-        assertEquals(6, result);
+        assertEquals(7, result);
     }
 
     /**
@@ -149,7 +149,7 @@ public class DataMapperTest {
     @Test
     public void testGetShedwidth() throws Exception {
         int result = CarportMapper.getShedwidth(4);
-        assertEquals(300, result);
+        assertEquals(270, result);
     }
 
     /**
@@ -158,7 +158,7 @@ public class DataMapperTest {
     @Test
     public void testGetShedlength() throws Exception {
         int result = CarportMapper.getShedlength(4);
-        assertEquals(240, result);
+        assertEquals(210, result);
     }
 
     /**
@@ -167,7 +167,7 @@ public class DataMapperTest {
     @Test
     public void testGetRoofAngle() throws Exception {
         int result = CarportMapper.getRoofAngle(4);
-        assertEquals(35, result);
+        assertEquals(30, result);
     }
     
 }

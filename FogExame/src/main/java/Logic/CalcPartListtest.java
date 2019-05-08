@@ -24,15 +24,10 @@ public class CalcPartListtest {
         //int answer1 = CalcPartList.calcShedMats();
         //System.out.println(answer1);
         System.out.println("______________________");
-<<<<<<< HEAD
-           
+
         MaterialList shedtest = CalcPartList.calcShedMats(700,500);
         MaterialList spertest = CalcPartList.calcSper(700 , 400);
-=======
 
-        MaterialList shedtest = CalcPartList.calcShedMats(700);
-        MaterialList spertest = CalcPartList.calcSper(700, 400);
->>>>>>> work0705
         MaterialList remtest = CalcPartList.calcRem(700, 400);
         MaterialList posttest = CalcPartList.calculatePortPost(400, 700);
         MaterialList rooftest = CalcPartList.calcRoofSides(400, 700, 25);

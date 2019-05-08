@@ -59,20 +59,12 @@ public class CalcPartList {
 
         return list1;
     }
-<<<<<<< HEAD
-    
+
     public static MaterialList calcShedMats(int length,int width) throws CarportException, SQLException
     {
         //Planks 200cm in heigth(length), 55cm width, thickness idk 
         
-=======
 
-    public static MaterialList calcShedMats(int length) throws CarportException, SQLException {
-        //Planks 200cm in heigth(length), 55cm width, thickness idk 
-
-        int width = CarportFacade.getShedwidth(1);
-
->>>>>>> work0705
         int amountOfLumberLength = (length / 55) * 2;
         int amountOfLumberWidth = (width / 55) * 2;
 
@@ -97,18 +89,13 @@ public class CalcPartList {
 
         return list1;
     }
-<<<<<<< HEAD
+
     
     public static int calcShed() throws CarportException, SQLException
     {
         int length = CarportMapper.getShedlength(1);
         int width = CarportMapper.getShedwidth(1);
-=======
 
-    public static int calcShed() throws CarportException, SQLException {
-        int length = DataMapper.getShedlength(1);
-        int width = DataMapper.getShedwidth(1);
->>>>>>> work0705
         int heigth = 220;
 
         int areaLength = (length * heigth) * 2;
@@ -371,8 +358,4 @@ public static ArrayList<MetalParts> addItem(MetalParts val) {
         
     }
    
-    
-=======
-     */
->>>>>>> work0705
 }

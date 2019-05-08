@@ -63,6 +63,8 @@ insert into degrees (degreeValue) values(35);
 insert into degrees (degreeValue) values(40);
 insert into degrees (degreeValue) values(45);
 
+select * from shedwidth;
+
 insert into height (heightValue) values(200);
 
 #insert into length(lengthValue) values(240);
