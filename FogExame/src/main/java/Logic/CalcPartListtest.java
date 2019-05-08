@@ -27,7 +27,7 @@ public class CalcPartListtest {
         
         System.out.println("______________________");
            
-        MaterialList shedtest = CalcPartList.calcShedMats(700);
+        MaterialList shedtest = CalcPartList.calcShedMats(700,500);
         MaterialList spertest = CalcPartList.calcSper(700 , 400);
         MaterialList remtest = CalcPartList.calcRem(700, 400);
         MaterialList posttest = CalcPartList.calculatePortPost(400, 700);
