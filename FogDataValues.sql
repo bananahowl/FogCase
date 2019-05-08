@@ -55,6 +55,7 @@ insert into length(lengthValue) values(720);
 insert into length(lengthValue) values(750);
 insert into length(lengthValue) values(780);
 
+insert into degrees (degreeValue) values(0);
 insert into degrees (degreeValue) values(15);
 insert into degrees (degreeValue) values(20);
 insert into degrees (degreeValue) values(30);
@@ -65,6 +66,7 @@ insert into degrees (degreeValue) values(45);
 insert into height (heightValue) values(200);
 
 #insert into length(lengthValue) values(240);
+insert into shedlength(shedlengthValue) values(0);
 insert into shedlength(shedlengthValue) values(150);
 insert into shedlength(shedlengthValue) values(180);
 insert into shedlength(shedlengthValue) values(210);
@@ -84,8 +86,9 @@ insert into shedlength(shedlengthValue) values(600);
 insert into shedlength(shedlengthValue) values(630);
 insert into shedlength(shedlengthValue) values(660);
 insert into shedlength(shedlengthValue) values(690);
-insert into shedlength(shedlengthValue) values(0); # ret til at 0 værdierne kommer i toppen
+ # ret til at 0 værdierne kommer i toppen
 
+insert into shedwidth(shedwidthValue) values(0);
 insert into shedwidth(shedwidthValue) values(210);
 insert into shedwidth(shedwidthValue) values(240);
 insert into shedwidth(shedwidthValue) values(270);
@@ -104,7 +107,7 @@ insert into shedwidth(shedwidthValue) values(630);
 insert into shedwidth(shedwidthValue) values(660);
 insert into shedwidth(shedwidthValue) values(690);
 insert into shedwidth(shedwidthValue) values(720);
-insert into shedwidth(shedwidthValue) values(0);
+
 
 insert into shed (width,length, materialFK) values(1,1,1);
 #REname table arearoof to area;
