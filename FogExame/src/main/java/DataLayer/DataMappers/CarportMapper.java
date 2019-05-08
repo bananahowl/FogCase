@@ -168,20 +168,6 @@ public class CarportMapper {
         }
     }
 
-    public static void createUser(User user) throws CarportException {
-        try {
-            Connection con = Connector.connection();
-            String SQL = "INSERT INTO users (email, password) VALUES (?, ?)";
-            PreparedStatement ps = con.prepareStatement(SQL, Statement.RETURN_GENERATED_KEYS);
-            ps.setString(1, user.getEmail());
-            ps.setString(2, user.getPassword());
-            ps.executeUpdate();
-        } catch (SQLException | ClassNotFoundException ex) {
-            throw new CarportException(ex.getMessage());
-        }
-    }
-
-
     public static int getmaxmatiralnum() throws CarportException {
 
         try {
