@@ -1,7 +1,6 @@
 DataLayer\Materials.class
 Presentation\CreateSVG.class
 DataLayer\CarportWithShed.class
-DataLayer\DataMappers\DataMapper.class
 Logic\CalcPrice.class
 DataLayer\MetalParts.class
 Presentation\GetMyOrders.class

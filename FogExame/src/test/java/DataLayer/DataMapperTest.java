@@ -5,7 +5,7 @@
  */
 package DataLayer;
 
-import DataLayer.DataMappers.DataMapper;
+import DataLayer.DataMappers.CarportMapper;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -43,7 +43,7 @@ public class DataMapperTest {
      */
     @Test
     public void testGetMatiralName() throws Exception {
-        String result = DataMapper.getMatiralName(1);
+        String result = CarportMapper.getMatiralName(1);
         assertEquals("birk", result);
     }
     
@@ -52,7 +52,7 @@ public class DataMapperTest {
      */
     @Test
     public void testGetmaxmatiralnum() throws Exception {
-        int result = DataMapper.getmaxmatiralnum();
+        int result = CarportMapper.getmaxmatiralnum();
         assertEquals(4, result);
     }
 
@@ -61,7 +61,7 @@ public class DataMapperTest {
      */
     @Test
     public void testGetMaxLength() throws Exception {
-        int result = DataMapper.getMaxLength();
+        int result = CarportMapper.getMaxLength();
         assertEquals(18, result);
     }
 
@@ -70,7 +70,7 @@ public class DataMapperTest {
      */
     @Test
     public void testGetMaxAngles() throws Exception {
-        int result = DataMapper.getMaxAngles();
+        int result = CarportMapper.getMaxAngles();
         assertEquals(6, result);
     }
 
@@ -79,7 +79,7 @@ public class DataMapperTest {
      */
     @Test
     public void testGetMaxWidth() throws Exception {
-        int result = DataMapper.getMaxWidth();
+        int result = CarportMapper.getMaxWidth();
         assertEquals(18, result);
     }
 
@@ -88,8 +88,8 @@ public class DataMapperTest {
      */
     @Test
     public void testGetMaxShedWidth() throws Exception {
-        int result = DataMapper.getMaxShedWidth();
-        assertEquals(18, result);
+        int result = CarportMapper.getMaxShedWidth();
+        assertEquals(19, result);
     }
 
     /**
@@ -97,7 +97,7 @@ public class DataMapperTest {
      */
     @Test
     public void testGetMaxShedLength() throws Exception {
-        int result = DataMapper.getMaxShedLength();
+        int result = CarportMapper.getMaxShedLength();
         assertEquals(20,result);
     }
 
@@ -106,7 +106,7 @@ public class DataMapperTest {
      */
     @Test
     public void testGetMaxRoofMaterial() throws Exception {
-        int result = DataMapper.getMaxRoofMaterial();
+        int result = CarportMapper.getMaxRoofMaterial();
         assertEquals(3, result);
     }
 
@@ -115,7 +115,7 @@ public class DataMapperTest {
      */
     @Test
     public void testGetRoofMaterial() throws Exception {
-        String result = DataMapper.getRoofMaterial(3);
+        String result = CarportMapper.getRoofMaterial(3);
         assertEquals("plast", result);
     }
 
@@ -124,7 +124,7 @@ public class DataMapperTest {
      */
     @Test
     public void testGetwidth() throws Exception {
-        int result = DataMapper.getwidth(2);
+        int result = CarportMapper.getwidth(2);
         assertEquals(270, result);
     }
 
@@ -133,7 +133,7 @@ public class DataMapperTest {
      */
     @Test
     public void testGetlength() throws Exception {
-        int result = DataMapper.getlength(1);
+        int result = CarportMapper.getlength(1);
         assertEquals(270, result);
     }
 
@@ -142,7 +142,7 @@ public class DataMapperTest {
      */
     @Test
     public void testGetShedwidth() throws Exception {
-        int result = DataMapper.getShedwidth(4);
+        int result = CarportMapper.getShedwidth(4);
         assertEquals(300, result);
     }
 
@@ -151,7 +151,7 @@ public class DataMapperTest {
      */
     @Test
     public void testGetShedlength() throws Exception {
-        int result = DataMapper.getShedlength(4);
+        int result = CarportMapper.getShedlength(4);
         assertEquals(240, result);
     }
 
@@ -160,7 +160,7 @@ public class DataMapperTest {
      */
     @Test
     public void testGetRoofAngle() throws Exception {
-        int result = DataMapper.getRoofAngle(4);
+        int result = CarportMapper.getRoofAngle(4);
         assertEquals(35, result);
     }
     
