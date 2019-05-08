@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <testsuite tests="14" failures="4" name="DataLayer.DataMapperTest" time="6.529" errors="1" skipped="0">
 =======
 <testsuite tests="15" failures="0" name="DataLayer.DataMapperTest" time="2.116" errors="0" skipped="0">
 >>>>>>> 6c9843033013cde92ea412c3bc77059228ed5f63
 =======
-<<<<<<< HEAD
-<testsuite tests="14" failures="6" name="DataLayer.DataMapperTest" time="1.123" errors="0" skipped="0">
+<testsuite tests="15" failures="0" name="DataLayer.DataMapperTest" time="2.159" errors="0" skipped="0">
+>>>>>>> adde66c46e12c414b13a00b80192d3851503f014
 =======
-<testsuite tests="15" failures="0" name="DataLayer.DataMapperTest" time="0.963" errors="0" skipped="0">
->>>>>>> 52f9985ae316d1a5accc6c75a92a378c4ca2d21d
->>>>>>> 96ed1b4e26e048ff65153598aacb70963d62c416
+<testsuite tests="15" failures="2" name="DataLayer.DataMapperTest" time="0.947" errors="0" skipped="0">
+>>>>>>> 8b3810143e0a4de666260a9061efa7c852f8b1c2
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_181\jre\bin"/>
@@ -26,6 +26,7 @@
     <property name="user.country" value="DK"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value=""/>
+    <property name="test" value="DataLayer.DataMapperTest"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -45,23 +46,13 @@
     <property name="java.io.tmpdir" value="C:\Users\emils\AppData\Local\Temp\"/>
 >>>>>>> 6c9843033013cde92ea412c3bc77059228ed5f63
 =======
-<<<<<<< HEAD
-    <property name="user.dir" value="C:\Users\fskn\Documents\2 semester\NetbeansProjekter\Fog-case\FogCase\FogExame"/>
-    <property name="java.runtime.version" value="1.8.0_191-b12"/>
-    <property name="netbeans.deploy" value="true"/>
-=======
     <property name="user.dir" value="C:\Users\ahmed\Desktop\GitCAN\FogCase\FogExame"/>
     <property name="java.runtime.version" value="1.8.0_181-b13"/>
->>>>>>> 52f9985ae316d1a5accc6c75a92a378c4ca2d21d
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_181\jre\lib\endorsed"/>
     <property name="os.arch" value="amd64"/>
-<<<<<<< HEAD
-    <property name="java.io.tmpdir" value="C:\Users\fskn\AppData\Local\Temp\"/>
-=======
     <property name="java.io.tmpdir" value="C:\Users\ahmed\AppData\Local\Temp\"/>
->>>>>>> 52f9985ae316d1a5accc6c75a92a378c4ca2d21d
->>>>>>> 96ed1b4e26e048ff65153598aacb70963d62c416
+>>>>>>> 8b3810143e0a4de666260a9061efa7c852f8b1c2
     <property name="line.separator" value="
 "/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
@@ -77,12 +68,8 @@
     <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_181\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Airtame;C:\Program Files\IDM Computer Solutions\UltraEdit;C:\Program Files\Git\cmd;C:\Windows\Airtame;C:\Program Files\PuTTY\;C:\Users\emils\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Java\jdk1.8.0_181\bin;;."/>
 >>>>>>> 6c9843033013cde92ea412c3bc77059228ed5f63
 =======
-<<<<<<< HEAD
-    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_191\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Git\cmd;C:\Program Files\PuTTY\;C:\Users\fskn\AppData\Local\Microsoft\WindowsApps C:\Program Files\Java\jdk1.8.0_191\bin;;."/>
-=======
     <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_181\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\Airtame;C:\Program Files\PuTTY\;C:\Users\ahmed\AppData\Local\Microsoft\WindowsApps;C:\Users\ahmed\AppData\Local\atom\bin;."/>
->>>>>>> 52f9985ae316d1a5accc6c75a92a378c4ca2d21d
->>>>>>> 96ed1b4e26e048ff65153598aacb70963d62c416
+>>>>>>> 8b3810143e0a4de666260a9061efa7c852f8b1c2
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -94,12 +81,8 @@
     <property name="user.home" value="C:\Users\emils"/>
 >>>>>>> 6c9843033013cde92ea412c3bc77059228ed5f63
 =======
-<<<<<<< HEAD
-    <property name="user.home" value="C:\Users\fskn"/>
-=======
     <property name="user.home" value="C:\Users\ahmed"/>
->>>>>>> 52f9985ae316d1a5accc6c75a92a378c4ca2d21d
->>>>>>> 96ed1b4e26e048ff65153598aacb70963d62c416
+>>>>>>> 8b3810143e0a4de666260a9061efa7c852f8b1c2
     <property name="user.timezone" value="Europe/Paris"/>
     <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
     <property name="java.specification.version" value="1.8"/>
@@ -111,16 +94,8 @@
     <property name="user.name" value="emils"/>
 >>>>>>> 6c9843033013cde92ea412c3bc77059228ed5f63
 =======
-<<<<<<< HEAD
-    <property name="user.name" value="fskn"/>
-    <property name="java.class.path" value="C:\Program Files\NetBeans 8.2\java\maven\boot\plexus-classworlds-2.4.jar"/>
-    <property name="java.vm.specification.version" value="1.8"/>
-    <property name="sun.arch.data.model" value="64"/>
-    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_191\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dnetbeans.deploy=true -Dnetbeans.deploy.clientUrlPart=/Register.jsp -Dmaven.ext.class.path=C:\Program Files\NetBeans 8.2\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 package"/>
-=======
     <property name="user.name" value="ahmed"/>
->>>>>>> 96ed1b4e26e048ff65153598aacb70963d62c416
+>>>>>>> 8b3810143e0a4de666260a9061efa7c852f8b1c2
     <property name="java.class.path" value="C:\Program Files\NetBeans 8.2\java\maven\boot\plexus-classworlds-2.4.jar"/>
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
@@ -130,9 +105,13 @@
 =======
     <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=DataLayer.DataMapperTest -Dmaven.ext.class.path=C:\Program Files\NetBeans 8.2\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 surefire:test"/>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 52f9985ae316d1a5accc6c75a92a378c4ca2d21d
 >>>>>>> 96ed1b4e26e048ff65153598aacb70963d62c416
+=======
+>>>>>>> 8b3810143e0a4de666260a9061efa7c852f8b1c2
+>>>>>>> adde66c46e12c414b13a00b80192d3851503f014
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="da"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -159,28 +138,27 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="DataLayer.DataMapperTest" name="testGetlength" time="1.719"/>
-  <testcase classname="DataLayer.DataMapperTest" name="testGetMatiralName" time="0.014"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetlength" time="1.721"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetMatiralName" time="0.013"/>
   <testcase classname="DataLayer.DataMapperTest" name="testGetwidth2" time="0.018"/>
-  <testcase classname="DataLayer.DataMapperTest" name="testGetShedwidth" time="0.017"/>
-  <testcase classname="DataLayer.DataMapperTest" name="testGetwidth" time="0.018"/>
-  <testcase classname="DataLayer.DataMapperTest" name="testGetShedlength" time="0.018"/>
-  <testcase classname="DataLayer.DataMapperTest" name="testGetRoofAngle" time="0.016"/>
-  <testcase classname="DataLayer.DataMapperTest" name="testGetMaxAngles" time="0.02"/>
-  <testcase classname="DataLayer.DataMapperTest" name="testGetMaxLength" time="0.018"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetShedwidth" time="0.023"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetwidth" time="0.021"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetShedlength" time="0.019"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetRoofAngle" time="0.017"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetMaxAngles" time="0.019"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetMaxLength" time="0.021"/>
   <testcase classname="DataLayer.DataMapperTest" name="testGetMaxRoofMaterial" time="0.018"/>
-  <testcase classname="DataLayer.DataMapperTest" name="testGetmaxmatiralnum" time="0.019"/>
-  <testcase classname="DataLayer.DataMapperTest" name="testGetMaxShedWidth" time="0.018"/>
-  <testcase classname="DataLayer.DataMapperTest" name="testGetMaxShedLength" time="0.017"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetmaxmatiralnum" time="0.018"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetMaxShedWidth" time="0.019"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetMaxShedLength" time="0.024"/>
   <testcase classname="DataLayer.DataMapperTest" name="testGetRoofMaterial" time="0.019"/>
   <testcase classname="DataLayer.DataMapperTest" name="testGetMaxWidth" time="0.02"/>
 >>>>>>> 6c9843033013cde92ea412c3bc77059228ed5f63
 =======
-<<<<<<< HEAD
-    <property name="netbeans.deploy.clientUrlPart" value="/Register.jsp"/>
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
+<<<<<<< HEAD
   <testcase classname="DataLayer.DataMapperTest" name="testGetlength" time="0.781"/>
   <testcase classname="DataLayer.DataMapperTest" name="testGetMatiralName" time="0.016"/>
   <testcase classname="DataLayer.DataMapperTest" name="testGetShedwidth" time="0.026">
@@ -402,6 +380,20 @@
   <testcase classname="DataLayer.DataMapperTest" name="testGetMaxRoofMaterial" time="0.021"/>
   <testcase classname="DataLayer.DataMapperTest" name="testGetmaxmatiralnum" time="0.019"/>
   <testcase classname="DataLayer.DataMapperTest" name="testGetMaxShedWidth" time="0.02">
+=======
+  <testcase classname="DataLayer.DataMapperTest" name="testGetlength" time="0.652"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetMatiralName" time="0.015"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetwidth2" time="0.013"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetShedwidth" time="0.016"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetwidth" time="0.016"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetShedlength" time="0.016"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetRoofAngle" time="0.016"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetMaxAngles" time="0.015"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetMaxLength" time="0.016"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetMaxRoofMaterial" time="0.016"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetmaxmatiralnum" time="0.016"/>
+  <testcase classname="DataLayer.DataMapperTest" name="testGetMaxShedWidth" time="0.016">
+>>>>>>> adde66c46e12c414b13a00b80192d3851503f014
     <failure message="expected:&lt;18&gt; but was:&lt;19&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;18&gt; but was:&lt;19&gt;
 >>>>>>> 96ed1b4e26e048ff65153598aacb70963d62c416
 	at org.junit.Assert.fail(Assert.java:88)
@@ -449,7 +441,7 @@
     <system-out>Hello
 </system-out>
   </testcase>
-  <testcase classname="DataLayer.DataMapperTest" name="testGetMaxShedLength" time="0.027">
+  <testcase classname="DataLayer.DataMapperTest" name="testGetMaxShedLength" time="0.016">
     <failure message="expected:&lt;19&gt; but was:&lt;20&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;19&gt; but was:&lt;20&gt;
 	at org.junit.Assert.fail(Assert.java:88)
 	at org.junit.Assert.failNotEquals(Assert.java:834)
@@ -495,6 +487,7 @@
 </system-out>
   </testcase>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <testcase classname="DataLayer.DataMapperTest" name="testGetMaxLength" time="0.021"/>
   <testcase classname="DataLayer.DataMapperTest" name="testGetMaxRoofMaterial" time="0.015"/>
   <testcase classname="DataLayer.DataMapperTest" name="testGetmaxmatiralnum" time="0.036"/>
@@ -522,8 +515,9 @@
   <testcase classname="DataLayer.DataMapperTest" name="testGetmaxmatiralnum" time="0.016"/>
   <testcase classname="DataLayer.DataMapperTest" name="testGetMaxShedWidth" time="0.012"/>
   <testcase classname="DataLayer.DataMapperTest" name="testGetMaxShedLength" time="0.012"/>
+=======
+>>>>>>> adde66c46e12c414b13a00b80192d3851503f014
   <testcase classname="DataLayer.DataMapperTest" name="testGetRoofMaterial" time="0.016"/>
   <testcase classname="DataLayer.DataMapperTest" name="testGetMaxWidth" time="0.016"/>
->>>>>>> 52f9985ae316d1a5accc6c75a92a378c4ca2d21d
->>>>>>> 96ed1b4e26e048ff65153598aacb70963d62c416
+>>>>>>> 8b3810143e0a4de666260a9061efa7c852f8b1c2
 </testsuite>
