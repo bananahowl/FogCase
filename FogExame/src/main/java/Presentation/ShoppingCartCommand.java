@@ -8,21 +8,23 @@ package Presentation;
 import DataLayer.Carport;
 import Logic.CarportException;
 import Logic.CarportFacade;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
  * @author emils
  */
-public class CreateSVG extends Command{
-        @Override
+public class ShoppingCartCommand extends Command {
+
+    @Override
     String execute(HttpServletRequest request, HttpServletResponse response) throws CarportException {
-        int length = Integer.parseInt(request.getParameter("length")) ;
-        int width = Integer.parseInt(request.getParameter("width"));
-        Carport ls = CarportFacade.createCarportFlatRoof(length, width,0,0,0);
-        request.getSession().setAttribute("customcarport", ls);
-        return "shoppingcart";
+        return "ShoppingCart";
+
     }
 
 }

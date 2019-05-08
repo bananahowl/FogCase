@@ -16,6 +16,7 @@ Logic\CarportFacade.class
 DataLayer\User.class
 Presentation\HtmlConverter.class
 Logic\CarportException.class
+Presentation\ShoppingCartCommand.class
 DataLayer\Roof_area.class
 Presentation\CarportFlatRoofCommand.class
 Presentation\CarportWithAngleCommand.class

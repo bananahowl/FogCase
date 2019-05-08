@@ -2,8 +2,12 @@
 Test set: DataLayer.DataMapperTest
 -------------------------------------------------------------------------------
 <<<<<<< HEAD
+<<<<<<< HEAD
 Tests run: 14, Failures: 4, Errors: 1, Skipped: 0, Time elapsed: 6.522 sec <<< FAILURE!
 testGetShedwidth(DataLayer.DataMapperTest)  Time elapsed: 0.059 sec  <<< FAILURE!
+=======
+Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.106 sec
+>>>>>>> 6c9843033013cde92ea412c3bc77059228ed5f63
 =======
 <<<<<<< HEAD
 Tests run: 14, Failures: 6, Errors: 0, Skipped: 0, Time elapsed: 1.106 sec <<< FAILURE!

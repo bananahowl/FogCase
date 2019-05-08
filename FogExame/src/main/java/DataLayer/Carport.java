@@ -15,13 +15,15 @@ public class Carport {
     private int width;
     private Shed shed;
     private int roofangle;
+    private int price;
 
-    public Carport(int length, int heigth, int width, Shed shed, int roofangle) {
+    public Carport(int length, int heigth, int width, Shed shed, int roofangle, int price) {
         this.length = length;
         this.heigth = heigth;
         this.width = width;
         this.shed = shed;
         this.roofangle = roofangle;
+        this.price = price;
     }
 
     public int getLength() {
@@ -63,6 +65,15 @@ public class Carport {
     public void setRoofangle(int roofangle) {
         this.roofangle = roofangle;
     }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
 
     
 }
