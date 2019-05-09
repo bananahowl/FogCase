@@ -43,9 +43,9 @@ public class dataTest {
         System.out.println(CarportFacade.getMaxRoofMaterial());
         System.out.println(CarportFacade.getShedwidth(3));
         System.out.println(CarportFacade.getShedlength(1));
-        System.out.println(CarportFacade.getRoofAngle(2));
+        System.out.println(CarportFacade.getRoofAngle(6));
         System.out.println(CarportFacade.getCarportLength(2));
-        System.out.println(CarportFacade.getCarportWidth(3));
+        System.out.println(CarportFacade.getCarportWidth(1));
         System.out.println(CarportFacade.getMaxShedWidth());
         System.out.println(CarportFacade.getMaxShedLength());
         
