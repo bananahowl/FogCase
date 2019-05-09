@@ -15,11 +15,8 @@ abstract class Command {
          */
         commands.put("shoppingcart", new ShoppingCartCommand());
         commands.put("register", new RegisterCommand());
-        commands.put( "carportflatroof", new CarportFlatRoofCommand());
-        commands.put( "carportwithangle", new CarportFlatRoofCommand());
         
-        commands.put("calculate", new CalculateCarportCommand());
-        commands.put("flatangle", new FlatAngleCommand());/*
+        commands.put("calculate", new CalculateCarportCommand());/*
         commands.put( "createOrder", new CreateOrder());
         commands.put( "seeMyOrders", new GetMyOrders());*/
 
