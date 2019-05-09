@@ -16,6 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import DataLayer.MaterialList;
 import Logic.CalcPartList;
+import java.util.ArrayList;
 
 /**
  *
@@ -36,6 +37,7 @@ public class CalculateCarportCommand extends Command {
             int price = CarportFacade.NumbersFlatRoof(width, length, width, length);
             Carport ls = CarportFacade.createCarportFlatRoof(length, width, lengthShed, widthShed,price);
             String html = HtmlConverter.carportFlatRooftoHtml(ls);
+            ArrayList<MaterialList> list = new ArrayList<>();
             request.setAttribute("carport", ls); // the good stuff
             request.setAttribute("table", html);
             request.setAttribute("price", price);

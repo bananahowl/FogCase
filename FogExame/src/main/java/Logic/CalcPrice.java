@@ -17,56 +17,54 @@ import java.util.ArrayList;
  */
 public class CalcPrice {
 
-    public int woodPrice(ArrayList <MaterialList> list ){
+    public int woodPrice(ArrayList<MaterialList> list) {
 
         int lenghtVal = 10;
         int price = 5;
         int total = 0;
 
+        for (int i = 0; i < list.size(); i++) {
+            total += ((list.get(i).getAmount() * list.get(i).getLength()) / lenghtVal) * price;
+            System.out.println(list.get(i));
+            System.out.println("Material: " + list.get(i).getDescription());
+            System.out.println("Lenght of material: " + list.get(i).getLength());
+            System.out.println("Amount of material: " + list.get(i).getAmount());
+            System.out.println("-------------");
+            System.out.println("current total: " + total);
 
-         for(int i = 0; i< list.size(); i++){
-            total +=(( list.get(i).getAmount() *  list.get(i).getLength()) /lenghtVal ) * price ;
-               System.out.println( list.get(i));
-
-               System.out.println("Lenght of material: "+ list.get(i).getLength());
-               System.out.println("Amount of material: "+list.get(i).getAmount());
-               System.out.println("-------------");
-               System.out.println( "current total: " + total);
-
-          }
-        return total ;
         }
-    
-    
-    public void printList(ArrayList <MaterialList> vals){
-        System.out.println("----------------------");
-    for(int i= 0; i< vals.size(); i ++ ){
-        System.out.println(vals.get(i).toString());
+        return total;
     }
+
+    public void printList(ArrayList<MaterialList> vals) {
+        System.out.println("----------------------");
+        for (int i = 0; i < vals.size(); i++) {
+            System.out.println(vals.get(i).toString());
+        }
         System.out.println("---------- END ----------");
     }
-    
-    public int metalParts(ArrayList <MaterialList> list ){
+
+    public int metalParts(ArrayList<MaterialList> list) {
 
         int lenghtVal = 10;
         int price = 5;
         int total = 0;
+        int amountOfLumber = 0;
         CarportFacade.Partscalc(name, total, price);
 
+        for (int i = 0; i < list.size(); i++) {
+            total += ((list.get(i).getAmount() * list.get(i).getLength()) / lenghtVal) * price;
+            System.out.println(list.get(i));
 
-         for(int i = 0; i< list.size(); i++){
-            total +=(( list.get(i).getAmount() *  list.get(i).getLength()) /lenghtVal ) * price ;
-               System.out.println( list.get(i));
+            amountOfLumber = list.get(i).getAmount();
+            System.out.println("Amount of material: " + list.get(i).getAmount());
 
-        int amountOfLumber = list.get(i).getAmount();
-               System.out.println("Amount of material: "+list.get(i).getAmount());
-              
-            }
-         
-        return total ;
         }
 
-/* sample for test
+        return total;
+    }
+
+    /* sample for test
 
 /*
 
@@ -86,5 +84,5 @@ System.out.println("______________________");
           CalcPrice test = new CalcPrice();
 
           
-*/
+     */
 }
