@@ -57,7 +57,7 @@ public class CalcPartList {
 
         int heigthRounded = (int) Math.round(heigthOfRoof / 20) * 20;
         int amountOfLumber = (width / 55) * 2;
-        MaterialList list1 = new MaterialList(heigthRounded, amountOfLumber, "Træ til tag gavl 1 og gavl 2");
+        MaterialList list1 = new MaterialList(heigthRounded, amountOfLumber, "galvetræ");
 
         return list1;
     }
@@ -71,7 +71,7 @@ public class CalcPartList {
         int amountOfLumberWidth = (width / 55) * 2;
 
         int result = amountOfLumberLength + amountOfLumberWidth;
-        MaterialList list1 = new MaterialList(length, result, "planker til skur");
+        MaterialList list1 = new MaterialList(length, result, "skurplanker");
 
         return list1;
     }
@@ -115,7 +115,7 @@ public class CalcPartList {
         int amountOfLumberSper = Math.round((length / gap));
         int lengthOfLumberSper = width + 30;
 
-        MaterialList list1 = new MaterialList(lengthOfLumberSper, amountOfLumberSper, "til spær som skal bruges ");
+        MaterialList list1 = new MaterialList(lengthOfLumberSper, amountOfLumberSper, "spær ");
 
         return list1;
     }
@@ -125,7 +125,7 @@ public class CalcPartList {
         int lengthOfLumberRem = length + 50;
         //int lengthOfLumberSper = length+60; 
 
-        MaterialList list1 = new MaterialList(lengthOfLumberRem, amountOfLumberRem, "til rem som skal bruges");
+        MaterialList list1 = new MaterialList(lengthOfLumberRem, amountOfLumberRem, "rem");
 
         return list1;
     }
@@ -143,7 +143,7 @@ public class CalcPartList {
             // code some dank here
         }
 
-        MaterialList list1 = new MaterialList(postLenght, postamount, "mængden af stolper der skal bruges");
+        MaterialList list1 = new MaterialList(postLenght, postamount, "stolper");
 
         return list1;
     }
@@ -159,7 +159,7 @@ public class CalcPartList {
         int gap = 50;
         int amountOfLumberSper = Math.round((length / gap));
 
-        MaterialList list1 = new MaterialList(sideB, amountOfLumberSper, "vertikale spær til vinklet tag ");
+        MaterialList list1 = new MaterialList(sideB, amountOfLumberSper, "vertikalespær ");
 
         return list1;
     }
@@ -169,115 +169,11 @@ public class CalcPartList {
         int amountOfLumberSper = Math.round((length / gap));
         int lengthOfLumberSper = length + 60;
 
-        MaterialList list1 = new MaterialList(lengthOfLumberSper, amountOfLumberSper, "horizontale spær til vinklet tag");
+        MaterialList list1 = new MaterialList(lengthOfLumberSper, amountOfLumberSper, "horizontalespær");
 
         return list1;
     }
 
-    public static MaterialList calcMetalPost(int amounts) {
-        int length = 0;
-        int bolt = 2;
-        int screw = 2;
-        int heng = 2;
-        int total = 0;
-        for (int i = 0; i < amounts; i++) {
-            total += bolt + screw + heng;
-
-        }
-        System.out.println(total);
-        MaterialList val = new MaterialList(length, total, "metal til stolper");
-        return val;
-    }
-
-    public static MaterialList calcMetalSper(int amounts) {
-
-        int length = 0;
-        int bolt = 36;
-        int screw = 36;
-        int heng = 6;
-        int total = 0;
-        for (int i = 0; i < amounts; i++) {
-            total += i + bolt + screw + heng;
-
-        }
-        System.out.println(total);
-        MaterialList val = new MaterialList(length, total, "metal til stolper");
-        return val;
-
-    } 
-    // til roof tages antal som tag spær mængden, disse metoder bruges hvis der et et tag med vinkel.
-    public static int calcSrewRoff(int amountHeng) {
-
-        int total = 0;
-        int screw = 6;
-        for (int i = 0; i < amountHeng; i++) {
-            total += i + screw ;
-        }
-        System.out.println(total);
-        return total;
-        
-    } 
-    public static int calBoltRoof(int amount) {
-        
-        int total = 0;
-        int bolt = 6;
-        int screw = 4;
-        for (int i = 0; i < amount; i++) {
-            total += i + bolt + screw ;
-        }
-        System.out.println(total);
-        return total;
-        
-    } 
-     public static int calcHengRoof(int amount) {
-        
-        int total = 0;
-        int heng = 1;
-        for (int i = 0; i < amount; i++) {
-            total += i + heng ;
-        }
-        System.out.println(total);
-        return total;
-
-    }
-     
-    // port delen er tager amount som antalet af spær om der er
-    public static int calcSrewPort(int amountHeng) {
-
-        int total = 0;
-        int screw = 9;
-        for (int i = 0; i < amountHeng; i++) {
-            total += i + screw ;
-        }
-        System.out.println(total);
-        return total;
-        
-    } 
-    
-    public static int calBoltPort(int amount) {
-        
-        int total = 0;
-        int bolt = 9;
-        int screw = 4;
-        for (int i = 0; i < amount; i++) {
-            total += i + bolt + screw ;
-        }
-        System.out.println(total);
-        return total;
-        
-    }
-   
-    public static int calcHengPort(int amount) {
-        
-        int total = 0;
-        int heng = 1;
-        for (int i = 0; i < amount; i++) {
-            total += i + heng ;
-        }
-        System.out.println(total);
-        return total;
-
-    }
     // metode som beregner antal søm til mængden af stolper
     public int calcPostNail(int amount){
     
@@ -331,7 +227,7 @@ public static ArrayList<MetalParts> addItem(MetalParts val) {
     }
 
     */
-    public static int totaltakesAnything(int shedWidth, int shedLength, int width, int length, int angle)
+    public static int totalwoodprice(int shedWidth, int shedLength, int width, int length, int angle)
     {
         try {
             CalcPrice price = new CalcPrice();
@@ -367,9 +263,10 @@ public static ArrayList<MetalParts> addItem(MetalParts val) {
         
     }
    
-    public static ArrayList<MaterialList> totaltakesAnything1(int shedWidth, int shedLength, int width, int length, int angle) throws CarportException, SQLException
+    public static ArrayList<MaterialList> totalpartlist(int shedWidth, int shedLength, int width, int length, int angle)
     {
         
+        try {
             MaterialList shedtest = calcShedMats(shedWidth,shedLength);
             MaterialList spertest = calcSper(width , length);
             MaterialList remtest  = calcRem(width, length);
@@ -390,6 +287,12 @@ public static ArrayList<MetalParts> addItem(MetalParts val) {
             duperlist.add(horizontaltest);
             
             return duperlist;
+        } catch (CarportException ex) {
+            Logger.getLogger(CalcPartList.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(CalcPartList.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
     }
     
 }
