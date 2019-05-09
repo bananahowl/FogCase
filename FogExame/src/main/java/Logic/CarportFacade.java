@@ -89,21 +89,17 @@ public class CarportFacade {
         try {
             Shed shed = new Shed(0, 0, 0);
             if (widthShed != 1 && lengthShed != 1) {
-                try {
+               
                     shed.setLength(getShedlength(lengthShed));
                     shed.setWidth(getShedwidth(widthShed));
-                } catch (CarportException ex) {
-                    Logger.getLogger(CarportFacade.class.getName()).log(Level.SEVERE, null, ex);
-                } catch (SQLException ex) {
-                    Logger.getLogger(CarportFacade.class.getName()).log(Level.SEVERE, null, ex);
-                }
+
             }
             int a = getCarportLength(length);
             int b = getCarportWidth(width);
             Carport carport = new Carport(a, 220, b, shed, 0,price);
             return carport;
         } catch (CarportException ex) {
-            Logger.getLogger(CarportFacade.class.getName()).log(Level.SEVERE, null, ex);
+            ex.printStackTrace();
         } catch (SQLException ex) {
             Logger.getLogger(CarportFacade.class.getName()).log(Level.SEVERE, null, ex);
         }

@@ -338,7 +338,6 @@ public class CarportMapper {
             throw new CarportException(ex.getMessage());
         }
     }
-
     
     
     public static int getlength(int id) throws CarportException, SQLException {
