@@ -44,10 +44,10 @@
         <svg height ="<%=length+25%>" width ="<%=width+25%>">
 
         <rect x="0" y="15" width="<%=width+10%>" height="50" fill="#none"
-              style="stroke:rgb(0,0,255);stroke-width:3"/>
+              style="stroke:rgb(0,0,0);stroke-width:3"/>
 
         <rect x="0" y="<%=length-65%>" width="<%=width+10%>" height="50" fill="#none"
-              style="stroke:rgb(0,0,255);stroke-width:3"/>	
+              style="stroke:rgb(0,0,0);stroke-width:3"/>	
                 
         <line x1="0" y1="<%=length+10.5%>" x2="10" y2="<%=length+5.5%>"
               style="stroke:rgb(0,0,0);stroke-width:1"/>
@@ -63,7 +63,7 @@
             for (int i = 0; i < 1000; i++) {
                 if (temp >= -0) {
         %><rect x="<%=temp%>" y="0"  width="10" height="<%=length%>" fill="none"
-              style="stroke:rgb(255,0,0);stroke-width:3"/>
+              style="stroke:rgb(0,0,0);stroke-width:3"/>
         <rect x="10" y="<%=length+10.5%>"  width="<%=temp-10%>" height="1" fill="#000000" /> <%
                     temp = temp - 30;
                 } else {
