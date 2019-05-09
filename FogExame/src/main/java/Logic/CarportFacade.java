@@ -8,6 +8,7 @@ package Logic;
 import DataLayer.Carport;
 import DataLayer.CarportWithShed;
 import DataLayer.DataMappers.CarportMapper;
+import DataLayer.MetalParts;
 import DataLayer.Roof_material;
 import DataLayer.Shed;
 import DataLayer.User;
@@ -172,6 +173,13 @@ public class CarportFacade {
             Logger.getLogger(CarportFacade.class.getName()).log(Level.SEVERE, null, ex);
         }
         return 0;
+    }
+    
+    public static MetalParts Partscalc(String name, int amount, double price)
+    {
+        MetalParts test = new MetalParts(name, amount, price);
+        
+        return test;
     }
 
     /*
