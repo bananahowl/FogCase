@@ -7,6 +7,7 @@ package Presentation;
 
 import DataLayer.Carport;
 import DataLayer.MaterialList;
+import DataLayer.MetalParts;
 import java.util.ArrayList;
 
 /**
@@ -56,7 +57,7 @@ public class HtmlConverter {
 
         String partlistmid = "";
         for (int i = 0; i < list.size(); i++) {
-            partlistmid += "<tr><th>Size</th><th>" + list.get(i).getDescription() + "</th><th> Legnth</th><th>" + list.get(i).getLength() + "</th><th>Amount</th><th>" + list.get(i).getAmount() + "</th></tr> <br>";
+            partlistmid += "<tr><th>Size :</th><th>" + list.get(i).getDescription() + "</th><th> Legnth :</th><th>" + list.get(i).getLength() + "</th><th>Amount :</th><th>" + list.get(i).getAmount() + "</th></tr> <br>";
         }
 
         //"<tr><th>Size</th><th>" + list.get(i).getDescription()+ "</th><th>" + list.get(i).getLength() + "</th><th>" + list.get(i).getAmount() + "</th></tr>";
@@ -65,16 +66,27 @@ public class HtmlConverter {
                 + "<br>"
                 + "</form>";
 
-        /*" <form action=\"FrontController\" method=\"GET\"> "
-               /+ "<tr>" 
-                + "<th> <p> Material: " + list.get(i).getDescription() + " </p> </th>"
-                + "<th> <p>Lenght of material: " + list.get(i).getLength() + " </p> </th>"
-                + "<th> <p>Amount of material: " + list.get(i).getAmount() + " </p> </th>"
-                + "</tr>"    
-               /* System.out.println("Lenght of material: " + list.get(i).getLength());
-                System.out.println("Amount of material: " + list.get(i).getAmount());
-                System.out.println("-------------");*/
-        // TODO add the print part list mehtod here so that the part list can be shown on the jsp pages.
+        String totalParts = partlisttop + partlistmid + partlistbottom;
+        totalParts.replace("MaterialList -", "");
+        return totalParts;
+    }
+    
+    public static String printMetalPartList(ArrayList<MetalParts> list) {
+
+        String partlisttop = "<form action=\"FrontController\" method=\"GET\">"
+                + "<table id=\"parlist\">";
+
+        String partlistmid = "";
+        for (int i = 0; i < list.size(); i++) {
+            partlistmid += "<tr><th>Size :</th><th>" + list.get(i).getName()+ "</th><th> Amount :</th><th>" + list.get(i).getAmount()+ "</th><th>Price :</th><th>" + list.get(i).getPrice()+ "</th></tr> <br>";
+        }
+
+        //"<tr><th>Size</th><th>" + list.get(i).getDescription()+ "</th><th>" + list.get(i).getLength() + "</th><th>" + list.get(i).getAmount() + "</th></tr>";
+        String partlistbottom
+                = "</table>"
+                + "<br>"
+                + "</form>";
+
         String totalParts = partlisttop + partlistmid + partlistbottom;
         totalParts.replace("MaterialList -", "");
         return totalParts;

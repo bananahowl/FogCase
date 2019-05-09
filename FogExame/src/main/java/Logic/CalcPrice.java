@@ -92,14 +92,9 @@ public class CalcPrice {
             amountOfNails += 2*(list.get(i).getAmount() *list.get(i-1).getAmount() *2);
             }
             
-            
-            
-            
              amountOfLumber += list.get(i).getAmount();
-             
-             
+
              System.out.println("Amount of material: " + list.get(i).getAmount());
-              
             }
         
          int bracketsAmount = (int )Math.ceil(amountOfBrackets /10);
@@ -119,6 +114,15 @@ public class CalcPrice {
         
         return partslist;
 
+    }
+    
+    public double metalPartsPrice(ArrayList <MetalParts> list )
+    {
+        double totalprice = 0;
+         for(int i = 0; i< list.size(); i++){
+             totalprice += (double) list.get(i).getPrice() * list.get(i).getAmount();
+         }
+        return totalprice;
     }
 
     /* sample for test
