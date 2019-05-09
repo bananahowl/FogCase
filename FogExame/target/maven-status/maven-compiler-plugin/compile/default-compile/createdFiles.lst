@@ -23,7 +23,6 @@ Presentation\CarportWithAngleCommand.class
 DataLayer\dataTest.class
 Presentation\UnknownCommand.class
 Presentation\RegisterCommand.class
-Logic\CalcCarport.class
 DataLayer\DataMappers\CarportMapper.class
 DataLayer\MaterialList.class
 Logic\Facade\OrderFacade.class
