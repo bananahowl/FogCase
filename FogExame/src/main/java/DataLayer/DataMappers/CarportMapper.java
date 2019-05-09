@@ -258,7 +258,7 @@ public class CarportMapper {
         }
     }
     
-    public static int getMaxShedLength() throws CarportException { // IKKE FÆRDIG
+    public static int getMaxShedLength() throws CarportException { 
         try {
             Connection con = Connector.connection();
             String SQL = "select max(shedlengthid) from shedlength;";
@@ -295,13 +295,14 @@ public class CarportMapper {
     }
     public static String getRoofMaterial(int id) throws CarportException, SQLException {
         try {
-
-            Connection connn = Connector.connection();
-            String queyyyry = "select roofmaterialname from roofmaterial where roofmaterialid = "+ id + ""; 
-            PreparedStatement ps = connn.prepareStatement(queyyyry);
             
-            //ps.setInt(1, id);
-            ResultSet rs = ps.executeQuery(queyyyry);
+            
+            
+            Connection connn = Connector.connection();
+            String queyyyry = "select roofmaterialname from roofmaterial where roofmaterialid = ?"; 
+            PreparedStatement ps = connn.prepareStatement(queyyyry);
+            ps.setInt(1, id);
+            ResultSet rs = ps.executeQuery();
 
 
             if (rs.next()) {
@@ -323,7 +324,6 @@ public class CarportMapper {
             PreparedStatement ps = con.prepareStatement(SQL);
             ps.setInt(1, id);
             ResultSet rs = ps.executeQuery();
-
             if (rs.next()) {
                 int width = rs.getInt("widthValue"); 
                 return width;
@@ -340,10 +340,10 @@ public class CarportMapper {
     public static int getlength(int id) throws CarportException, SQLException {
         try {
             Connection conn = Connector.connection();
-            String query = "select lengthvalue from length where lengthid =" + id + ";"; 
+            String query = "select lengthvalue from length where lengthid = ?"; 
             PreparedStatement ps = conn.prepareStatement(query);
-           //ps.setInt(1, id);
-            ResultSet rs = ps.executeQuery(query);
+           ps.setInt(1, id);
+            ResultSet rs = ps.executeQuery();
 
             if (rs.next()) {
                 int length = rs.getInt("lengthvalue"); 
@@ -359,9 +359,10 @@ public class CarportMapper {
     public static int getShedwidth(int id) throws CarportException, SQLException {
         try {
             Connection conn = Connector.connection();
-            String query = "select shedwidthvalue from shedwidth where shedwidthid =" + id + ";"; 
+            String query = "select shedwidthvalue from shedwidth where shedwidthid =?"; 
             PreparedStatement ps = conn.prepareStatement(query);
-            ResultSet rs = ps.executeQuery(query);
+            ps.setInt(1, id);
+            ResultSet rs = ps.executeQuery();
 
             if (rs.next()) {
                 int width = rs.getInt("shedwidthvalue"); 
@@ -377,9 +378,10 @@ public class CarportMapper {
     public static int getShedlength(int id) throws CarportException, SQLException {
         try {
             Connection conn = Connector.connection();
-            String query = "select shedlengthvalue from shedlength where shedlengthid =" + id + ";"; 
+            String query = "select shedlengthvalue from shedlength where shedlengthid = ?"; 
             PreparedStatement ps = conn.prepareStatement(query);
-            ResultSet rs = ps.executeQuery(query);
+            ps.setInt(1, id);
+            ResultSet rs = ps.executeQuery();
 
             if (rs.next()) {
                 int length = rs.getInt("shedlengthvalue"); 
@@ -395,11 +397,11 @@ public class CarportMapper {
     public static int getRoofAngle(int id) throws CarportException, SQLException {
         try {
             Connection conn = Connector.connection();
-            String query = "select degreevalue from degrees where degreeid = ?";
-            PreparedStatement ps = conn.prepareStatement(query);
-            ps.setString(1, "degreeid");
-            ResultSet rs = ps.executeQuery(query);
 
+            String query = "select degreevalue from degrees where degreeid = ?"; 
+            PreparedStatement ps = conn.prepareStatement(query);
+            ps.setInt(1, id);
+            ResultSet rs = ps.executeQuery();
             if (rs.next()) {
                 int angle = rs.getInt("degreevalue"); 
                 return angle;

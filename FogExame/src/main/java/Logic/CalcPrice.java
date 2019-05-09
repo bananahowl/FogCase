@@ -8,6 +8,7 @@
 package Logic;
 
 import DataLayer.MaterialList;
+import DataLayer.MetalParts;
 import java.util.ArrayList;
 
 /**
@@ -44,6 +45,26 @@ public class CalcPrice {
     }
         System.out.println("---------- END ----------");
     }
+    
+    public int metalParts(ArrayList <MaterialList> list ){
+
+        int lenghtVal = 10;
+        int price = 5;
+        int total = 0;
+        //CarportFacade.Partscalc(name, total, price);
+
+
+         for(int i = 0; i< list.size(); i++){
+            total +=(( list.get(i).getAmount() *  list.get(i).getLength()) /lenghtVal ) * price ;
+               System.out.println( list.get(i));
+
+        int amountOfLumber = list.get(i).getAmount();
+               System.out.println("Amount of material: "+list.get(i).getAmount());
+              
+            }
+         
+        return total ;
+        }
 
 /* sample for test
 
