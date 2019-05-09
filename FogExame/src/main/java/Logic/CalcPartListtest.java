@@ -76,6 +76,9 @@ public class CalcPartListtest {
         System.out.println(partTest.calcPostNail(3));
 
         //test.woodPrice(superlist);
+        System.out.println(test.metalParts(superlist));
     }
+    
+    
 
 }

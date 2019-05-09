@@ -36,7 +36,7 @@ public class CalcPartList {
         int roofTiles = (int) (areaOfRoofx2 * 15);
 
         //return areaOfRoof;
-        MaterialList list1 = new MaterialList(15, roofTiles, "Tagsten");
+        MaterialList list1 = new MaterialList(15, roofTiles, "tagsten");
         return list1;
 
     }
@@ -57,7 +57,7 @@ public class CalcPartList {
 
         int heigthRounded = (int) Math.round(heigthOfRoof / 20) * 20;
         int amountOfLumber = (width / 55) * 2;
-        MaterialList list1 = new MaterialList(heigthRounded, amountOfLumber, "galvetræ");
+        MaterialList list1 = new MaterialList(heigthRounded, amountOfLumber, "trægalver");
 
         return list1;
     }
@@ -115,7 +115,7 @@ public class CalcPartList {
         int amountOfLumberSper = Math.round((length / gap));
         int lengthOfLumberSper = width + 30;
 
-        MaterialList list1 = new MaterialList(lengthOfLumberSper, amountOfLumberSper, "spær ");
+        MaterialList list1 = new MaterialList(lengthOfLumberSper, amountOfLumberSper, "spær");
 
         return list1;
     }
@@ -159,7 +159,7 @@ public class CalcPartList {
         int gap = 50;
         int amountOfLumberSper = Math.round((length / gap));
 
-        MaterialList list1 = new MaterialList(sideB, amountOfLumberSper, "vertikalespær ");
+        MaterialList list1 = new MaterialList(sideB, amountOfLumberSper, "vertikalespær");
 
         return list1;
     }
