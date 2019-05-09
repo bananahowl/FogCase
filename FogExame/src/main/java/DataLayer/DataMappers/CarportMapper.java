@@ -317,17 +317,15 @@ public class CarportMapper {
     }
     public static int getwidth(int id) throws CarportException {
         try {
-
-            Connection conn = Connector.connection();
-            String query = "select widthvalue from width where widthid = ?"; 
-            PreparedStatement ps = conn.prepareStatement(query);
-           ps.setInt(1, id);
+            Connection con = Connector.connection();
+            String SQL = "SELECT widthValue FROM width WHERE widthid = ? ";
+            
+            //+ id +""; 
+            PreparedStatement ps = con.prepareStatement(SQL);
+            ps.setInt(1, id);
             ResultSet rs = ps.executeQuery();
-
             if (rs.next()) {
-                System.out.println("bafsfa nut");
                 int width = rs.getInt("widthValue"); 
-                System.out.println(width);
                 return width;
             } else {
                 throw new CarportException("Error");
@@ -403,9 +401,7 @@ public class CarportMapper {
             String query = "select degreevalue from degrees where degreeid = ?"; 
             PreparedStatement ps = conn.prepareStatement(query);
             ps.setInt(1, id);
-
             ResultSet rs = ps.executeQuery();
-
             if (rs.next()) {
                 int angle = rs.getInt("degreevalue"); 
                 return angle;
@@ -418,3 +414,6 @@ public class CarportMapper {
     }
     
 }
+
+
+               

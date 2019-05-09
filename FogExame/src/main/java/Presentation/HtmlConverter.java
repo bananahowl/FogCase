@@ -53,12 +53,12 @@ public class HtmlConverter {
 
         String partlisttop = "<form action=\"FrontController\" method=\"GET\">"
                 + "<table id=\"parlist\">";
-        
+
         String partlistmid = "";
         for (int i = 0; i < list.size(); i++) {
-            partlistmid += "<tr><th>Size</th><th>" + list.get(i).getDescription() + "</th><th>" + list.get(i).getLength() + "</th><th>" + list.get(i).getAmount() + "</th></tr>";
+            partlistmid += "<tr><th>Size</th><th>" + list.get(i).getDescription() + "</th><th> Legnth</th><th>" + list.get(i).getLength() + "</th><th>Amount</th><th>" + list.get(i).getAmount() + "</th></tr> <br>";
         }
-        
+
         //"<tr><th>Size</th><th>" + list.get(i).getDescription()+ "</th><th>" + list.get(i).getLength() + "</th><th>" + list.get(i).getAmount() + "</th></tr>";
         String partlistbottom
                 = "</table>"
@@ -75,8 +75,8 @@ public class HtmlConverter {
                 System.out.println("Amount of material: " + list.get(i).getAmount());
                 System.out.println("-------------");*/
         // TODO add the print part list mehtod here so that the part list can be shown on the jsp pages.
-        
         String totalParts = partlisttop + partlistmid + partlistbottom;
+        totalParts.replace("MaterialList -", "");
         return totalParts;
     }
 

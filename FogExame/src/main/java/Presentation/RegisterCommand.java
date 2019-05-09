@@ -1,10 +1,10 @@
 package Presentation;
 
-import Logic.CarportFacade;
+import Logic.Facade.CarportFacade;
 import Logic.CarportException;
 import DataLayer.User;
-import Logic.CarportFacade;
-import Logic.UserFacade;
+import Logic.Facade.CarportFacade;
+import Logic.Facade.UserFacade;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -22,7 +22,7 @@ public class RegisterCommand extends Command {
         String password1 = request.getParameter( "password1" );
         String password2 = request.getParameter( "password2" );
         if ( password1.equals( password2 ) ) {
-            User user = UserFacade.createUser(firstname, lastname, adress, city, phone, email, password2);
+            User user = UserFacade.createUser(firstname, lastname, adress, city, phone, email, password1);
             HttpSession session = request.getSession();
             return "FlatAngle";
         } else {

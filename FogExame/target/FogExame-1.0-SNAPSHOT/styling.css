@@ -1,0 +1,114 @@
+
+* {
+    box-sizing: border-box;
+}
+
+.header {
+    text-align:left;
+    width:100%;
+    background-color: midnightblue;
+    color:white;
+    padding: 15px;
+}
+
+.footer {
+    background-color: graytext;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    padding: 25px;
+    width:100%;
+}
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.topnav a:white {
+    background-color: #ddd;
+    color: grey;
+}
+
+.center {
+    margin: auto;
+    width: 100%;
+    float: center;
+    padding: 100px;
+    text-align: center;
+    font-size: 20px;
+}
+
+body{
+    background-color: white;
+    margin: auto;
+    padding: 0px;
+}
+h1{
+    font-size:30px;
+    font-family:tahoma;
+    text-align:center;
+    color:Black;
+}
+
+p1{
+    font-size: 22px;
+    font-family: tahoma;
+    text-align: left;
+    color:black;
+}
+
+ul {
+    list-style-type: none;
+    margin: auto;
+    padding: auto;
+    overflow: hidden;
+    background-color: grey;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: tahoma;
+}
+
+.active {
+    background-color: grey;
+}
+select {
+    width: 100%;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+}
+a {
+    background-color: grey;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: right;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    font-family: tahoma;
+}
+
+td{
+   font-family: tahoma;
+   font-size: 20px
+}
