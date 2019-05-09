@@ -329,7 +329,7 @@ public static ArrayList<MetalParts> addItem(MetalParts val) {
     MaterialList val =new MaterialList(length, total, "metal til stolper");
     return val;
     }
-<<<<<<< HEAD
+
     */
     public static int totaltakesAnything(int shedWidth, int shedLength, int width, int length, int angle)
     {

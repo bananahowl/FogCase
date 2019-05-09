@@ -2,6 +2,16 @@
 Test set: DataLayer.DataMapperTest
 -------------------------------------------------------------------------------
 <<<<<<< HEAD
+Tests run: 15, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 2.515 sec <<< FAILURE!
+testGetRoofAngle(DataLayer.DataMapperTest)  Time elapsed: 0.031 sec  <<< ERROR!
+Logic.CarportException: Error
+	at DataLayer.DataMappers.CarportMapper.getRoofAngle(CarportMapper.java:403)
+	at DataLayer.DataMapperTest.testGetRoofAngle(DataMapperTest.java:169)
+=======
+<<<<<<< HEAD
+Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.201 sec
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 Tests run: 14, Failures: 4, Errors: 1, Skipped: 0, Time elapsed: 6.522 sec <<< FAILURE!
@@ -20,6 +30,7 @@ java.lang.AssertionError: expected:<300> but was:<270>
 	at org.junit.Assert.assertEquals(Assert.java:645)
 	at org.junit.Assert.assertEquals(Assert.java:631)
 	at DataLayer.DataMapperTest.testGetShedwidth(DataMapperTest.java:146)
+>>>>>>> 9ca68f6870128fe7d87c86e60b3010ebd5a080c4
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -53,6 +64,8 @@ java.lang.AssertionError: expected:<300> but was:<270>
 	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
 	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 testGetwidth(DataLayer.DataMapperTest)  Time elapsed: 0.018 sec  <<< ERROR!
 java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?' at line 1
@@ -307,3 +320,5 @@ Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.963 sec
 =======
 >>>>>>> 8b3810143e0a4de666260a9061efa7c852f8b1c2
 >>>>>>> adde66c46e12c414b13a00b80192d3851503f014
+>>>>>>> ba5292604812bae433f1cfb506e0dabcf1190b15
+>>>>>>> 9ca68f6870128fe7d87c86e60b3010ebd5a080c4

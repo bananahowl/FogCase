@@ -40,7 +40,7 @@
                             <p1>Lastname:<br></p1>
                             <input type="text" name="email" value="">
                             <br>
-                            <p1>Address:<br></p1>
+                            <p1>Adress:<br></p1>
                             <input type="text" name="email" value="">
                             <br>
                             <p1>City:<br></p1>
