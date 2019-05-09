@@ -4,7 +4,8 @@
     Author     : fskn
 --%>
 
-<%@page import="Logic.CarportFacade"%>
+<%@page import="Logic.Facade.CarportFacade"%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>

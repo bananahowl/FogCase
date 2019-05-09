@@ -11,10 +11,10 @@ package DataLayer;
  */
 public class MetalParts {
     private String name;
-    private double price;
     private int amount;
+    private double price;
     
-    public MetalParts(String name, double price, int amount){
+    public MetalParts(String name, int amount, double price){
     this.name = name;
     this.price = price;
     this.amount = amount;

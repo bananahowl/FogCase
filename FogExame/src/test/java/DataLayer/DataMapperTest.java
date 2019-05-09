@@ -161,13 +161,6 @@ public class DataMapperTest {
         assertEquals(210, result);
     }
 
-    /**
-     * Test of getRoofAngle method, of class DataMapper.
-     */
-    @Test
-    public void testGetRoofAngle() throws Exception {
-        int result = CarportMapper.getRoofAngle(4);
-        assertEquals(30, result);
-    }
+
     
 }

@@ -1,5 +1,6 @@
 DataLayer\Materials.class
 Presentation\CalculateCarportCommand.class
+DataLayer\DataMappers\OrderMapper.class
 Presentation\CreateSVG.class
 DataLayer\CarportWithShed.class
 Logic\CalcPrice.class
@@ -8,11 +9,10 @@ DataLayer\MetalParts.class
 Presentation\GetMyOrders.class
 DataLayer\Carport.class
 Presentation\Login.class
+Logic\Facade\CarportFacade.class
 DataLayer\Connector.class
-Logic\UserFacade.class
 Logic\CalcPartList.class
 DataLayer\DataMappers\UserMapper.class
-Logic\CarportFacade.class
 DataLayer\User.class
 Presentation\HtmlConverter.class
 Logic\CarportException.class
@@ -26,9 +26,11 @@ Presentation\RegisterCommand.class
 Logic\CalcCarport.class
 DataLayer\DataMappers\CarportMapper.class
 DataLayer\MaterialList.class
+Logic\Facade\OrderFacade.class
 Presentation\CreateOrder.class
 Presentation\FrontController.class
 DataLayer\Roof_material.class
 DataLayer\Shed.class
+Logic\Facade\UserFacade.class
 Presentation\Command.class
 Logic\CalcPartListtest.class

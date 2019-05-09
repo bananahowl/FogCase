@@ -63,7 +63,7 @@ insert into degrees (degreeValue) values(35);
 insert into degrees (degreeValue) values(40);
 insert into degrees (degreeValue) values(45);
 
-select * from shedwidth;
+select * from degrees;
 
 insert into height (heightValue) values(200);
 
@@ -124,5 +124,7 @@ insert into roof (roofmaterialFK, areaFK) values (1,1);
 insert into orders (carportFK, shedFK, roofFK) values (1,1,1);
 
 insert into roof (roofmaterialFK, areaFK) values (1,1);
+
+
 
 

@@ -3,14 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Logic;
+package Logic.Facade;
 
 import DataLayer.Carport;
 import DataLayer.CarportWithShed;
 import DataLayer.DataMappers.CarportMapper;
+import DataLayer.MetalParts;
 import DataLayer.Roof_material;
 import DataLayer.Shed;
 import DataLayer.User;
+import Logic.CalcPartList;
+import Logic.CarportException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -143,7 +146,7 @@ public class CarportFacade {
             int b = getCarportWidth(width);
             int c =  getShedlength(lengthShed);
             int d =    getShedwidth(widthShed);
-            int price = CalcPartList.totaltakesAnything(b, a, d, c, 0);
+            int price = CalcPartList.totalwoodprice(b, a, d, c, 0);
             return price;
         } catch (CarportException ex) {
             Logger.getLogger(CarportFacade.class.getName()).log(Level.SEVERE, null, ex);
@@ -160,7 +163,7 @@ public class CarportFacade {
             int c =  getShedlength(lengthShed);
             int d =    getShedwidth(widthShed);
             int e = getRoofAngle(angle);
-            int price = CalcPartList.totaltakesAnything(b, a, d, c, e);
+            int price = CalcPartList.totalwoodprice(b, a, d, c, e);
             return price;
         } catch (CarportException ex) {
             Logger.getLogger(CarportFacade.class.getName()).log(Level.SEVERE, null, ex);
@@ -168,6 +171,13 @@ public class CarportFacade {
             Logger.getLogger(CarportFacade.class.getName()).log(Level.SEVERE, null, ex);
         }
         return 0;
+    }
+    
+    public static MetalParts Partscalc(String name, int amount, double price)
+    {
+        MetalParts test = new MetalParts(name, amount, price);
+        
+        return test;
     }
 
     /*
