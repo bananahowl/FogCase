@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: DataLayer.DataMapperTest
 -------------------------------------------------------------------------------
+<<<<<<< HEAD
+Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.156 sec
+=======
 Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.967 sec
+>>>>>>> 726dd52447e9389308efe14e4ee2ed6decd0055d

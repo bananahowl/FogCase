@@ -7,7 +7,7 @@ package Presentation;
 
 import DataLayer.Carport;
 import Logic.CarportException;
-import Logic.CarportFacade;
+import Logic.Facade.CarportFacade;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
