@@ -22,7 +22,21 @@
         int width = cf.getCarportWidth(Integer.parseInt(request.getParameter("width")));
         int length = cf.getCarportLength(Integer.parseInt(request.getParameter("length")));
         %>
-<<<<<<< HEAD
+        
+        <div class="header">
+            <img src="https://media.licdn.com/dms/image/C4E0BAQGleVi1XAFxBg/company-logo_200_200/0?e=2159024400&v=beta&t=qQ2ebmGf9u4b45tNF9OyVrcy7NGpnwLXZkLrOky6ibM" alt="Fog" width="200" height="200">
+        </div>
+
+        <div class="row">
+            <div class="col-3 col-s-3 menu">
+                <ul>
+                    <li><a href="index.jsp">Home</a></li>
+                    <li style="float:right"><a class="active" href="Register.jsp">Register</a></li>
+                    <li><a href="CustomizeCarport.jsp">Customize</a></li>
+                    <li style="float:right"><a class="active" href="#about">Log in</a></li>
+                </ul>
+            </div>
+        </div>
        X${table}X   
        
         <svg height ="120mm" width ="1000mm">
@@ -33,21 +47,9 @@
        ${mlist}
        <br>
         <form>
-            
-                     
-            
-            <div class="shedYesNo">
-        <a type="button" class="btn btn-primary test" href ="YesShed.jsp">Yes</a>
-        <tr>
-        <a type="button" class="btn btn-primary test" href ="ShoppingCart.jsp">No</a>
-        </div>
-        </form>
-        <div class="back">
-        <a type="button" class="btn btn-primary test" href ="FlatAngle.jsp">Back to start</a>
-    </div>
+       
        <h2> bird view</h2>
         <svg height ="<%=length+25%>" width ="<%=width+25%>">
->>>>>>> 7af6fa425565504300a0357a3019e4a532f1d721
 
         <rect x="0" y="15" width="<%=width+10%>" height="50" fill="#none"
               style="stroke:rgb(0,0,255);stroke-width:3"/>

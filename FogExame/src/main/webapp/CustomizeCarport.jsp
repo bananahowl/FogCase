@@ -25,7 +25,7 @@
                 <ul>
                     <li><a href="index.jsp">Home</a></li>
                     <li style="float:right"><a class="active" href="Register.jsp">Register</a></li>
-                    <li><a href="Custom">Customize</a></li>
+                    <li><a href="CustomizeCarport.jsp">Customize</a></li>
                     <li style="float:right"><a class="active" href="#about">Log in</a></li>
                 </ul>
             </div>
