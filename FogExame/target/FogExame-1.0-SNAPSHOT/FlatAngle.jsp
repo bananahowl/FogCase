@@ -32,8 +32,10 @@
                 <p1><b>Customize your own carport here!</b></p1><br><br><br>
                 <form action="FrontController" method="GET">
                     <button type="submit"  name="command" value="carportflatroof" >FlatRoof</button>
+                </form>
                     <form action="FrontController" method="GET">
                         <button type="submit"  name="command" value="carportwithangle" >WithAngle</button>
+                    </form>
                         <!--<a type="button" href ="CarportFlatRoof.jsp"> Carport with flat roof </a>-->
                         <!--<a type="button" href ="CarportWithAngle.jsp"> Carport with angle </a>-->
 

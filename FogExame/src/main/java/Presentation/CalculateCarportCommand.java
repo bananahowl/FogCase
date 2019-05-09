@@ -37,22 +37,22 @@ public class CalculateCarportCommand extends Command {
         CalcPartList tsst = new CalcPartList();
         if (angle == 1) {
             int price = CarportFacade.NumbersFlatRoof(width, length, width, length);
-            Carport ls = CarportFacade.createCarportFlatRoof(length, width, lengthShed, widthShed,price);
-            String html = HtmlConverter.carportFlatRooftoHtml(ls);
+            Carport cp = CarportFacade.createCarportFlatRoof(length, width, lengthShed, widthShed,price);
+            String html = HtmlConverter.carportFlatRooftoHtml(cp);
             ArrayList<MaterialList> list = totalpartlist(widthShed,lengthShed,width,length,0);
+            request.setAttribute("carport", cp); // the good stuff
             request.setAttribute("mlist", list);
-            request.setAttribute("carport", ls); // the good stuff
             request.setAttribute("table", html);
             request.setAttribute("price", price);
             request.setAttribute("carportwidth", width);
             return "Shed";
         } else {
             int price = CarportFacade.NumbersAngleRoof(width, length, width, length, angle);
-            Carport ls = CarportFacade.createCarportAngleRoof(length, width, lengthShed, widthShed, angle,price);
-            String html = HtmlConverter.carportAnlgeRooftoHtml(ls);
+            Carport cp = CarportFacade.createCarportAngleRoof(length, width, lengthShed, widthShed, angle,price);
+            String html = HtmlConverter.carportAnlgeRooftoHtml(cp);
             ArrayList<MaterialList> list = totalpartlist(widthShed,lengthShed,width,length,angle);
             request.setAttribute("mlist", list);
-            request.setAttribute("carport", ls);
+            request.setAttribute("carport", cp);
             request.setAttribute("price", price);
             request.setAttribute("table", html);
             request.setAttribute("carportwidth", width);
