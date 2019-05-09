@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Logic;
+package Logic.Facade;
 
 import DataLayer.Carport;
 import DataLayer.CarportWithShed;
@@ -11,6 +11,8 @@ import DataLayer.DataMappers.CarportMapper;
 import DataLayer.Roof_material;
 import DataLayer.Shed;
 import DataLayer.User;
+import Logic.CalcPartList;
+import Logic.CarportException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;

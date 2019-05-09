@@ -27,44 +27,45 @@
                 </ul>
             </div>
         </div>
-        <table>
-            <td>
-                <div class ="grid-container">
-                    <div class ='center'>
-                        <form name="register" action="Frontcontroller" method="POST">
-                            <input type="hidden" name="command" value="register">
+
+        <div class ="grid-container">
+            <div class ='center'>
+                <form action="FrontController" method="GET">
+                    <table>
+                        <td>
                             <h1>Please register to order a carport</h1>
-                            <p1>Firstname:<br></p1>
-                            <input type="text" name="email" value="">
-                            <br>
-                            <p1>Lastname:<br></p1>
-                            <input type="text" name="email" value="">
-                            <br>
-                            <p1>Adress:<br></p1>
-                            <input type="text" name="email" value="">
-                            <br>
-                            <p1>City:<br></p1>
-                            <input type="text" name="email" value="">
-                            <br>
-                            <p1>Phone:<br></p1>
-                            <input type="text" name="email" value="8 numbers">
-                            <br>
-                            <p1>Email:<br></p1>
-                            <input type="text" name="email" value="">
-                            <br>
-                            <p1>Password:<br></p1>
-                            <input type="password" name="password1" value="">
-                            <br>
-                            <p1>Retype Password:<br></p1>
-                            <input type="password" name="password2" value="">
-                            <br>
-                            <input type="submit" value="Register">
-                        </form>
-                    </div>
-                </div>
-            </td>
-        </tr>
-    </table>
+                        <p1>Firstname:<br></p1>
+                        <input type="text" name="firstname" value="Frederikke">
+                        <br>
+                        <p1>Lastname:<br></p1>
+                        <input type="text" name="lastname" value="Nilsson">
+                        <br>
+                        <p1>Adress:<br></p1>
+                        <input type="text" name="adress" value="Mosen 1">
+                        <br>
+                        <p1>City:<br></p1>
+                        <input type="text" name="city" value="Greve">
+                        <br>
+                        <p1>Phone:<br></p1>
+                        <input type="text" name="phonenumber" value="12345678">
+                        <br>
+                        <p1>Email:<br></p1>
+                        <input type="text" name="email" value="frede@hotmail.com">
+                        <br>
+                        <p1>Password:<br></p1>
+                        <input type="password" name="password1" value="1234">
+                        <br>
+                        <p1>Retype Password:<br></p1>
+                        <input type="password" name="password2" value="1234">
+                        <br>
+                        <button type="submit"  name="command" value="register">Register</button>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </td>
+
     <div class="footer">THIS IS A FOOTER </div>
 </body>
 </html>
