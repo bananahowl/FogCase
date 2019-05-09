@@ -20,6 +20,7 @@
         <% 
         CarportFacade cf = new CarportFacade();
         int width = cf.getCarportWidth(Integer.parseInt(request.getParameter("width")));
+        int length = cf.getCarportLength(Integer.parseInt(request.getParameter("length")));
         %>
        X${table}X
        <br>
@@ -39,40 +40,38 @@
         <div class="back">
         <a type="button" class="btn btn-primary test" href ="FlatAngle.jsp">Back to start</a>
     </div>
-            
-        <svg height ="120mm" width ="1000mm">
+       <h2> bird view</h2>
+        <svg height ="<%=length+25%>" width ="<%=width+25%>">
 
-        <rect x="0" y="0" width="<%=width+5.5%>mm" height="10mm" fill="#none"
-              style="stroke:rgb(0,0,255);stroke-width:1mm"/>
+        <rect x="0" y="15" width="<%=width+10%>" height="50" fill="#none"
+              style="stroke:rgb(0,0,255);stroke-width:3"/>
 
-        <rect x="0" y="100mm" width="<%=width+5.5%>mm" height="10mm" fill="#none"
-              style="stroke:rgb(0,0,255);stroke-width:1mm"/>	
+        <rect x="0" y="<%=length-65%>" width="<%=width+10%>" height="50" fill="#none"
+              style="stroke:rgb(0,0,255);stroke-width:3"/>	
                 
-        <line x1="0" y1="115mm" x2="10mm" y2="110mm "
-              style="stroke:rgb(0,0,0);stroke-width:1mm "/>
-        <line x1="0" y1="115mm" x2="10mm" y2="120mm "
-              style="stroke:rgb(0,0,0);stroke-width:1mm"/>
+        <line x1="0" y1="<%=length+10.5%>" x2="10" y2="<%=length+5.5%>"
+              style="stroke:rgb(0,0,0);stroke-width:1"/>
+        <line x1="0" y1="<%=length+10.5%>" x2="10" y2="<%=length+15.5%> "
+              style="stroke:rgb(0,0,0);stroke-width:1"/>
 
-        <line x1="<%=width + 10%>mm" y1="115mm" x2="<%=width%>mm" y2="111mm "
-              style="stroke:rgb(0,0,0);stroke-width:1mm"/>
-        <line x1="<%=width+10%>mm" y1="115mm" x2="<%=width%>mm" y2="119mm "
-              style="stroke:rgb(0,0,0);stroke-width:1mm"/>  
+        <line x1="<%=width + 10%>" y1="<%=length+10.5%>" x2="<%=width%>" y2="<%=length+5.5%>"
+              style="stroke:rgb(0,0,0);stroke-width:1"/>
+        <line x1="<%=width+10%>" y1="<%=length+10.5%>" x2="<%=width%>" y2="<%=length+15.5%>"
+              style="stroke:rgb(0,0,0);stroke-width:1"/>  
 
         <% int temp = width;
             for (int i = 0; i < 1000; i++) {
                 if (temp >= -0) {
-        %><rect x="<%=temp%>mm" y="0"  width="5.5mm" height="110mm" fill="none"
-              style="stroke:rgb(255,0,0);stroke-width:1mm"/>
-        <rect x="10mm" y="115mm"  width="<%=temp-10%>mm" height="1mm" fill="#000000" /> <%
-                    temp = temp - 50;
+        %><rect x="<%=temp%>" y="0"  width="10" height="<%=length%>" fill="none"
+              style="stroke:rgb(255,0,0);stroke-width:3"/>
+        <rect x="10" y="<%=length+10.5%>"  width="<%=temp-10%>" height="1" fill="#000000" /> <%
+                    temp = temp - 30;
                 } else {
                     break;
                 }
             }
         %>
-        </svg>
-        <h2> 1:10</h2>
-        
+        </svg>        
 
 </body>
 </html>
