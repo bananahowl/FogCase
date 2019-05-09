@@ -22,11 +22,6 @@
         int width = cf.getCarportWidth(Integer.parseInt(request.getParameter("width")));
         int length = cf.getCarportLength(Integer.parseInt(request.getParameter("length")));
         %>
-<<<<<<< HEAD
-       X${table}X   
-       
-        <svg height ="120mm" width ="1000mm">
-=======
        X${table}X
        <br>
        
@@ -47,7 +42,6 @@
     </div>
        <h2> bird view</h2>
         <svg height ="<%=length+25%>" width ="<%=width+25%>">
->>>>>>> 7af6fa425565504300a0357a3019e4a532f1d721
 
         <rect x="0" y="15" width="<%=width+10%>" height="50" fill="#none"
               style="stroke:rgb(0,0,0);stroke-width:3"/>
