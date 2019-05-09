@@ -151,7 +151,7 @@ public class CarportMapper {
     public static String getMatiralName(int id) throws CarportException {
         try {
             Connection con = Connector.connection();
-            String SQL = "SELECT materialName FROM materials " + "WHERE materialID = ? ";
+            String SQL = "SELECT materialName FROM materials WHERE materialID = ? ";
 
             PreparedStatement rstt = con.prepareStatement(SQL);
             rstt.setInt(1, id);
@@ -315,25 +315,29 @@ public class CarportMapper {
             throw new CarportException(ex.getMessage());
         }
     }
-    public static int getwidth(int id) throws CarportException, SQLException {
+    public static int getwidth(int id) throws CarportException {
         try {
+
             Connection conn = Connector.connection();
             String query = "select widthvalue from width where widthid = ?"; 
             PreparedStatement ps = conn.prepareStatement(query);
            ps.setInt(1, id);
-           
             ResultSet rs = ps.executeQuery();
 
             if (rs.next()) {
-                int width = rs.getInt("widthvalue"); 
+                System.out.println("bafsfa nut");
+                int width = rs.getInt("widthValue"); 
+                System.out.println(width);
                 return width;
             } else {
                 throw new CarportException("Error");
             }
-        } catch (ClassNotFoundException ex) {
+        } catch (ClassNotFoundException | SQLException ex) {
             throw new CarportException(ex.getMessage());
         }
     }
+
+    
     
     public static int getlength(int id) throws CarportException, SQLException {
         try {
@@ -395,13 +399,15 @@ public class CarportMapper {
     public static int getRoofAngle(int id) throws CarportException, SQLException {
         try {
             Connection conn = Connector.connection();
+
             String query = "select degreevalue from degrees where degreeid = ?"; 
             PreparedStatement ps = conn.prepareStatement(query);
             ps.setInt(1, id);
+
             ResultSet rs = ps.executeQuery();
 
             if (rs.next()) {
-                int angle = rs.getInt("degreevalue"); //BEMÆRK !!!! DENNE ER IKKE RIGTIG (PS. SLET DENNE KOMMENTAR NÅR DU HAR RETTET!!!)
+                int angle = rs.getInt("degreevalue"); 
                 return angle;
             } else {
                 throw new CarportException("Error");

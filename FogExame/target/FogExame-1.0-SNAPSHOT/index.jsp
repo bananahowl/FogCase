@@ -23,7 +23,7 @@
                 <td>
                     <form name="login" action="FrontController" method="POST">
                         <input type="hidden" name="command" value="login">
-                        Email:<br>
+                        Email:<br>  
                         <input type="text" name="email" value="fog@carportmail.com">
                         <br>
                         Password:<br>
