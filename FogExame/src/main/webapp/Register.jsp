@@ -29,7 +29,6 @@
         </div>
 
         <div class ="grid-container">
-            <div class ='center'>
                 <form action="FrontController" method="GET">
                     <table>
                         <td>
@@ -57,12 +56,11 @@
                         <br>
                         <p1>Retype Password:<br></p1>
                         <input type="password" name="password2" value="1234">
-                        <br>
+                        <br><br>
                         <button type="submit"  name="command" value="register">Register</button>
                         </tr>
                     </table>
                 </form>
-            </div>
         </div>
     </td>
 

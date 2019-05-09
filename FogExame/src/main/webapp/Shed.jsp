@@ -4,7 +4,7 @@
     Author     : fskn
 --%>
 
-<%@page import="Logic.CarportFacade"%>
+<%@page import="Logic.Facade.CarportFacade"%>
 <%@page import="DataLayer.Carport"%>
 <%@page import="DataLayer.DataMappers.CarportMapper"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -22,20 +22,7 @@
         int width = cf.getCarportWidth(widthh);
         %>
        X${table}X   
-        <form>
-            
-                      
-            
-            <div class="shedYesNo">
-        <a type="button" class="btn btn-primary test" href ="YesShed.jsp">Yes</a>
-        <tr>
-        <a type="button" class="btn btn-primary test" href ="ShoppingCart.jsp">No</a>
-        </div>
-        </form>
-        <div class="back">
-        <a type="button" class="btn btn-primary test" href ="FlatAngle.jsp">Back to start</a>
-    </div>
-            
+       
         <svg height ="120mm" width ="1000mm">
 
         <rect x="0" y="0" width="<%=width+5.5%>mm" height="10mm" fill="#none"
