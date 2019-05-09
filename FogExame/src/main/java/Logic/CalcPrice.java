@@ -51,7 +51,7 @@ public class CalcPrice {
         int lenghtVal = 10;
         int price = 5;
         int total = 0;
-        CarportFacade.Partscalc(name, total, price);
+        //CarportFacade.Partscalc(name, total, price);
 
 
          for(int i = 0; i< list.size(); i++){
