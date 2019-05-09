@@ -391,12 +391,13 @@ public class CarportMapper {
     public static int getRoofAngle(int id) throws CarportException, SQLException {
         try {
             Connection conn = Connector.connection();
-            String query = "select degreevalue from degrees where degreeid =" + id + ";"; //BEMÆRK !!!! DENNE ER IKKE RIGTIG (PS. SLET DENNE KOMMENTAR NÅR DU HAR RETTET!!!)
+            String query = "select degreevalue from degrees where degreeid = ?";
             PreparedStatement ps = conn.prepareStatement(query);
-            ResultSet rs = ps.executeQuery(query);
+            ps.setString(1, "degreeid");
+            ResultSet rs = ps.executeQuery();
 
             if (rs.next()) {
-                int angle = rs.getInt("degreevalue"); //BEMÆRK !!!! DENNE ER IKKE RIGTIG (PS. SLET DENNE KOMMENTAR NÅR DU HAR RETTET!!!)
+                int angle = rs.getInt("degreevalue"); 
                 return angle;
             } else {
                 throw new CarportException("Error");
