@@ -57,6 +57,11 @@ public class CalcPartList {
 
         int heigthRounded = (int) Math.round(heigthOfRoof / 20) * 20;
         int amountOfLumber = (width / 55) * 2;
+        
+        if(heigthRounded == 0)
+        {
+            amountOfLumber = 0;
+        }
         MaterialList list1 = new MaterialList(heigthRounded, amountOfLumber, "trægalver");
 
         return list1;
@@ -158,6 +163,11 @@ public class CalcPartList {
 
         int gap = 50;
         int amountOfLumberSper = Math.round((length / gap));
+        
+        if(sideB == 0)
+        {
+            amountOfLumberSper = 0;
+        }
 
         MaterialList list1 = new MaterialList(sideB, amountOfLumberSper, "vertikalespær");
 
@@ -165,6 +175,7 @@ public class CalcPartList {
     }
 
     public static MaterialList calcAngledHorizontalSpær(int width, int length) throws CarportException, SQLException {
+        //Denne metode giver length og amount selvom der ikke er tag. Har fikset det på de andre metoder men ikke denne.
         int gap = 100;
         int amountOfLumberSper = Math.round((length / gap));
         int lengthOfLumberSper = length + 60;
