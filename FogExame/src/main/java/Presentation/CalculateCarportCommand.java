@@ -17,6 +17,7 @@ import javax.servlet.http.HttpSession;
 import DataLayer.MaterialList;
 import Logic.CalcPartList;
 import static Logic.CalcPartList.totalpartlist;
+import static Presentation.HtmlConverter.printPartList;
 import java.util.ArrayList;
 
 /**
@@ -40,8 +41,9 @@ public class CalculateCarportCommand extends Command {
             Carport cp = CarportFacade.createCarportFlatRoof(length, width, lengthShed, widthShed,price);
             String html = HtmlConverter.carportFlatRooftoHtml(cp);
             ArrayList<MaterialList> list = totalpartlist(widthShed,lengthShed,width,length,0);
+            String  slist = printPartList(list);
             request.setAttribute("carport", cp); // the good stuff
-            request.setAttribute("mlist", list);
+            request.setAttribute("mlist", slist);
             request.setAttribute("table", html);
             request.setAttribute("price", price);
             request.setAttribute("carportwidth", width);
@@ -51,7 +53,8 @@ public class CalculateCarportCommand extends Command {
             Carport cp = CarportFacade.createCarportAngleRoof(length, width, lengthShed, widthShed, angle,price);
             String html = HtmlConverter.carportAnlgeRooftoHtml(cp);
             ArrayList<MaterialList> list = totalpartlist(widthShed,lengthShed,width,length,angle);
-            request.setAttribute("mlist", list);
+            String  slist = printPartList(list);
+            request.setAttribute("mlist", slist);
             request.setAttribute("carport", cp);
             request.setAttribute("price", price);
             request.setAttribute("table", html);

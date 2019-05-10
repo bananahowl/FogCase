@@ -28,7 +28,8 @@
             </div>
         </div>
         <form action="FrontController" method="GET">
-        <button type="submit"  name="command" value="register" >next</button>
+            <a href="CustomizeCarport.jsp">next </a> 
+            <button type="submit"  name="command" value="CustomizeCarport.jsp" >next </button>
         </form>
          
     </body>

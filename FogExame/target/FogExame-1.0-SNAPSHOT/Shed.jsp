@@ -27,7 +27,7 @@
             <img src="https://media.licdn.com/dms/image/C4E0BAQGleVi1XAFxBg/company-logo_200_200/0?e=2159024400&v=beta&t=qQ2ebmGf9u4b45tNF9OyVrcy7NGpnwLXZkLrOky6ibM" alt="Fog" width="200" height="200">
         </div>
 
-        <div class="row">
+        <div class="row" >
             <div class="col-3 col-s-3 menu">
                 <ul>
                     <li><a href="index.jsp">Home</a></li>
@@ -38,11 +38,6 @@
             </div>
         </div>
        X${table}X   
-       
-        <svg height ="120mm" width ="1000mm">
-=======
-       X${table}X
-       <br>
        
        ${mlist}
        <br>
