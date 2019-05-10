@@ -3,7 +3,7 @@
     Created on : 02-05-2019, 14:08:38
     Author     : emils
 --%>
-
+    
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -28,8 +28,7 @@
             </div>
         </div>
         <form action="FrontController" method="GET">
-            <a href="CustomizeCarport.jsp">next </a> 
-            <button type="submit"  name="command" value="CustomizeCarport.jsp" >next </button>
+            <button type="submit"  name="command" value="login" >next </button>
         </form>
          
     </body>
