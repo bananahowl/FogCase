@@ -19,16 +19,18 @@ public class LoginCommand extends Command {
 
     @Override
     String execute(HttpServletRequest request, HttpServletResponse response) throws CarportException {
-        if (request.getSession(false).getAttribute("user") == null) {
+        HttpSession session = request.getSession();
+        session.getAttribute("user");
+        if (request.getSession().getAttribute("user") == null) {
             String email = request.getParameter("email");
             String password = request.getParameter("password");
             User user = Logic.Facade.UserFacade.getUser(email, password);
-            HttpSession session = request.getSession();
+            
             session.setAttribute("user", user);
             
-            return "index";
+            return "CustomizeCarport";
         }
-        return "CustomizeCarport";
+        return "index";
     }
     }
     

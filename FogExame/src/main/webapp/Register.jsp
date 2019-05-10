@@ -58,7 +58,6 @@
                         <input type="password" name="password2" value="1234">
                         <br><br>
                         <button type="submit"  name="command" value="register">Register</button>
-                        </tr>
                     </table>
                 </form>
         </div>

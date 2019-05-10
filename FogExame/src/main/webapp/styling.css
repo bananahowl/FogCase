@@ -86,7 +86,7 @@ li a {
 }
 
 li a:hover {
-  background-color: #111;
+    background-color: #111;
 }
 
 .active {
@@ -112,16 +112,16 @@ button {
 }
 
 table {
-  border-collapse: separate;
-  width: 100%;
+    border-collapse: separate;
+    width: 90%;
 }
 
 th, td {
-  text-align: left;
-  padding: 15px;
-  background-color: beige;
-  color: darkslategrey;
-  font-family: Tahoma;
-  font-size: 20px;
-  text-align: center;
+    text-align: left;
+    padding: 15px;
+    background-color: beige;
+    color: darkslategrey;
+    font-family: Tahoma;
+    font-size: 20px;
+    text-align: center;
 }
