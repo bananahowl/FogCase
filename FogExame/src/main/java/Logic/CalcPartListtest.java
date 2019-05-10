@@ -77,6 +77,10 @@ public class CalcPartListtest {
 
         //test.woodPrice(superlist);
         System.out.println(test.metalParts(superlist));
+        CalcPartList tre = new CalcPartList();
+        
+        System.out.println("xxxxx");
+        System.out.println(tre.totalpartlist(0,0 , 270, 240, 0));
     }
     
     
