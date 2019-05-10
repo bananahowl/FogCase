@@ -9,6 +9,8 @@ import DataLayer.DataMappers.UserMapper;
 import DataLayer.User;
 import Logic.CarportException;
 import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -22,7 +24,16 @@ public class UserFacade {
         return user;
     }
     
-    public static User getUser(String email, String password) throws CarportException, SQLException {
-        return UserMapper.login(email, password);
+    public static User getUser(String email, String password) {
+        try {
+            return UserMapper.login(email, password);
+        } catch (CarportException ex) {
+            Logger.getLogger(UserFacade.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(UserFacade.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
     }
+    
+
 }

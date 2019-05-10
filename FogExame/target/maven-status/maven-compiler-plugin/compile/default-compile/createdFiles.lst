@@ -1,5 +1,4 @@
 DataLayer\Materials.class
-Presentation\CalculateCarportCommand.class
 DataLayer\DataMappers\OrderMapper.class
 Presentation\CreateSVG.class
 DataLayer\CarportWithShed.class
@@ -7,7 +6,6 @@ Logic\CalcPrice.class
 DataLayer\MetalParts.class
 Presentation\GetMyOrders.class
 DataLayer\Carport.class
-Presentation\Login.class
 Logic\Facade\CarportFacade.class
 DataLayer\Connector.class
 Logic\CalcPartList.class

@@ -53,14 +53,15 @@ public class HtmlConverter {
     public static String printPartList(ArrayList<MaterialList> list) {
 
         String partlisttop = "<form action=\"FrontController\" method=\"GET\">"
-                + "<table id=\"parlist\" border =\"1px\" >";
+                + "<table id=\"parlist\" border =\"1px\" >"
+                +"<tr> <th>Description </th> <th>Length </th> <th> Amount</th> </tr>";
 
         String partlistmid = "";
         for (int i = 0; i < list.size(); i++) {
             partlistmid
-                    += "<tr> <th>Description : " + list.get(i).getDescription()
-                    + " </th><th> Legnth " + list.get(i).getLength()
-                    + "</th> <th>Amount " + list.get(i).getAmount() + "</th></tr>";
+                    += "<tr> <th> " + list.get(i).getDescription().toUpperCase()
+                    + " </th><th> " + list.get(i).getLength()
+                    + "</th> <th> " + list.get(i).getAmount() + "</th></tr>";
         }
         String partlistbottom
                 = "</table>"
@@ -68,20 +69,21 @@ public class HtmlConverter {
                 + "</form>";
 
         String totalParts = partlisttop + partlistmid + partlistbottom;
-        totalParts.replace("MaterialList -", "");
+       
         return totalParts;
     }
 
     public static String printMetalPartList(ArrayList<MetalParts> list) {
 
         String partlisttop = "<form action=\"FrontController\" method=\"GET\">"
-                + "<table id=\"parlist\" border =\"1px\">";
+                + "<table id=\"parlist\" border =\"1px\">"
+                +"<tr> <th>Description </th> <th>Legnth </th> <th> Amount</th> </tr>";
 
         String partlistmid = "";
         for (int i = 0; i < list.size(); i++) {
-            partlistmid += "<tr> <th>Description : " + list.get(i).getName()
-                    + " </th><th> Legnth " + list.get(i).getPrice()
-                    + "</th> <th>Amount " + list.get(i).getAmount() + "</th></tr>";
+            partlistmid += "<tr> <th> " + list.get(i).getName()
+                    + " </th><th>  " + list.get(i).getPrice()
+                    + "</th> <th> " + list.get(i).getAmount() + "</th></tr>";
     
         }
 
@@ -92,7 +94,6 @@ public class HtmlConverter {
                 + "</form>";
 
         String totalParts = partlisttop + partlistmid + partlistbottom;
-        totalParts.replace("MaterialList -", "");
         return totalParts;
     }
 
