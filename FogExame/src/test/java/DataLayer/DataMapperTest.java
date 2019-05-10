@@ -116,7 +116,7 @@ public class DataMapperTest {
     @Test
     public void testGetRoofMaterial() throws Exception {
         String result = CarportMapper.getRoofMaterial(3);
-        assertEquals("plast", result);
+        assertEquals("Plast", result);
     }
 
     /**
