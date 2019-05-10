@@ -31,7 +31,7 @@
                 </ul>
             </div>
         </div>
-        
+        <div class ="grid-container">
         <svg height ="120mm" width ="1000mm">
 
         <rect x="0" y="0" width="<%=width+5.5%>mm" height="10mm" fill="#none"
@@ -63,5 +63,7 @@
         %>
         </svg>
         <h2> 1:10</h2>
+    </div>
+        <div class="footer">THIS IS A FOOTER </div>
     </body>
 </html>
