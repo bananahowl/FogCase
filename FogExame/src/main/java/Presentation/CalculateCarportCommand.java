@@ -17,6 +17,7 @@ import javax.servlet.http.HttpSession;
 import DataLayer.MaterialList;
 import Logic.CalcPartList;
 import static Logic.CalcPartList.totalpartlist;
+import Logic.CreateCarport;
 import static Presentation.HtmlConverter.printPartList;
 import java.util.ArrayList;
 
@@ -37,8 +38,8 @@ public class CalculateCarportCommand extends Command {
         HttpSession session = request.getSession();
         CalcPartList tsst = new CalcPartList();
         if (angle == 1) {
-            int price = CarportFacade.NumbersFlatRoof(width, length, width, length);
-            Carport cp = CarportFacade.createCarportFlatRoof(length, width, lengthShed, widthShed,price);
+            int price = CreateCarport.NumbersFlatRoof(width, length, width, length);
+            Carport cp = CreateCarport.createCarportFlatRoof(length, width, lengthShed, widthShed,price);
             String html = HtmlConverter.carportFlatRooftoHtml(cp);
             ArrayList<MaterialList> list = totalpartlist(widthShed,lengthShed,width,length,0);
             String  slist = printPartList(list);
@@ -49,8 +50,8 @@ public class CalculateCarportCommand extends Command {
             request.setAttribute("carportwidth", width);
             return "Shed";
         } else {
-            int price = CarportFacade.NumbersAngleRoof(width, length, width, length, angle);
-            Carport cp = CarportFacade.createCarportAngleRoof(length, width, lengthShed, widthShed, angle,price);
+            int price = CreateCarport.NumbersAngleRoof(width, length, width, length, angle);
+            Carport cp = CreateCarport.createCarportAngleRoof(length, width, lengthShed, widthShed, angle,price);
             String html = HtmlConverter.carportAnlgeRooftoHtml(cp);
             ArrayList<MaterialList> list = totalpartlist(widthShed,lengthShed,width,length,angle);
             String  slist = printPartList(list);
