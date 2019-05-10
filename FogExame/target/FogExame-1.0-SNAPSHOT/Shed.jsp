@@ -17,12 +17,13 @@
         <link href ="styling.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <% 
-        CarportFacade cf = new CarportFacade();
-        int width = cf.getCarportWidth(Integer.parseInt(request.getParameter("width")));
-        int length = cf.getCarportLength(Integer.parseInt(request.getParameter("length")));
+        <%
+            CarportFacade cf = new CarportFacade();
+            int width = cf.getCarportWidth(Integer.parseInt(request.getParameter("width")));
+            int length = cf.getCarportLength(Integer.parseInt(request.getParameter("length")));
         %>
-        
+
+
         <div class="header">
             <img src="https://media.licdn.com/dms/image/C4E0BAQGleVi1XAFxBg/company-logo_200_200/0?e=2159024400&v=beta&t=qQ2ebmGf9u4b45tNF9OyVrcy7NGpnwLXZkLrOky6ibM" alt="Fog" width="200" height="200">
         </div>
@@ -37,6 +38,33 @@
                 </ul>
             </div>
         </div>
+<<<<<<< HEAD
+        X${table}X   
+
+        ${mlist}
+
+
+        <h2> Bird view</h2>
+        <svg height ="<%=width + 25%>" width ="<%=length + 25%>">
+
+        <rect x="0" y="15" width="<%=length + 10%>" height="50" fill="#none"
+              style="stroke:rgb(0,0,0);stroke-width:3"/>
+
+        <rect x="0" y="<%=width - 65%>" width="<%=length + 10%>" height="50" fill="#none"
+              style="stroke:rgb(0,0,0);stroke-width:3"/>	
+
+<!--        <line x1="0" y1="<%=length + 10.5%>" x2="10" y2="<%=length + 5.5%>"
+style="stroke:rgb(0,0,0);stroke-width:1"/>
+<line x1="0" y1="<%=length + 10.5%>" x2="10" y2="<%=length + 15.5%> "
+style="stroke:rgb(0,0,0);stroke-width:1"/>
+
+<line x1="<%=length + 10%>" y1="<%=width + 10.5%>" x2="<%=length%>" y2="<%=width + 5.5%>"
+style="stroke:rgb(0,0,0);stroke-width:1"/>
+<line x1="<%=length + 10%>" y1="<%=width + 10.5%>" x2="<%=length%>" y2="<%=width + 15.5%>"
+style="stroke:rgb(0,0,0);stroke-width:1"/>  -->
+
+        <% int temp = length;
+=======
        X${table}X   
        
        ${mlist}
@@ -63,18 +91,54 @@
               style="stroke:rgb(0,0,0);stroke-width:1"/>  
 
         <% int temp = width;
+>>>>>>> 0396735ddf16aef71e35b0b4317c8f2244a3284c
             for (int i = 0; i < 1000; i++) {
                 if (temp >= -0) {
-        %><rect x="<%=temp%>" y="0"  width="10" height="<%=length%>" fill="none"
-              style="stroke:rgb(255,0,0);stroke-width:3"/>
-        <rect x="10" y="<%=length+10.5%>"  width="<%=temp-10%>" height="1" fill="#000000" /> <%
+        %><rect x="<%=temp%>" y="0"  width="10" height="<%=width%>" fill="none"
+              style="stroke:rgb(0,0,0);stroke-width:3"/>
+        <rect x="10" y="<%=length + 10.5%>"  width="<%=temp - 10%>" height="1" fill="#000000" /> <%
                     temp = temp - 30;
                 } else {
                     break;
                 }
             }
         %>
-        </svg>        
+        </svg>
+        <h2><%=length%> in cm</h2>
+        <br>
+        <h2> Side view</h2>
+        <svg height ="300" width ="<%=length + 25%>">
 
-</body>
+
+<!--        <line x1="0" y1="<%=length + 10.5%>" x2="10" y2="<%=length + 5.5%>"
+style="stroke:rgb(0,0,0);stroke-width:1"/>
+<line x1="0" y1="<%=length + 10.5%>" x2="10" y2="<%=length + 15.5%> "
+style="stroke:rgb(0,0,0);stroke-width:1"/>
+
+<line x1="<%=width + 10%>" y1="<%=length + 10.5%>" x2="<%=width%>" y2="<%=length + 5.5%>"
+style="stroke:rgb(0,0,0);stroke-width:1"/>
+<line x1="<%=width + 10%>" y1="<%=length + 10.5%>" x2="<%=width%>" y2="<%=length + 15.5%>"
+style="stroke:rgb(0,0,0);stroke-width:1"/>  -->
+
+        <% int tempp = length;
+            for (int i = 0; i < 1000; i++) {
+                if (tempp >= -0) {
+        %><rect x="<%=tempp%>" y="30"  width="10" height="220" fill="none"
+              style="stroke:rgb(0,0,0);stroke-width:3"/>
+        <rect x="10" y="<%=length + 10.5%>"  width="<%=tempp - 10%>" height="1" fill="#000000" /> <%
+                    tempp = tempp - 120;
+                } else {
+                    break;
+                }
+            }
+        %>
+
+        <rect x="0" y="0" width="<%=length + 10%>" height="30" fill="#none"
+              style="stroke:rgb(0,0,0);stroke-width:3"/>
+
+
+        </svg>   
+        <h2><%=length%> in cm</h2>
+
+    </body>
 </html>
