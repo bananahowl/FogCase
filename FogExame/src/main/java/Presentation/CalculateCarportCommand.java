@@ -37,8 +37,8 @@ public class CalculateCarportCommand extends Command {
         HttpSession session = request.getSession();
         CalcPartList tsst = new CalcPartList();
         if (angle == 1) {
-            int price = CarportFacade.NumbersFlatRoof(width, length, widthShed, lengthShed);
-            Carport cp = CarportFacade.createCarportFlatRoof(length, width, lengthShed, widthShed,price);
+            int price = CarportFacade.NumbersFlatRoof(width, length, widthShed, lengthShed, 0);
+            Carport cp = CarportFacade.createCarportFlatRoof(length, width, lengthShed, widthShed,price , 0);
             String html = HtmlConverter.carportFlatRooftoHtml(cp);
             ArrayList<MaterialList> list = totalpartlist(widthShed,lengthShed,width,length,0);
             String  slist = printPartList(list);

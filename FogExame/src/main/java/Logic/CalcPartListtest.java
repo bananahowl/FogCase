@@ -30,9 +30,9 @@ public class CalcPartListtest {
 
         MaterialList remtest = CalcPartList.calcRem(700, 400);
         MaterialList posttest = CalcPartList.calculatePortPost(400, 700);
-        MaterialList rooftest = CalcPartList.calcRoofSides(400, 700, 25);
-        MaterialList fronttest = CalcPartList.calcRoofFronts(400, 25);
-        MaterialList verticaltest = CalcPartList.calcAngledVerticalSpær(400, 700, 25);
+        MaterialList rooftest = CalcPartList.calcRoofSides(400, 700, 0);
+        MaterialList fronttest = CalcPartList.calcRoofFronts(400, 0);
+        MaterialList verticaltest = CalcPartList.calcAngledVerticalSpær(400, 700, 0);
         MaterialList horizontaltest = CalcPartList.calcAngledHorizontalSpær(400, 700);
 
         ArrayList<MaterialList> superlist = CalcPartList.totalMaterial(shedtest, spertest, remtest, posttest, rooftest, fronttest, verticaltest, horizontaltest);
@@ -80,7 +80,7 @@ public class CalcPartListtest {
         CalcPartList tre = new CalcPartList();
         
         System.out.println("xxxxx");
-        System.out.println(tre.totalpartlist(0,0 , 270, 240, 0));
+        System.out.println(tre.totalpartlist(0,0 , 1, 1, 0));
     }
     
     

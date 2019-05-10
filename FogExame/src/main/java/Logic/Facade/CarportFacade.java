@@ -88,7 +88,7 @@ public class CarportFacade {
         return CarportMapper.getRoofAngle(id);
     }
 
-    public static Carport createCarportFlatRoof(int length, int width, int widthShed, int lengthShed, int price) {
+    public static Carport createCarportFlatRoof(int length, int width, int widthShed, int lengthShed, int price, int angle) {
         try {
             Shed shed = new Shed(0, 0, 0);
             if (widthShed != 1 && lengthShed != 1) {
@@ -139,7 +139,7 @@ public class CarportFacade {
         CarportWithShed cws = new CarportWithShed(carport, shed);
         return cws;
     }
-        public static int NumbersFlatRoof(int length, int width, int widthShed, int lengthShed){
+        public static int NumbersFlatRoof(int length, int width, int widthShed, int lengthShed, int angle){
             
         try {
             int a = getCarportLength(length);
