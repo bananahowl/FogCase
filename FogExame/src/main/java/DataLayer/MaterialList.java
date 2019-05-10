@@ -22,7 +22,7 @@ public class MaterialList {
 
     @Override
     public String toString() {
-        return "MaterialList-" + "\n Length:" + length + "\n Amount:" + amount + "\n Description: " + description +"\n";
+        return "MaterialList-" + " Length:" + length + " Amount:" + amount + " Description: " + description + "\n";
     }
 
     public int getLength() {
