@@ -34,11 +34,14 @@
                     <li><a href="index.jsp">Home</a></li>
                     <li style="float:right"><a class="active" href="Register.jsp">Register</a></li>
                     <li><a href="CustomizeCarport.jsp">Customize</a></li>
-                    <li style="float:right"><a class="active" href="#about">Log in</a></li>
+                    <li style="float:right"><a class="active" href="Login.jsp">Log in</a></li>
                 </ul>
             </div>
         </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 15c1b39f3c93ded2dc15d95284356b2f5b1c18bf
         X${table}X   
 
         ${mlist}

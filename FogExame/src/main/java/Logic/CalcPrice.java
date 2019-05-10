@@ -102,11 +102,11 @@ public class CalcPrice {
          int boltsAmount =(int )Math.ceil(amountOfBolts / 50);
          int nailsAmount =(int )Math.ceil(amountOfNails/ 100);
          
-        MetalParts brackets = CarportFacade.Partscalc("Beslag, 10 i en pakke", bracketsAmount, 100);
-        MetalParts screws = CarportFacade.Partscalc("Skruer med møtrik, 100 i en pakke", screwsAmount, 50);
-        MetalParts nails = CarportFacade.Partscalc("Søm, 100 i en pakke", boltsAmount, 50);
+        MetalParts brackets = CreateCarport.Partscalc("Beslag, 10 i en pakke", bracketsAmount, 100);
+        MetalParts screws = CreateCarport.Partscalc("Skruer med møtrik, 100 i en pakke", screwsAmount, 50);
+        MetalParts nails = CreateCarport.Partscalc("Søm, 100 i en pakke", boltsAmount, 50);
         //MetalParts nut = CarportFacade.Partscalc(name, amount, price);
-        MetalParts bolt = CarportFacade.Partscalc("Bolte, 50 i en pakke", boltsAmount, 150);
+        MetalParts bolt = CreateCarport.Partscalc("Bolte, 50 i en pakke", boltsAmount, 150);
         partslist.add(brackets);
         partslist.add(screws);
         partslist.add(bolt);
