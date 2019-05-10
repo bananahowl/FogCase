@@ -69,7 +69,7 @@ public class HtmlConverter {
                 + "</form>";
 
         String totalParts = partlisttop + partlistmid + partlistbottom;
-        totalParts.replace("MaterialList -", "");
+       
         return totalParts;
     }
 
@@ -94,7 +94,6 @@ public class HtmlConverter {
                 + "</form>";
 
         String totalParts = partlisttop + partlistmid + partlistbottom;
-        totalParts.replace("MaterialList -", "");
         return totalParts;
     }
 
