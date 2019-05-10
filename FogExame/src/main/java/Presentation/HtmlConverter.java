@@ -6,6 +6,8 @@
 package Presentation;
 
 import DataLayer.Carport;
+import DataLayer.MaterialList;
+import DataLayer.MetalParts;
 import java.util.ArrayList;
 
 /**
@@ -18,7 +20,7 @@ public class HtmlConverter {
         String cartTable = "<form action=\"FrontController\" method=\"GET\">"
                 + "<table id=\"carport\">"
                 + "<tr><th>Carport  </th><th>Length   </th><th>Width    </th><th>Height    </th><th>Shed Length    </th><th>Shed Width    </th><th>Angle   </th><th>Price      </th></tr>"
-                + "<tr><th>Size</th><th>" + carport.getLength() + "</th><th>" + carport.getWidth() + "</th><th>220</th><th>"+ carport.getShed().getLength()+"</th><th>"+ carport.getShed().getWidth()+"</th><th>none</th><th>" +carport.getPrice() +"</th></tr>"
+                + "<tr><th>Size</th><th>" + carport.getLength() + "</th><th>" + carport.getWidth() + "</th><th>220</th><th>" + carport.getShed().getLength() + "</th><th>" + carport.getShed().getWidth() + "</th><th>none</th><th>" + carport.getPrice() + "</th></tr>"
                 + "</table>"
                 + "<button type=\"submit\"  name=\"command\" value=\"Shoppingcart\" >Add to Shoppingcart</button>"
                 + "</form>";
@@ -40,12 +42,58 @@ public class HtmlConverter {
         String cartTable = "<form action=\"FrontController\" method=\"GET\">"
                 + "<table id=\"carport\">"
                 + "<tr><th>Carport  </th><th>Length   </th><th>Width    </th><th>Height    </th><th>Shed Length    </th><th>Shed Width    </th><th>Angle   </th><th>Price      </th></tr>"
-                + "<tr><th>Size</th><th>" + carport.getLength() + "</th><th>" + carport.getWidth() + "</th><th>220</th><th>"+ carport.getShed().getLength()+"</th><th>"+ carport.getShed().getWidth()+"</th><th>" +carport.getRoofangle()+"</th><th>" +carport.getPrice() +"</th></tr>"
+                + "<tr><th>Size</th><th>" + carport.getLength() + "</th><th>" + carport.getWidth() + "</th><th>220</th><th>" + carport.getShed().getLength() + "</th><th>" + carport.getShed().getWidth() + "</th><th>" + carport.getRoofangle() + "</th><th>" + carport.getPrice() + "</th></tr>"
                 + "</table>"
                 + "<button type=\"submit\"  name=\"command\" value=\"Shoppingcart\" >Add to Shoppingcart</button>"
                 + "</form>";
         return cartTable;
 
+    }
+
+    public static String printPartList(ArrayList<MaterialList> list) {
+
+        String partlisttop = "<form action=\"FrontController\" method=\"GET\">"
+                + "<table id=\"parlist\" border =\"1px\" >";
+
+        String partlistmid = "";
+        for (int i = 0; i < list.size(); i++) {
+            partlistmid
+                    += "<tr> <th>Description : " + list.get(i).getDescription()
+                    + " </th><th> Legnth " + list.get(i).getLength()
+                    + "</th> <th>Amount " + list.get(i).getAmount() + "</th></tr>";
+        }
+        String partlistbottom
+                = "</table>"
+                + "<br>"
+                + "</form>";
+
+        String totalParts = partlisttop + partlistmid + partlistbottom;
+        totalParts.replace("MaterialList -", "");
+        return totalParts;
+    }
+
+    public static String printMetalPartList(ArrayList<MetalParts> list) {
+
+        String partlisttop = "<form action=\"FrontController\" method=\"GET\">"
+                + "<table id=\"parlist\" border =\"1px\">";
+
+        String partlistmid = "";
+        for (int i = 0; i < list.size(); i++) {
+            partlistmid += "<tr> <th>Description : " + list.get(i).getName()
+                    + " </th><th> Legnth " + list.get(i).getPrice()
+                    + "</th> <th>Amount " + list.get(i).getAmount() + "</th></tr>";
+    
+        }
+
+        //"<tr><th>Size</th><th>" + list.get(i).getDescription()+ "</th><th>" + list.get(i).getLength() + "</th><th>" + list.get(i).getAmount() + "</th></tr>";
+        String partlistbottom
+                = "</table>"
+                + "<br>"
+                + "</form>";
+
+        String totalParts = partlisttop + partlistmid + partlistbottom;
+        totalParts.replace("MaterialList -", "");
+        return totalParts;
     }
 
 }

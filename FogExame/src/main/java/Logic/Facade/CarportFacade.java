@@ -92,21 +92,17 @@ public class CarportFacade {
         try {
             Shed shed = new Shed(0, 0, 0);
             if (widthShed != 1 && lengthShed != 1) {
-                try {
+               
                     shed.setLength(getShedlength(lengthShed));
                     shed.setWidth(getShedwidth(widthShed));
-                } catch (CarportException ex) {
-                    Logger.getLogger(CarportFacade.class.getName()).log(Level.SEVERE, null, ex);
-                } catch (SQLException ex) {
-                    Logger.getLogger(CarportFacade.class.getName()).log(Level.SEVERE, null, ex);
-                }
+
             }
             int a = getCarportLength(length);
             int b = getCarportWidth(width);
             Carport carport = new Carport(a, 220, b, shed, 0,price);
             return carport;
         } catch (CarportException ex) {
-            Logger.getLogger(CarportFacade.class.getName()).log(Level.SEVERE, null, ex);
+            ex.printStackTrace();
         } catch (SQLException ex) {
             Logger.getLogger(CarportFacade.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -150,7 +146,7 @@ public class CarportFacade {
             int b = getCarportWidth(width);
             int c =  getShedlength(lengthShed);
             int d =    getShedwidth(widthShed);
-            int price = CalcPartList.totaltakesAnything(b, a, d, c, 0);
+            int price = CalcPartList.totalwoodprice(b, a, d, c, 0);
             return price;
         } catch (CarportException ex) {
             Logger.getLogger(CarportFacade.class.getName()).log(Level.SEVERE, null, ex);
@@ -167,7 +163,7 @@ public class CarportFacade {
             int c =  getShedlength(lengthShed);
             int d =    getShedwidth(widthShed);
             int e = getRoofAngle(angle);
-            int price = CalcPartList.totaltakesAnything(b, a, d, c, e);
+            int price = CalcPartList.totalwoodprice(b, a, d, c, e);
             return price;
         } catch (CarportException ex) {
             Logger.getLogger(CarportFacade.class.getName()).log(Level.SEVERE, null, ex);

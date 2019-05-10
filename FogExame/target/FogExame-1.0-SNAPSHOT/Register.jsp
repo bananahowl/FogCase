@@ -14,22 +14,21 @@
     </head>
     <body>
         <div class="header">
-            <h1>Fog</h1>
+            <img src="https://media.licdn.com/dms/image/C4E0BAQGleVi1XAFxBg/company-logo_200_200/0?e=2159024400&v=beta&t=qQ2ebmGf9u4b45tNF9OyVrcy7NGpnwLXZkLrOky6ibM" alt="Fog" width="200" height="200">
         </div>
 
         <div class="row">
             <div class="col-3 col-s-3 menu">
                 <ul>
                     <li><a href="index.jsp">Home</a></li>
-                    <li><a href="Profile.jsp">Profile</a></li>
-                    <li><a href="FlatAngle.jsp">Customize</a></li>
-                    <li style="float:right"><a class="active" href="#about">BRUG TIL LOG IN/LOG UD</a></li>
+                    <li style="float:right"><a class="active" href="Register.jsp">Register</a></li>
+                    <li><a href="CustomizeCarport.jsp">Customize</a></li>
+                    <li style="float:right"><a class="active" href="#about">Log in</a></li>
                 </ul>
             </div>
         </div>
 
         <div class ="grid-container">
-            <div class ='center'>
                 <form action="FrontController" method="GET">
                     <table>
                         <td>
@@ -57,12 +56,11 @@
                         <br>
                         <p1>Retype Password:<br></p1>
                         <input type="password" name="password2" value="1234">
-                        <br>
+                        <br><br>
                         <button type="submit"  name="command" value="register">Register</button>
                         </tr>
                     </table>
                 </form>
-            </div>
         </div>
     </td>
 
