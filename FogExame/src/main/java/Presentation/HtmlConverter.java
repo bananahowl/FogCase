@@ -53,14 +53,16 @@ public class HtmlConverter {
     public static String printPartList(ArrayList<MaterialList> list) {
 
         String partlisttop = "<form action=\"FrontController\" method=\"GET\">"
-                + "<table id=\"parlist\">";
+                + "<table id=\"parlist\" border =\"1px\" >"
+                +"<tr> <th>Description </th> <th>Legnth </th> <th> Amount</th> </tr>";
 
         String partlistmid = "";
         for (int i = 0; i < list.size(); i++) {
-            partlistmid += "<tr><th>Size :</th><th>" + list.get(i).getDescription() + "</th><th> Legnth :</th><th>" + list.get(i).getLength() + "</th><th>Amount :</th><th>" + list.get(i).getAmount() + "</th></tr> <br>";
+            partlistmid
+                    += "<tr> <th> " + list.get(i).getDescription().toUpperCase()
+                    + " </th><th> " + list.get(i).getLength()
+                    + "</th> <th> " + list.get(i).getAmount() + "</th></tr>";
         }
-
-        //"<tr><th>Size</th><th>" + list.get(i).getDescription()+ "</th><th>" + list.get(i).getLength() + "</th><th>" + list.get(i).getAmount() + "</th></tr>";
         String partlistbottom
                 = "</table>"
                 + "<br>"
@@ -70,15 +72,19 @@ public class HtmlConverter {
         totalParts.replace("MaterialList -", "");
         return totalParts;
     }
-    
+
     public static String printMetalPartList(ArrayList<MetalParts> list) {
 
         String partlisttop = "<form action=\"FrontController\" method=\"GET\">"
-                + "<table id=\"parlist\">";
+                + "<table id=\"parlist\" border =\"1px\">"
+                +"<tr> <th>Description </th> <th>Legnth </th> <th> Amount</th> </tr>";
 
         String partlistmid = "";
         for (int i = 0; i < list.size(); i++) {
-            partlistmid += "<tr><th>Size :</th><th>" + list.get(i).getName()+ "</th><th> Amount :</th><th>" + list.get(i).getAmount()+ "</th><th>Price :</th><th>" + list.get(i).getPrice()+ "</th></tr> <br>";
+            partlistmid += "<tr> <th> " + list.get(i).getName()
+                    + " </th><th>  " + list.get(i).getPrice()
+                    + "</th> <th> " + list.get(i).getAmount() + "</th></tr>";
+    
         }
 
         //"<tr><th>Size</th><th>" + list.get(i).getDescription()+ "</th><th>" + list.get(i).getLength() + "</th><th>" + list.get(i).getAmount() + "</th></tr>";
