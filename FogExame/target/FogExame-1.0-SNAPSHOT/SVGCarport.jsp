@@ -64,6 +64,5 @@
         </svg>
         <h2> 1:10</h2>
     </div>
-        <div class="footer">THIS IS A FOOTER </div>
     </body>
 </html>

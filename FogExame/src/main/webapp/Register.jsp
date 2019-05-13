@@ -61,8 +61,5 @@
                     </table>
                 </form>
         </div>
-    </td>
-
-    <div class="footer">THIS IS A FOOTER </div>
 </body>
 </html>
