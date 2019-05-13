@@ -23,17 +23,16 @@ public class UserMapper {
     public static void createUser(User user) throws CarportException {
         try {
             Connection con = Connector.connection();
-            String SQL = "insert into user (user_id, firstname, lastname, adress, city, zipcode, email, phonenumber, password) values (?, ?, ?, ?, ?, ?, ?,?,?);";
+            String SQL = "insert into user(firstname, lastname, adress, city, zipcode, phonenumber, email,  password) values (?,?,?,?,?,?,?,?);";
             PreparedStatement ps = con.prepareStatement(SQL, Statement.RETURN_GENERATED_KEYS);
-            ps.setInt(1, user.getUser_id());
-            ps.setString(2, user.getFirstname());
-            ps.setString(3, user.getLastname());
-            ps.setString(4, user.getAdress());
-            ps.setString(5, user.getCity());
-            ps.setInt(6, user.getZipcode());
-            ps.setString(7, user.getEmail());
-            ps.setInt(8, user.getPhone());
-            ps.setString(9, user.getPassword());
+            ps.setString(1, user.getFirstname());
+            ps.setString(2, user.getLastname());
+            ps.setString(3, user.getAdress());
+            ps.setString(4, user.getCity());
+            ps.setInt(5, user.getZipcode());
+            ps.setString(6, user.getEmail());
+            ps.setInt(7, user.getPhone());
+            ps.setString(8, user.getPassword());
             ps.executeUpdate();
         } catch (SQLException | ClassNotFoundException ex) {
             throw new CarportException(ex.getMessage());
