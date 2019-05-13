@@ -8,6 +8,7 @@ package Presentation;
 import DataLayer.Carport;
 import DataLayer.MaterialList;
 import DataLayer.MetalParts;
+import DataLayer.Order;
 import java.util.ArrayList;
 
 /**
@@ -54,7 +55,7 @@ public class HtmlConverter {
 
         String partlisttop = "<form action=\"FrontController\" method=\"GET\">"
                 + "<table id=\"parlist\" border =\"1px\" >"
-                +"<tr> <th>Description </th> <th>Length </th> <th> Amount</th> </tr>";
+                + "<tr> <th>Description </th> <th>Length </th> <th> Amount</th> </tr>";
 
         String partlistmid = "";
         for (int i = 0; i < list.size(); i++) {
@@ -69,7 +70,7 @@ public class HtmlConverter {
                 + "</form>";
 
         String totalParts = partlisttop + partlistmid + partlistbottom;
-       
+
         return totalParts;
     }
 
@@ -77,14 +78,14 @@ public class HtmlConverter {
 
         String partlisttop = "<form action=\"FrontController\" method=\"GET\">"
                 + "<table id=\"parlist\" border =\"1px\">"
-                +"<tr> <th>Description </th> <th>Legnth </th> <th> Amount</th> </tr>";
+                + "<tr> <th>Description </th> <th>Legnth </th> <th> Amount</th> </tr>";
 
         String partlistmid = "";
         for (int i = 0; i < list.size(); i++) {
             partlistmid += "<tr> <th> " + list.get(i).getName()
                     + " </th><th>  " + list.get(i).getPrice()
                     + "</th> <th> " + list.get(i).getAmount() + "</th></tr>";
-    
+
         }
 
         //"<tr><th>Size</th><th>" + list.get(i).getDescription()+ "</th><th>" + list.get(i).getLength() + "</th><th>" + list.get(i).getAmount() + "</th></tr>";
@@ -96,20 +97,20 @@ public class HtmlConverter {
         String totalParts = partlisttop + partlistmid + partlistbottom;
         return totalParts;
     }
-    
-  /*  
+
     public static String generateOrdersHTML(ArrayList<Order> orders) {
         String cartTable = "<table id=\"orders\">"
-                + "<tr><th>Order ID </th><th>Length </th><th>Width </th><th>Height </th><th>User </th><th>Shipped\t</th></tr>";
+                + "<tr><th>Order ID </th><th>Length </th><th>Width </th><th>Shed length </th><th>Shed width </th><th>User </th><th>Shipped\t</th></tr>";
         for (int i = 0; i < orders.size(); i++) {
             cartTable += "<tr><td>" + orders.get(i).getOrder_id() + " </td>"
-                    + "<td>" + orders.get(i).getLength() + " </td>"
-                    + "<td>" + orders.get(i).getWidth() + " </td>"
-                    + "<td>" + orders.get(i).getHeight() + " </td>"
+                    + "<td>" + orders.get(i).getCarport().getLength() + " </td>"
+                    + "<td>" + orders.get(i).getCarport().getWidth() + " </td>"
+                    + "<td>" + orders.get(i).getCarport().getShed().getLength() + " </td>"
+                    + "<td>" + orders.get(i).getCarport().getShed().getWidth() + " </td>"
                     + "<td>" + orders.get(i).getUser().toString() + " </td>"
                     + "<td>" + orders.get(i).isShipped() + " </td></tr>";
         }
         return cartTable;
     }
-*/
+
 }
