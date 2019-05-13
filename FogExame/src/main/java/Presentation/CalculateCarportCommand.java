@@ -39,7 +39,7 @@ public class CalculateCarportCommand extends Command {
             Carport cp = CreateCarport.createCarportFlatRoof(length, width, lengthShed, widthShed,price);
 
             String html = HtmlConverter.carportFlatRooftoHtml(cp);
-            ArrayList<MaterialList> list = totalpartlist(widthShed,lengthShed,width,length,0);
+            ArrayList<MaterialList> list = totalpartlist(widthShed,lengthShed,width,length,angle);
             String  slist = printPartList(list);
             request.setAttribute("carport", cp); // the good stuff
             request.setAttribute("mlist", slist);
