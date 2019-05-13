@@ -31,19 +31,17 @@
                 </ul>
             </div>
         </div>
-<<<<<<< HEAD
+
         <%
             CarportFacade cf = new CarportFacade();
             int width = cf.getCarportWidth(Integer.parseInt(request.getParameter("width")));
             int length = cf.getCarportLength(Integer.parseInt(request.getParameter("length")));
         %>
         ${table}
-=======
 
-        X${table}X   
-${carport.length}
         ${mlist}
->>>>>>> 8d97d9e067a97ae803f1ccba74d9e4e64e48a0bd
+        X${shoppingcart}X
+        ${order}X
         <div class ="grid-container">
             <div class ='center'>
 

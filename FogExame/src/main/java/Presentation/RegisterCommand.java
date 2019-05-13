@@ -30,6 +30,7 @@ public class RegisterCommand extends Command {
             return "CustomizeCarport";
         } else {
             throw new CarportException("the two passwords did not match" );
+            
         }
     }
 
