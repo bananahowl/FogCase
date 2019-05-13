@@ -40,7 +40,7 @@
         </div>
 
         X${table}X   
-
+${carport.length}
         ${mlist}
         <div class ="grid-container">
             <div class ='center'>
@@ -112,6 +112,35 @@ style="stroke:rgb(0,0,0);stroke-width:1"/>  -->
 
                 </svg>   
                 <h2><%=length%> in cm</h2>
+                <br>
+                
+                <h1> Front view</h1>
+                <svg height ="300" width ="<%=width + 25%>">
+
+
+<!--    ½    <line x1="0" y1="<%=length + 10.5%>" x2="10" y2="<%=length + 5.5%>"
+style="stroke:rgb(0,0,0);stroke-width:1"/>
+<line x1="0" y1="<%=length + 10.5%>" x2="10" y2="<%=length + 15.5%> "
+style="stroke:rgb(0,0,0);stroke-width:1"/>
+
+<line x1="<%=width + 10%>" y1="<%=length + 10.5%>" x2="<%=width%>" y2="<%=length + 5.5%>"
+style="stroke:rgb(0,0,0);stroke-width:1"/>
+<line x1="<%=width + 10%>" y1="<%=length + 10.5%>" x2="<%=width%>" y2="<%=length + 15.5%>"
+style="stroke:rgb(0,0,0);stroke-width:1"/>  -->
+
+               
+                %><rect x="0" y="30"  width="10" height="220" fill="none"
+                      style="stroke:rgb(0,0,0);stroke-width:3"/>
+                <rect x="<%=width-10%>" y="30"  width="10" height="220" fill="none"
+                      style="stroke:rgb(0,0,0);stroke-width:3"/>
+                <rect x="10" y="<%=length + 10.5%>"  width="<%=length - 10%>" height="1" fill="#000000" />
+                
+                <rect x="0" y="0" width="<%=width%>" height="30" fill="#none"
+                      style="stroke:rgb(0,0,0);stroke-width:3"/>
+
+
+                </svg>   
+                <h2><%=width%> in cm</h2>
             </div>
         </div>
         <div class="footer">THIS IS A FOOTER </div>
