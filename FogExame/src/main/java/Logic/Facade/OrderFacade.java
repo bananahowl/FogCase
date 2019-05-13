@@ -14,7 +14,7 @@ import java.util.List;
  * @author fskn
  */
 public class OrderFacade {
-        public static List<Order> getAllOrders () throws CarportException {
+       /* public static List<Order> getAllOrders () throws CarportException {
         return DataMapper.getAllOrders();
     }
     
@@ -25,5 +25,5 @@ public class OrderFacade {
     public static void createOrder (Legohouse legohouse, User user) throws LegohouseException {
         Order order = new Order(legohouse.getLength(), legohouse.getWidth(), legohouse.getHeight(), user, false);
         DataMapper.createOrder(order);
-    }
+    }*/
 }

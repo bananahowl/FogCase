@@ -23,12 +23,13 @@ public class UserMapper {
     public static void createUser(User user) throws CarportException {
         try {
             Connection con = Connector.connection();
-            String SQL = "insert into users (firstname, lastname, adress, city, email, phonenumber, password) values (?, ?, ?, ?, ?, ?, ?);";
+            String SQL = "insert into user (firstname, lastname, adress, city, email, phonenumber, password) values (?, ?, ?, ?, ?, ?, ?);";
             PreparedStatement ps = con.prepareStatement(SQL, Statement.RETURN_GENERATED_KEYS);
             ps.setString(1, user.getFirstname());
             ps.setString(2, user.getLastname());
             ps.setString(3, user.getAdress());
             ps.setString(4, user.getCity());
+            ps.setInt(5, user.getZipcode());
             ps.setString(5, user.getEmail());
             ps.setInt(6, user.getPhone());
             ps.setString(7, user.getPassword());
