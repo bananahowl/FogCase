@@ -7,12 +7,15 @@ package DataLayer.DataMappers;
 
 import DataLayer.Connector;
 import DataLayer.Order;
+import DataLayer.User;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import Logic.CarportException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -42,6 +45,33 @@ public class OrderMapper {
     }
     /*
     public static List<Order> getAllOrders() throws LegohouseException {
+=======
+    
+        public static ArrayList<Order> getOrdersByUser(User user) throws CarportException {
+        ArrayList<Order> orders = new ArrayList();
+        try {
+            Connection con = Connector.connection();
+            String SQL = "SELECT order_id, length, width, height, shipped "
+                    + "FROM legohouse.orders WHERE email_FK = ?;";
+            PreparedStatement ps = con.prepareStatement(SQL);
+            ps.setString(1, user.getEmail());
+            ResultSet rs = ps.executeQuery();
+
+            while (rs.next()) {
+                int orderID = rs.getInt("order_id");
+                int length = rs.getInt("length");
+                int width = rs.getInt("width");
+                int height = rs.getInt("height");
+                boolean shipped = rs.getBoolean("shipped");
+                orders.add(new Order(orderID, length, width, height, user, shipped));
+            }
+        } catch (ClassNotFoundException | SQLException ex) {
+            throw new CarportException(ex.getMessage());
+        }
+        return orders;
+    }
+        
+            public static List<Order> getAllOrders() throws CarportException {
         ArrayList<Order> orders = new ArrayList();
         try {
             Connection con = Connector.connection();
@@ -64,10 +94,12 @@ public class OrderMapper {
                 orders.add(new Order(orderID, length, width, height, user, shipped));
             }
         } catch (ClassNotFoundException | SQLException ex) {
+
             throw new LegohouseException(ex.getMessage());
+
+            throw new CarportException(ex.getMessage());
         }
         return orders;
     }
-
 */
 }

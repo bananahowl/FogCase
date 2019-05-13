@@ -54,6 +54,8 @@ public class Order {
     public void setShipped(boolean shipped) {
         this.shipped = shipped;
     }
-
-   
+    @Override
+    public String toString() {
+        return "Order{" + "order_id=" + order_id + ", carport=" + carport + ", user=" + user + ", shipped=" + shipped + '}';
+    }
 }

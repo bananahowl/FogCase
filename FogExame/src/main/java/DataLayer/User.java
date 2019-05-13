@@ -21,16 +21,15 @@ public class User {
     private String email; 
     private String password;
 
-    public User(int user_id, String firstname, String lastname, String adress, String city, int zipcode, int phone, String email, String password) {
-        this.user_id = user_id;
+    public User(String firstname, String lastname, String adress, String city, int zipcode, int phone, String email, String password) {
         this.firstname = firstname;
         this.lastname = lastname;
-        this.adress = adress;
+        this.password = password;
+        this.email = email;
         this.city = city;
         this.zipcode = zipcode;
+        this.adress = adress;
         this.phone = phone;
-        this.email = email;
-        this.password = password;
     }
 
     public int getUser_id() {
@@ -105,6 +104,9 @@ public class User {
         this.password = password;
     }
 
-
+    @Override
+    public String toString() {
+        return "User{" + "user_id=" + user_id + ", firstname=" + firstname + ", lastname=" + lastname + ", adress=" + adress + ", city=" + city + ", zipcode=" + zipcode + ", phone=" + phone + ", email=" + email + ", password=" + password + '}';
+    }
     
 }

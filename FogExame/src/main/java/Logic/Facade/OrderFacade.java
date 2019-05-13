@@ -5,10 +5,14 @@
  */
 package Logic.Facade;
 
+import DataLayer.Carport;
 import DataLayer.Order;
+import DataLayer.User;
+import Logic.CarportException;
 import java.util.ArrayList;
 import java.util.List;
-
+import DataLayer.DataMappers.OrderMapper;
+import DataLayer.DataMappers.UserMapper;
 /**
  *
  * @author fskn
@@ -17,13 +21,20 @@ public class OrderFacade {
        /* public static List<Order> getAllOrders () throws CarportException {
         return DataMapper.getAllOrders();
     }
+        public static List<Order> getAllOrders () throws CarportException {
+        return OrderMapper.getAllOrders();
+    }
     
-    public static ArrayList<Order> getAllOrdersByUser (User user) throws LegohouseException {
-        return DataMapper.getOrdersByUser(user);
+    public static ArrayList<Order> getAllOrdersByUser (User user) throws CarportException{
+        return OrderMapper.getOrdersByUser(user);
     }
     
     public static void createOrder (Legohouse legohouse, User user) throws LegohouseException {
         Order order = new Order(legohouse.getLength(), legohouse.getWidth(), legohouse.getHeight(), user, false);
         DataMapper.createOrder(order);
     }*/
+    public static void createOrder (int id, Carport carport, User user) throws CarportException {
+        Order order = new Order(id,carport, user, false);
+        OrderMapper.createOrder(order);
+    }
 }
