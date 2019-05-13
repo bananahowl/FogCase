@@ -22,10 +22,11 @@ public class Connector {
     }
 
     public static Connection connection() throws ClassNotFoundException, SQLException {
-        System.out.println("Hello");
+        System.out.println("Connecting..... ");
         if ( singleton == null ) {
             Class.forName( "com.mysql.cj.jdbc.Driver" );
             singleton = DriverManager.getConnection( URL, USERNAME, PASSWORD );
+            System.out.println("Making a connection");
         }
         return singleton;
     }
