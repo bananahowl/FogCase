@@ -96,5 +96,20 @@ public class HtmlConverter {
         String totalParts = partlisttop + partlistmid + partlistbottom;
         return totalParts;
     }
-
+    
+  /*  
+    public static String generateOrdersHTML(ArrayList<Order> orders) {
+        String cartTable = "<table id=\"orders\">"
+                + "<tr><th>Order ID </th><th>Length </th><th>Width </th><th>Height </th><th>User </th><th>Shipped\t</th></tr>";
+        for (int i = 0; i < orders.size(); i++) {
+            cartTable += "<tr><td>" + orders.get(i).getOrder_id() + " </td>"
+                    + "<td>" + orders.get(i).getLength() + " </td>"
+                    + "<td>" + orders.get(i).getWidth() + " </td>"
+                    + "<td>" + orders.get(i).getHeight() + " </td>"
+                    + "<td>" + orders.get(i).getUser().toString() + " </td>"
+                    + "<td>" + orders.get(i).isShipped() + " </td></tr>";
+        }
+        return cartTable;
+    }
+*/
 }
