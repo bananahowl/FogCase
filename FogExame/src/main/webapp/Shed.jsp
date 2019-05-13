@@ -17,13 +17,6 @@
         <link href ="styling.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <%
-            CarportFacade cf = new CarportFacade();
-            int width = cf.getCarportWidth(Integer.parseInt(request.getParameter("width")));
-            int length = cf.getCarportLength(Integer.parseInt(request.getParameter("length")));
-        %>
-
-
         <div class="header">
             <img src="https://media.licdn.com/dms/image/C4E0BAQGleVi1XAFxBg/company-logo_200_200/0?e=2159024400&v=beta&t=qQ2ebmGf9u4b45tNF9OyVrcy7NGpnwLXZkLrOky6ibM" alt="Fog" width="200" height="200">
         </div>
@@ -38,10 +31,19 @@
                 </ul>
             </div>
         </div>
+<<<<<<< HEAD
+        <%
+            CarportFacade cf = new CarportFacade();
+            int width = cf.getCarportWidth(Integer.parseInt(request.getParameter("width")));
+            int length = cf.getCarportLength(Integer.parseInt(request.getParameter("length")));
+        %>
+        ${table}
+=======
 
         X${table}X   
 ${carport.length}
         ${mlist}
+>>>>>>> 8d97d9e067a97ae803f1ccba74d9e4e64e48a0bd
         <div class ="grid-container">
             <div class ='center'>
 
@@ -143,6 +145,5 @@ style="stroke:rgb(0,0,0);stroke-width:1"/>  -->
                 <h2><%=width%> in cm</h2>
             </div>
         </div>
-        <div class="footer">THIS IS A FOOTER </div>
     </body>
 </html>

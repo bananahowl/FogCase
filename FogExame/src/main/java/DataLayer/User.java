@@ -11,19 +11,33 @@ package DataLayer;
  */
 public class User {
   
-    private String firstname,lastname,password,email,city,adress; 
-    private int phone,zipcode, User_id;
+    private int user_id;
+    private String firstname; 
+    private String lastname;
+    private String adress; 
+    private String city;
+    private int zipcode;
+    private int phone;
+    private String email; 
+    private String password;
 
-    public User(String firstname, String lastname, String password, String email, String city, String adress, int phone, int zipcode, int id) {
+    public User(String firstname, String lastname, String adress, String city, int zipcode, int phone, String email, String password) {
         this.firstname = firstname;
         this.lastname = lastname;
         this.password = password;
         this.email = email;
         this.city = city;
+        this.zipcode = zipcode;
         this.adress = adress;
         this.phone = phone;
-        this.zipcode = zipcode;
-        this.User_id = id;
+    }
+
+    public int getUser_id() {
+        return user_id;
+    }
+
+    public void setUser_id(int user_id) {
+        this.user_id = user_id;
     }
 
     public String getFirstname() {
@@ -42,20 +56,12 @@ public class User {
         this.lastname = lastname;
     }
 
-    public String getPassword() {
-        return password;
+    public String getAdress() {
+        return adress;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
+    public void setAdress(String adress) {
+        this.adress = adress;
     }
 
     public String getCity() {
@@ -66,12 +72,12 @@ public class User {
         this.city = city;
     }
 
-    public String getAdress() {
-        return adress;
+    public int getZipcode() {
+        return zipcode;
     }
 
-    public void setAdress(String adress) {
-        this.adress = adress;
+    public void setZipcode(int zipcode) {
+        this.zipcode = zipcode;
     }
 
     public int getPhone() {
@@ -82,29 +88,25 @@ public class User {
         this.phone = phone;
     }
 
-    public int getZipcode() {
-        return zipcode;
+    public String getEmail() {
+        return email;
     }
 
-    public void setZipcode(int zipcode) {
-        this.zipcode = zipcode;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public int getId() {
-        return User_id;
+    public String getPassword() {
+        return password;
     }
 
-    public void setId(int id) {
-        this.User_id = id;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     @Override
     public String toString() {
-        return "User{" + "firstname=" + firstname + ", lastname=" + lastname + ", password=" + password + ", email=" + email + ", city=" + city + ", adress=" + adress + ", phone=" + phone + ", zipcode=" + zipcode + ", id=" + User_id + '}';
+        return "User{" + "user_id=" + user_id + ", firstname=" + firstname + ", lastname=" + lastname + ", adress=" + adress + ", city=" + city + ", zipcode=" + zipcode + ", phone=" + phone + ", email=" + email + ", password=" + password + '}';
     }
-
-
-
-    
     
 }

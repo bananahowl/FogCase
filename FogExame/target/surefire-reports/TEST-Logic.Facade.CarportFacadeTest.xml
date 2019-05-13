@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <testsuite tests="15" failures="0" name="Logic.Facade.CarportFacadeTest" time="1.219" errors="0" skipped="0">
 =======
 <testsuite tests="15" failures="0" name="Logic.Facade.CarportFacadeTest" time="2.277" errors="0" skipped="0">
 >>>>>>> 21ce1e9d379653afe505fcca8c97739cd6df3f66
+=======
+<testsuite tests="15" failures="0" name="Logic.Facade.CarportFacadeTest" time="2.64" errors="0" skipped="0">
+=======
+<testsuite tests="15" failures="0" name="Logic.Facade.CarportFacadeTest" time="2.277" errors="0" skipped="0">
+>>>>>>> 8d97d9e067a97ae803f1ccba74d9e4e64e48a0bd
+>>>>>>> f3245cf01daaaa64165fc1e486ae2470d53d4fc5
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_181\jre\bin"/>
@@ -48,8 +55,13 @@
     <property name="java.class.path" value="C:\Program Files\NetBeans 8.2\java\maven\boot\plexus-classworlds-2.4.jar"/>
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
+<<<<<<< HEAD
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_191\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dnetbeans.deploy=true -Dnetbeans.deploy.clientUrlPart=/ShoppingCart.jsp -Dmaven.ext.class.path=C:\Program Files\NetBeans 8.2\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 package"/>
+=======
     <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_181\jre"/>
     <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dnetbeans.deploy=true -Dnetbeans.deploy.clientUrlPart=/index.jsp -Dmaven.ext.class.path=C:\Program Files\NetBeans 8.2\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 package"/>
+>>>>>>> 8d97d9e067a97ae803f1ccba74d9e4e64e48a0bd
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="da"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -63,6 +75,27 @@
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+<<<<<<< HEAD
+    <property name="netbeans.deploy.clientUrlPart" value="/ShoppingCart.jsp"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetMatiralName" time="2.119"/>
+  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetShedwidth" time="0.012"/>
+  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetLengthShed" time="0.016"/>
+  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetShedlength" time="0.017"/>
+  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetCarportWidth" time="0.017"/>
+  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetCarportLength" time="0.017"/>
+  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetRoofAngle" time="0.017"/>
+  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetMaxAngles" time="0.017"/>
+  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetMaxLength" time="0.016"/>
+  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetMaxRoofMaterial" time="0.018"/>
+  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetmaxmatiralnum" time="0.017"/>
+  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetMaxShedWidth" time="0.025"/>
+  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetMaxShedLength" time="0.017"/>
+  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetRoofMaterial" time="0.017"/>
+  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetMaxWidth" time="0.016"/>
+=======
     <property name="netbeans.deploy.clientUrlPart" value="/index.jsp"/>
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -99,5 +132,9 @@
   <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetMaxShedLength" time="0.022"/>
   <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetRoofMaterial" time="0.018"/>
   <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetMaxWidth" time="0.018"/>
+<<<<<<< HEAD
 >>>>>>> 21ce1e9d379653afe505fcca8c97739cd6df3f66
+=======
+>>>>>>> 8d97d9e067a97ae803f1ccba74d9e4e64e48a0bd
+>>>>>>> f3245cf01daaaa64165fc1e486ae2470d53d4fc5
 </testsuite>

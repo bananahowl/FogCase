@@ -60,8 +60,6 @@
             </table>
         </form>
             </div>
-            <div class="footer">Adresse: Firskovvej 20, 2800 Kongens Lyngby        tlf: 45 87 10 01</div>
         </div>
-        
             </body>
             </html>

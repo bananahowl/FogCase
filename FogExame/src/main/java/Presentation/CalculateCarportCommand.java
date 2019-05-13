@@ -16,6 +16,7 @@ import DataLayer.User;
 import Logic.CalcPartList;
 import static Logic.CalcPartList.totalpartlist;
 import Logic.CreateCarport;
+import Logic.Facade.OrderFacade;
 import static Presentation.HtmlConverter.printPartList;
 import java.util.ArrayList;
 
@@ -46,7 +47,7 @@ public class CalculateCarportCommand extends Command {
             ArrayList<MaterialList> list = totalpartlist(widthShed,lengthShed,width,length,angle);
             String  slist = printPartList(list);
             
-            Order orders = CreateOrder(1,cp,user);
+            Order orders = OrderFacade.createOrder(1, cp, user);
             shoppingcart.add(orders);
             String orderss = HtmlConverter.generateOrdersHTML(shoppingcart);
             request.setAttribute("carport", cp); // the good stuff
@@ -54,7 +55,8 @@ public class CalculateCarportCommand extends Command {
             request.setAttribute("table", html);
             request.setAttribute("price", price);
             request.setAttribute("carportwidth", width);
-            request.setAttribute("ordera", orders);
+            request.setAttribute("shoppingcart", shoppingcart);
+            request.setAttribute("order", orderss);
             return "Shed";
         } else {
             int price = CreateCarport.NumbersAngleRoof(width, length, width, length, angle);

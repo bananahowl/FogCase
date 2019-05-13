@@ -45,6 +45,5 @@
             </table>
         </form>
         </div>
-        <div class="footer">THIS IS A FOOTER </div>
     </body>
 </html>
