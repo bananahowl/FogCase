@@ -55,7 +55,7 @@ public class UserMapper {
                 String city = rs.getString("city");
                 int zipcode = rs.getInt("zipcode");
                 int phone = rs.getInt("phonenumber");
-                User user = new User(firstname, lastname, adress, city, zipcode, phone, email, password);
+                User user = new User(id,firstname, lastname, adress, city, zipcode, phone, email, password);
                 return user;
             } else {
                 throw new CarportException("Error");

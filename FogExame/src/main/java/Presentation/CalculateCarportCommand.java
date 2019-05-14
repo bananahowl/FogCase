@@ -47,7 +47,7 @@ public class CalculateCarportCommand extends Command {
             ArrayList<MaterialList> list = totalpartlist(widthShed,lengthShed,width,length,angle);
             String  slist = printPartList(list);
             
-            Order orders = OrderFacade.createOrder(1, cp, user);
+            Order orders = OrderFacade.createOrder(user.getUser_id(), cp, user);
             shoppingcart.add(orders);
             String orderss = HtmlConverter.generateOrdersHTML(shoppingcart);
             request.setAttribute("carport", cp); // the good stuff
