@@ -1,10 +1,10 @@
 -------------------------------------------------------------------------------
 Test set: Logic.Facade.OrderFacadeTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 3.568 sec <<< FAILURE!
-testCreateOrder(Logic.Facade.OrderFacadeTest)  Time elapsed: 3.295 sec  <<< ERROR!
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 4.349 sec <<< FAILURE!
+testCreateOrder(Logic.Facade.OrderFacadeTest)  Time elapsed: 4.08 sec  <<< ERROR!
 Logic.CarportException: Cannot add or update a child row: a foreign key constraint fails
-	at DataLayer.DataMappers.OrderMapper.createOrder(OrderMapper.java:45)
+	at DataLayer.DataMappers.OrderMapper.createOrder(OrderMapper.java:50)
 	at Logic.Facade.OrderFacade.createOrder(OrderFacade.java:34)
 	at Logic.Facade.OrderFacadeTest.testCreateOrder(OrderFacadeTest.java:38)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)

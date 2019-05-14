@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="Logic.Facade.OrderFacadeTest" time="3.568" errors="1" skipped="0">
+<testsuite tests="1" failures="0" name="Logic.Facade.OrderFacadeTest" time="4.348" errors="1" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_181\jre\bin"/>
@@ -62,9 +62,9 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="Logic.Facade.OrderFacadeTest" name="testCreateOrder" time="3.295">
+  <testcase classname="Logic.Facade.OrderFacadeTest" name="testCreateOrder" time="4.08">
     <error message="Cannot add or update a child row: a foreign key constraint fails" type="Logic.CarportException">Logic.CarportException: Cannot add or update a child row: a foreign key constraint fails
-	at DataLayer.DataMappers.OrderMapper.createOrder(OrderMapper.java:45)
+	at DataLayer.DataMappers.OrderMapper.createOrder(OrderMapper.java:50)
 	at Logic.Facade.OrderFacade.createOrder(OrderFacade.java:34)
 	at Logic.Facade.OrderFacadeTest.testCreateOrder(OrderFacadeTest.java:38)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
