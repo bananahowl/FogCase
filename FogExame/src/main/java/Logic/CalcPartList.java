@@ -99,21 +99,7 @@ public class CalcPartList {
     }
 
     
-    public static int calcShed() throws CarportException, SQLException
-    {
-        int length = CarportMapper.getShedlength(1);
-        int width = CarportMapper.getShedwidth(1);
 
-        int heigth = 220;
-
-        int areaLength = (length * heigth) * 2;
-        int areaWidth = (width * heigth) * 2;
-
-        // arealength + areawidth er i kvadrat meter. hvis vi har en pris i kvardrat meter er det let at regne.
-        int shedcm2 = areaLength + areaWidth;
-
-        return shedcm2;
-    }
 
     public static MaterialList calcSper(int length, int width) throws CarportException, SQLException {
         int gap = 50;
@@ -211,34 +197,7 @@ public static ArrayList<MetalParts> addItem(MetalParts val) {
 
     }
 
-    /* // idea to calc the seperate parts to in a better way.
-        public static MaterialList calcBolts(int amounts, String type){
-   switch(type){
-       case sperTop:
-           
-       break;
-       
-       case sper:
-           
-       break;
-       
-       case pots:
-           
-       break;
-       default:
-           System.out.println("Error gotta choose a right value");
-           break;
-   }
-    for(int i= 0; i < amounts; i++){
-    
-        
-    }
-        System.out.println(total);
-    MaterialList val =new MaterialList(length, total, "metal til stolper");
-    return val;
-    }
 
-    */
     public static int totalwoodprice(int shedWidth, int shedLength, int width, int length, int angle)
     {
         try {

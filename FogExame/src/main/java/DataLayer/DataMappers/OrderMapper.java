@@ -16,6 +16,8 @@ import java.sql.Statement;
 import Logic.CarportException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -37,11 +39,31 @@ public class OrderMapper {
             ps.setInt(6, order.getCarport().getShed().getWidth());
             ps.setInt(7, order.getCarport().getRoofangle());
             ps.setInt(8, order.getCarport().getPrice());
-            ps.setBoolean(9, order.isShipped());
+            if(order.isShipped()== false){
+            ps.setInt(9, 0);    
+            }
+            else{
+            ps.setInt(9, 1);
+            }
             ps.executeUpdate();
         } catch (SQLException | ClassNotFoundException ex) {
             throw new CarportException(ex.getMessage());
         }
+    }
+    
+    public static void deleteorder(int id) throws CarportException {
+        try {
+            Connection con = Connector.connection();
+            String SQL = "delete from orderTable where user_id = ?";
+            PreparedStatement ps = con.prepareStatement(SQL);
+            ps.setInt(1, id);
+            ps.executeQuery(SQL);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(OrderMapper.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(OrderMapper.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
     }
     /*
     public static List<Order> getAllOrders() throws LegohouseException {

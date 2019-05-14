@@ -32,11 +32,11 @@ public class CalcPartListtest {
 
         MaterialList remtest = CalcPartList.calcRem(700, 400);
         MaterialList posttest = CalcPartList.calculatePortPost(400, 700);
-        MaterialList rooftest = CalcPartList.calcRoofSides(400, 700, 0);
-        MaterialList fronttest = CalcPartList.calcRoofFronts(400, 0);
+        MaterialList rooftest = CalcPartList.calcRoofSides(400, 700, 15);
+        MaterialList fronttest = CalcPartList.calcRoofFronts(400, 15);
         MaterialList verticaltest = CalcPartList.calcAngledVerticalSpær(400, 700, 0);
         MaterialList horizontaltest = CalcPartList.calcAngledHorizontalSpær(400, 700);
-
+        System.out.println(fronttest);
         ArrayList<MaterialList> superlist = CalcPartList.totalMaterial(shedtest, spertest, remtest, posttest, rooftest, fronttest, verticaltest, horizontaltest);
         System.out.println(superlist);
 /*
@@ -84,6 +84,12 @@ public class CalcPartListtest {
         Carport carpot = new Carport(0,0,1, sh, 0,0);
         System.out.println("xxxxx");
         System.out.println(tre.totalpartlist(carpot));
+
+        System.out.println("xx");
+        System.out.println("___________________________");
+        System.out.println(tre.totalwoodprice(300, 200, 400, 700, 15));
+        System.out.println("_____________________________");
+
     }
     
     

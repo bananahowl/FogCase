@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+<<<<<<< HEAD
 <testsuite tests="15" failures="0" name="Logic.Facade.CarportFacadeTest" time="1.796" errors="0" skipped="0">
+=======
+<testsuite tests="15" failures="0" name="Logic.Facade.CarportFacadeTest" time="2.258" errors="0" skipped="0">
+>>>>>>> 939528929458ca9ad1b90ffc7a5b216b11fe52fb
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_181\jre\bin"/>
@@ -63,6 +67,7 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
+<<<<<<< HEAD
   <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetMatiralName" time="1.461"/>
   <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetShedwidth" time="0.06"/>
   <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetLengthShed" time="0.015"/>
@@ -78,4 +83,21 @@
   <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetMaxShedLength" time="0.015"/>
   <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetRoofMaterial" time="0.016"/>
   <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetMaxWidth" time="0.015"/>
+=======
+  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetMatiralName" time="1.842"/>
+  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetShedwidth" time="0.012"/>
+  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetLengthShed" time="0.018"/>
+  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetShedlength" time="0.017"/>
+  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetCarportWidth" time="0.018"/>
+  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetCarportLength" time="0.017"/>
+  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetRoofAngle" time="0.018"/>
+  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetMaxAngles" time="0.017"/>
+  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetMaxLength" time="0.017"/>
+  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetMaxRoofMaterial" time="0.019"/>
+  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetmaxmatiralnum" time="0.018"/>
+  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetMaxShedWidth" time="0.02"/>
+  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetMaxShedLength" time="0.018"/>
+  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetRoofMaterial" time="0.018"/>
+  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetMaxWidth" time="0.017"/>
+>>>>>>> 939528929458ca9ad1b90ffc7a5b216b11fe52fb
 </testsuite>
