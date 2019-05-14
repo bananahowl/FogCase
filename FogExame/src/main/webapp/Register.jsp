@@ -45,6 +45,9 @@
                         <p1>City:<br></p1>
                         <input type="text" name="city" value="Greve">
                         <br>
+                        <p1>Zipcode:<br></p1>
+                        <input type="text" name="zipcode" value="2670">
+                        <br>
                         <p1>Phone:<br></p1>
                         <input type="text" name="phonenumber" value="12345678">
                         <br>
@@ -61,8 +64,5 @@
                     </table>
                 </form>
         </div>
-    </td>
-
-    <div class="footer">THIS IS A FOOTER </div>
 </body>
 </html>

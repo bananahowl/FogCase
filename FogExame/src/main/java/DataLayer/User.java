@@ -11,22 +11,33 @@ package DataLayer;
  */
 public class User {
   
+    private int user_id;
     private String firstname; 
     private String lastname;
     private String adress; 
     private String city;
+    private int zipcode;
     private int phone;
     private String email; 
     private String password;
 
-    public User(String firstname, String lastname, String adress, String city, int phone, String email, String password) {
+    public User(String firstname, String lastname, String adress, String city, int zipcode, int phone, String email, String password) {
         this.firstname = firstname;
         this.lastname = lastname;
-        this.adress = adress;
-        this.city = city;
-        this.phone = phone;
-        this.email = email;
         this.password = password;
+        this.email = email;
+        this.city = city;
+        this.zipcode = zipcode;
+        this.adress = adress;
+        this.phone = phone;
+    }
+
+    public int getUser_id() {
+        return user_id;
+    }
+
+    public void setUser_id(int user_id) {
+        this.user_id = user_id;
     }
 
     public String getFirstname() {
@@ -61,6 +72,14 @@ public class User {
         this.city = city;
     }
 
+    public int getZipcode() {
+        return zipcode;
+    }
+
+    public void setZipcode(int zipcode) {
+        this.zipcode = zipcode;
+    }
+
     public int getPhone() {
         return phone;
     }
@@ -87,8 +106,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" + "firstname=" + firstname + ", lastname=" + lastname + ", adress=" + adress + ", city=" + city + ", phone=" + phone + ", email=" + email + ", password=" + password + '}';
+        return "User{" + "user_id=" + user_id + ", firstname=" + firstname + ", lastname=" + lastname + ", adress=" + adress + ", city=" + city + ", zipcode=" + zipcode + ", phone=" + phone + ", email=" + email + ", password=" + password + '}';
     }
-    
     
 }

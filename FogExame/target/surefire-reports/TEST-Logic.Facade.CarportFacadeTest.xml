@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<<<<<<< HEAD
-<testsuite tests="15" failures="0" name="Logic.Facade.CarportFacadeTest" time="2.161" errors="0" skipped="0">
-=======
-<testsuite tests="15" failures="0" name="Logic.Facade.CarportFacadeTest" time="2.2" errors="0" skipped="0">
->>>>>>> c669b525be72a018f6448fe3334e18f8ac6e5e5c
+<testsuite tests="15" failures="0" name="Logic.Facade.CarportFacadeTest" time="1.376" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_181\jre\bin"/>
@@ -48,13 +44,8 @@
     <property name="java.class.path" value="C:\Program Files\NetBeans 8.2\java\maven\boot\plexus-classworlds-2.4.jar"/>
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
-<<<<<<< HEAD
     <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_181\jre"/>
     <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dnetbeans.deploy=true -Dnetbeans.deploy.clientUrlPart=/index.jsp -Dmaven.ext.class.path=C:\Program Files\NetBeans 8.2\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 package"/>
-=======
-    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_191\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dnetbeans.deploy=true -Dnetbeans.deploy.clientUrlPart=/CustomizeCarport.jsp -Dmaven.ext.class.path=C:\Program Files\NetBeans 8.2\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 package"/>
->>>>>>> c669b525be72a018f6448fe3334e18f8ac6e5e5c
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="da"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -68,40 +59,23 @@
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
-    <property name="netbeans.deploy.clientUrlPart" value="/CustomizeCarport.jsp"/>
+    <property name="netbeans.deploy.clientUrlPart" value="/index.jsp"/>
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-<<<<<<< HEAD
-  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetMatiralName" time="1.739"/>
-  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetShedwidth" time="0.013"/>
-  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetLengthShed" time="0.02"/>
-  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetShedlength" time="0.018"/>
-  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetCarportWidth" time="0.02"/>
-  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetCarportLength" time="0.017"/>
-  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetRoofAngle" time="0.017"/>
-  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetMaxAngles" time="0.018"/>
-  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetMaxLength" time="0.02"/>
-  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetMaxRoofMaterial" time="0.018"/>
-  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetmaxmatiralnum" time="0.018"/>
-  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetMaxShedWidth" time="0.02"/>
-  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetMaxShedLength" time="0.02"/>
-  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetRoofMaterial" time="0.017"/>
-=======
-  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetMatiralName" time="1.73"/>
-  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetShedwidth" time="0.013"/>
-  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetLengthShed" time="0.017"/>
+  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetMatiralName" time="1.041"/>
+  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetShedwidth" time="0.011"/>
+  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetLengthShed" time="0.018"/>
   <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetShedlength" time="0.018"/>
   <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetCarportWidth" time="0.018"/>
   <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetCarportLength" time="0.018"/>
   <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetRoofAngle" time="0.018"/>
   <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetMaxAngles" time="0.018"/>
-  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetMaxLength" time="0.017"/>
-  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetMaxRoofMaterial" time="0.018"/>
-  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetmaxmatiralnum" time="0.017"/>
-  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetMaxShedWidth" time="0.026"/>
+  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetMaxLength" time="0.022"/>
+  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetMaxRoofMaterial" time="0.019"/>
+  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetmaxmatiralnum" time="0.018"/>
+  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetMaxShedWidth" time="0.021"/>
   <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetMaxShedLength" time="0.017"/>
-  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetRoofMaterial" time="0.018"/>
->>>>>>> c669b525be72a018f6448fe3334e18f8ac6e5e5c
-  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetMaxWidth" time="0.018"/>
+  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetRoofMaterial" time="0.019"/>
+  <testcase classname="Logic.Facade.CarportFacadeTest" name="testGetMaxWidth" time="0.019"/>
 </testsuite>

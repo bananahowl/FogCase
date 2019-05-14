@@ -35,7 +35,7 @@
                     <h1>Log in here to create a order</h1>
                     <input type="hidden" name="command" value="login">
                 <p1>Email:<br></p1>
-                <input type="text" name="email" value="emil@gmail.com">
+                <input type="text" name="email" value="fnsk@hotmail.com">
                 <br>
                 <p1>Password:<br></p1>
                 <input type="password" name="password" value="1234">
@@ -45,6 +45,5 @@
             </table>
         </form>
         </div>
-        <div class="footer">THIS IS A FOOTER </div>
     </body>
 </html>

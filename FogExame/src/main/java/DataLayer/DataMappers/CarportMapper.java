@@ -18,8 +18,10 @@ import java.util.List;
 import Logic.CarportException;
 
 import java.sql.Connection;
+
 public class CarportMapper {
-/*
+
+    /*
     public String getMatiralName(int id) throws Exception {
         try {
             Connection con = Connector.connection();
@@ -53,25 +55,7 @@ public class CarportMapper {
         }
     }
 
-    public static void createOrder(Order order) throws LegohouseException {
-        try {
-            Connection con = Connector.connection();
-            String SQL = "INSERT INTO orders (email_FK, length, width, height, shipped) VALUES (?, ?, ?, ?, ?)";
-            PreparedStatement ps = con.prepareStatement(SQL, Statement.RETURN_GENERATED_KEYS);
-            ps.setString(1, order.getUser().getEmail());
-            ps.setInt(2, order.getLength());
-            ps.setInt(3, order.getWidth());
-            ps.setInt(4, order.getHeight());
-            ps.setBoolean(5, order.isShipped());
-            ps.executeUpdate();
-            ResultSet ids = ps.getGeneratedKeys();
-            ids.next();
-            int id = ids.getInt(1);
-            order.setOrder_id(id);
-        } catch (SQLException | ClassNotFoundException ex) {
-            throw new LegohouseException(ex.getMessage());
-        }
-    }
+   
 
     public static User login(String email, String password) throws LegohouseException {
         try {
@@ -147,7 +131,6 @@ public class CarportMapper {
         return orders;
     }*/
 
-
     public static String getMatiralName(int id) throws CarportException {
         try {
             Connection con = Connector.connection();
@@ -175,7 +158,7 @@ public class CarportMapper {
             String SQL = "SELECT max(materialID) FROM materials;";
             PreparedStatement ps = con.prepareStatement(SQL);
             ResultSet rs = ps.executeQuery();
-            
+
             if (rs.next()) {
                 int nr = rs.getInt("max(materialID)");
                 return nr;
@@ -186,14 +169,14 @@ public class CarportMapper {
             throw new CarportException(ex.getMessage());
         }
     }
-    
+
     public static int getMaxLength() throws CarportException {
         try {
             Connection con = Connector.connection();
             String SQL = "select max(lengthid) from length;";
             PreparedStatement ps = con.prepareStatement(SQL);
             ResultSet rs = ps.executeQuery();
-            
+
             if (rs.next()) {
                 int nr = rs.getInt("max(lengthid)");
                 return nr;
@@ -204,14 +187,14 @@ public class CarportMapper {
             throw new CarportException(ex.getMessage());
         }
     }
-    
+
     public static int getMaxAngles() throws CarportException {
         try {
             Connection con = Connector.connection();
             String SQL = "select max(degreeid) from degrees;";
             PreparedStatement ps = con.prepareStatement(SQL);
             ResultSet rs = ps.executeQuery();
-            
+
             if (rs.next()) {
                 int nr = rs.getInt("max(degreeid)");
                 return nr;
@@ -222,14 +205,14 @@ public class CarportMapper {
             throw new CarportException(ex.getMessage());
         }
     }
-    
+
     public static int getMaxWidth() throws CarportException {
         try {
             Connection con = Connector.connection();
             String SQL = "select max(widthid) from width;";
             PreparedStatement ps = con.prepareStatement(SQL);
             ResultSet rs = ps.executeQuery();
-            
+
             if (rs.next()) {
                 int nr = rs.getInt("max(widthid)");
                 return nr;
@@ -240,13 +223,14 @@ public class CarportMapper {
             throw new CarportException(ex.getMessage());
         }
     }
+
     public static int getMaxShedWidth() throws CarportException {
         try {
             Connection con = Connector.connection();
             String SQL = "select max(shedwidthid) from shedwidth;";
             PreparedStatement ps = con.prepareStatement(SQL);
             ResultSet rs = ps.executeQuery();
-            
+
             if (rs.next()) {
                 int nr = rs.getInt("max(shedwidthid)");
                 return nr;
@@ -257,14 +241,14 @@ public class CarportMapper {
             throw new CarportException(ex.getMessage());
         }
     }
-    
-    public static int getMaxShedLength() throws CarportException { 
+
+    public static int getMaxShedLength() throws CarportException {
         try {
             Connection con = Connector.connection();
             String SQL = "select max(shedlengthid) from shedlength;";
             PreparedStatement ps = con.prepareStatement(SQL);
             ResultSet rs = ps.executeQuery();
-            
+
             if (rs.next()) {
                 int nr = rs.getInt("max(shedlengthid)");
                 return nr;
@@ -275,14 +259,14 @@ public class CarportMapper {
             throw new CarportException(ex.getMessage());
         }
     }
-    
+
     public static int getMaxRoofMaterial() throws CarportException {
         try {
             Connection con = Connector.connection();
             String SQL = "select max(roofmaterialid) from roofmaterial";
             PreparedStatement ps = con.prepareStatement(SQL);
             ResultSet rs = ps.executeQuery();
-            
+
             if (rs.next()) {
                 int nr = rs.getInt("max(roofmaterialid)");
                 return nr;
@@ -293,20 +277,17 @@ public class CarportMapper {
             throw new CarportException(ex.getMessage());
         }
     }
+
     public static String getRoofMaterial(int id) throws CarportException, SQLException {
         try {
-            
-            
-            
             Connection connn = Connector.connection();
-            String queyyyry = "select roofmaterialname from roofmaterial where roofmaterialid = ?"; 
+            String queyyyry = "select roofmaterialname from roofmaterial where roofmaterialid = ?";
             PreparedStatement ps = connn.prepareStatement(queyyyry);
             ps.setInt(1, id);
             ResultSet rs = ps.executeQuery();
 
-
             if (rs.next()) {
-                String name = rs.getString("roofmaterialname"); 
+                String name = rs.getString("roofmaterialname");
                 return name;
             } else {
                 throw new CarportException("Error");
@@ -315,17 +296,18 @@ public class CarportMapper {
             throw new CarportException(ex.getMessage());
         }
     }
+
     public static int getwidth(int id) throws CarportException {
         try {
             Connection con = Connector.connection();
             String SQL = "SELECT widthValue FROM width WHERE widthid = ? ";
-            
+
             //+ id +""; 
             PreparedStatement ps = con.prepareStatement(SQL);
             ps.setInt(1, id);
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
-                int width = rs.getInt("widthValue"); 
+                int width = rs.getInt("widthValue");
                 return width;
             } else {
                 throw new CarportException("Error");
@@ -334,18 +316,17 @@ public class CarportMapper {
             throw new CarportException(ex.getMessage());
         }
     }
-    
-    
+
     public static int getlength(int id) throws CarportException, SQLException {
         try {
             Connection conn = Connector.connection();
-            String query = "select lengthvalue from length where lengthid = ?"; 
+            String query = "select lengthvalue from length where lengthid = ?";
             PreparedStatement ps = conn.prepareStatement(query);
-           ps.setInt(1, id);
+            ps.setInt(1, id);
             ResultSet rs = ps.executeQuery();
 
             if (rs.next()) {
-                int length = rs.getInt("lengthvalue"); 
+                int length = rs.getInt("lengthvalue");
                 return length;
             } else {
                 throw new CarportException("Error");
@@ -354,17 +335,17 @@ public class CarportMapper {
             throw new CarportException(ex.getMessage());
         }
     }
-    
+
     public static int getShedwidth(int id) throws CarportException, SQLException {
         try {
             Connection conn = Connector.connection();
-            String query = "select shedwidthvalue from shedwidth where shedwidthid =?"; 
+            String query = "select shedwidthvalue from shedwidth where shedwidthid =?";
             PreparedStatement ps = conn.prepareStatement(query);
             ps.setInt(1, id);
             ResultSet rs = ps.executeQuery();
 
             if (rs.next()) {
-                int width = rs.getInt("shedwidthvalue"); 
+                int width = rs.getInt("shedwidthvalue");
                 return width;
             } else {
                 throw new CarportException("Error");
@@ -373,17 +354,17 @@ public class CarportMapper {
             throw new CarportException(ex.getMessage());
         }
     }
-    
+
     public static int getShedlength(int id) throws CarportException, SQLException {
         try {
             Connection conn = Connector.connection();
-            String query = "select shedlengthvalue from shedlength where shedlengthid = ?"; 
+            String query = "select shedlengthvalue from shedlength where shedlengthid = ?";
             PreparedStatement ps = conn.prepareStatement(query);
             ps.setInt(1, id);
             ResultSet rs = ps.executeQuery();
 
             if (rs.next()) {
-                int length = rs.getInt("shedlengthvalue"); 
+                int length = rs.getInt("shedlengthvalue");
                 return length;
             } else {
                 throw new CarportException("Error");
@@ -392,17 +373,17 @@ public class CarportMapper {
             throw new CarportException(ex.getMessage());
         }
     }
-    
+
     public static int getRoofAngle(int id) throws CarportException, SQLException {
         try {
             Connection conn = Connector.connection();
 
-            String query = "select degreevalue from degrees where degreeid = ?"; 
+            String query = "select degreevalue from degrees where degreeid = ?";
             PreparedStatement ps = conn.prepareStatement(query);
             ps.setInt(1, id);
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
-                int angle = rs.getInt("degreevalue"); 
+                int angle = rs.getInt("degreevalue");
                 return angle;
             } else {
                 throw new CarportException("Error");
@@ -411,8 +392,5 @@ public class CarportMapper {
             throw new CarportException(ex.getMessage());
         }
     }
-    
+
 }
-
-
-               

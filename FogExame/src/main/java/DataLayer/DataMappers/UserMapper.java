@@ -23,15 +23,16 @@ public class UserMapper {
     public static void createUser(User user) throws CarportException {
         try {
             Connection con = Connector.connection();
-            String SQL = "insert into users (firstname, lastname, adress, city, email, phonenumber, password) values (?, ?, ?, ?, ?, ?, ?);";
+            String SQL = "insert into user( firstname, lastname, adress, city, zipcode, email, phonenumber, password) values (?,?,?,?,?,?,?,?)";
             PreparedStatement ps = con.prepareStatement(SQL, Statement.RETURN_GENERATED_KEYS);
             ps.setString(1, user.getFirstname());
             ps.setString(2, user.getLastname());
             ps.setString(3, user.getAdress());
             ps.setString(4, user.getCity());
-            ps.setString(5, user.getEmail());
-            ps.setInt(6, user.getPhone());
-            ps.setString(7, user.getPassword());
+            ps.setInt(5, user.getZipcode());
+            ps.setString(6, user.getEmail());
+            ps.setInt(7, user.getPhone());
+            ps.setString(8, user.getPassword());
             ps.executeUpdate();
         } catch (SQLException | ClassNotFoundException ex) {
             throw new CarportException(ex.getMessage());
@@ -41,18 +42,20 @@ public class UserMapper {
     public static User login(String email, String password) throws CarportException, SQLException {
         try {
             Connection conn = Connector.connection();
-            String query = "select firstname, lastname from users where email = ? AND password = ?;";
+            String query = "select firstname, lastname from user where email = ? AND password = ?;";
             PreparedStatement ps = conn.prepareStatement(query);
             ps.setString(1, email);
             ps.setString(2, password);
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
+                int id = rs.getInt("user_id");
                 String firstname = rs.getString("firstname");
                 String lastname = rs.getString("lastname");
                 String adress = rs.getString("adress");
                 String city = rs.getString("city");
+                int zipcode = rs.getInt("zipcode");
                 int phone = rs.getInt("phonenumber");
-                User user = new User(firstname, lastname, adress, city, phone, email, password);
+                User user = new User(firstname, lastname, adress, city, zipcode, phone, email, password);
                 return user;
             } else {
                 throw new CarportException("Error");

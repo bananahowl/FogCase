@@ -18,8 +18,8 @@ import java.util.logging.Logger;
  */
 public class UserFacade {
     
-    public static User createUser(String firstname, String lastname, String adress, String city, int phone, String email, String password) throws CarportException {
-        User user = new User(firstname, lastname, adress, city, phone, email, password);
+    public static User createUser( String firstname, String lastname, String adress, String city, int zipcode, int phone, String email, String password) throws CarportException {
+        User user = new User( firstname, lastname, adress, city, zipcode, phone, email, password);
         UserMapper.createUser(user);
         return user;
     }

@@ -27,9 +27,6 @@
                 </ul>
             </div>
         </div>
-        <form action="FrontController" method="GET">
-            <button type="submit"  name="command" value="login" >next </button>
-        </form>
          
     </body>
 </html>
