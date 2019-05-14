@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 C:\Users\ahmed\Desktop\GitCAN\FogCase\FogExame\src\main\java\Logic\Facade\UserFacade.java
 C:\Users\ahmed\Desktop\GitCAN\FogCase\FogExame\src\main\java\Presentation\UnknownCommand.java
 C:\Users\ahmed\Desktop\GitCAN\FogCase\FogExame\src\main\java\Presentation\ShoppingCartCommand.java
@@ -70,6 +71,40 @@ C:\Users\fskn\Documents\2 semester\NetbeansProjekter\Fog-case\FogCase\FogExame\s
 C:\Users\fskn\Documents\2 semester\NetbeansProjekter\Fog-case\FogCase\FogExame\src\main\java\DataLayer\MaterialList.java
 >>>>>>> c4314ff4cf73e33a7549ab6ede00a1b470a4c02c
 =======
+C:\Users\frizz\OneDrive\Documents\GitHub\FogCase\FogExame\src\main\java\DataLayer\Roof_material.java
+C:\Users\frizz\OneDrive\Documents\GitHub\FogCase\FogExame\src\main\java\DataLayer\MaterialList.java
+C:\Users\frizz\OneDrive\Documents\GitHub\FogCase\FogExame\src\main\java\DataLayer\MetalParts.java
+C:\Users\frizz\OneDrive\Documents\GitHub\FogCase\FogExame\src\main\java\DataLayer\Roof_area.java
+C:\Users\frizz\OneDrive\Documents\GitHub\FogCase\FogExame\src\main\java\DataLayer\CarportWithShed.java
+C:\Users\frizz\OneDrive\Documents\GitHub\FogCase\FogExame\src\main\java\Presentation\CalculateCarportCommand.java
+C:\Users\frizz\OneDrive\Documents\GitHub\FogCase\FogExame\src\main\java\Presentation\FrontController.java
+C:\Users\frizz\OneDrive\Documents\GitHub\FogCase\FogExame\src\main\java\DataLayer\DataMappers\CarportMapper.java
+C:\Users\frizz\OneDrive\Documents\GitHub\FogCase\FogExame\src\main\java\DataLayer\User.java
+C:\Users\frizz\OneDrive\Documents\GitHub\FogCase\FogExame\src\main\java\Presentation\UnknownCommand.java
+C:\Users\frizz\OneDrive\Documents\GitHub\FogCase\FogExame\src\main\java\Logic\Facade\OrderFacade.java
+C:\Users\frizz\OneDrive\Documents\GitHub\FogCase\FogExame\src\main\java\Presentation\CreateOrder.java
+C:\Users\frizz\OneDrive\Documents\GitHub\FogCase\FogExame\src\main\java\Logic\CalcPartList.java
+C:\Users\frizz\OneDrive\Documents\GitHub\FogCase\FogExame\src\main\java\Presentation\GetMyOrders.java
+C:\Users\frizz\OneDrive\Documents\GitHub\FogCase\FogExame\src\main\java\Presentation\HtmlConverter.java
+C:\Users\frizz\OneDrive\Documents\GitHub\FogCase\FogExame\src\main\java\Presentation\Command.java
+C:\Users\frizz\OneDrive\Documents\GitHub\FogCase\FogExame\src\main\java\Logic\CalcPrice.java
+C:\Users\frizz\OneDrive\Documents\GitHub\FogCase\FogExame\src\main\java\Presentation\RegisterCommand.java
+C:\Users\frizz\OneDrive\Documents\GitHub\FogCase\FogExame\src\main\java\Logic\Facade\UserFacade.java
+C:\Users\frizz\OneDrive\Documents\GitHub\FogCase\FogExame\src\main\java\DataLayer\Carport.java
+C:\Users\frizz\OneDrive\Documents\GitHub\FogCase\FogExame\src\main\java\DataLayer\DataMappers\OrderMapper.java
+C:\Users\frizz\OneDrive\Documents\GitHub\FogCase\FogExame\src\main\java\Presentation\CreateSVG.java
+C:\Users\frizz\OneDrive\Documents\GitHub\FogCase\FogExame\src\main\java\DataLayer\dataTest.java
+C:\Users\frizz\OneDrive\Documents\GitHub\FogCase\FogExame\src\main\java\Logic\Facade\CarportFacade.java
+C:\Users\frizz\OneDrive\Documents\GitHub\FogCase\FogExame\src\main\java\Presentation\ShoppingCartCommand.java
+C:\Users\frizz\OneDrive\Documents\GitHub\FogCase\FogExame\src\main\java\DataLayer\DataMappers\UserMapper.java
+C:\Users\frizz\OneDrive\Documents\GitHub\FogCase\FogExame\src\main\java\Logic\CarportException.java
+C:\Users\frizz\OneDrive\Documents\GitHub\FogCase\FogExame\src\main\java\Logic\CalcPartListtest.java
+C:\Users\frizz\OneDrive\Documents\GitHub\FogCase\FogExame\src\main\java\DataLayer\Shed.java
+C:\Users\frizz\OneDrive\Documents\GitHub\FogCase\FogExame\src\main\java\DataLayer\Materials.java
+C:\Users\frizz\OneDrive\Documents\GitHub\FogCase\FogExame\src\main\java\DataLayer\Connector.java
+C:\Users\frizz\OneDrive\Documents\GitHub\FogCase\FogExame\src\main\java\Presentation\LoginCommand.java
+>>>>>>> 5b55ad88af6dbf23cc3c37c49e85c25834f667f2
+=======
 C:\Users\emils\Desktop\2semester\FogCase\FogExame\src\main\java\Logic\CarportException.java
 C:\Users\emils\Desktop\2semester\FogCase\FogExame\src\main\java\DataLayer\DataMappers\UserMapper.java
 C:\Users\emils\Desktop\2semester\FogCase\FogExame\src\main\java\DataLayer\CarportWithShed.java
@@ -104,4 +139,8 @@ C:\Users\emils\Desktop\2semester\FogCase\FogExame\src\main\java\DataLayer\User.j
 C:\Users\emils\Desktop\2semester\FogCase\FogExame\src\main\java\Presentation\Command.java
 C:\Users\emils\Desktop\2semester\FogCase\FogExame\src\main\java\Logic\CalcPartListtest.java
 C:\Users\emils\Desktop\2semester\FogCase\FogExame\src\main\java\DataLayer\dataTest.java
+<<<<<<< HEAD
 >>>>>>> 26ef955044c309ff98117775a262ca12f5207c14
+=======
+>>>>>>> e0fd44ece7cee74150e8737aa3d304ceded06bba
+>>>>>>> 5b55ad88af6dbf23cc3c37c49e85c25834f667f2
