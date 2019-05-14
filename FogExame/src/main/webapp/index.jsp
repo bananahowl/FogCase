@@ -3,7 +3,7 @@
     Created on : 02-05-2019, 14:08:38
     Author     : emils
 --%>
-
+    
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -23,13 +23,12 @@
                     <li><a href="index.jsp">Home</a></li>
                     <li style="float:right"><a class="active" href="Register.jsp">Register</a></li>
                     <li><a href="CustomizeCarport.jsp">Customize</a></li>
-                    <li style="float:right"><a class="active" href="#about">Log in</a></li>
+                    <li style="float:right"><a class="active" href="Login.jsp">Log in</a></li>
                 </ul>
             </div>
         </div>
         <form action="FrontController" method="GET">
-            <a href="CustomizeCarport.jsp">next </a> 
-            <button type="submit"  name="command" value="CustomizeCarport.jsp" >next </button>
+            <button type="submit"  name="command" value="login" >next </button>
         </form>
          
     </body>

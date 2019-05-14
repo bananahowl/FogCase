@@ -23,7 +23,7 @@
                     <li><a href="index.jsp">Home</a></li>
                     <li style="float:right"><a class="active" href="Register.jsp">Register</a></li>
                     <li><a href="CustomizeCarport.jsp">Customize</a></li>
-                    <li style="float:right"><a class="active" href="#about">Log in</a></li>
+                    <li style="float:right"><a class="active" href="Login.jsp">Log in</a></li>
                 </ul>
             </div>
         </div>
@@ -58,7 +58,6 @@
                         <input type="password" name="password2" value="1234">
                         <br><br>
                         <button type="submit"  name="command" value="register">Register</button>
-                        </tr>
                     </table>
                 </form>
         </div>
