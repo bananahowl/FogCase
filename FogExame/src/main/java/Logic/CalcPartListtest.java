@@ -5,7 +5,9 @@
  */
 package Logic;
 
+import DataLayer.Carport;
 import DataLayer.MaterialList;
+import DataLayer.Shed;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
@@ -78,9 +80,10 @@ public class CalcPartListtest {
         //test.woodPrice(superlist);
         System.out.println(test.metalParts(superlist));
         CalcPartList tre = new CalcPartList();
-        
+        Shed sh = new Shed(0, 0, 0);
+        Carport carpot = new Carport(0,0,1, sh, 0,0);
         System.out.println("xxxxx");
-        System.out.println(tre.totalpartlist(0,0 , 1, 1, 0));
+        System.out.println(tre.totalpartlist(carpot));
     }
     
     

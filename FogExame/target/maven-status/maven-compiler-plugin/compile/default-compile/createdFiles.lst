@@ -31,4 +31,3 @@ DataLayer\Roof_material.class
 DataLayer\Shed.class
 Logic\Facade\UserFacade.class
 Presentation\Command.class
-Logic\CalcPartListtest.class
