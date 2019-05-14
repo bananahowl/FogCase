@@ -34,4 +34,8 @@ public class OrderFacade {
         OrderMapper.createOrder(order);
         return order;
     }
+    
+    public static void deleteorder(int id) throws CarportException{
+        OrderMapper.deleteorder(id);
+    }
 }
