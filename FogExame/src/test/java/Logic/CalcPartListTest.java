@@ -24,12 +24,10 @@ import static org.junit.Assert.*;
  */
 
 public class CalcPartListTest {
-<<<<<<< HEAD
-   /* 
-=======
+
     protected int length, width, angleInDegree;
     
->>>>>>> afab65fd8e62fbfd3ef8229b34231d4209bac1e4
+
     public CalcPartListTest() {
     }
     

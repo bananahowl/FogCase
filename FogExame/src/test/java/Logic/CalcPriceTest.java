@@ -105,14 +105,8 @@ public class CalcPriceTest {
         double result = instance.metalPartsPrice(list);
         assertEquals(expResult, result, 0.0);
         // TODO review the generated test code and remove the default call to fail.
-<<<<<<< HEAD
-        fail("The test case is a prototype.");
-    }*/
-    
-
-=======
         //fail("The test case is a prototype.");
     }
 */    
->>>>>>> afab65fd8e62fbfd3ef8229b34231d4209bac1e4
+
 }

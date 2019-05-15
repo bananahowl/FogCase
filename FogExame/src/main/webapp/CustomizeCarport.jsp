@@ -34,21 +34,12 @@
             <div class ='center'>
                 <p1><b>Design your own carport - with your measurements</b></p1><br><br><br><br>
                 <form action="FrontController" method="GET">
-<<<<<<< HEAD
                     <table>
                         <thead><tr><th>Carport length</th><th>Carport width</th><th>Shed length</th><th>Shed width</th><th>Roof angle</th></tr></thead>
                         <tbody>
                             <tr>  <td> <select name=length id="option">                        
                                         <% for (int i = 1; i < cf.getMaxLength() + 1; i++) {%>
                                         <option value=<%=i%>><%=cf.getCarportLength(i)%></option><% }%>
-=======
-            <table class ="second">
-                <thead><tr><th>Carport length</th><th>Carport width</th><th>Shed length</th><th>Shed width</th><th>Roof angle</th></tr></thead>
-                <tbody>
-                    <tr>  <td> <select name=length id="option">                        
-                                <% for (int i = 1; i < cf.getMaxLength() + 1; i++) {%>
-                                <option value=<%=i%>><%=cf.getCarportLength(i)%></option><% }%>
->>>>>>> afab65fd8e62fbfd3ef8229b34231d4209bac1e4
 
                                         <td> <select name=width id="option">
                                                 <% for (int i = 1; i < cf.getMaxWidth() + 1; i++) {%>
