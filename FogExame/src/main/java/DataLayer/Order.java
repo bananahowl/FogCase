@@ -5,6 +5,8 @@
  */
 package DataLayer;
 
+import java.util.Objects;
+
 /**
  *
  * @author emils
@@ -21,6 +23,39 @@ public class Order {
         this.carport = carport;
         this.user = user;
         this.shipped = shipped;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Order other = (Order) obj;
+        if (this.order_id != other.order_id) {
+            return false;
+        }
+        if (this.shipped != other.shipped) {
+            return false;
+        }
+        if (!Objects.equals(this.carport, other.carport)) {
+            return false;
+        }
+        if (!Objects.equals(this.user, other.user)) {
+            return false;
+        }
+        return true;
     }
 
     public int getOrder_id() {

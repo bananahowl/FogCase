@@ -23,6 +23,7 @@ import static org.junit.Assert.*;
  * @author frizz
  */
 public class CalcPartListTest {
+    protected int length, width, angleInDegree;
     
     public CalcPartListTest() {
     }
@@ -37,6 +38,9 @@ public class CalcPartListTest {
     
     @Before
     public void setUp() {
+        int length = 700;
+        int width = 400;
+        int angleInDegree = 15;
     }
     
     @After
@@ -49,9 +53,8 @@ public class CalcPartListTest {
     @Test
     public void testCalcRoofSides() throws Exception {
         System.out.println("calcRoofSides");
-        int width = 400;
-        int length = 700;
-        int angleInDegree = 15;
+
+        
         MaterialList expResult = new MaterialList(15, 434, "tagsten");
         MaterialList result = CalcPartList.calcRoofSides(width, length, angleInDegree);
         assertEquals(expResult, result);
@@ -65,8 +68,7 @@ public class CalcPartListTest {
     @Test
     public void testCalcRoofFronts() throws Exception {
         System.out.println("calcRoofFronts");
-        int width = 400;
-        int angleInDegree = 15;
+        
         MaterialList expResult = new MaterialList(60, 14, "trægalver");
         MaterialList result = CalcPartList.calcRoofFronts(width, angleInDegree);
         assertEquals(expResult, result);
@@ -80,8 +82,7 @@ public class CalcPartListTest {
     @Test
     public void testCalcShedMats() throws Exception {
         System.out.println("calcShedMats");
-        int length = 700;
-        int width = 400;
+        
         MaterialList expResult = new MaterialList(700, 38, "skurplanker");
         MaterialList result = CalcPartList.calcShedMats(length, width);
         assertEquals(expResult, result);
@@ -101,14 +102,14 @@ public class CalcPartListTest {
                 new MaterialList(430, 14, "spær"), new MaterialList(310, 10, "stolper"),
                 new MaterialList(15, 434, "tagsten"), new MaterialList(60, 14, "trægalver"),
                 new MaterialList(207, 14, "vertikalespær"), new MaterialList(760, 7, "horizontalespær")));
-        MaterialList shedtrue = CalcPartList.calcShedMats(700,400);
-        MaterialList spertrue = CalcPartList.calcSper(700 , 400);
-        MaterialList remtrue = CalcPartList.calcRem(700, 400);
-        MaterialList posttrue = CalcPartList.calculatePortPost(400, 700);
-        MaterialList rooftrue = CalcPartList.calcRoofSides(400, 700, 15);
-        MaterialList fronttrue = CalcPartList.calcRoofFronts(400, 15);
-        MaterialList verticaltrue = CalcPartList.calcAngledVerticalSpær(400, 700, 0);
-        MaterialList horizontaltrue = CalcPartList.calcAngledHorizontalSpær(400, 700);
+        MaterialList shedtrue = CalcPartList.calcShedMats(length, width);
+        MaterialList spertrue = CalcPartList.calcSper(length , width);
+        MaterialList remtrue = CalcPartList.calcRem(length, width);
+        MaterialList posttrue = CalcPartList.calculatePortPost(width, length);
+        MaterialList rooftrue = CalcPartList.calcRoofSides(width, length, angleInDegree);
+        MaterialList fronttrue = CalcPartList.calcRoofFronts(width, angleInDegree);
+        MaterialList verticaltrue = CalcPartList.calcAngledVerticalSpær(width, length, angleInDegree);
+        MaterialList horizontaltrue = CalcPartList.calcAngledHorizontalSpær(width, length);
         ArrayList<MaterialList> result = CalcPartList.totalMaterial(shedtrue, remtrue, spertrue, posttrue, 
                 rooftrue, fronttrue, verticaltrue, horizontaltrue);
         assertEquals(expResult, result);
@@ -123,8 +124,7 @@ public class CalcPartListTest {
     @Test
     public void testCalcSper() throws Exception {
         System.out.println("calcSper");
-        int length = 700;
-        int width = 400;
+        
         MaterialList expResult = new MaterialList(430, 14, "spær");
         MaterialList result = CalcPartList.calcSper(length, width);
         assertEquals(expResult, result);
@@ -138,8 +138,7 @@ public class CalcPartListTest {
     @Test
     public void testCalcRem() throws Exception {
         System.out.println("calcRem");
-        int length = 700;
-        int width = 400;
+        
         MaterialList expResult = new MaterialList(750, 2, "rem");
         MaterialList result = CalcPartList.calcRem(length, width);
         assertEquals(expResult, result);
@@ -153,8 +152,7 @@ public class CalcPartListTest {
     @Test
     public void testCalculatePortPost() throws Exception {
         System.out.println("calculatePortPost");
-        int width = 400;
-        int length = 700;
+        
         MaterialList expResult = new MaterialList(310, 10, "stolper");
         MaterialList result = CalcPartList.calculatePortPost(width, length);
         assertEquals(expResult, result);
@@ -168,9 +166,7 @@ public class CalcPartListTest {
     @Test
     public void testCalcAngledVerticalSper() throws Exception {
         System.out.println("calcAngledVerticalSper");
-        int width = 400;
-        int length = 700;
-        int angleInDegree = 15;
+        
         MaterialList expResult = new MaterialList(207, 14, "vertikalespær");
         MaterialList result = CalcPartList.calcAngledVerticalSpær(width, length, angleInDegree);
         assertEquals(expResult, result);
@@ -184,8 +180,7 @@ public class CalcPartListTest {
     @Test
     public void testCalcAngledHorizontalSper() throws Exception {
         System.out.println("calcAngledHorizontalSper");
-        int width = 400;
-        int length = 700;
+       
         MaterialList expResult = new MaterialList(760, 7, "horizontalespær");
         MaterialList result = CalcPartList.calcAngledHorizontalSpær(width, length);
         assertEquals(expResult, result);
@@ -230,11 +225,10 @@ public class CalcPartListTest {
         System.out.println("totalwoodprice");
         int shedWidth = 300;
         int shedLength = 200;
-        int width = 400;
-        int length = 700;
-        int angle = 15;
+     
+       
         int expResult = 15100;
-        int result = CalcPartList.totalwoodprice(shedWidth, shedLength, width, length, angle);
+        int result = CalcPartList.totalwoodprice(shedWidth, shedLength, width, length, angleInDegree);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
@@ -248,12 +242,10 @@ public class CalcPartListTest {
         System.out.println("totalpartlist");
         int shedWidth = 300;
         int shedLength = 200;
-        int width = 400;
-        int length = 700;
-        int angle = 15;
+      
         ArrayList<MaterialList> expResult = null;
         Shed sh = new Shed(shedLength, 220, shedWidth);
-        Carport cp = new Carport(length, 220, width, sh, angle, 0);
+        Carport cp = new Carport(length, 220, width, sh, angleInDegree, 0);
         ArrayList<MaterialList> result = CalcPartList.totalpartlist(cp);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.

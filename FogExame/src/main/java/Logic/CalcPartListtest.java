@@ -77,6 +77,7 @@ public class CalcPartListtest {
         System.out.println(partTest.calcPostNail(3));
 
         //test.woodPrice(superlist);
+        System.out.println("XXXX______");
         System.out.println(test.metalParts(superlist));
         CalcPartList tre = new CalcPartList();
         Shed sh = new Shed(0, 0, 0);

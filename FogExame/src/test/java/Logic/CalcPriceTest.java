@@ -8,6 +8,7 @@ package Logic;
 import DataLayer.MaterialList;
 import DataLayer.MetalParts;
 import java.util.ArrayList;
+import java.util.Arrays;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -74,7 +75,12 @@ public class CalcPriceTest {
     @Test
     public void testMetalParts() {
         System.out.println("metalParts");
-        ArrayList<MaterialList> list = null;
+        ArrayList<MaterialList> list = new ArrayList<MaterialList>
+        (Arrays.asList( 
+                new MaterialList(700, 38, "skurplanker"), new MaterialList(750, 2, "rem"),
+                new MaterialList(430, 14, "spær"), new MaterialList(310, 10, "stolper"),
+                new MaterialList(15, 434, "tagsten"), new MaterialList(60, 14, "trægalver"),
+                new MaterialList(207, 14, "vertikalespær"), new MaterialList(760, 7, "horizontalespær")));
         CalcPrice instance = new CalcPrice();
         ArrayList<MetalParts> expResult = null;
         ArrayList<MetalParts> result = instance.metalParts(list);
@@ -95,7 +101,7 @@ public class CalcPriceTest {
         double result = instance.metalPartsPrice(list);
         assertEquals(expResult, result, 0.0);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
     
 }

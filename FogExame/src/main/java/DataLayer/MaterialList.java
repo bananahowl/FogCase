@@ -32,7 +32,22 @@ public class MaterialList {
         if (this == obj) {
             return true;
         }
-
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final MaterialList other = (MaterialList) obj;
+        if (this.length != other.length) {
+            return false;
+        }
+        if (this.amount != other.amount) {
+            return false;
+        }
+        if (!Objects.equals(this.description, other.description)) {
+            return false;
+        }
         return true;
     }
 

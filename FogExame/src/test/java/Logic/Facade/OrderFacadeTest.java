@@ -32,15 +32,15 @@ public class OrderFacadeTest {
         int id = 0;
         Carport carport = new Carport(700,220,500,shed,20,5000);
         Carport carportexp = new Carport(700,220,500,shedexp,20,5000);
-        User user = new User(99,"Knud", "Mogensen", "Gattet 7", "Lyngby", 2800, 12345678, "Knud@hotmail.dk", "KnudDenStore");
-        User userexp = new User(99,"Knud", "Mogensen", "Gattet 7", "Lyngby", 2800, 12345678, "Knud@hotmail.dk", "KnudDenStore");
+        User user = new User(7,"Knud", "Mogensen", "Gattet 7", "Lyngby", 2800, 12345678, "Knud@hotmail.dk", "KnudDenStore");
+        User userexp = new User(7,"Knud", "Mogensen", "Gattet 7", "Lyngby", 2800, 12345678, "Knud@hotmail.dk", "KnudDenStore");
         Order expResult = new Order(id,carportexp, userexp, false);
         Order result = OrderFacade.createOrder(id, carport, user);
-        
+        OrderFacade.deleteorder(7);
         assertEquals(expResult, result);
-        OrderFacade.deleteorder(99);
+        //OrderFacade.deleteorder(7);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
     
 }
