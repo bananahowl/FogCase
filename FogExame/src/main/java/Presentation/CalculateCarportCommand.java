@@ -44,11 +44,10 @@ public class CalculateCarportCommand extends Command {
             String html = HtmlConverter.carportFlatRooftoHtml(cp);
             Order orders = OrderFacade.createOrder(user.getUser_id(), cp);
             shoppingcart.add(orders);
-            Shed she = new Shed(lengthShed, 0, widthShed);
+            Shed she = new Shed(lengthShed, 220, widthShed);
             Carport carPor = new Carport(length, 220, width, she, angle, 0);
             ArrayList<MaterialList> list = totalpartlist(carPor);
             String slist = printPartList(list);
-
             String orderss = HtmlConverter.generateOrdersHTML(shoppingcart);
             request.setAttribute("carport", cp); // the good stuff
             request.setAttribute("mlist", slist);

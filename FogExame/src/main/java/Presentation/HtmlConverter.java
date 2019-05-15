@@ -42,9 +42,15 @@ public class HtmlConverter {
 
     public static String carportAnlgeRooftoHtml(Carport carport) {
         String cartTable = "<form action=\"FrontController\" method=\"GET\">"
-                + "<table class =first>"
-                + "<br><br><tr><th>Carport  </th><th>Length   </th><th>Width    </th><th>Height    </th><th>Shed Length    </th><th>Shed Width    </th><th>Angle   </th><th>Price      </th></tr>"
-                + "<tr><th>Size</th><th>" + carport.getLength() + "</th><th>" + carport.getWidth() + "</th><th>220</th><th>" + carport.getShed().getLength() + "</th><th>" + carport.getShed().getWidth() + "</th><th>" + carport.getRoofangle() + "</th><th>" + carport.getPrice() + "</th></tr>"
+
+                + "<br><br><table class =first>"
+                + "<tr><th>Carport  </th><th>Length   </th><th>Width    </th><th>Height    </th><th>Shed Length    </th><th>Shed Width    </th><th>Angle   </th><th>Price      </th></tr>"
+                + "<tr><th>Size</th>"
+                + "<th>" + carport.getLength() + "</th>"
+                + "<th>" + carport.getWidth() + "</th><th>220</th>"
+                + "<th>" + carport.getShed().getLength() + "</th>"
+                + "<th>" + carport.getShed().getWidth() + "</th><th>" + carport.getRoofangle() + "</th>"
+                + "<th>" + carport.getPrice() + "</th></tr>"
                 + "</table>"
                 + "<button type=\"submit\"  name=\"command\" value=\"Shoppingcart\" >Add to Shoppingcart</button>"
                 + "</form>";
