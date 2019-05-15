@@ -8,6 +8,8 @@ package DataLayer;
 import DataLayer.DataMappers.CarportMapper;
 import DataLayer.DataMappers.OrderMapper;
 import Logic.Facade.CarportFacade;
+import Logic.Facade.OrderFacade;
+import Logic.Facade.UserFacade;
 import java.util.ArrayList;
 
 /**
@@ -50,8 +52,8 @@ public class dataTest {
         System.out.println(CarportFacade.getMaxShedWidth());
         System.out.println(CarportFacade.getMaxShedLength());
         
-        OrderMapper om = new OrderMapper();
-        System.out.println(om.getAllOrders().toString());
+        System.out.println(OrderFacade.getAllOrders());
+        System.out.println(OrderFacade.getOrdersByUser(UserFacade.getUser("frede@hotmail.com", "1234")));
         
     }
     

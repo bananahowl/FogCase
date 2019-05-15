@@ -38,4 +38,12 @@ public class OrderFacade {
     public static void deleteorder(int id) throws CarportException{
         OrderMapper.deleteorder(id);
     }
+    
+    public static ArrayList<Order> getOrdersByUser(User user) throws CarportException {
+        return OrderMapper.getOrdersByUser(user);
+    }
+    
+    public static List<Order> getAllOrders() throws CarportException {
+        return OrderMapper.getAllOrders();
+    }
 }
