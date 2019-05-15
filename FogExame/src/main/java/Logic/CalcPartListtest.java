@@ -27,16 +27,15 @@ public class CalcPartListtest {
         //System.out.println(answer1);
         System.out.println("______________________");
 
-        MaterialList shedtest = CalcPartList.calcShedMats(700,500);
+        MaterialList shedtest = CalcPartList.calcShedMats(700,400);
         MaterialList spertest = CalcPartList.calcSper(700 , 400);
-
         MaterialList remtest = CalcPartList.calcRem(700, 400);
         MaterialList posttest = CalcPartList.calculatePortPost(400, 700);
         MaterialList rooftest = CalcPartList.calcRoofSides(400, 700, 15);
         MaterialList fronttest = CalcPartList.calcRoofFronts(400, 15);
-        MaterialList verticaltest = CalcPartList.calcAngledVerticalSpær(400, 700, 0);
+        MaterialList verticaltest = CalcPartList.calcAngledVerticalSpær(400, 700, 15);
         MaterialList horizontaltest = CalcPartList.calcAngledHorizontalSpær(400, 700);
-        System.out.println(fronttest);
+        System.out.println(horizontaltest);
         ArrayList<MaterialList> superlist = CalcPartList.totalMaterial(shedtest, spertest, remtest, posttest, rooftest, fronttest, verticaltest, horizontaltest);
         System.out.println(superlist);
 /*

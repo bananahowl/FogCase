@@ -10,6 +10,7 @@ import DataLayer.MaterialList;
 import DataLayer.MetalParts;
 import DataLayer.Shed;
 import java.util.ArrayList;
+import java.util.Arrays;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -81,11 +82,11 @@ public class CalcPartListTest {
         System.out.println("calcShedMats");
         int length = 700;
         int width = 400;
-        MaterialList expResult = null;
+        MaterialList expResult = new MaterialList(700, 38, "skurplanker");
         MaterialList result = CalcPartList.calcShedMats(length, width);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -94,19 +95,25 @@ public class CalcPartListTest {
     @Test
     public void testTotalMaterial() throws Exception {
         System.out.println("totalMaterial");
-        MaterialList shed = null;
-        MaterialList rem = null;
-        MaterialList spær = null;
-        MaterialList post = null;
-        MaterialList roof = null;
-        MaterialList front = null;
-        MaterialList vertical = null;
-        MaterialList horizontal = null;
-        ArrayList<MaterialList> expResult = null;
-        ArrayList<MaterialList> result = CalcPartList.totalMaterial(shed, rem, spær, post, roof, front, vertical, horizontal);
+        ArrayList<MaterialList> expResult = new ArrayList<MaterialList>
+        (Arrays.asList( 
+                new MaterialList(700, 38, "skurplanker"), new MaterialList(750, 2, "rem"),
+                new MaterialList(430, 14, "spær"), new MaterialList(310, 10, "stolper"),
+                new MaterialList(15, 434, "tagsten"), new MaterialList(60, 14, "trægalver"),
+                new MaterialList(207, 14, "vertikalespær"), new MaterialList(760, 7, "horizontalespær")));
+        MaterialList shedtrue = CalcPartList.calcShedMats(700,400);
+        MaterialList spertrue = CalcPartList.calcSper(700 , 400);
+        MaterialList remtrue = CalcPartList.calcRem(700, 400);
+        MaterialList posttrue = CalcPartList.calculatePortPost(400, 700);
+        MaterialList rooftrue = CalcPartList.calcRoofSides(400, 700, 15);
+        MaterialList fronttrue = CalcPartList.calcRoofFronts(400, 15);
+        MaterialList verticaltrue = CalcPartList.calcAngledVerticalSpær(400, 700, 0);
+        MaterialList horizontaltrue = CalcPartList.calcAngledHorizontalSpær(400, 700);
+        ArrayList<MaterialList> result = CalcPartList.totalMaterial(shedtrue, remtrue, spertrue, posttrue, 
+                rooftrue, fronttrue, verticaltrue, horizontaltrue);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
 
@@ -118,11 +125,11 @@ public class CalcPartListTest {
         System.out.println("calcSper");
         int length = 700;
         int width = 400;
-        MaterialList expResult = null;
+        MaterialList expResult = new MaterialList(430, 14, "spær");
         MaterialList result = CalcPartList.calcSper(length, width);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -133,11 +140,11 @@ public class CalcPartListTest {
         System.out.println("calcRem");
         int length = 700;
         int width = 400;
-        MaterialList expResult = null;
+        MaterialList expResult = new MaterialList(750, 2, "rem");
         MaterialList result = CalcPartList.calcRem(length, width);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -148,42 +155,42 @@ public class CalcPartListTest {
         System.out.println("calculatePortPost");
         int width = 400;
         int length = 700;
-        MaterialList expResult = null;
+        MaterialList expResult = new MaterialList(310, 10, "stolper");
         MaterialList result = CalcPartList.calculatePortPost(width, length);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
      * Test of calcAngledVerticalSpær method, of class CalcPartList.
      */
     @Test
-    public void testCalcAngledVerticalSpær() throws Exception {
-        System.out.println("calcAngledVerticalSp\u00e6r");
+    public void testCalcAngledVerticalSper() throws Exception {
+        System.out.println("calcAngledVerticalSper");
         int width = 400;
         int length = 700;
         int angleInDegree = 15;
-        MaterialList expResult = null;
+        MaterialList expResult = new MaterialList(207, 14, "vertikalespær");
         MaterialList result = CalcPartList.calcAngledVerticalSpær(width, length, angleInDegree);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
      * Test of calcAngledHorizontalSpær method, of class CalcPartList.
      */
     @Test
-    public void testCalcAngledHorizontalSpær() throws Exception {
-        System.out.println("calcAngledHorizontalSp\u00e6r");
+    public void testCalcAngledHorizontalSper() throws Exception {
+        System.out.println("calcAngledHorizontalSper");
         int width = 400;
         int length = 700;
-        MaterialList expResult = null;
+        MaterialList expResult = new MaterialList(760, 7, "horizontalespær");
         MaterialList result = CalcPartList.calcAngledHorizontalSpær(width, length);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -250,7 +257,7 @@ public class CalcPartListTest {
         ArrayList<MaterialList> result = CalcPartList.totalpartlist(cp);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
     
 }
