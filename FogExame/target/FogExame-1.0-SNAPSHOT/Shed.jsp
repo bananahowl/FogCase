@@ -46,13 +46,13 @@
                 int lengthShed = Integer.parseInt(request.getParameter("lengthShed"));
                 int widthShed = Integer.parseInt(request.getParameter("widthShed"));
                 int angle = Integer.parseInt(request.getParameter("angle"));
-
             %>
             <input type="hidden" value="<%= lengths %>" name = "length">
             <input type="hidden" value="<%= widths %>" name = "width">
             <input type="hidden" value="<%= lengthShed %>" name = "lengthShed">
             <input type="hidden" value="<%= widthShed %>" name = "widthShed">
             <input type="hidden" value="<%= angle %>" name = "angle">
+            <button type=\"submit\"  name=\"command\" value=\"Shoppingcart\"> Go to shoppingcart </button>
             <button type="submit" name="command" value="materialList"> MaterialList  </button>            
         </form>
 

@@ -28,6 +28,23 @@
                 </ul>
             </div>
         </div>
+        <form action= "FrontController" method="GET" > 
+            <%
+                int lengths = Integer.parseInt(request.getParameter("length"));
+                int widths = Integer.parseInt(request.getParameter("width"));
+                int lengthShed = Integer.parseInt(request.getParameter("lengthShed"));
+                int widthShed = Integer.parseInt(request.getParameter("widthShed"));
+                int angle = Integer.parseInt(request.getParameter("angle"));
+            %>
+            <input type="hidden" value="<%= lengths %>" name = "length">
+            <input type="hidden" value="<%= widths %>" name = "width">
+            <input type="hidden" value="<%= lengthShed %>" name = "lengthShed">
+            <input type="hidden" value="<%= widthShed %>" name = "widthShed">
+            <input type="hidden" value="<%= angle %>" name = "angle">
+            <br>
+            <button type="submit" name="command" value="materialList"> MaterialList  </button>   
+            <br>
+        </form>
         
         ${mlist}
 
