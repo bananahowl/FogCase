@@ -107,7 +107,7 @@ public class HtmlConverter {
                     + "<td>" + orders.get(i).getCarport().getWidth() + " </td>"
                     + "<td>" + orders.get(i).getCarport().getShed().getLength() + " </td>"
                     + "<td>" + orders.get(i).getCarport().getShed().getWidth() + " </td>"
-                    + "<td>" + orders.get(i).getUser().toString() + " </td>"
+                    + "<td>" + orders.get(i).getOrder_id() + " </td>"
                     + "<td>" + orders.get(i).isShipped() + " </td></tr>";
         }
         return cartTable;
