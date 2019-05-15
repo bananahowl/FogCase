@@ -43,6 +43,7 @@ public class CalcPriceTest {
     /**
      * Test of woodPrice method, of class CalcPrice.
      */
+    /*
     @Test
     public void testWoodPrice() {
         System.out.println("woodPrice");
@@ -58,6 +59,7 @@ public class CalcPriceTest {
     /**
      * Test of printList method, of class CalcPrice.
      */
+    /*
     @Test
     public void testPrintList() {
         System.out.println("printList");
@@ -71,6 +73,7 @@ public class CalcPriceTest {
     /**
      * Test of metalParts method, of class CalcPrice.
      */
+    /*
     @Test
     public void testMetalParts() {
         System.out.println("metalParts");
@@ -81,11 +84,12 @@ public class CalcPriceTest {
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
-    }
+    }*/
 
     /**
      * Test of metalPartsPrice method, of class CalcPrice.
      */
+    /*
     @Test
     public void testMetalPartsPrice() {
         System.out.println("metalPartsPrice");
@@ -96,6 +100,6 @@ public class CalcPriceTest {
         assertEquals(expResult, result, 0.0);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
-    }
+    }*/
     
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="13" failures="2" name="Logic.CalcPartListTest" time="0.763" errors="0" skipped="0">
+<testsuite tests="13" failures="2" name="Logic.CalcPartListTest" time="0.736" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_181\jre\bin"/>
@@ -63,9 +63,9 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="Logic.CalcPartListTest" name="testTotalMaterial" time="0.004"/>
+  <testcase classname="Logic.CalcPartListTest" name="testTotalMaterial" time="0.003"/>
   <testcase classname="Logic.CalcPartListTest" name="testCalcAngledVerticalSper" time="0"/>
-  <testcase classname="Logic.CalcPartListTest" name="testAddItem" time="0.001">
+  <testcase classname="Logic.CalcPartListTest" name="testAddItem" time="0.002">
     <failure message="expected:&lt;null&gt; but was:&lt;[null]&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;null&gt; but was:&lt;[null]&gt;
 	at org.junit.Assert.fail(Assert.java:88)
 	at org.junit.Assert.failNotEquals(Assert.java:834)
@@ -109,14 +109,14 @@
     <system-out>addItem
 </system-out>
   </testcase>
-  <testcase classname="Logic.CalcPartListTest" name="testTotalpartlist" time="0.692"/>
+  <testcase classname="Logic.CalcPartListTest" name="testTotalpartlist" time="0.667"/>
   <testcase classname="Logic.CalcPartListTest" name="testCalcShedMats" time="0"/>
-  <testcase classname="Logic.CalcPartListTest" name="testCalcAngledHorizontalSper" time="0"/>
+  <testcase classname="Logic.CalcPartListTest" name="testCalcAngledHorizontalSper" time="0.001"/>
   <testcase classname="Logic.CalcPartListTest" name="testTotalwoodprice" time="0.001"/>
   <testcase classname="Logic.CalcPartListTest" name="testCalcRem" time="0"/>
   <testcase classname="Logic.CalcPartListTest" name="testCalcRoofSides" time="0"/>
   <testcase classname="Logic.CalcPartListTest" name="testCalcSper" time="0"/>
-  <testcase classname="Logic.CalcPartListTest" name="testCalcPostNail" time="0">
+  <testcase classname="Logic.CalcPartListTest" name="testCalcPostNail" time="0.001">
     <failure message="The test case is a prototype." type="java.lang.AssertionError">java.lang.AssertionError: The test case is a prototype.
 	at org.junit.Assert.fail(Assert.java:88)
 	at Logic.CalcPartListTest.testCalcPostNail(CalcPartListTest.java:208)
@@ -158,5 +158,5 @@
 </system-out>
   </testcase>
   <testcase classname="Logic.CalcPartListTest" name="testCalcRoofFronts" time="0"/>
-  <testcase classname="Logic.CalcPartListTest" name="testCalculatePortPost" time="0.001"/>
+  <testcase classname="Logic.CalcPartListTest" name="testCalculatePortPost" time="0"/>
 </testsuite>

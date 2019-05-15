@@ -34,6 +34,7 @@ public class MaterialListCommand extends Command{
         int lengthShed = Integer.parseInt(request.getParameter("lengthShed"));
         int widthShed = Integer.parseInt(request.getParameter("widthShed"));
         int angle = Integer.parseInt(request.getParameter("angle"));
+        
         /*
         ArrayList<Order> shoppingcart = new ArrayList();
         User user = (User) request.getSession().getAttribute("user");
