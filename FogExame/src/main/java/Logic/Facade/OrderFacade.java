@@ -28,9 +28,9 @@ public class OrderFacade {
         return OrderMapper.getOrdersByUser(user);
     }
 */
-    public static Order createOrder(int id, Carport carport, User user) throws CarportException {
+    public static Order createOrder(int id, Carport carport) throws CarportException {
 
-        Order order = new Order(id, carport, user, false);
+        Order order = new Order(id, carport, false);
         OrderMapper.createOrder(order);
         return order;
     }

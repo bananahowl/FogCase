@@ -25,8 +25,7 @@ import java.util.ArrayList;
  * @author emils
  */
 public class CalculateCarportCommand extends Command {
-    
-    
+
     @Override
     String execute(HttpServletRequest request, HttpServletResponse response) throws CarportException {
         int length = Integer.parseInt(request.getParameter("length"));
@@ -37,33 +36,30 @@ public class CalculateCarportCommand extends Command {
         HttpSession session = request.getSession();
         CalcPartList tsst = new CalcPartList();
         ArrayList<Order> shoppingcart = new ArrayList();
-        User user = (User) request.getSession().getAttribute("user");
+        //  User user = (User) request.getSession().getAttribute("user");
         if (angle == 1) {
-
             int price = CreateCarport.NumbersFlatRoof(width, length, width, length);
-            Carport cp = CreateCarport.createCarportFlatRoof(length, width, lengthShed, widthShed,price);
-
+            Carport cp = CreateCarport.createCarportFlatRoof(length, width, lengthShed, widthShed, price);
             String html = HtmlConverter.carportFlatRooftoHtml(cp);
-            ArrayList<MaterialList> list = totalpartlist(widthShed,lengthShed,width,length,angle);
-            String  slist = printPartList(list);
-            
-            Order orders = OrderFacade.createOrder(user.getUser_id(), cp, user);
-            shoppingcart.add(orders);
+            ArrayList<MaterialList> list = totalpartlist(widthShed, lengthShed, width, length, angle);
+            String slist = printPartList(list);
+           //    Order orders = OrderFacade.createOrder(88, cp);
+            //  shoppingcart.add(orders);
             String orderss = HtmlConverter.generateOrdersHTML(shoppingcart);
             request.setAttribute("carport", cp); // the good stuff
             request.setAttribute("mlist", slist);
             request.setAttribute("table", html);
             request.setAttribute("price", price);
             request.setAttribute("carportwidth", width);
-            request.setAttribute("shoppingcart", shoppingcart);
+            //request.setAttribute("shoppingcart", shoppingcart);
             request.setAttribute("order", orderss);
             return "Shed";
         } else {
             int price = CreateCarport.NumbersAngleRoof(width, length, width, length, angle);
-            Carport cp = CreateCarport.createCarportAngleRoof(length, width, lengthShed, widthShed, angle,price);
+            Carport cp = CreateCarport.createCarportAngleRoof(length, width, lengthShed, widthShed, angle, price);
             String html = HtmlConverter.carportAnlgeRooftoHtml(cp);
-            ArrayList<MaterialList> list = totalpartlist(widthShed,lengthShed,width,length,angle);
-            String  slist = printPartList(list);
+            ArrayList<MaterialList> list = totalpartlist(widthShed, lengthShed, width, length, angle);
+            String slist = printPartList(list);
             request.setAttribute("mlist", slist);
             request.setAttribute("carport", cp);
             request.setAttribute("price", price);
