@@ -6,6 +6,7 @@ DataLayer\CarportWithShed.class
 DataLayer\Order.class
 Logic\CalcPrice.class
 Presentation\LoginCommand.class
+Presentation\MaterialListCommand.class
 DataLayer\MetalParts.class
 Presentation\GetMyOrders.class
 DataLayer\Carport.class
@@ -31,3 +32,4 @@ DataLayer\Roof_material.class
 DataLayer\Shed.class
 Logic\Facade\UserFacade.class
 Presentation\Command.class
+Logic\CalcPartListtest.class

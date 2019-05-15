@@ -195,7 +195,7 @@ public class CalcPartListTest {
 
     /**
      * Test of calcPostNail method, of class CalcPartList.
-     */
+     *//*
     @Test
     public void testCalcPostNail() {
         System.out.println("calcPostNail");
@@ -207,10 +207,10 @@ public class CalcPartListTest {
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
-
+*/
     /**
      * Test of addItem method, of class CalcPartList.
-     */
+     *//*
     @Test
     public void testAddItem() {
         System.out.println("addItem");
@@ -221,7 +221,7 @@ public class CalcPartListTest {
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
-
+*/
     /**
      * Test of totalwoodprice method, of class CalcPartList.
      */
