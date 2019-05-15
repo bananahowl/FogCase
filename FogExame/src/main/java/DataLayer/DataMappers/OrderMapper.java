@@ -5,8 +5,10 @@
  */
 package DataLayer.DataMappers;
 
+import DataLayer.Carport;
 import DataLayer.Connector;
 import DataLayer.Order;
+import DataLayer.Shed;
 import DataLayer.User;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -65,34 +67,36 @@ public class OrderMapper {
         }
         
     }
-    /*
-    public static List<Order> getAllOrders() throws LegohouseException {
-=======
-    
+
         public static ArrayList<Order> getOrdersByUser(User user) throws CarportException {
         ArrayList<Order> orders = new ArrayList();
         try {
             Connection con = Connector.connection();
-            String SQL = "SELECT order_id, length, width, height, shipped "
-                    + "FROM legohouse.orders WHERE email_FK = ?;";
+            String SQL = "select order_id, cLength, cWidth, cHeigth, sLength, sWidth, angle, price, shipped from orderTable where user_id = ?;";
             PreparedStatement ps = con.prepareStatement(SQL);
             ps.setString(1, user.getEmail());
             ResultSet rs = ps.executeQuery();
 
             while (rs.next()) {
                 int orderID = rs.getInt("order_id");
-                int length = rs.getInt("length");
-                int width = rs.getInt("width");
-                int height = rs.getInt("height");
+                int clength = rs.getInt("cLength");
+                int cwidth = rs.getInt("cWidth");
+                int cheight = rs.getInt("cHeight");
+                int slength = rs.getInt("sLength");
+                int swidth = rs.getInt("sWidth");
+                int angle = rs.getInt("angle");
+                int price = rs.getInt("price");
+                Shed shed = new Shed (220, slength, swidth);
+                Carport carport = new Carport(clength, cwidth, cheight, shed, angle, price);
                 boolean shipped = rs.getBoolean("shipped");
-                orders.add(new Order(orderID, length, width, height, user, shipped));
+                orders.add(new Order(orderID, carport,  user, shipped));
             }
         } catch (ClassNotFoundException | SQLException ex) {
             throw new CarportException(ex.getMessage());
         }
         return orders;
     }
-        
+        /*
             public static List<Order> getAllOrders() throws CarportException {
         ArrayList<Order> orders = new ArrayList();
         try {

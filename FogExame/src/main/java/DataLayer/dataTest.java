@@ -6,6 +6,7 @@
 package DataLayer;
 
 import DataLayer.DataMappers.CarportMapper;
+import DataLayer.DataMappers.OrderMapper;
 import Logic.Facade.CarportFacade;
 import java.util.ArrayList;
 
@@ -48,6 +49,8 @@ public class dataTest {
         System.out.println(CarportFacade.getCarportWidth(1));
         System.out.println(CarportFacade.getMaxShedWidth());
         System.out.println(CarportFacade.getMaxShedLength());
+        
+        OrderMapper om = new OrderMapper();
         
     }
     
