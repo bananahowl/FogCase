@@ -225,9 +225,7 @@ public static ArrayList<MetalParts> addItem(MetalParts val) {
             int pricetotal = price.woodPrice(duperlist);
             
             return pricetotal;
-        } catch (CarportException ex) {
-            Logger.getLogger(CalcPartList.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (SQLException ex) {
+        } catch (CarportException | SQLException ex) {
             Logger.getLogger(CalcPartList.class.getName()).log(Level.SEVERE, null, ex);
         }
         return 0;
@@ -259,9 +257,7 @@ public static ArrayList<MetalParts> addItem(MetalParts val) {
             duperlist.add(horizontaltest);
             
             return duperlist;
-        } catch (CarportException ex) {
-            Logger.getLogger(CalcPartList.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (SQLException ex) {
+        } catch (CarportException | SQLException ex) {
             Logger.getLogger(CalcPartList.class.getName()).log(Level.SEVERE, null, ex);
         }
         return null;

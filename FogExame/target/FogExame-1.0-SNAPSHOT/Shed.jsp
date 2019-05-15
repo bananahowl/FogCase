@@ -60,9 +60,9 @@
 
         X${shoppingcart}X
         ${order}X
+
         <div class ="grid-container">
             <div class ='center'>
-
                 <h1> Bird view</h1>
                 <svg height ="<%=width + 25%>" width ="<%=length + 25%>">
 
@@ -99,6 +99,10 @@ style="stroke:rgb(0,0,0);stroke-width:1"/>  -->
                 <br>
                 <h2> Side view</h2>
                 <svg height ="300" width ="<%=length + 25%>">
+<<<<<<< HEAD
+=======
+
+>>>>>>> afab65fd8e62fbfd3ef8229b34231d4209bac1e4
 
 
 <!--        <line x1="0" y1="<%=length + 10.5%>" x2="10" y2="<%=length + 5.5%>"
