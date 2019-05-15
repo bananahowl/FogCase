@@ -38,7 +38,7 @@ public class OrderFacadeTest {
         Order result = OrderFacade.createOrder(id, carport, user);
         
         assertEquals(expResult, result);
-        OrderFacade.deleteorder(1);
+        OrderFacade.deleteorder(99);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }

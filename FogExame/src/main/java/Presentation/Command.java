@@ -16,7 +16,9 @@ abstract class Command {
         commands.put("shoppingcart", new ShoppingCartCommand());
         commands.put("register", new RegisterCommand());
         
-        commands.put("calculate", new CalculateCarportCommand());/*
+        commands.put("calculate", new CalculateCarportCommand());
+        commands.put("materialList", new MaterialListCommand());
+        /*
         commands.put( "createOrder", new CreateOrder());
         commands.put( "seeMyOrders", new GetMyOrders());*/
 

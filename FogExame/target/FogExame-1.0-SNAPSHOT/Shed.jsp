@@ -64,6 +64,10 @@ style="stroke:rgb(0,0,0);stroke-width:1"/>
 <line x1="<%=length + 10%>" y1="<%=width + 10.5%>" x2="<%=length%>" y2="<%=width + 15.5%>"
 style="stroke:rgb(0,0,0);stroke-width:1"/>  -->
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1a7da6206a1366e7cef56ae351527af1addde9d3
         <% int temp = length;
             for (int i = 0; i < 1000; i++) {
                 if (temp >= -0) {
