@@ -218,13 +218,12 @@ public class CalcPartListTest {
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
-
+*/
     /**
      * Test of addItem method, of class CalcPartList.
      */
 /*
-    @Test
-    public void testAddItem() {
+   public void testAddItem() {
         System.out.println("addItem");
         MetalParts val = null;
         ArrayList<MetalParts> expResult = null;
@@ -233,7 +232,7 @@ public class CalcPartListTest {
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
-
+*/
     /**
      * Test of totalwoodprice method, of class CalcPartList.
      */

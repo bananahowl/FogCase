@@ -68,15 +68,9 @@ ArrayList<MaterialList> list = totalpartlist(carPor);
             Carport cp = CreateCarport.createCarportAngleRoof(length, width, lengthShed, widthShed, angle, price);
             String html = HtmlConverter.carportAnlgeRooftoHtml(cp);
             Shed she = new Shed(lengthShed, 0, widthShed);
-            
             Carport carPor = new Carport(length, 220, width, she, angle, 0);
-            
 ArrayList<MaterialList> list = totalpartlist(carPor);
             String slist = printPartList(list);
-
-            
-            
-
             request.setAttribute("mlist", slist);
             request.setAttribute("carport", cp);
             request.setAttribute("price", price);

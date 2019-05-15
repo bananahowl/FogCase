@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 C:\Users\ahmed\Desktop\GitCAN\FogCase\FogExame\src\test\java\Logic\Facade\OrderFacadeTest.java
 C:\Users\ahmed\Desktop\GitCAN\FogCase\FogExame\src\test\java\Logic\Facade\UserFacadeTest.java
 C:\Users\ahmed\Desktop\GitCAN\FogCase\FogExame\src\test\java\Logic\CalcPriceTest.java
 C:\Users\ahmed\Desktop\GitCAN\FogCase\FogExame\src\test\java\Logic\Facade\CarportFacadeTest.java
 C:\Users\ahmed\Desktop\GitCAN\FogCase\FogExame\src\test\java\Logic\CalcPartListTest.java
+=======
+C:\Users\emils\Desktop\2semester\FogCase\FogExame\src\test\java\Logic\Facade\UserFacadeTest.java
+C:\Users\emils\Desktop\2semester\FogCase\FogExame\src\test\java\Logic\Facade\CarportFacadeTest.java
+C:\Users\emils\Desktop\2semester\FogCase\FogExame\src\test\java\Logic\Facade\OrderFacadeTest.java
+C:\Users\emils\Desktop\2semester\FogCase\FogExame\src\test\java\Logic\CalcPartListTest.java
+C:\Users\emils\Desktop\2semester\FogCase\FogExame\src\test\java\Logic\CalcPriceTest.java
+>>>>>>> f4305f12d178cd7392717873c0192c22a8022081

@@ -44,7 +44,7 @@ public class CalcPriceTest {
      * Test of woodPrice method, of class CalcPrice.
      */
     /*
-    @Test
+   @Test
     public void testWoodPrice() {
         System.out.println("woodPrice");
         ArrayList<MaterialList> list = null;
@@ -74,7 +74,7 @@ public class CalcPriceTest {
      * Test of metalParts method, of class CalcPrice.
      */
     /*
-    @Test
+ @Test
     public void testMetalParts() {
         System.out.println("metalParts");
         ArrayList<MaterialList> list = null;
@@ -102,4 +102,5 @@ public class CalcPriceTest {
         fail("The test case is a prototype.");
     }*/
     
+
 }
