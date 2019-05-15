@@ -101,7 +101,6 @@ style="stroke:rgb(0,0,0);stroke-width:1"/>  -->
                 <svg height ="300" width ="<%=length + 25%>">
 
 
-
 <!--        <line x1="0" y1="<%=length + 10.5%>" x2="10" y2="<%=length + 5.5%>"
 style="stroke:rgb(0,0,0);stroke-width:1"/>
 <line x1="0" y1="<%=length + 10.5%>" x2="10" y2="<%=length + 15.5%> "

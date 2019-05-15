@@ -6,7 +6,6 @@
 package Logic;
 
 import DataLayer.Carport;
-import DataLayer.CarportWithShed;
 import DataLayer.MetalParts;
 import DataLayer.Shed;
 import Logic.Facade.CarportFacade;
@@ -64,10 +63,7 @@ public class CreateCarport {
         return null;
     }
 
-    public static CarportWithShed add(Carport carport, Shed shed) {
-        CarportWithShed cws = new CarportWithShed(carport, shed);
-        return cws;
-    }
+
         public static int NumbersFlatRoof(int length, int width, int widthShed, int lengthShed){
             
         try {
