@@ -51,6 +51,7 @@ public class dataTest {
         System.out.println(CarportFacade.getMaxShedLength());
         
         OrderMapper om = new OrderMapper();
+        System.out.println(om.getAllOrders().toString());
         
     }
     

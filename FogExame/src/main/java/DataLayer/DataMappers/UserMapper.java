@@ -43,7 +43,7 @@ public class UserMapper {
         try {
             Connection conn = Connector.connection();
 //            String query = "select * from user where `email` = ? AND `password` = ?;";
-            String query = "SELECT firstname, lastname, adress, city, zipcode, phonenumber FROM User "
+            String query = "SELECT * FROM user "
                     + "WHERE email=? AND kodeord=?";
 //String query = "select * from user where email = emil@hotmail.com AND password = 1234;";
             PreparedStatement ps = conn.prepareStatement(query);
