@@ -36,10 +36,15 @@
             CarportFacade cf = new CarportFacade();
             int width = cf.getCarportWidth(Integer.parseInt(request.getParameter("width")));
             int length = cf.getCarportLength(Integer.parseInt(request.getParameter("length")));
+            //${mlist}
         %>
         ${table}
-
-        ${mlist}
+        <form action= "FrontController" method="GET" > 
+          <button type="submit" name="command" value="materialList"> MaterialList  </button>            
+        </form>
+        
+        <br>
+        
         X${shoppingcart}X
         ${order}X
         <div class ="grid-container">
