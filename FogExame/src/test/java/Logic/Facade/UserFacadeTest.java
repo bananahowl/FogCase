@@ -40,7 +40,7 @@ public class UserFacadeTest {
 
     /**
      * Test of createUser method, of class UserFacade.
-     */
+     *//*
     @Test
     public void testCreateUser() throws Exception {
         System.out.println("createUser");
@@ -61,7 +61,7 @@ public class UserFacadeTest {
 
     /**
      * Test of getUser method, of class UserFacade.
-     */
+     *//*
     @Test
     public void testGetUser() {
         System.out.println("getUser");
@@ -72,6 +72,6 @@ public class UserFacadeTest {
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
-    }
+    }*/
     
 }

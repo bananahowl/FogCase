@@ -31,22 +31,23 @@ public class OrderMapper {
     public static void createOrder(Order order) throws CarportException {
         try {
             Connection con = Connector.connection();
-            String SQL = "insert into orderTable (user_id, cLength, cWidth, cHeigth, sLength, sWidth, angle, price, shipped) values (?,?,?,?,?,?,?,?,?);";
+            String SQL = "insert into orderTable (order_id ,user_id, cLength, cWidth, cHeigth, sLength, sWidth, angle, price, shipped) values (?,?,?,?,?,?,?,?,?,?);";
             PreparedStatement ps = con.prepareStatement(SQL, Statement.RETURN_GENERATED_KEYS);
-            ps.setInt(1, order.getUser().getUser_id());
-            ps.setInt(2, order.getCarport().getLength());
-            ps.setInt(3, order.getCarport().getWidth());
-            ps.setInt(4, order.getCarport().getHeigth());
-            ps.setInt(5, order.getCarport().getShed().getLength());
-            ps.setInt(6, order.getCarport().getShed().getWidth());
-            ps.setInt(7, order.getCarport().getRoofangle());
-            ps.setInt(8, order.getCarport().getPrice());
-            if(order.isShipped()== false){
-            ps.setInt(9, 0);    
-            }
-            else{
-            ps.setInt(9, 1);
-            }
+            ps.setInt(1, order.getOrder_id());
+            ps.setInt(2, order.getOrder_id());
+            ps.setInt(3, order.getCarport().getLength());
+            ps.setInt(4, order.getCarport().getWidth());
+            ps.setInt(5, order.getCarport().getHeigth());
+            ps.setInt(6, order.getCarport().getShed().getLength());
+            ps.setInt(7, order.getCarport().getShed().getWidth());
+            ps.setInt(8, order.getCarport().getRoofangle());
+            ps.setInt(9, order.getCarport().getPrice());
+           // if(order.isShipped()== false){
+            ps.setInt(10, 5);    
+           // }
+           // else{
+           // ps.setInt(10, 7);
+          //  }
             ps.executeUpdate();
         } catch (SQLException | ClassNotFoundException ex) {
             throw new CarportException(ex.getMessage());
@@ -74,7 +75,7 @@ public class OrderMapper {
             Connection con = Connector.connection();
             String SQL = "select order_id, cLength, cWidth, cHeigth, sLength, sWidth, angle, price, shipped from orderTable where user_id = ?;";
             PreparedStatement ps = con.prepareStatement(SQL);
-            ps.setString(1, user.getEmail());
+            ps.setInt(1, user.getUser_id());
             ResultSet rs = ps.executeQuery();
 
             while (rs.next()) {
@@ -89,21 +90,20 @@ public class OrderMapper {
                 Shed shed = new Shed (220, slength, swidth);
                 Carport carport = new Carport(clength, cwidth, cheight, shed, angle, price);
                 boolean shipped = rs.getBoolean("shipped");
-                orders.add(new Order(orderID, carport,  user, shipped));
+                orders.add(new Order(orderID, carport,shipped));
             }
         } catch (ClassNotFoundException | SQLException ex) {
             throw new CarportException(ex.getMessage());
         }
         return orders;
     }
-        /*
+        
             public static List<Order> getAllOrders() throws CarportException {
         ArrayList<Order> orders = new ArrayList();
         try {
             Connection con = Connector.connection();
-            String SQL = "SELECT order_id, email_FK, length, width, height, "
-                    + "shipped, `password`, role FROM legohouse.orders JOIN legohouse.users"
-                    + " where orders.email_FK = users.email;";
+            String SQL = "select user_id, order_id, cLength, cWidth, cHeigth, sLength, sWidth, angle, price, shipped from orderTable"
+                    + "join Fogdatabase.user where user.userID = orderTable.user_id ;";
             PreparedStatement ps = con.prepareStatement(SQL);
             ResultSet rs = ps.executeQuery();
 
@@ -121,11 +121,10 @@ public class OrderMapper {
             }
         } catch (ClassNotFoundException | SQLException ex) {
 
-            throw new LegohouseException(ex.getMessage());
+            throw new Exception(ex.getMessage());
 
             throw new CarportException(ex.getMessage());
         }
         return orders;
     }
-*/
 }
