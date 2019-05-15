@@ -5,6 +5,8 @@
  */
 package DataLayer;
 
+import java.util.Objects;
+
 /**
  *
  * @author frizz
@@ -23,6 +25,15 @@ public class MaterialList {
     @Override
     public String toString() {
         return "MaterialList-" + " Length:" + length + " Amount:" + amount + " Description: " + description + "\n";
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+
+        return true;
     }
 
     public int getLength() {

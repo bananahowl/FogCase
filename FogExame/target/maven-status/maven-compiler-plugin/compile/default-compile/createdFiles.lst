@@ -3,6 +3,7 @@ Presentation\CalculateCarportCommand.class
 DataLayer\DataMappers\OrderMapper.class
 Presentation\CreateSVG.class
 DataLayer\CarportWithShed.class
+DataLayer\Order.class
 Logic\CalcPrice.class
 Presentation\LoginCommand.class
 DataLayer\MetalParts.class
@@ -30,4 +31,3 @@ DataLayer\Roof_material.class
 DataLayer\Shed.class
 Logic\Facade\UserFacade.class
 Presentation\Command.class
-Logic\CalcPartListtest.class

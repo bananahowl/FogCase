@@ -31,19 +31,17 @@
                 </ul>
             </div>
         </div>
-<<<<<<< HEAD
+
         <%
             CarportFacade cf = new CarportFacade();
             int width = cf.getCarportWidth(Integer.parseInt(request.getParameter("width")));
             int length = cf.getCarportLength(Integer.parseInt(request.getParameter("length")));
         %>
         ${table}
-=======
 
-        X${table}X   
-${carport.length}
         ${mlist}
->>>>>>> 8d97d9e067a97ae803f1ccba74d9e4e64e48a0bd
+        X${shoppingcart}X
+        ${order}X
         <div class ="grid-container">
             <div class ='center'>
 
@@ -66,23 +64,25 @@ style="stroke:rgb(0,0,0);stroke-width:1"/>
 <line x1="<%=length + 10%>" y1="<%=width + 10.5%>" x2="<%=length%>" y2="<%=width + 15.5%>"
 style="stroke:rgb(0,0,0);stroke-width:1"/>  -->
 
-                <% int temp = length;
-                    for (int i = 0; i < 1000; i++) {
-                        if (temp >= -0) {
-                %><rect x="<%=temp%>" y="0"  width="10" height="<%=width%>" fill="none"
-                      style="stroke:rgb(0,0,0);stroke-width:3"/>
-                <rect x="10" y="<%=length + 10.5%>"  width="<%=temp - 10%>" height="1" fill="#000000" /> <%
-                            temp = temp - 30;
-                        } else {
-                            break;
-                        }
-                    }
-                %>
-                </svg>
-                <h2><%=length%> in cm</h2>
-                <br>
-                <h1> Side view</h1>
-                <svg height ="300" width ="<%=length + 25%>">
+
+        <% int temp = length;
+            for (int i = 0; i < 1000; i++) {
+                if (temp >= -0) {
+        %><rect x="<%=temp%>" y="0"  width="10" height="<%=width%>" fill="none"
+              style="stroke:rgb(0,0,0);stroke-width:3"/>
+        <rect x="10" y="<%=length + 10.5%>"  width="<%=temp - 10%>" height="1" fill="#000000" /> <%
+                    temp = temp - 30;
+                } else {
+                    break;
+                }
+            }
+        %>
+        </svg>
+        <h2><%=length%> in cm</h2>
+        <br>
+        <h2> Side view</h2>
+        <svg height ="300" width ="<%=length + 25%>">
+
 
 
 <!--        <line x1="0" y1="<%=length + 10.5%>" x2="10" y2="<%=length + 5.5%>"

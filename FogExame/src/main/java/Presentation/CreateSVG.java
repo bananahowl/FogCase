@@ -20,10 +20,18 @@ public class CreateSVG extends Command{
     String execute(HttpServletRequest request, HttpServletResponse response) throws CarportException {
         int length = Integer.parseInt(request.getParameter("length")) ;
         int width = Integer.parseInt(request.getParameter("width"));
-
+        int angle = Integer.parseInt(request.getParameter("angle"));
+        
+        if(angle == 0){
         Carport ls = CreateCarport.createCarportFlatRoof(length, width,0,0,0);
-
+        
         request.getSession().setAttribute("customcarport", ls);
+        }
+        else{
+        Carport ls = CreateCarport.createCarportAngleRoof(length, width, 0, 0, angle, 0);
+        
+        request.getSession().setAttribute("customcarport", ls);
+        }
         return "shoppingcart";
     }
 
