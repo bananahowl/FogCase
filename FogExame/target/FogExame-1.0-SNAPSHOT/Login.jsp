@@ -30,7 +30,7 @@
         </div>
         <div class ="grid-container">
         <form name="login" action="FrontController" method="GET">
-            <table>
+            <table class ="first">
                 <td>
                     <h1>Log in here to create a order</h1>
                     <input type="hidden" name="command" value="login">

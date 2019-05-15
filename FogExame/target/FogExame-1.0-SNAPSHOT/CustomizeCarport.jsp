@@ -32,9 +32,9 @@
         </div>
         <div class ="grid-container">
             <div class ='center'>
-                <p1><b>Design your own carport - with your measurements</b></p1><br><br>
+                <p1><b>Design your own carport - with your measurements</b></p1><br><br><br><br>
                 <form action="FrontController" method="GET">
-            <table>
+            <table class ="second">
                 <thead><tr><th>Carport length</th><th>Carport width</th><th>Shed length</th><th>Shed width</th><th>Roof angle</th></tr></thead>
                 <tbody>
                     <tr>  <td> <select name=length id="option">                        

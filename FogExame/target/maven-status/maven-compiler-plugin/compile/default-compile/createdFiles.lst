@@ -5,7 +5,6 @@ Presentation\CreateSVG.class
 DataLayer\CarportWithShed.class
 DataLayer\Order.class
 Logic\CalcPrice.class
-Presentation\LoginCommand.class
 Presentation\MaterialListCommand.class
 DataLayer\MetalParts.class
 Presentation\GetMyOrders.class
@@ -16,7 +15,6 @@ Logic\CalcPartList.class
 DataLayer\DataMappers\UserMapper.class
 DataLayer\User.class
 Logic\CreateCarport.class
-Presentation\HtmlConverter.class
 Logic\CarportException.class
 Presentation\ShoppingCartCommand.class
 DataLayer\Roof_area.class

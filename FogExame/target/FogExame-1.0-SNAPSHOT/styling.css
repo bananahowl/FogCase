@@ -6,7 +6,7 @@
 .header {
     text-align:left;
     width:100%;
-    background-color: cornsilk;
+    background-color: white;
     padding: 0px;
 }
 
@@ -46,21 +46,21 @@
 }
 
 body{
-    background-color: beige;
+    background-color: white;
     margin: auto;
     padding: 0px;
 }
 h1{
     font-size:30px;
-    font-family:tahoma;
+    font-family:Trebuchet MS;
     text-align:center;
-    color:Black;
+    color:black;
 }
 
 p1{
     font-size: 22px;
-    font-family: tahoma;
-    text-align: center;
+    font-family:Trebuchet MS;
+    text-align: left;
     color:black;
 }
 
@@ -69,7 +69,7 @@ ul {
     margin: auto;
     padding: auto;
     overflow: hidden;
-    background-color: darkblue;
+    background-color: lightsteelblue;
 }
 
 li {
@@ -82,7 +82,7 @@ li a {
     text-align: center;
     padding: 18px 20px;
     text-decoration: none;
-    font-family: tahoma;
+    font-family: Trebuchet MS;
 }
 
 li a:hover {
@@ -99,29 +99,43 @@ select {
     border-radius: 4px;
     background-color: #f1f1f1;
     text-align: center;
-    font-family: tahoma;
+    font-family: Trebuchet MS;
     font-size: 20px;
 }
 button {
-    background-color: darkgray;
-    border: none;
+    background-color: grey;
     color: white;
     padding: 20px 32px;
     font-size: 18px;
-    font-family: tahoma;
+    font-family: Trebuchet MS;
 }
 
-table {
+table.first{
     border-collapse: separate;
-    width: 90%;
-}
-
-th, td {
-    text-align: left;
+    width: 70%;
     padding: 15px;
-    background-color: beige;
-    color: darkslategrey;
-    font-family: Tahoma;
+    font-family: Trebuchet MS;
     font-size: 20px;
     text-align: center;
+}
+
+table.second {
+    border: 2px solid black;
+    border-collapse: separate;
+    width: 25%; 
+    font-family: Trebuchet MS;
+    font-size: 20px;
+    text-align: center;
+    float: left;
+    padding: 15px;
+}
+
+table.third{
+    border-collapse: separate;
+    width: 80%; 
+    font-family: Trebuchet MS;
+    font-size: 20px;
+    text-align: center;
+    float: left;
+    padding: 15px;
 }
