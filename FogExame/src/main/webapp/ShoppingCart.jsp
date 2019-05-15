@@ -29,7 +29,9 @@
             </div>
         </div>
         
-        ${mlist}
 
+        ${mlist}
+        X${shoppingcart}X
+        ${order}X
     </body>
 </html>

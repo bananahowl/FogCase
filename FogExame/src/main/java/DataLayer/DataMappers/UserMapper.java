@@ -42,10 +42,8 @@ public class UserMapper {
     public static User login(String email, String password) throws CarportException {
         try {
             Connection conn = Connector.connection();
-//            String query = "select * from user where `email` = ? AND `password` = ?;";
             String query = "SELECT * FROM user "
                     + "WHERE email=? AND kodeord=?";
-//String query = "select * from user where email = emil@hotmail.com AND password = 1234;";
             PreparedStatement ps = conn.prepareStatement(query);
             ps.setString(1, email);
             ps.setString(2, password);
