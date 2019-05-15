@@ -23,7 +23,7 @@ public class UserMapper {
     public static void createUser(User user) throws CarportException {
         try {
             Connection con = Connector.connection();
-            String SQL = "insert into user( firstname, lastname, adress, city, zipcode, email, phonenumber, password) values (?,?,?,?,?,?,?,?)";
+            String SQL = "insert into user( firstname, lastname, adress, city, zipcode, email, phonenumber, kodeord) values (?,?,?,?,?,?,?,?)";
             PreparedStatement ps = con.prepareStatement(SQL, Statement.RETURN_GENERATED_KEYS);
             ps.setString(1, user.getFirstname());
             ps.setString(2, user.getLastname());
@@ -39,29 +39,78 @@ public class UserMapper {
         }
     }
 
-    public static User login(String email, String password) throws CarportException, SQLException {
+    public static User login(String email, String password) throws CarportException {
         try {
             Connection conn = Connector.connection();
-            String query = "select firstname, lastname from user where email = ? AND password = ?;";
+            String query = "SELECT * FROM user "
+                    + "WHERE email=? AND kodeord=?";
             PreparedStatement ps = conn.prepareStatement(query);
             ps.setString(1, email);
             ps.setString(2, password);
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
-                int id = rs.getInt("user_id");
+                int id = rs.getInt("userID");
                 String firstname = rs.getString("firstname");
                 String lastname = rs.getString("lastname");
                 String adress = rs.getString("adress");
                 String city = rs.getString("city");
                 int zipcode = rs.getInt("zipcode");
                 int phone = rs.getInt("phonenumber");
-                User user = new User(id,firstname, lastname, adress, city, zipcode, phone, email, password);
+                User user = new User(firstname, lastname, adress, city, zipcode, phone, email, password);
+                User uuser = new User("Knud", "Mogensen", "Gattet 7", "Lyngby", 2800, 12345678, "Knud@hotmail.dk", "KnudDenStore");
+                user.setUser_id(id);
                 return user;
             } else {
                 throw new CarportException("Error");
             }
-        } catch (ClassNotFoundException ex) {
+        } catch (SQLException |ClassNotFoundException ex) {
             throw new CarportException(ex.getMessage());
         }
     }
+       
+  /*  public static User login( String email, String password ) throws LoginSampleException, Exception {
+        try {
+            Connection con = new Connector().getConnection();
+                    String SQL = "SELECT id, role FROM Users "
+                            + "WHERE email=? AND password=?";
+            PreparedStatement ps = con.prepareStatement( SQL );
+            ps.setString( 1, email );
+            ps.setString( 2, password );
+            ResultSet rs = ps.executeQuery();
+            if ( rs.next() ) {
+                String role = rs.getString( "role" );
+                int id = rs.getInt( "id" );
+                User user = new User( email, password, role );
+                user.setId( id );
+                return user;
+            } else {
+                throw new LoginSampleException( "Could not validate user" );
+            }
+        } catch ( ClassNotFoundException | SQLException ex ) {
+            throw new LoginSampleException(ex.getMessage());
+        }
+    }
+    
+   /*     public static User login( String email, String password ) throws LoginSampleException {
+        try {
+            Connection con = Connector.connection();
+            String SQL = "SELECT id, role FROM Users "
+                    + "WHERE email=? AND password=?";
+            PreparedStatement ps = con.prepareStatement( SQL );
+            ps.setString( 1, email )    ;
+            ps.setString( 2, password );
+            ResultSet rs = ps.executeQuery();
+            if ( rs.next() ) {
+                String role = rs.getString( "role" );
+                int id = rs.getInt( "id" );
+                User user = new User( email, password, role );
+                user.setId( id );
+                return user;
+            } else {
+                throw new LoginSampleException( "Could not validate user" );
+            }
+        } catch ( ClassNotFoundException | SQLException ex ) {
+            throw new LoginSampleException(ex.getMessage());
+        }
+    }*/
 }

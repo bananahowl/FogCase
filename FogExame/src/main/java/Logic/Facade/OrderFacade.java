@@ -28,14 +28,22 @@ public class OrderFacade {
         return OrderMapper.getOrdersByUser(user);
     }
 */
-    public static Order createOrder(int id, Carport carport, User user) throws CarportException {
+    public static Order createOrder(int id, Carport carport) throws CarportException {
 
-        Order order = new Order(id, carport, user, false);
+        Order order = new Order(id, carport, false);
         OrderMapper.createOrder(order);
         return order;
     }
     
     public static void deleteorder(int id) throws CarportException{
         OrderMapper.deleteorder(id);
+    }
+    
+    public static ArrayList<Order> getOrdersByUser(User user) throws CarportException {
+        return OrderMapper.getOrdersByUser(user);
+    }
+    
+    public static List<Order> getAllOrders() throws CarportException {
+        return OrderMapper.getAllOrders();
     }
 }

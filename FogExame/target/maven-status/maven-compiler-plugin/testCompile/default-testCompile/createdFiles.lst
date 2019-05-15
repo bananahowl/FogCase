@@ -1,1 +1,5 @@
+Logic\CalcPartListTest.class
+Logic\CalcPriceTest.class
+Logic\Facade\OrderFacadeTest.class
+Logic\Facade\UserFacadeTest.class
 Logic\Facade\CarportFacadeTest.class

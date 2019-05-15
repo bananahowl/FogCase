@@ -23,6 +23,11 @@ public class ShoppingCartCommand extends Command {
 
     @Override
     String execute(HttpServletRequest request, HttpServletResponse response) throws CarportException {
+        HttpSession session = request.getSession();
+        request.getSession().getAttribute("user");
+        request.getSession().getAttribute("shoppingcart");
+        request.getSession().getAttribute("order");
+        request.setAttribute("order",request.getSession().getAttribute("order") );
         return "ShoppingCart";
 
     }
