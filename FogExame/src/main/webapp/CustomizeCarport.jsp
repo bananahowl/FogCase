@@ -59,7 +59,7 @@
                             </tr>
                     </table>
                 </form>
-                x${user}X
+                x${userbox}X
             </div>
         </div>
     </body>

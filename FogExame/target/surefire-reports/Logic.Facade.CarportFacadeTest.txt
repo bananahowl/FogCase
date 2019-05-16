@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: Logic.Facade.CarportFacadeTest
 -------------------------------------------------------------------------------
+<<<<<<< HEAD
 Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.986 sec
+=======
+Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.072 sec
+>>>>>>> 636e0dc390678a2cedc78904e9b34ae4001a3711
