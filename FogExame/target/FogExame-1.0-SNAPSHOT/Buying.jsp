@@ -19,7 +19,6 @@
             <img src="https://media.licdn.com/dms/image/C4E0BAQGleVi1XAFxBg/company-logo_200_200/0?e=2159024400&v=beta&t=qQ2ebmGf9u4b45tNF9OyVrcy7NGpnwLXZkLrOky6ibM" alt="Fog" width="200" height="200">
         </div>
 
-        <div class="topnav">
             <form method="get" action="index.jsp">
                 <button type="submit" class="btn btn-light" name="command" value="calculate">Home</button>
             </form>
