@@ -21,8 +21,10 @@ Presentation\ShoppingCartCommand.class
 DataLayer\Roof_area.class
 DataLayer\dataTest.class
 Presentation\UnknownCommand.class
+Presentation\BuyCommand.class
 Presentation\RegisterCommand.class
 DataLayer\DataMappers\CarportMapper.class
+Presentation\DesignCommand.class
 DataLayer\MaterialList.class
 Logic\Facade\OrderFacade.class
 Presentation\CreateOrder.class

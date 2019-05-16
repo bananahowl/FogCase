@@ -42,8 +42,8 @@ public class MaterialListCommand extends Command {
         ArrayList<Order> shoppingcart = new ArrayList();
         User user = (User) request.getSession().getAttribute("user");
          */
-        int price = CreateCarport.NumbersFlatRoof(width, length, width, length);
-        Carport cp = CreateCarport.createCarportFlatRoof(length, width, lengthShed, widthShed, price);
+        int price = CreateCarport.NumbersAngleRoof(length, width, widthShed, lengthShed, angle);
+        Carport cp = CreateCarport.createCarportAngleRoof(length, width, lengthShed, widthShed,angle, price);
         Shed sh = new Shed(lengthShed, 220, widthShed);
         Carport carp = new Carport(length, 220, width, sh, angle, 0);
         ArrayList<MaterialList> list = totalpartlist(carp);

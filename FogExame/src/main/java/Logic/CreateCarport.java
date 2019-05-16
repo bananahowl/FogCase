@@ -23,25 +23,6 @@ import java.util.logging.Logger;
  * @author fskn
  */
 public class CreateCarport {
-    public static Carport createCarportFlatRoof(int length, int width, int widthShed, int lengthShed, int price) {
-        try {
-            Shed shed = new Shed(0, 220, 0);
-            if (widthShed != 1 && lengthShed != 1) {
-               
-                    shed.setLength(getShedlength(lengthShed));
-                    shed.setWidth(getShedwidth(widthShed));
-            }
-            int a = getCarportLength(length);
-            int b = getCarportWidth(width);
-            Carport carport = new Carport(a, 220, b, shed, 0,price);
-            return carport;
-        } catch (CarportException ex) {
-            ex.printStackTrace();
-        } catch (SQLException ex) {
-            Logger.getLogger(CarportFacade.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        return null;
-    }
 
     public static Carport createCarportAngleRoof(int length, int width, int widthShed, int lengthShed, int angle, int price) {
         try {
@@ -63,23 +44,6 @@ public class CreateCarport {
         return null;
     }
 
-
-        public static int NumbersFlatRoof(int length, int width, int widthShed, int lengthShed){
-            
-        try {
-            int a = getCarportLength(length);
-            int b = getCarportWidth(width);
-            int c =  getShedlength(lengthShed);
-            int d =    getShedwidth(widthShed);
-            int price = CalcPartList.totalwoodprice(b, a, d, c, 0);
-            return price;
-        } catch (CarportException ex) {
-            Logger.getLogger(CarportFacade.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (SQLException ex) {
-            Logger.getLogger(CarportFacade.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        return 0;
-    }
     public static int NumbersAngleRoof(int length, int width, int widthShed, int lengthShed, int angle){
     
         try {

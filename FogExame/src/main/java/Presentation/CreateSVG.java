@@ -23,7 +23,7 @@ public class CreateSVG extends Command{
         int angle = Integer.parseInt(request.getParameter("angle"));
         
         if(angle == 0){
-        Carport ls = CreateCarport.createCarportFlatRoof(length, width,0,0,0);
+        Carport ls = CreateCarport.createCarportAngleRoof(length, width, width, length, angle, angle);
         
         request.getSession().setAttribute("customcarport", ls);
         }
