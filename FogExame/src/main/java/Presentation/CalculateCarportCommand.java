@@ -38,10 +38,11 @@ public class CalculateCarportCommand extends Command {
         User user = (User) request.getSession().getAttribute("user");
         if (angle == 1) {
             int price = CreateCarport.NumbersFlatRoof(width, length, width, length);
-            Carport cp = CreateCarport.createCarportFlatRoof(length, width, lengthShed, widthShed, price);
+            Carport cp = CreateCarport.createCarportFlatRoof(length, width, widthShed,lengthShed,  price);
             String html = HtmlConverter.carportFlatRooftoHtml(cp);
             Order orders = OrderFacade.createOrder(user.getUser_id(), cp);
             shoppingcart.add(orders);
+          
             ArrayList<MaterialList> list = totalpartlist(cp);
             String slist = printPartList(list);
             String orderss = HtmlConverter.generateOrdersHTML(shoppingcart);
@@ -59,7 +60,7 @@ public class CalculateCarportCommand extends Command {
             return "Shed";
         } else {
             int price = CreateCarport.NumbersAngleRoof(width, length, width, length, angle);
-            Carport cp = CreateCarport.createCarportAngleRoof(length, width, lengthShed, widthShed, angle, price);
+            Carport cp = CreateCarport.createCarportAngleRoof(length, width,  widthShed,lengthShed, angle, price);
             String html = HtmlConverter.carportAnlgeRooftoHtml(cp);            
             ArrayList<MaterialList> list = totalpartlist(cp);
             String slist = printPartList(list);
