@@ -54,9 +54,7 @@
                             </table>
                 </form>
                 <div class="rightcolumn">
-                    <div class="card">
                         ${userbox}
-                    </div>
                 </div>
                      </div>
     </body>
