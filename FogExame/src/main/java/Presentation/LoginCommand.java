@@ -26,7 +26,8 @@ public class LoginCommand extends Command {
             String password = request.getParameter("password");
             User user = Logic.Facade.UserFacade.getUser(email, password);
             String html = HtmlConverter.showLoggedInUser(user);
-            session.setAttribute("user", html);
+            session.setAttribute("user", user);
+            session.setAttribute("userbox", html);
             return "CustomizeCarport";
         }
         return "index";
