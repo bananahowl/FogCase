@@ -30,7 +30,7 @@
 
         <div class ="grid-container">
                 <form action="FrontController" method="GET">
-                    <table>
+                    <table class ="first">
                         <td>
                             <h1>Please register to order a carport</h1>
                         <p1>Firstname:<br></p1>

@@ -27,6 +27,10 @@
                 </ul>
             </div>
         </div>
-         
+        <form action="FrontController" method="GET">
+            <button type="submit" name="command" value="customize">Customize</button>  <% // button to make link to customize with command %>
+            
+        </form>
+        
     </body>
 </html>

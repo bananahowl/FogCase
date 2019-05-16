@@ -56,6 +56,10 @@ public class CalculateCarportCommand extends Command {
             request.setAttribute("carportwidth", width);
             request.setAttribute("shoppingcart", shoppingcart);
             request.setAttribute("order", orderss);
+            /*
+            request.setAttribute("length", length);
+            request.setAttribute("width", width);
+            request.setAttribute("length", length);*/
             return "Shed";
         } else {
             int price = CreateCarport.NumbersAngleRoof(width, length, width, length, angle);

@@ -32,35 +32,35 @@
         </div>
         <div class ="grid-container">
             <div class ='center'>
-                <p1><b>Design your own carport - with your measurements</b></p1><br><br>
+                <p1><b>Design your own carport - with your measurements</b></p1><br><br><br><br>
                 <form action="FrontController" method="GET">
-            <table>
-                <thead><tr><th>Carport length</th><th>Carport width</th><th>Shed length</th><th>Shed width</th><th>Roof angle</th></tr></thead>
-                <tbody>
-                    <tr>  <td> <select name=length id="option">                        
-                                <% for (int i = 1; i < cf.getMaxLength() + 1; i++) {%>
-                                <option value=<%=i%>><%=cf.getCarportLength(i)%></option><% }%>
+                    <table>
+                        <thead><tr><th>Carport length</th><th>Carport width</th><th>Shed length</th><th>Shed width</th><th>Roof angle</th></tr></thead>
+                        <tbody>
+                            <tr>  <td> <select name=length id="option">                        
+                                        <% for (int i = 1; i < cf.getMaxLength() + 1; i++) {%>
+                                        <option value=<%=i%>><%=cf.getCarportLength(i)%></option><% }%>
 
-                                <td> <select name=width id="option">
-                                        <% for (int i = 1; i < cf.getMaxWidth() + 1; i++) {%>
-                                        <option value=<%=i%>><%= cf.getCarportWidth(i)%></option><% }%></td> 
+                                        <td> <select name=width id="option">
+                                                <% for (int i = 1; i < cf.getMaxWidth() + 1; i++) {%>
+                                                <option value=<%=i%>><%= cf.getCarportWidth(i)%></option><% }%></td> 
 
-                                <td><select name=lengthShed id="option">
-                                        <% for (int i = 1; i < cf.getMaxShedLength() + 1; i++) {%>
-                                        <option value=<%=i%>><%= cf.getShedlength(i)%></option><% }%></td>
-                                <td><select name=widthShed id="option">
-                                        <% for (int i = 1; i < cf.getMaxShedWidth() + 1; i++) {%>
-                                        <option value=<%=i%>><%= cf.getShedwidth(i)%></option><% }%></td>
-                                <td><select name=angle id="option">
-                                        <% for (int i = 1; i < cf.getMaxAngles()+ 1; i++) {%>
-                                        <option value=<%=i%>><%= cf.getRoofAngle(i)%></option><% }%></td>
-                                <td><button type="submit" name="command" value="calculate">Calculate </button></td>
-                                <td><span id="errorContainer"></span></td>
-                    </tr>
-            </table>
-        </form>
+                                        <td><select name=lengthShed id="option">
+                                                <% for (int i = 1; i < cf.getMaxShedLength() + 1; i++) {%>
+                                                <option value=<%=i%>><%= cf.getShedlength(i)%></option><% }%></td>
+                                        <td><select name=widthShed id="option">
+                                                <% for (int i = 1; i < cf.getMaxShedWidth() + 1; i++) {%>
+                                                <option value=<%=i%>><%= cf.getShedwidth(i)%></option><% }%></td>
+                                        <td><select name=angle id="option">
+                                                <% for (int i = 1; i < cf.getMaxAngles() + 1; i++) {%>
+                                                <option value=<%=i%>><%= cf.getRoofAngle(i)%></option><% }%></td>
+                                        <td><button type="submit" name="command" value="calculate">Calculate </button></td>
+                                        <td><span id="errorContainer"></span></td>
+                            </tr>
+                    </table>
+                </form>
                 x${user}X
             </div>
         </div>
-            </body>
-            </html>
+    </body>
+</html>

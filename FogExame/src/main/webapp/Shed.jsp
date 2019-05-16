@@ -36,15 +36,33 @@
             CarportFacade cf = new CarportFacade();
             int width = cf.getCarportWidth(Integer.parseInt(request.getParameter("width")));
             int length = cf.getCarportLength(Integer.parseInt(request.getParameter("length")));
+            //${mlist}
         %>
         ${table}
+        <form action= "FrontController" method="GET" > 
+            <%
+                int lengths = Integer.parseInt(request.getParameter("length"));
+                int widths = Integer.parseInt(request.getParameter("width"));
+                int lengthShed = Integer.parseInt(request.getParameter("lengthShed"));
+                int widthShed = Integer.parseInt(request.getParameter("widthShed"));
+                int angle = Integer.parseInt(request.getParameter("angle"));
+            %>
+            <input type="hidden" value="<%= lengths %>" name = "length">
+            <input type="hidden" value="<%= widths %>" name = "width">
+            <input type="hidden" value="<%= lengthShed %>" name = "lengthShed">
+            <input type="hidden" value="<%= widthShed %>" name = "widthShed">
+            <input type="hidden" value="<%= angle %>" name = "angle">
+            <button type=\"submit\"  name=\"command\" value=\"Shoppingcart\"> Go to shoppingcart </button>
+            <button type="submit" name="command" value="materialList"> MaterialList  </button>            
+        </form>
 
-        ${mlist}
+        <br>
+
         X${shoppingcart}X
         ${order}X
+
         <div class ="grid-container">
             <div class ='center'>
-
                 <h1> Bird view</h1>
                 <svg height ="<%=width + 25%>" width ="<%=length + 25%>">
 
@@ -64,24 +82,23 @@ style="stroke:rgb(0,0,0);stroke-width:1"/>
 <line x1="<%=length + 10%>" y1="<%=width + 10.5%>" x2="<%=length%>" y2="<%=width + 15.5%>"
 style="stroke:rgb(0,0,0);stroke-width:1"/>  -->
 
-        <% int temp = length;
-            for (int i = 0; i < 1000; i++) {
-                if (temp >= -0) {
-        %><rect x="<%=temp%>" y="0"  width="10" height="<%=width%>" fill="none"
-              style="stroke:rgb(0,0,0);stroke-width:3"/>
-        <rect x="10" y="<%=length + 10.5%>"  width="<%=temp - 10%>" height="1" fill="#000000" /> <%
-                    temp = temp - 30;
-                } else {
-                    break;
-                }
-            }
-        %>
-        </svg>
-        <h2><%=length%> in cm</h2>
-        <br>
-        <h2> Side view</h2>
-        <svg height ="300" width ="<%=length + 25%>">
-
+                <% int temp = length;
+                    for (int i = 0; i < 1000; i++) {
+                        if (temp >= -0) {
+                %><rect x="<%=temp%>" y="0"  width="10" height="<%=width%>" fill="none"
+                      style="stroke:rgb(0,0,0);stroke-width:3"/>
+                <rect x="10" y="<%=length + 10.5%>"  width="<%=temp - 10%>" height="1" fill="#000000" /> <%
+                            temp = temp - 30;
+                        } else {
+                            break;
+                        }
+                    }
+                %>
+                </svg>
+                <h2><%=length%> in cm</h2>
+                <br>
+                <h2> Side view</h2>
+                <svg height ="300" width ="<%=length + 25%>">
 
 
 <!--        <line x1="0" y1="<%=length + 10.5%>" x2="10" y2="<%=length + 5.5%>"
@@ -114,7 +131,7 @@ style="stroke:rgb(0,0,0);stroke-width:1"/>  -->
                 </svg>   
                 <h2><%=length%> in cm</h2>
                 <br>
-                
+
                 <h1> Front view</h1>
                 <svg height ="300" width ="<%=width + 25%>">
 
@@ -129,13 +146,13 @@ style="stroke:rgb(0,0,0);stroke-width:1"/>
 <line x1="<%=width + 10%>" y1="<%=length + 10.5%>" x2="<%=width%>" y2="<%=length + 15.5%>"
 style="stroke:rgb(0,0,0);stroke-width:1"/>  -->
 
-               
+
                 %><rect x="0" y="30"  width="10" height="220" fill="none"
-                      style="stroke:rgb(0,0,0);stroke-width:3"/>
-                <rect x="<%=width-10%>" y="30"  width="10" height="220" fill="none"
+                        style="stroke:rgb(0,0,0);stroke-width:3"/>
+                <rect x="<%=width - 10%>" y="30"  width="10" height="220" fill="none"
                       style="stroke:rgb(0,0,0);stroke-width:3"/>
                 <rect x="10" y="<%=length + 10.5%>"  width="<%=length - 10%>" height="1" fill="#000000" />
-                
+
                 <rect x="0" y="0" width="<%=width%>" height="30" fill="#none"
                       style="stroke:rgb(0,0,0);stroke-width:3"/>
 
@@ -146,4 +163,3 @@ style="stroke:rgb(0,0,0);stroke-width:1"/>  -->
         </div>
     </body>
 </html>
- 

@@ -9,6 +9,7 @@ import DataLayer.Carport;
 import DataLayer.MaterialList;
 import DataLayer.MetalParts;
 import DataLayer.Order;
+import DataLayer.User;
 import java.util.ArrayList;
 
 /**
@@ -23,7 +24,7 @@ public class HtmlConverter {
                 + "<tr><th>Carport  </th><th>Length   </th><th>Width    </th><th>Height    </th><th>Shed Length    </th><th>Shed Width    </th><th>Angle   </th><th>Price      </th></tr>"
                 + "<tr><th>Size</th><th>" + carport.getLength() + "</th><th>" + carport.getWidth() + "</th><th>220</th><th>" + carport.getShed().getLength() + "</th><th>" + carport.getShed().getWidth() + "</th><th>none</th><th>" + carport.getPrice() + "</th></tr>"
                 + "</table>"
-                + "<button type=\"submit\"  name=\"command\" value=\"Shoppingcart\" >Add to Shoppingcart</button>"
+                //+ "<button type=\"submit\"  name=\"command\" value=\"Shoppingcart\" >Add to Shoppingcart</button>"
                 + "</form>";
         return cartTable;
 
@@ -41,15 +42,17 @@ public class HtmlConverter {
 
     public static String carportAnlgeRooftoHtml(Carport carport) {
         String cartTable = "<form action=\"FrontController\" method=\"GET\">"
-                + "<table id=\"carport\">"
+
+                + "<br><br><table class =first>"
                 + "<tr><th>Carport  </th><th>Length   </th><th>Width    </th><th>Height    </th><th>Shed Length    </th><th>Shed Width    </th><th>Angle   </th><th>Price      </th></tr>"
                 + "<tr><th>Size</th>"
                 + "<th>" + carport.getLength() + "</th>"
                 + "<th>" + carport.getWidth() + "</th><th>220</th>"
                 + "<th>" + carport.getShed().getLength() + "</th>"
-                + "<th>" + carport.getShed().getWidth() + "</th><th>" + carport.getRoofangle() + "</th><th>" + carport.getPrice() + "</th></tr>"
+                + "<th>" + carport.getShed().getWidth() + "</th><th>" + carport.getRoofangle() + "</th>"
+                + "<th>" + carport.getPrice() + "</th></tr>"
                 + "</table>"
-                + "<button type=\"submit\"  name=\"command\" value=\"Shoppingcart\" >Add to Shoppingcart</button>"
+                //+ "<button type=\"submit\"  name=\"command\" value=\"Shoppingcart\" >Add to Shoppingcart</button>"
                 + "</form>";
         return cartTable;
 
@@ -58,7 +61,7 @@ public class HtmlConverter {
     public static String printPartList(ArrayList<MaterialList> list) {
 
         String partlisttop = "<form action=\"FrontController\" method=\"GET\">"
-                + "<table id=\"parlist\" border =\"1px\" >"
+                + "<table class=second >"
                 + "<tr> <th>Description </th> <th>Length </th> <th> Amount</th> </tr>";
 
         String partlistmid = "";
@@ -103,7 +106,7 @@ public class HtmlConverter {
     }
 
     public static String generateOrdersHTML(ArrayList<Order> orders) {
-        String cartTable = "<table id=\"orders\">"
+        String cartTable = "<table class =second>"
                 + "<tr><th>Order ID </th><th>Length </th><th>Width </th><th>Shed length </th><th>Shed width </th><th>User </th><th>Shipped\t</th></tr>";
         for (int i = 0; i < orders.size(); i++) {
             cartTable += "<tr><td>" + orders.get(i).getOrder_id() + " </td>"
@@ -115,6 +118,22 @@ public class HtmlConverter {
                     + "<td>" + orders.get(i).isShipped() + " </td></tr>";
         }
         return cartTable;
+    }
+
+    public static String showLoggedInUser(User user) {
+        String table = "<table class =second>"
+                + " <tr><th>ID </th><th>Firstname</th><th>Lastname</th><th>Adress</th><th>City</th><th>Zipcode</th><th>Phone</th><th>Email</th></tr>"
+                + "<tr><td>" + user.getUser_id() + " </td>"
+                + "<td>" + user.getFirstname() + " </td>"
+                + "<td>" + user.getLastname() + " </td>"
+                + "<td>" + user.getAdress() + " </td>"
+                + "<td>" + user.getCity() + " </td>"
+                + "<td>" + user.getZipcode() + " </td>"
+                + "<td>" + user.getPhone() + " </td>"
+                + "<td>" + user.getEmail() + " </td></tr>"
+        + "</table>";
+        
+        return table;
     }
 
 }
