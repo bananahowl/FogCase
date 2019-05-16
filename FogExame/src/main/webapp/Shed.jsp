@@ -52,14 +52,12 @@
             <input type="hidden" value="<%= lengthShed %>" name = "lengthShed">
             <input type="hidden" value="<%= widthShed %>" name = "widthShed">
             <input type="hidden" value="<%= angle %>" name = "angle">
-<<<<<<< HEAD
-            <button type="submit"  name="command" value="Shoppingcart"> Go to shoppingcart </button>
+
             <button type="submit" name="command" value="buy">Pay for the carport</button> 
-=======
             <button type="submit"  name="command" value="shoppingcart"> Go to shoppingcart </button>
 
             <button type="submit" name="command" value="materialList"> MaterialList  </button>            
->>>>>>> eb00280c32b1c0ce1dfc8782d0e8a4ac49f58370
+
         </form>
 
         <br>
@@ -132,8 +130,10 @@ style="stroke:rgb(0,0,0);stroke-width:1"/>  -->
 
                 <rect x="0" y="170" width="<%=length + 10%>" height="10" fill="#none"
                       style="stroke:rgb(0,0,0);stroke-width:3"/>
+                <%if(angle != 1){ %>
                 <rect x="0" y="70" width="<%=length + 10%>" height="100" fill="#none"
                       style="stroke:rgb(0,0,0);stroke-width:3"/>
+                <%}%>
 
 
                 </svg>   
@@ -160,8 +160,10 @@ style="stroke:rgb(0,0,0);stroke-width:1"/>  -->
                 <rect x="<%=width - 10%>" y="180"  width="10" height="220" fill="none"
                       style="stroke:rgb(0,0,0);stroke-width:3"/>
                 <rect x="10" y="<%=length + 10.5%>"  width="<%=length - 10%>" height="1" fill="#000000" />
+                <%if(angle != 1){ %>
                 <polygon points="<%=width / 2%>,0 <%=width%>, 170 0,170" fill="none"
                          style="stroke:rgb(0,0,0);stroke-width:3"/>
+                <%}%>
 
                 <rect x="0" y="170" width="<%=width%>" height="10" fill="#none"
                       style="stroke:rgb(0,0,0);stroke-width:3"/>
