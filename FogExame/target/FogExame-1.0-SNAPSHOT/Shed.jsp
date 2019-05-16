@@ -55,7 +55,7 @@
             <button type="submit" name="command" value="buy">Pay for the carport</button> 
 
             <button type="submit"  name="command" value="shoppingcart"> Go to shoppingcart </button>
-
+            
         </form>
 
         <br>

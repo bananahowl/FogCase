@@ -84,7 +84,7 @@ public class HtmlConverter {
     public static String printMetalPartList(ArrayList<MetalParts> list) {
 
         String partlisttop = "<form action=\"FrontController\" method=\"GET\">"
-                + "<table id=\"parlist\" border =\"1px\">"
+                + "<table class=second >"
                 + "<tr> <th>Description </th> <th>Price </th> <th> Amount</th> </tr>";
 
         String partlistmid = "";
@@ -135,5 +135,6 @@ public class HtmlConverter {
         
         return table;
     }
+    
 
 }
