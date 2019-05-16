@@ -53,11 +53,8 @@
             <input type="hidden" value="<%= widthShed %>" name = "widthShed">
             <input type="hidden" value="<%= angle %>" name = "angle">
 
+            <button type="submit"  name="command" value="shoppingcart"> Go to Shoppingcart </button>
             <button type="submit" name="command" value="buy">Pay for the carport</button> 
-            <button type="submit"  name="command" value="shoppingcart"> Go to shoppingcart </button>
-
-            <button type="submit" name="command" value="materialList"> MaterialList  </button>            
-
 
         </form>
 
