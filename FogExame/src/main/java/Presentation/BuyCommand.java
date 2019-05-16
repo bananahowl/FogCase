@@ -11,59 +11,52 @@ import DataLayer.MetalParts;
 import DataLayer.Order;
 import DataLayer.Shed;
 import DataLayer.User;
-import Logic.CalcPartList;
 import static Logic.CalcPartList.totalpartlist;
 import Logic.CalcPrice;
 import Logic.CarportException;
 import Logic.CreateCarport;
-import Logic.Facade.CarportFacade;
 import Logic.Facade.OrderFacade;
 import static Presentation.HtmlConverter.printMetalPartList;
 import static Presentation.HtmlConverter.printPartList;
-import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
  *
  * @author ahmed
  */
-public class MaterialListCommand extends Command {
+public class BuyCommand extends Command {
+
+    public BuyCommand() {
+    }
 
     @Override
     String execute(HttpServletRequest request, HttpServletResponse response) throws CarportException {
+
         int length = Integer.parseInt(request.getParameter("length"));
         int width = Integer.parseInt(request.getParameter("width"));
         int lengthShed = Integer.parseInt(request.getParameter("lengthShed"));
         int widthShed = Integer.parseInt(request.getParameter("widthShed"));
         int angle = Integer.parseInt(request.getParameter("angle"));
-
-        /*
-        ArrayList<Order> shoppingcart = new ArrayList();
-        User user = (User) request.getSession().getAttribute("user");
-         */
         int price = CreateCarport.NumbersAngleRoof(length, width, widthShed, lengthShed, angle);
-        Carport cp = CreateCarport.createCarportAngleRoof(length, width, lengthShed, widthShed,angle, price);
-        Shed sh = new Shed(lengthShed, 220, widthShed);
-        Carport carp = new Carport(length, 220, width, sh, angle, 0);
-        ArrayList<MaterialList> list = totalpartlist(carp);
+        Carport cp = CreateCarport.createCarportAngleRoof(length, width, widthShed,lengthShed,angle, price);
+       /* User user = (User) request.getSession().getAttribute("user");
+        ArrayList<Order> shoppingcart = new ArrayList();
+        Order orders = OrderFacade.createOrder(user.getUser_id(), cp);
+        shoppingcart.add(orders);
+        String orderss = HtmlConverter.generateOrdersHTML(shoppingcart);*/
+        ArrayList<MaterialList> list = totalpartlist(cp);
         String slist = printPartList(list);
-        
         CalcPrice lizz = new CalcPrice();
         ArrayList<MetalParts> mlist = lizz.metalParts(list);
         String smlist = printMetalPartList(mlist);
-        /*
-        Order orders = OrderFacade.createOrder(1, cp, user);
-        shoppingcart.add(orders);
-         */
         request.setAttribute("mlist", slist);
         request.setAttribute("smlist", smlist);
+//        request.setAttribute("shoppingcart", shoppingcart);
+//        request.setAttribute("order", orderss);
 
-        return "MaterialList";
+        return "Buying";
 
     }
 

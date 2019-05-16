@@ -37,10 +37,30 @@
             CarportFacade cf = new CarportFacade();
             int width = cf.getCarportWidth(Integer.parseInt(request.getParameter("width")));
             int length = cf.getCarportLength(Integer.parseInt(request.getParameter("length")));
+            //${mlist}
         %>
         ${table}
+        <form action= "FrontController" method="GET" > 
+            <%
+                int lengths = Integer.parseInt(request.getParameter("length"));
+                int widths = Integer.parseInt(request.getParameter("width"));
+                int lengthShed = Integer.parseInt(request.getParameter("lengthShed"));
+                int widthShed = Integer.parseInt(request.getParameter("widthShed"));
+                int angle = Integer.parseInt(request.getParameter("angle"));
+            %>
+            <input type="hidden" value="<%= lengths %>" name = "length">
+            <input type="hidden" value="<%= widths %>" name = "width">
+            <input type="hidden" value="<%= lengthShed %>" name = "lengthShed">
+            <input type="hidden" value="<%= widthShed %>" name = "widthShed">
+            <input type="hidden" value="<%= angle %>" name = "angle">
 
-        ${mlist}
+            <button type="submit"  name="command" value="shoppingcart"> Go to Shoppingcart </button>
+            <button type="submit" name="command" value="buy">Pay for the carport</button> 
+
+        </form>
+
+        <br>
+
         X${shoppingcart}X
         ${order}X
 
@@ -81,8 +101,7 @@ style="stroke:rgb(0,0,0);stroke-width:1"/>  -->
                 <h2><%=length%> in cm</h2>
                 <br>
                 <h2> Side view</h2>
-                <svg height ="300" width ="<%=length + 25%>">
-
+                <svg height ="600" width ="<%=length + 25%>">
 
 
 <!--        <line x1="0" y1="<%=length + 10.5%>" x2="10" y2="<%=length + 5.5%>"
@@ -98,7 +117,7 @@ style="stroke:rgb(0,0,0);stroke-width:1"/>  -->
                 <% int tempp = length;
                     for (int i = 0; i < 1000; i++) {
                         if (tempp >= -0) {
-                %><rect x="<%=tempp%>" y="30"  width="10" height="220" fill="none"
+                %><rect x="<%=tempp%>" y="180"  width="10" height="220" fill="none"
                       style="stroke:rgb(0,0,0);stroke-width:3"/>
                 <rect x="10" y="<%=length + 10.5%>"  width="<%=tempp - 10%>" height="1" fill="#000000" /> <%
                             tempp = tempp - 120;
@@ -108,8 +127,12 @@ style="stroke:rgb(0,0,0);stroke-width:1"/>  -->
                     }
                 %>
 
-                <rect x="0" y="0" width="<%=length + 10%>" height="30" fill="#none"
+                <rect x="0" y="170" width="<%=length + 10%>" height="10" fill="#none"
                       style="stroke:rgb(0,0,0);stroke-width:3"/>
+                <%if(angle != 1){ %>
+                <rect x="0" y="70" width="<%=length + 10%>" height="100" fill="#none"
+                      style="stroke:rgb(0,0,0);stroke-width:3"/>
+                <%}%>
 
 
                 </svg>   
@@ -117,7 +140,7 @@ style="stroke:rgb(0,0,0);stroke-width:1"/>  -->
                 <br>
 
                 <h1> Front view</h1>
-                <svg height ="300" width ="<%=width + 25%>">
+                <svg height ="600" width ="<%=width + 25%>">
 
 
 <!--    ½    <line x1="0" y1="<%=length + 10.5%>" x2="10" y2="<%=length + 5.5%>"
@@ -131,13 +154,17 @@ style="stroke:rgb(0,0,0);stroke-width:1"/>
 style="stroke:rgb(0,0,0);stroke-width:1"/>  -->
 
 
-                %><rect x="0" y="30"  width="10" height="220" fill="none"
+                %><rect x="0" y="180"  width="10" height="220" fill="none"
                         style="stroke:rgb(0,0,0);stroke-width:3"/>
-                <rect x="<%=width - 10%>" y="30"  width="10" height="220" fill="none"
+                <rect x="<%=width - 10%>" y="180"  width="10" height="220" fill="none"
                       style="stroke:rgb(0,0,0);stroke-width:3"/>
                 <rect x="10" y="<%=length + 10.5%>"  width="<%=length - 10%>" height="1" fill="#000000" />
+                <%if(angle != 1){ %>
+                <polygon points="<%=width / 2%>,0 <%=width%>, 170 0,170" fill="none"
+                         style="stroke:rgb(0,0,0);stroke-width:3"/>
+                <%}%>
 
-                <rect x="0" y="0" width="<%=width%>" height="30" fill="#none"
+                <rect x="0" y="170" width="<%=width%>" height="10" fill="#none"
                       style="stroke:rgb(0,0,0);stroke-width:3"/>
 
 

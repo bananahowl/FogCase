@@ -1,0 +1,34 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Presentation;
+
+import Logic.CarportException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ *
+ * @author ahmed
+ */
+public class DesignCommand extends Command {
+
+    public DesignCommand() {
+    }
+
+    @Override
+    String execute(HttpServletRequest request, HttpServletResponse response) throws CarportException {
+        
+        int length = Integer.parseInt(request.getParameter("length"));
+        int width = Integer.parseInt(request.getParameter("width"));
+        int lengthShed = Integer.parseInt(request.getParameter("lengthShed"));
+        int widthShed = Integer.parseInt(request.getParameter("widthShed"));
+        int angle = Integer.parseInt(request.getParameter("angle"));
+        
+        
+        return "Design";
+    }
+    
+}

@@ -31,6 +31,8 @@
                     <p>BESKYT BILEN MED EN CARPORT</p>
                     <p>Det kan beskrives som en delvist lukket overdækning af bilen, som enten er fritstående eller bygget som en del af huset. For de fleste, og specielt dem der elsker biler, er den uundværlig. Med en carport kan du slappe helt af. Den beskytter nemlig din bil mod regn og slud. Det er derfor praktisk at lade bilen komme i læ under en overdækning. Du slipper for at skulle skrabe ruderne fri for is om vinteren, at vade igennem vandpytter om efteråret eller at sætte dig ind i en skoldhed bil om sommeren. Den er også hurtigere at opføre end en garage. Du kan derfor både hurtigt og nemt opføre den, og derved beskytte din bil efter kort tid. Det er en gevinst for huset, som får det til at fremstå færdigt. Alt andet vil være synd. En flot carport forøger husets værdi, og det vil have betydning, hvis du en dag skal sælge din bolig. Så gå på jagt og lad dig inspirere af vores store udvalg.
                     </p>
+                        <button type="submit" class="btn btn-secondary btn-lg btn-block" value="customize">Customize Carport</button>
+                    
                 </div>
                 <div class="card">
                     <h2><b>NYT INFO</b></h2>
@@ -85,7 +87,5 @@
         <div class="footer">
             <h2>Footer</h2>
         </div>
-
-
     </body>
 </html>

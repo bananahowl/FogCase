@@ -1,26 +1,15 @@
 <%-- 
-    Document   : SVGCarport
-    Created on : 29-04-2019, 10:49:05
-    Author     : fskn
+    Document   : Buying
+    Created on : 16-05-2019, 11:41:32
+    Author     : ahmed
 --%>
 
-<%@page import="Logic.Facade.CarportFacade"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html> 
-<%
-    CarportFacade cf = new CarportFacade();
-    int width = cf.getCarportWidth(Integer.parseInt(request.getParameter("width")));
-    int length = cf.getCarportLength(Integer.parseInt(request.getParameter("length")));
-    // this is a test method to work on the code
-%>
-
+<!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>MaterialList Page</title>
-        <link href ="styling.css" rel="stylesheet" type="text/css"/>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        
+        <title>JSP Page</title>
     </head>
     <body>
         <div class="header">
@@ -28,12 +17,10 @@
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
             <link href ="styling.css" rel="stylesheet" type="text/css"/>
         </div>
-
-        <div class="row" >
-            <div class="col-3 col-s-3 menu">
-                
-            </div>
-        </div>
+        <br>
+        <h1>You have bout a carport here is the list of materials and a sketch!</h1>
+        <br>
+        
         <div class =" field">
 
 
@@ -49,6 +36,8 @@
             </form>
 
         </div>
-
+        
+        
+        
     </body>
 </html>

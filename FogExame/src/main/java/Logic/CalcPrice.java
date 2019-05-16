@@ -16,7 +16,7 @@ import java.util.ArrayList;
  *
  * @author ahmed
  */
-public class CalcPrice {
+public  class CalcPrice {
 
     public int woodPrice(ArrayList<MaterialList> list) {
 

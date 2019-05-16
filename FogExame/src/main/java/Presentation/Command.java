@@ -18,6 +18,11 @@ abstract class Command {
         
         commands.put("calculate", new CalculateCarportCommand());
         commands.put("materialList", new MaterialListCommand());
+        
+        commands.put("customize", new CustomizeCommand());
+        commands.put("design", new DesignCommand());
+        
+        commands.put("buy", new BuyCommand());
         /*
         commands.put( "createOrder", new CreateOrder());
         commands.put( "seeMyOrders", new GetMyOrders());*/
