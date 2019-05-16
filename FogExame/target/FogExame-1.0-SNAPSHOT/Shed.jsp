@@ -55,14 +55,6 @@
 
             <button type="submit" name="command" value="buy">Pay for the carport</button> 
             <button type="submit"  name="command" value="shoppingcart"> Go to shoppingcart </button>
-<<<<<<< HEAD
-            
-=======
-
-            <button type="submit" name="command" value="materialList"> MaterialList  </button>            
-
-
->>>>>>> ab464e467d7446f8faf73239f996d1f1e357b173
         </form>
 
         <br>
