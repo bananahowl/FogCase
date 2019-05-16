@@ -39,7 +39,7 @@ public class BuyCommand extends Command {
         int lengthShed = Integer.parseInt(request.getParameter("lengthShed"));
         int widthShed = Integer.parseInt(request.getParameter("widthShed"));
         int angle = Integer.parseInt(request.getParameter("angle"));
-        int price = CreateCarport.NumbersFlatRoof(width, length, width, length);
+        int price = CreateCarport.NumbersAngleRoof(length, width, widthShed, lengthShed, angle);
         Carport cp = CreateCarport.createCarportAngleRoof(length, width, widthShed,lengthShed,angle, price);
        /* User user = (User) request.getSession().getAttribute("user");
         ArrayList<Order> shoppingcart = new ArrayList();

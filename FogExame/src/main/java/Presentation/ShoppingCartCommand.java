@@ -46,14 +46,13 @@ public class ShoppingCartCommand extends Command {
         int lengthShed = Integer.parseInt(request.getParameter("lengthShed"));
         int widthShed = Integer.parseInt(request.getParameter("widthShed"));
         int angle = Integer.parseInt(request.getParameter("angle"));
-        int price = CreateCarport.NumbersFlatRoof(width, length, width, length);
+        int price = CreateCarport.NumbersAngleRoof(width, length, width, angle,length);
         
         //User user = (User) request.getSession().getAttribute("user");
-        //Carport cp = CreateCarport.createCarportFlatRoof(length, width, lengthShed, widthShed, price);
+        Carport cp = CreateCarport.createCarportAngleRoof(length, width, widthShed, lengthShed, angle, price);
         
-        Shed sh = new Shed(lengthShed, 220, widthShed);
-        Carport carp = new Carport(length, 220, width, sh, angle, 0);
-        ArrayList<MaterialList> list = totalpartlist(carp);
+
+        ArrayList<MaterialList> list = totalpartlist(cp);
         CalcPrice lizz = new CalcPrice();
         ArrayList<MetalParts> mlist = lizz.metalParts(list);
         String slist = printPartList(list);
