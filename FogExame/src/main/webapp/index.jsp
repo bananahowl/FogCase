@@ -20,9 +20,13 @@
         </div>
 
         <div class="topnav">
-            <a href="index.jsp">Home</a>
+            <form method="get" action="index.jsp">
+                <button type="submit" class="btn btn-light" name="command" value="calculate">Home</button>
+            </form>
         </div>
         <div class="shadow-lg p-3 mb-5 bg-white rounded">
+       
+        </div>
             <div class="leftcolumn">
                 <div class="card">
                     <h2><b>Design your carport with your own measurements at Fogs</b></h2>
@@ -61,7 +65,7 @@
                     <form name="login" action="FrontController" method="GET">
                         <table class ="first">
                             <td>
-                                <h2>Sign in here</h2>
+                                <h2><b>Sign in here</b></h2>
                                 <input type="hidden" name="command" value="login">
                                 <div class="form-group"
                                      <p>Email:<br></p>

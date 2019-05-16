@@ -25,10 +25,10 @@
             <a href="index.jsp">Home</a>
         </div>
         <div class="shadow-lg p-3 mb-5 bg-white rounded">
-                <form action="FrontController" method="GET">
-                    <div class ="leftcolumn">
-                        <div class ="card">
-                            <table class="first">
+            <div class="leftcolumn2">
+                <div class="card">
+                    <form action="FrontController" method="GET">
+                        <table class="first">
                             <h2><b>Design your own carport - with your measurements</b></h2>
                             <thead><tr><th>Carport length</th><th>Carport width</th><th>Shed length</th><th>Shed width</th><th>Roof angle</th></tr></thead>
                             <tbody>
@@ -47,15 +47,18 @@
                                             <td><select name=angle id="option">
                                                     <% for (int i = 1; i < cf.getMaxAngles() + 1; i++) {%>
                                                     <option value=<%=i%>><%= cf.getRoofAngle(i)%></option><% }%></td>
-                                            
+
                                             <td><button type="submit" class="btn btn-outline-dark" name="command" value="calculate">Calculate </button></td>
                                             <td><span id="errorContainer"></span></td>
                                 </tr>
-                            </table>
-                </form>
-                <div class="rightcolumn">
-                        ${userbox}
+                        </table>
+                    </form>
+                </div></div>
+            <div class="rightcolumn2">
+                <div class="card">
+                    ${userbox}
                 </div>
-                     </div>
+            </div>
+        </div>
     </body>
 </html>
