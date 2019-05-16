@@ -34,8 +34,6 @@ public class CalculateCarportCommand extends Command {
         int lengthShed = Integer.parseInt(request.getParameter("lengthShed"));
         int widthShed = Integer.parseInt(request.getParameter("widthShed"));
         int angle = Integer.parseInt(request.getParameter("angle"));
-        HttpSession session = request.getSession();
-        CalcPartList tsst = new CalcPartList();
         ArrayList<Order> shoppingcart = new ArrayList();
         User user = (User) request.getSession().getAttribute("user");
         if (angle == 1) {
@@ -44,9 +42,7 @@ public class CalculateCarportCommand extends Command {
             String html = HtmlConverter.carportFlatRooftoHtml(cp);
             Order orders = OrderFacade.createOrder(user.getUser_id(), cp);
             shoppingcart.add(orders);
-            Shed she = new Shed(lengthShed, 220, widthShed);
-            Carport carPor = new Carport(length, 220, width, she, angle, 0);
-            ArrayList<MaterialList> list = totalpartlist(carPor);
+            ArrayList<MaterialList> list = totalpartlist(cp);
             String slist = printPartList(list);
             String orderss = HtmlConverter.generateOrdersHTML(shoppingcart);
             request.setAttribute("carport", cp); // the good stuff
@@ -64,10 +60,8 @@ public class CalculateCarportCommand extends Command {
         } else {
             int price = CreateCarport.NumbersAngleRoof(width, length, width, length, angle);
             Carport cp = CreateCarport.createCarportAngleRoof(length, width, lengthShed, widthShed, angle, price);
-            String html = HtmlConverter.carportAnlgeRooftoHtml(cp);
-            Shed she = new Shed(lengthShed, 0, widthShed);
-            Carport carPor = new Carport(length, 220, width, she, angle, 0);
-            ArrayList<MaterialList> list = totalpartlist(carPor);
+            String html = HtmlConverter.carportAnlgeRooftoHtml(cp);            
+            ArrayList<MaterialList> list = totalpartlist(cp);
             String slist = printPartList(list);
             request.setAttribute("mlist", slist);
             request.setAttribute("carport", cp);
