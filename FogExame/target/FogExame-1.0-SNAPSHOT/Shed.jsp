@@ -52,7 +52,7 @@
             <input type="hidden" value="<%= lengthShed %>" name = "lengthShed">
             <input type="hidden" value="<%= widthShed %>" name = "widthShed">
             <input type="hidden" value="<%= angle %>" name = "angle">
-            <button type=\"submit\"  name=\"command\" value=\"Shoppingcart\"> Go to shoppingcart </button>
+            <button type="submit"  name="command" value="Shoppingcart"> Go to shoppingcart </button>
             <button type="submit" name="command" value="materialList"> MaterialList  </button>            
         </form>
 
@@ -152,6 +152,8 @@ style="stroke:rgb(0,0,0);stroke-width:1"/>  -->
                 <rect x="<%=width - 10%>" y="30"  width="10" height="220" fill="none"
                       style="stroke:rgb(0,0,0);stroke-width:3"/>
                 <rect x="10" y="<%=length + 10.5%>"  width="<%=length - 10%>" height="1" fill="#000000" />
+                <polygon points="300,0 <%=width%>, 190 0,190" fill="none"
+                         style="stroke:rgb(0,0,0);stroke-width:3"/>
 
                 <rect x="0" y="0" width="<%=width%>" height="30" fill="#none"
                       style="stroke:rgb(0,0,0);stroke-width:3"/>

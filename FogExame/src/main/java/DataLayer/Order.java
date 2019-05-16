@@ -14,6 +14,7 @@ import java.util.Objects;
 public class Order {
     
     private int order_id;
+    
     private Carport carport;
     private boolean shipped;
     
