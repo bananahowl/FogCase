@@ -16,10 +16,14 @@ import static Logic.CalcPartList.totalpartlist;
 import Logic.CalcPrice;
 import Logic.CarportException;
 import Logic.CreateCarport;
+import Logic.Facade.CarportFacade;
 import Logic.Facade.OrderFacade;
 import static Presentation.HtmlConverter.printMetalPartList;
 import static Presentation.HtmlConverter.printPartList;
+import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -60,6 +64,7 @@ public class MaterialListCommand extends Command {
         request.setAttribute("smlist", smlist);
 
         return "MaterialList";
+
     }
 
 }
