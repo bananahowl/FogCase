@@ -1,5 +1,21 @@
+<<<<<<< HEAD
 C:\Users\frizz\OneDrive\Documents\GitHub\FogCase\FogExame\src\test\java\Logic\Facade\OrderFacadeTest.java
 C:\Users\frizz\OneDrive\Documents\GitHub\FogCase\FogExame\src\test\java\Logic\Facade\CarportFacadeTest.java
 C:\Users\frizz\OneDrive\Documents\GitHub\FogCase\FogExame\src\test\java\Logic\CalcPriceTest.java
 C:\Users\frizz\OneDrive\Documents\GitHub\FogCase\FogExame\src\test\java\Logic\Facade\UserFacadeTest.java
 C:\Users\frizz\OneDrive\Documents\GitHub\FogCase\FogExame\src\test\java\Logic\CalcPartListTest.java
+=======
+<<<<<<< HEAD
+C:\Users\ahmed\Desktop\GitCAN\FogCase\FogExame\src\test\java\Logic\Facade\OrderFacadeTest.java
+C:\Users\ahmed\Desktop\GitCAN\FogCase\FogExame\src\test\java\Logic\Facade\UserFacadeTest.java
+C:\Users\ahmed\Desktop\GitCAN\FogCase\FogExame\src\test\java\Logic\CalcPriceTest.java
+C:\Users\ahmed\Desktop\GitCAN\FogCase\FogExame\src\test\java\Logic\Facade\CarportFacadeTest.java
+C:\Users\ahmed\Desktop\GitCAN\FogCase\FogExame\src\test\java\Logic\CalcPartListTest.java
+=======
+C:\Users\emils\Desktop\2semester\FogCase\FogExame\src\test\java\Logic\Facade\UserFacadeTest.java
+C:\Users\emils\Desktop\2semester\FogCase\FogExame\src\test\java\Logic\Facade\CarportFacadeTest.java
+C:\Users\emils\Desktop\2semester\FogCase\FogExame\src\test\java\Logic\Facade\OrderFacadeTest.java
+C:\Users\emils\Desktop\2semester\FogCase\FogExame\src\test\java\Logic\CalcPartListTest.java
+C:\Users\emils\Desktop\2semester\FogCase\FogExame\src\test\java\Logic\CalcPriceTest.java
+>>>>>>> fa260e955ceb0b45da81e2895eb8c2eae304a3ff
+>>>>>>> ac86472ec862949e9e0ec09b66f1ddd871d09481

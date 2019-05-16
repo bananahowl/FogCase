@@ -27,7 +27,6 @@
             <br>
             Tree:
             ${mlist}
-            <br>
             Metal:
             ${smlist}
             <br>
