@@ -19,31 +19,25 @@
             <img src="https://media.licdn.com/dms/image/C4E0BAQGleVi1XAFxBg/company-logo_200_200/0?e=2159024400&v=beta&t=qQ2ebmGf9u4b45tNF9OyVrcy7NGpnwLXZkLrOky6ibM" alt="Fog" width="200" height="200">
         </div>
 
-            <form method="get" action="index.jsp">
-                <button type="submit" class="btn btn-light" name="command" value="calculate">Home</button>
-            </form>
+        <div class="topnav">
+            <a href="index.jsp">Home</a>
         </div>
-        <div class="shadow-lg p-3 mb-5 bg-white rounded">
-            <div class="leftcolumn">
+        
+        <div class="row">
+        <div class="column side">
+            <h1></h1>
+        </div>
+            <div class="column middle">
                 <div class="card">
                     <h2><b>Material list Tree</b></h2>
-                    ${mlist}
+            ${mlist}
                 </div>
                 <div class="card">
                     <h2><b>Material list Metal:</b></h2>
-                    ${smlist}
+            ${smlist}
                 </div>
             </div>
+            
         </div>
-        <div class="rightcolumn">
-
-            <div class="card">
-                <h2>About Fog</h2>
-                <img src="https://f.nordiskemedier.dk/2a4on0lxc8g1816b.jpg" alt="Fog" width="362" height="280">
-            </div>
-        </div>
-    <div class="footer">
-        <h2>Footer</h2>
-    </div>
 </body>
 </html>

@@ -25,11 +25,15 @@
             <a href="index.jsp">Home</a>
         </div>
         <div class="shadow-lg p-3 mb-5 bg-white rounded">
-            <div class="leftcolumn2">
+            <div class="row">
+        <div class="column side">
+            <h1></h1>
+        </div>
+            <div class="column middle">
                 <div class="card">
                     <form action="FrontController" method="GET">
                         <table class="first">
-                            <h2><b>Design your own carport - with your measurements</b></h2>
+                            <h5><b>Design your own carport - with your measurements</b></h5>
                             <thead><tr><th>Carport length</th><th>Carport width</th><th>Shed length</th><th>Shed width</th><th>Roof angle</th></tr></thead>
                             <tbody>
                                 <tr>  <td> <select name=length id="option">                        
@@ -53,12 +57,12 @@
                                 </tr>
                         </table>
                     </form>
-                </div></div>
-            <div class="rightcolumn2">
+                </div>
                 <div class="card">
                     ${userbox}
                 </div>
             </div>
+        </div>
         </div>
     </body>
 </html>

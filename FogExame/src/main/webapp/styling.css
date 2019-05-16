@@ -31,6 +31,7 @@ body{
 .topnav {
   overflow: hidden;
   background-color: #333;
+  width: 100%;
 }
 
 /* Style the topnav links */
@@ -49,37 +50,14 @@ body{
   color: black;
 }
 
-/* Create two unequal columns that floats next to each other */
-/* Left column */
-.leftcolumn {   
-  float: left;
-  width: 75%;
-}
-
-.mid {   
-  float: left;
-  width: 60%;
-}
-/* Right column */
-.rightcolumn {
-  float: left;
+/* Left and right column */
+.column.side {
   width: 25%;
-  background-color: #f1f1f1;
-  padding-left: 20px;
 }
 
-.rightcolumn2 {
-  float: left;
-  width: 30%;
-  background-color: #f1f1f1;
-  padding-left: 20px;
-}
-
-/* Fake image */
-.fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
+/* Middle column */
+.column.middle {
+  width: 50%;
 }
 
 /* Add a card effect for articles */
@@ -103,19 +81,9 @@ body{
   background: #ddd;
   margin-top: 20px;
 }
-
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
-  .leftcolumn, .rightcolumn {   
-    width: 100%;
-    padding: 0;
-  }
-}
-
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 400px) {
-  .topnav a {
-    float: none;
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column.side, .column.middle {
     width: 100%;
   }
 }
@@ -136,14 +104,6 @@ select {
     text-align: center;
     font-family: Trebuchet MS;
     font-size: 20px;
-}
-button {
-    background-color: grey;
-    color: white;
-    padding: 20px 32px;
-    font-size: 18px;
-    font-family: Trebuchet MS;
-    text-align: center;
 }
 
 table.first{
