@@ -121,16 +121,16 @@ public class HtmlConverter {
     }
 
     public static String showLoggedInUser(User user) {
-        String table = "<table class =second>"
-                + " <tr><th>ID </th><th>Firstname</th><th>Lastname</th><th>Adress</th><th>City</th><th>Zipcode</th><th>Phone</th><th>Email</th></tr>"
-                + "<tr><td>" + user.getUser_id() + " </td>"
-                + "<td>" + user.getFirstname() + " </td>"
-                + "<td>" + user.getLastname() + " </td>"
-                + "<td>" + user.getAdress() + " </td>"
-                + "<td>" + user.getCity() + " </td>"
-                + "<td>" + user.getZipcode() + " </td>"
-                + "<td>" + user.getPhone() + " </td>"
-                + "<td>" + user.getEmail() + " </td></tr>"
+        String table = "<table class =rigthcolumn>"
+                + " <tr><th><b>Contact information</b></th></tr>"
+                + "<tr><td>" + user.getUser_id() + " </td></tr>"
+                + "<tr><td>" + user.getFirstname() + " </td></tr>"
+                + "<tr><td>" + user.getLastname() + " </td></tr>"
+                + "<tr><td>" + user.getAdress() + " </td></tr>"
+                + "<tr><td>" + user.getCity() + " </td></tr>"
+                + "<tr><td>" + user.getZipcode() + " </td></tr>"
+                + "<tr><td>" + user.getPhone() + " </td></tr>"
+                + "<tr><td>" + user.getEmail() + " </td></tr>"
         + "</table>";
         
         return table;
