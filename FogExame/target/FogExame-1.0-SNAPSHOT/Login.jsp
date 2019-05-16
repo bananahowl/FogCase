@@ -44,6 +44,7 @@
                 </td>
             </table>
         </form>
+            <h4> ${error} </h4>
         </div>
     </body>
 </html>
