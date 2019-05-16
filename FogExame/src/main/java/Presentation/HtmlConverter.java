@@ -85,7 +85,7 @@ public class HtmlConverter {
 
         String partlisttop = "<form action=\"FrontController\" method=\"GET\">"
                 + "<table id=\"parlist\" border =\"1px\">"
-                + "<tr> <th>Description </th> <th>Legnth </th> <th> Amount</th> </tr>";
+                + "<tr> <th>Description </th> <th>Price </th> <th> Amount</th> </tr>";
 
         String partlistmid = "";
         for (int i = 0; i < list.size(); i++) {
