@@ -44,6 +44,8 @@
             <br>
             
             <button type="submit" name="command" value="materialList"> MaterialList  </button> 
+            <button type="submit" name="command" value="design"> See carport design  </button> 
+            
              
             <br>
             

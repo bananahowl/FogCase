@@ -21,6 +21,11 @@ public class DesignCommand extends Command {
     @Override
     String execute(HttpServletRequest request, HttpServletResponse response) throws CarportException {
         
+        int length = Integer.parseInt(request.getParameter("length"));
+        int width = Integer.parseInt(request.getParameter("width"));
+        int lengthShed = Integer.parseInt(request.getParameter("lengthShed"));
+        int widthShed = Integer.parseInt(request.getParameter("widthShed"));
+        int angle = Integer.parseInt(request.getParameter("angle"));
         
         
         return "Design";
