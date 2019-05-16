@@ -2,6 +2,9 @@
 Test set: Logic.CalcPartListTest
 -------------------------------------------------------------------------------
 <<<<<<< HEAD
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.451 sec
+=======
+<<<<<<< HEAD
 Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.504 sec
 =======
 <<<<<<< HEAD
@@ -127,3 +130,4 @@ java.lang.AssertionError: The test case is a prototype.
 Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.864 sec
 >>>>>>> 4511d7c234fdcedbb9aa19e77dcc89dc3f541d58
 >>>>>>> ec32bebfe158a019f168eeef9f5328f226bd35e5
+>>>>>>> 6cbbccfd8a6d7d0f6bd42dd5a217b0f86f64a7f9

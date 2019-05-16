@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <<<<<<< HEAD
+<testsuite tests="11" failures="0" name="Logic.CalcPartListTest" time="1.46" errors="0" skipped="0">
+=======
+<<<<<<< HEAD
 <testsuite tests="11" failures="0" name="Logic.CalcPartListTest" time="2.521" errors="0" skipped="0">
 =======
 <<<<<<< HEAD
@@ -8,6 +11,7 @@
 <testsuite tests="11" failures="0" name="Logic.CalcPartListTest" time="1.872" errors="0" skipped="0">
 >>>>>>> 4511d7c234fdcedbb9aa19e77dcc89dc3f541d58
 >>>>>>> ec32bebfe158a019f168eeef9f5328f226bd35e5
+>>>>>>> 6cbbccfd8a6d7d0f6bd42dd5a217b0f86f64a7f9
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_181\jre\bin"/>
@@ -97,6 +101,9 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
+<<<<<<< HEAD
+  <testcase classname="Logic.CalcPartListTest" name="testTotalMaterial" time="0.006"/>
+=======
 <<<<<<< HEAD
   <testcase classname="Logic.CalcPartListTest" name="testTotalMaterial" time="0.02"/>
   <testcase classname="Logic.CalcPartListTest" name="testCalcAngledVerticalSper" time="0"/>
@@ -239,14 +246,15 @@
   <testcase classname="Logic.CalcPartListTest" name="testCalculatePortPost" time="0.001"/>
 =======
   <testcase classname="Logic.CalcPartListTest" name="testTotalMaterial" time="0.013"/>
+>>>>>>> 6cbbccfd8a6d7d0f6bd42dd5a217b0f86f64a7f9
   <testcase classname="Logic.CalcPartListTest" name="testCalcAngledVerticalSper" time="0"/>
-  <testcase classname="Logic.CalcPartListTest" name="testTotalpartlist" time="1.69"/>
+  <testcase classname="Logic.CalcPartListTest" name="testTotalpartlist" time="1.332"/>
   <testcase classname="Logic.CalcPartListTest" name="testCalcShedMats" time="0"/>
   <testcase classname="Logic.CalcPartListTest" name="testCalcAngledHorizontalSper" time="0"/>
-  <testcase classname="Logic.CalcPartListTest" name="testTotalwoodprice" time="0.002"/>
-  <testcase classname="Logic.CalcPartListTest" name="testCalcRem" time="0"/>
+  <testcase classname="Logic.CalcPartListTest" name="testTotalwoodprice" time="0.001"/>
+  <testcase classname="Logic.CalcPartListTest" name="testCalcRem" time="0.001"/>
   <testcase classname="Logic.CalcPartListTest" name="testCalcRoofSides" time="0"/>
-  <testcase classname="Logic.CalcPartListTest" name="testCalcSper" time="0.001"/>
+  <testcase classname="Logic.CalcPartListTest" name="testCalcSper" time="0"/>
   <testcase classname="Logic.CalcPartListTest" name="testCalcRoofFronts" time="0"/>
 >>>>>>> ec32bebfe158a019f168eeef9f5328f226bd35e5
   <testcase classname="Logic.CalcPartListTest" name="testCalculatePortPost" time="0"/>
