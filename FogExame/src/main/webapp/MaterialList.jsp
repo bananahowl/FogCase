@@ -35,7 +35,11 @@
 
 
             <br>
+            Tree:
             ${mlist}
+            <br>
+            Metal:
+            ${smlist}
             <br>
             <form method="get" action="index.jsp">
             <button type="submit" name="command" value="calculate"> Back to home</button>
