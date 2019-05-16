@@ -25,7 +25,7 @@ import java.util.logging.Logger;
 public class CreateCarport {
     public static Carport createCarportFlatRoof(int length, int width, int widthShed, int lengthShed, int price) {
         try {
-            Shed shed = new Shed(0, 0, 0);
+            Shed shed = new Shed(0, 220, 0);
             if (widthShed != 1 && lengthShed != 1) {
                
                     shed.setLength(getShedlength(lengthShed));
@@ -45,7 +45,7 @@ public class CreateCarport {
 
     public static Carport createCarportAngleRoof(int length, int width, int widthShed, int lengthShed, int angle, int price) {
         try {
-            Shed shed = new Shed(0, 0, 0);
+            Shed shed = new Shed(0, 220, 0);
             if (widthShed != 1 && lengthShed != 1) {
                     shed.setLength(getShedlength(lengthShed));
                     shed.setWidth(getShedwidth(widthShed));

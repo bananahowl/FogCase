@@ -237,14 +237,14 @@ public static ArrayList<MetalParts> addItem(MetalParts val) {
         
         try {
             
-            MaterialList shedtest = calcShedMats(CarportFacade.getShedwidth(carport.getShed().getWidth()),CarportFacade.getCarportLength(carport.getShed().getLength()));
-            MaterialList spertest = calcSper(CarportFacade.getCarportWidth(carport.getWidth()), CarportFacade.getCarportLength(carport.getLength()));
-            MaterialList remtest  = calcRem(CarportFacade.getCarportWidth(carport.getWidth()), CarportFacade.getCarportLength(carport.getLength()));
-            MaterialList posttest = calculatePortPost(CarportFacade.getCarportWidth(carport.getWidth()), CarportFacade.getCarportLength(carport.getLength()));
-            MaterialList rooftest = calcRoofSides(CarportFacade.getCarportWidth(carport.getWidth()), CarportFacade.getCarportLength(carport.getLength()), CarportFacade.getRoofAngle(carport.getRoofangle()));
-            MaterialList fronttest= calcRoofFronts(CarportFacade.getCarportWidth(carport.getWidth()), CarportFacade.getRoofAngle(carport.getRoofangle()));
-            MaterialList verticaltest = calcAngledVerticalSpær(CarportFacade.getCarportWidth(carport.getWidth()), CarportFacade.getCarportLength(carport.getLength()), CarportFacade.getRoofAngle(carport.getRoofangle()));
-            MaterialList horizontaltest = calcAngledHorizontalSpær(CarportFacade.getCarportWidth(carport.getWidth()), CarportFacade.getCarportLength(carport.getLength()));
+            MaterialList shedtest = calcShedMats(carport.getShed().getWidth(),carport.getShed().getLength());
+            MaterialList spertest = calcSper(carport.getWidth(), carport.getLength());
+            MaterialList remtest  = calcRem(carport.getWidth(), carport.getLength());
+            MaterialList posttest = calculatePortPost(carport.getWidth(), carport.getLength());
+            MaterialList rooftest = calcRoofSides(carport.getWidth(), carport.getLength(), carport.getRoofangle());
+            MaterialList fronttest= calcRoofFronts(carport.getWidth(),carport.getRoofangle());
+            MaterialList verticaltest = calcAngledVerticalSpær(carport.getWidth(), carport.getLength(), carport.getRoofangle());
+            MaterialList horizontaltest = calcAngledHorizontalSpær(carport.getWidth(),carport.getLength());
             
             ArrayList<MaterialList> duperlist = new ArrayList<>();
             duperlist.add(shedtest);
