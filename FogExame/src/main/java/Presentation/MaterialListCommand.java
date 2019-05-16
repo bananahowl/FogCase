@@ -49,7 +49,7 @@ public class MaterialListCommand extends Command {
             int price = CreateCarport.NumbersFlatRoof(width, length, width, length);
             Carport cp = CreateCarport.createCarportFlatRoof(length, width, lengthShed, widthShed, price);
             Shed sh = new Shed(lengthShed, 220, widthShed);
-            //Carport carp = new Carport(CarportFacade.getCarportLength(length), 220, CarportFacade.getCarportWidth(width), sh, angle, 0);
+            Carport carp = new Carport(length, 220, width, sh, angle, 0);
             ArrayList<MaterialList> list = totalpartlist(cp);
             String slist = printPartList(list);
             
