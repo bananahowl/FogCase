@@ -5,7 +5,9 @@
  */
 package Presentation;
 
+import DataLayer.Carport;
 import Logic.CarportException;
+import Logic.CreateCarport;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -26,8 +28,11 @@ public class DesignCommand extends Command {
         int lengthShed = Integer.parseInt(request.getParameter("lengthShed"));
         int widthShed = Integer.parseInt(request.getParameter("widthShed"));
         int angle = Integer.parseInt(request.getParameter("angle"));
+        int price = CreateCarport.NumbersAngleRoof(width, length, width, length, angle);
+        Carport carport = CreateCarport.createCarportAngleRoof(length, width, widthShed, lengthShed, angle, price);
+        String design = HtmlConverter.makeDesign(carport);
         
-        
+        request.setAttribute("SVG", design);
         return "Design";
     }
     

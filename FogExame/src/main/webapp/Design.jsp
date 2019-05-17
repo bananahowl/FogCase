@@ -34,6 +34,10 @@
         <input type="hidden" value="<%= angle%>" name = "angle">
         </form>
         
+        
+        ${SVG}
+        
+        <p> ----------------------------</p>
         <div class="row">
         <div class="column side">
             <h1></h1>

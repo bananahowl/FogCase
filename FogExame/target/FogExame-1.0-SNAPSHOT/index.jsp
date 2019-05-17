@@ -31,14 +31,12 @@
                 <div class="card">
                     <h2><b>Protect your car with a carport</b></h2>
                     <h5>Tekst</h5>
-<<<<<<< HEAD
-                    <button type="submit" class="btn btn-secondary btn-lg btn-block" name="command" value="customize">Customize Carport</button>
-=======
+
                     <form action="FrontController" method="GET">
                     <button type="submit" class="btn btn-secondary btn-lg btn-block" name="command" value="customize">Customize Carport</button>
                         
                     </form>
->>>>>>> aea3f5d3cd7597e74786e6b22ce940f643ceaac1
+
                 </div>
                 <div class="card">
                     <h2><b>About us </b></h2>
