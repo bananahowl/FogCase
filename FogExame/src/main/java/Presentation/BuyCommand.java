@@ -35,7 +35,7 @@ public class BuyCommand extends Command {
     String execute(HttpServletRequest request, HttpServletResponse response) throws CarportException {
         if (request.getSession(true).getAttribute("user") == null) {
             String error = "you have to be logged in before you can finalize your order";
-            request.setAttribute("error",error);
+            request.setAttribute("error", error);
             return "Login";
 
         } else {
@@ -58,10 +58,14 @@ public class BuyCommand extends Command {
             String smlist = printMetalPartList(mlist);
             request.setAttribute("mlist", slist);
             request.setAttribute("smlist", smlist);
+            String html = HtmlConverter.carportAnlgeRooftoHtml(cp);
+            request.setAttribute("table2", html);
+            request.setAttribute("mlist", slist);
+            request.setAttribute("smlist", smlist);
 //        request.setAttribute("shoppingcart", shoppingcart);
 //        request.setAttribute("order", orderss);
 
-            return "Buying";
+            return "ShoppingCart";
 
         }
     }
