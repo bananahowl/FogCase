@@ -18,6 +18,7 @@ import Logic.CarportException;
 import Logic.CreateCarport;
 import Logic.Facade.CarportFacade;
 import Logic.Facade.OrderFacade;
+import static Presentation.HtmlConverter.makeDesign;
 import static Presentation.HtmlConverter.printMetalPartList;
 import static Presentation.HtmlConverter.printPartList;
 import java.sql.SQLException;
@@ -46,11 +47,12 @@ public class MaterialListCommand extends Command {
         ArrayList<Order> shoppingcart = new ArrayList();
         User user = (User) request.getSession().getAttribute("user");
          */
+
         int price = CreateCarport.NumbersAngleRoof(length, width, widthShed, lengthShed, angle);
         Carport cp = CreateCarport.createCarportAngleRoof(length, width, lengthShed, widthShed,angle, price);
-        Shed sh = new Shed(lengthShed, 220, widthShed);
-        Carport carp = new Carport(length, 220, width, sh, angle, 0);
-        ArrayList<MaterialList> list = totalpartlist(carp);
+
+        ArrayList<MaterialList> list = totalpartlist(cp);
+
         String slist = printPartList(list);
         
         CalcPrice lizz = new CalcPrice();
@@ -60,8 +62,11 @@ public class MaterialListCommand extends Command {
         Order orders = OrderFacade.createOrder(1, cp, user);
         shoppingcart.add(orders);
          */
+        String dePrint = makeDesign(cp);
+        
         request.setAttribute("mlist", slist);
         request.setAttribute("smlist", smlist);
+        //request.setAttribute("print", dePrint);
 
         return "MaterialList";
 
