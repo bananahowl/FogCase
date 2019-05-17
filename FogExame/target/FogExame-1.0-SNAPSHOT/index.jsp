@@ -16,22 +16,22 @@
     </head>
     <body>
         <div class="header">
-            <img src="https://media.licdn.com/dms/image/C4E0BAQGleVi1XAFxBg/company-logo_200_200/0?e=2159024400&v=beta&t=qQ2ebmGf9u4b45tNF9OyVrcy7NGpnwLXZkLrOky6ibM" alt="Fog" width="200" height="200">
+            <img src="https://hr-skyen.dk/hr/image.php?companyid=226&id=5973" alt="Fog" width="500" heigth ="100">
         </div>
 
         <div class="topnav">
             <a href="index.jsp">Home</a>
         </div>
-        
+
         <div class="row">
-        <div class="column side">
-            <h1></h1>
-        </div>
+            <div class="column side">
+                <h1></h1>
+            </div>
             <div class="column middle">
                 <div class="card">
                     <h2><b>Protect your car with a carport</b></h2>
                     <h5>Tekst</h5>
-                        <button type="submit" class="btn btn-secondary btn-lg btn-block" value="customize">Customize Carport</button>
+                    <button type="submit" class="btn btn-secondary btn-lg btn-block" value="customize">Customize Carport</button>
                 </div>
                 <div class="card">
                     <h2><b>About us </b></h2>
@@ -39,9 +39,10 @@
                 </div>
             </div>
             <div class="column side">
-                <h5><b>Sign in</b></h5>
+                <div class="card">
                     <form name="login" action="FrontController" method="GET">
                         <table>
+                            <h5><b>Sign in</b></h5>
                             <td>
                                 <input type="hidden" name="command" value="login">
                                 <div class="form-group"
@@ -57,11 +58,33 @@
                         </table>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="Register.jsp">New around here? Register here</a>
+
                     </form>
-                <div class="card">
-                    
                 </div>
+                <div class="card">
+
+                </div>
+            </div>
         </div>
-        </div>
+        <div class ="footer">
+            <div class="row">
+                <div class="column side">
+                    <div class="card">
+                        <h2>TEST TEST</h2>
+                        </div>
+                    </div>
+                    <div class="column middle">
+                        <div class="card">
+                            <h2>TEST TEST</h2>
+                        </div>
+                    </div>
+                    <div class="column side">
+                        <div class="card">
+                            <h2>TEST TEST</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
     </body>
 </html>

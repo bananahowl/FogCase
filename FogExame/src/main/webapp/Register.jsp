@@ -16,58 +16,89 @@
     </head>
     <body>
         <div class="header">
-            <img src="https://media.licdn.com/dms/image/C4E0BAQGleVi1XAFxBg/company-logo_200_200/0?e=2159024400&v=beta&t=qQ2ebmGf9u4b45tNF9OyVrcy7NGpnwLXZkLrOky6ibM" alt="Fog" width="200" height="200">
+            <img src="https://hr-skyen.dk/hr/image.php?companyid=226&id=5973" alt="Fog" width="500" heigth ="100">
         </div>
+
         <div class="topnav">
             <a href="index.jsp">Home</a>
         </div>
         <div class="shadow-lg p-3 mb-5 bg-white rounded">
-        <div class="leftcolumn">
-            <div class="card">
-                <form action="FrontController" method="GET">
-                    <table class="first">
-                        <td>
-                             
-                                <h1><b>Register here</b></h1><br>
+            <div class="shadow-lg p-3 mb-5 bg-white rounded">
+                <div class="row">
+                    <div class="column side">
+                    </div>
+                    <div class="column middle">
+                        <div class="card">
+                            <form action="FrontController" method="GET">
+                                <table>
+                                    <td>
+                                        <h5><b>Register here</b></h5><br>
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="inputGroup-sizing-default">Firstname</span>
+                                            </div>
+                                            <input type="text" name="firstname" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                                        </div>
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="inputGroup-sizing-default">Lastname</span>
+                                            </div>
+                                            <input type="text" name="lastname" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                                        </div>
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="inputGroup-sizing-default">Adress</span>
+                                            </div>
+                                            <input type="text" name="adress" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                                        </div>
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="inputGroup-sizing-default">City</span>
+                                            </div>
+                                            <input type="text" name="city" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                                        </div>
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="inputGroup-sizing-default">Zipcode</span>
+                                            </div>
+                                            <input type="text" name="zipcode" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                                        </div>
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="inputGroup-sizing-default">Phone</span>
+                                            </div>
+                                            <input type="text" name="phonenumber" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                                        </div>
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="inputGroup-sizing-default">Email</span>
+                                            </div>
+                                            <input type="text" name="email" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                                        </div>
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="inputGroup-sizing-default">Password</span>
+                                            </div>
+                                            <input type="password" name="password1" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                                        </div>
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="inputGroup-sizing-default">Retype password</span>
+                                            </div>
+                                            <input type="password" name="password2" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                                        </div>
+                                        
+                                        <button type="submit" class="btn btn-outline-dark" name="command" value="register">Register</button>
+                                </table>
+                            </form>
+                        </div>
+                        <div class="column side">
+                            <div class="card">
 
-                                <label for="3" class="col-sm-2 col-form-label">Firstname</label>
-                                <input type="text" name="firstname" value="Frederikke" id="1">
-                                <br>
-                                <label for="2" class="col-sm-2 col-form-label">Lastname</label>
-                                <input type="text" name="lastname" value="Nilsson" id="2">
-                                <br>
-                                <label for="3" class="col-sm-2 col-form-label">Adress</label>
-                                <input type="text" name="adress" value="Mosen 1" id="3">
-                                <br>
-                                <label for="4" class="col-sm-2 col-form-label">City</label>
-                                <input type="text" name="city" value="Greve" id="4">
-                                <br>
-                                <label for="5" class="col-sm-2 col-form-label">Zipcode</label>
-                                <input type="text" name="zipcode" value="2670" id="5">
-                                <br>
-                                <label for="6" class="col-sm-2 col-form-label">Phone</label>
-                                <input type="text" name="phonenumber" value="12345678" id="6">
-                                <br>
-                                <label for="7" class="col-sm-2 col-form-label">Email</label>
-                                <input type="text" name="email" value="frede@hotmail.com" id="7">
-                                <br>
-                                <label for="8" class="col-sm-2 col-form-label">Password</label>
-                                <input type="password" name="password1" value="1234" id="8">
-                                <br>
-                                <label for="9" class="col-sm-2 col-form-label">Retype password</label>
-                                <input type="password" name="password2" value="1234" id="9">
-                                <br><br>
-                                <button type="submit" class="btn btn-outline-dark" name="command" value="register">Register</button>
-                            
-                    </table>
-                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        
-        <div class="rightcolumn">
-            <img src="https://media.licdn.com/dms/image/C4E0BAQGleVi1XAFxBg/company-logo_200_200/0?e=2159024400&v=beta&t=qQ2ebmGf9u4b45tNF9OyVrcy7NGpnwLXZkLrOky6ibM" alt="Fog" width="200" height="200">
-            <img src="https://media.licdn.com/dms/image/C4E0BAQGleVi1XAFxBg/company-logo_200_200/0?e=2159024400&v=beta&t=qQ2ebmGf9u4b45tNF9OyVrcy7NGpnwLXZkLrOky6ibM" alt="Fog" width="200" height="200">
-        </div>
-        </div>
     </body>
 </html>

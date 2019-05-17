@@ -41,7 +41,7 @@ public class HtmlConverter {
     }
 
     public static String carportAnlgeRooftoHtml(Carport carport) {
-        String cartTable =  "<form action=\"FrontController\" method=\"GET\">"
+        String cartTable = "<form action=\"FrontController\" method=\"GET\">"
                 + "<table class=first>"
                 + "<thead class=dark><tr>"
                 + "      <th scope=\"col\"><b>#</b></th>"
@@ -56,23 +56,23 @@ public class HtmlConverter {
                 + "<th scope=\"col\"><b>Width</b></th>"
                 + "      <th scope=\"col\">" + carport.getWidth() + "</th>"
                 + "</tr>"
-                 + "<tr>"
+                + "<tr>"
                 + "<th scope=\"col\"><b>Heigth</b></th>"
                 + "      <th scope=\"col\">" + 220 + "</th>"
                 + "</tr>"
-                 + "<tr>"
+                + "<tr>"
                 + "<th scope=\"col\"><b>Shed Length</b></th>"
                 + "      <th scope=\"col\">" + carport.getShed().getLength() + "</th>"
                 + "</tr>"
-                 + "<tr>"
+                + "<tr>"
                 + "<th scope=\"col\"><b>Shed Width</b></th>"
                 + "      <th scope=\"col\">" + carport.getShed().getWidth() + "</th>"
                 + "</tr>"
-                 + "<tr>"
+                + "<tr>"
                 + "<th scope=\"col\"><b>Roof-angle</b></th>"
                 + "      <th scope=\"col\">" + carport.getRoofangle() + "</th>"
                 + "</tr>"
-                 + "<tr>"
+                + "<tr>"
                 + "<th scope=\"col\"><b>Price</b></th>"
                 + "      <th scope=\"col\">" + carport.getPrice() + ",-" + "</th>"
                 + "</tr></tbody>"
@@ -145,131 +145,139 @@ public class HtmlConverter {
 
     public static String showLoggedInUser(User user) {
         String table = "<form action=\"FrontController\" method=\"GET\">"
-                + "<table class =table table-hover table-dark>"
-                + "<thead class=dark><tr>"
-                + "      <th scope=\"col\">#</th>"
-                + "      <th scope=\"col\"><b>Contact Information</b></th>"
-                + "    </tr></thread>"
-                + "<tbody>"
-                + "<tr>"
-                + "<th scope=\"col\"><b>ID</b></th>"
-                + "      <th scope=\"col\">" + user.getUser_id() + "</th>"
-                + "</tr>"
-                + "<tr>"
-                + "<th scope=\"col\"><b>Firstname</b></th>"
-                + "      <th scope=\"col\">" + user.getFirstname() + "</th>"
-                + "</tr>"
-                 + "<tr>"
-                + "<th scope=\"col\"><b>Lastname</b></th>"
-                + "      <th scope=\"col\">" + user.getLastname() + "</th>"
-                + "</tr>"
-                 + "<tr>"
-                + "<th scope=\"col\"><b>Adress</b></th>"
-                + "      <th scope=\"col\">" + user.getAdress() + "</th>"
-                + "</tr>"
-                 + "<tr>"
-                + "<th scope=\"col\"><b>City</b></th>"
-                + "      <th scope=\"col\">" + user.getCity() + "</th>"
-                + "</tr>"
-                 + "<tr>"
-                + "<th scope=\"col\"><b>Zipcode</b></th>"
-                + "      <th scope=\"col\">" + user.getZipcode() + "</th>"
-                + "</tr>"
-                 + "<tr>"
-                + "<th scope=\"col\"><b>Phone</b></th>"
-                + "      <th scope=\"col\">" + user.getPhone() + "</th>"
-                + "</tr>"
-                + "<tr>"
-                + "<th scope\"col\"><b>Email</b></th>"
-                + "         <th scope=\"col\">" + user.getEmail() + "</th>"
-                + "</tr></tbody>"
+                + "<table class=\"table\">\n"
+                + "  <thead class=\"thead-light\">\n"
+                + "    <tr>\n"
+                + "      <th scope=\"col\">#</th>\n"
+                + "      <th scope=\"col\">Profile:</th>"
+                 + "      <th scope=\"col\">Information</th>"
+                + "    </tr>\n"
+                + "  </thead><tbody>\n"
+                + "    <tr>\n"
+                + "      <th scope=\"row\"></th>\n"
+                + "      <td>ID:</td>\n"
+                + "      <td>"+ user.getUser_id() + "</td>\n"
+                + "    </tr>\n"
+                + "    <tr>\n"
+                + "      <th scope=\"row\"></th>\n"
+                + "      <td>Firstname</td>\n"
+                + "      <td>" + user.getFirstname() + "</td>\n"
+                + "    </tr>\n"
+                + "    <tr>\n"
+                + "      <th scope=\"row\"></th>\n"
+                + "      <td>Lastname</td>\n"
+                + "      <td>" + user.getLastname() + "</td>\n"
+                + "    </tr>\n"
+                + "    <tr>\n"
+                + "      <th scope=\"row\"></th>\n"
+                + "      <td>Adress</td>\n"
+                + "      <td>" + user.getAdress() + "</td>\n"
+                + "    </tr>\n"
+                + "    <tr>\n"
+                + "      <th scope=\"row\"></th>\n"
+                + "      <td>City</td>\n"
+                + "      <td>" + user.getCity() + "</td>\n"
+                + "    </tr>\n"
+                + "    <tr>\n"
+                + "      <th scope=\"row\"></th>\n"
+                + "      <td>Zipcode</td>\n"
+                + "      <td>" + user.getZipcode() + "</td>\n"
+                + "    </tr>\n"
+                + "    <tr>\n"
+                + "      <th scope=\"row\"></th>\n"
+                + "      <td>Phone</td>\n"
+                + "      <td>" + user.getPhone() + "</td>\n"
+                + "    </tr>\n"
+                + "    <tr>\n"
+                + "      <th scope=\"row\"></th>\n"
+                + "      <td>Email</td>\n"
+                + "      <td>" + user.getEmail() + "</td>\n"
+                + "    </tr>\n"
+                + "  </tbody>\n"
                 + "</table>"
-                + "</form>"
-                + "</div></div>";
+                + "</form>";
         return table;
     }
-    
-    public static String makeDesign(Carport carport){
-    
-    String print = " <div class =\"grid-container\">\n" +
-"            <div class ='center'>\n" +
-"                <h1> Bird view</h1>\n" +
-"                <svg height =\""+carport.getWidth()+" + 25\" width =\""+carport.getLength()+" + 25\">\n" +
-"\n" +
-"                <rect x=\"0\" y=\"15\" width=\""+carport.getLength()+"  + 10\" height=\"50\" fill=\"#none\"\n" +
-"                      style=\"stroke:rgb(0,0,0);stroke-width:3\"/>\n" +
-"\n" +
-"                <rect x=\"0\" y=\""+carport.getWidth()+" - 65\" width=\""+carport.getLength()+"  + 10\" height=\"50\" fill=\"#none\"\n" +
-"                      style=\"stroke:rgb(0,0,0);stroke-width:3\"/>	\n" +
 
-"\n" +
-"                <% int temp = "+carport.getLength()+";\n" +
-"                    for (int i = 0; i < 1000; i++) {\n" +
-"                        if (temp >= -0) {\n" +
-"                %><rect x=\"=temp\" y=\"0\"  width=\"10\" height=\""+carport.getWidth()+" \" fill=\"none\"\n" +
-"                      style=\"stroke:rgb(0,0,0);stroke-width:3\"/>\n" +
-"                <rect x=\"10\" y=\""+carport.getLength()+"  + 10.5\"  width=\"temp - 10\" height=\"1\" fill=\"#000000\" /> <%\n" +
-"                            temp = temp - 30;\n" +
-"                        } else {\n" +
-"                            break;\n" +
-"                        }\n" +
-"                    }\n" +
-"                %>\n" +
-"                </svg>\n" +
-"                <h2><%="+carport.getLength()+" %> in cm</h2>\n" +
-"                <br>\n" +
-"                <h2> Side view</h2>\n" +
-"                <svg height =\"600\" width =\"<%="+carport.getLength()+" + 25%>\">\n" +
-"\n" +
-"                <% int tempp = "+carport.getLength()+" ;\n" +
-"                    for (int i = 0; i < 1000; i++) {\n" +
-"                        if (tempp >= -0) {\n" +
-"                %><rect x=\"<%=tempp%>\" y=\"180\"  width=\"10\" height=\"220\" fill=\"none\"\n" +
-"                      style=\"stroke:rgb(0,0,0);stroke-width:3\"/>\n" +
-"                <rect x=\"10\" y=\"<%="+carport.getLength()+"  + 10.5%>\"  width=\"<%=tempp - 10%>\" height=\"1\" fill=\"#000000\" /> <%\n" +
-"                            tempp = tempp - 120;\n" +
-"                        } else {\n" +
-"                            break;\n" +
-"                        }\n" +
-"                    }\n" +
-"                %>\n" +
-"\n" +
-"                <rect x=\"0\" y=\"170\" width=\"<%="+carport.getLength()+"  + 10%>\" height=\"10\" fill=\"#none\"\n" +
-"                      style=\"stroke:rgb(0,0,0);stroke-width:3\"/>\n" +
-"                <%if(angle != 1){ %>\n" +
-"                <rect x=\"0\" y=\"70\" width=\"<%="+carport.getLength()+"  + 10%>\" height=\"100\" fill=\"#none\"\n" +
-"                      style=\"stroke:rgb(0,0,0);stroke-width:3\"/>\n" +
-"                <%}%>\n" +
-"\n" +
-"\n" +
-"                </svg>   \n" +
-"                <h2><%="+carport.getLength()+" %> in cm</h2>\n" +
-"                <br>\n" +
-"\n" +
-"                <h1> Front view</h1>\n" +
-"                <svg height =\"600\" width =\"<%="+carport.getWidth()+" + 25%>\">\n" +
+    public static String makeDesign(Carport carport) {
 
-"\n" +
-"                %><rect x=\"0\" y=\"180\"  width=\"10\" height=\"220\" fill=\"none\"\n" +
-"                        style=\"stroke:rgb(0,0,0);stroke-width:3\"/>\n" +
-"                <rect x=\"<%="+carport.getWidth()+" - 10%>\" y=\"180\"  width=\"10\" height=\"220\" fill=\"none\"\n" +
-"                      style=\"stroke:rgb(0,0,0);stroke-width:3\"/>\n" +
-"                <rect x=\"10\" y=\"<%="+carport.getLength()+"  + 10.5%>\"  width=\"<%="+carport.getLength()+"  - 10%>\" height=\"1\" fill=\"#000000\" />\n" +
-"                <%if(angle != 1){ %>\n" +
-"                <polygon points=\"<%="+carport.getWidth()+" / 2%>,0 <%="+carport.getWidth()+"%>, 170 0,170\" fill=\"none\"\n" +
-"                         style=\"stroke:rgb(0,0,0);stroke-width:3\"/>\n" +
-"                <%}%>\n" +
-"\n" +
-"                <rect x=\"0\" y=\"170\" width=\"<%="+carport.getWidth()+"%>\" height=\"10\" fill=\"#none\"\n" +
-"                      style=\"stroke:rgb(0,0,0);stroke-width:3\"/>\n" +
-"\n" +
-"\n" +
-"                </svg>   \n" +
-"                <h2><%="+carport.getWidth()+"%> in cm</h2>\n" +
-"            </div>\n" +
-"        </div>";
-    
-    return print;
+        String print = " <div class =\"grid-container\">\n"
+                + "            <div class ='center'>\n"
+                + "                <h1> Bird view</h1>\n"
+                + "                <svg height =\"" + carport.getWidth() + " + 25\" width =\"" + carport.getLength() + " + 25\">\n"
+                + "\n"
+                + "                <rect x=\"0\" y=\"15\" width=\"" + carport.getLength() + "  + 10\" height=\"50\" fill=\"#none\"\n"
+                + "                      style=\"stroke:rgb(0,0,0);stroke-width:3\"/>\n"
+                + "\n"
+                + "                <rect x=\"0\" y=\"" + carport.getWidth() + " - 65\" width=\"" + carport.getLength() + "  + 10\" height=\"50\" fill=\"#none\"\n"
+                + "                      style=\"stroke:rgb(0,0,0);stroke-width:3\"/>	\n"
+                + "\n"
+                + "                <% int temp = " + carport.getLength() + ";\n"
+                + "                    for (int i = 0; i < 1000; i++) {\n"
+                + "                        if (temp >= -0) {\n"
+                + "                %><rect x=\"=temp\" y=\"0\"  width=\"10\" height=\"" + carport.getWidth() + " \" fill=\"none\"\n"
+                + "                      style=\"stroke:rgb(0,0,0);stroke-width:3\"/>\n"
+                + "                <rect x=\"10\" y=\"" + carport.getLength() + "  + 10.5\"  width=\"temp - 10\" height=\"1\" fill=\"#000000\" /> <%\n"
+                + "                            temp = temp - 30;\n"
+                + "                        } else {\n"
+                + "                            break;\n"
+                + "                        }\n"
+                + "                    }\n"
+                + "                %>\n"
+                + "                </svg>\n"
+                + "                <h2><%=" + carport.getLength() + " %> in cm</h2>\n"
+                + "                <br>\n"
+                + "                <h2> Side view</h2>\n"
+                + "                <svg height =\"600\" width =\"<%=" + carport.getLength() + " + 25%>\">\n"
+                + "\n"
+                + "                <% int tempp = " + carport.getLength() + " ;\n"
+                + "                    for (int i = 0; i < 1000; i++) {\n"
+                + "                        if (tempp >= -0) {\n"
+                + "                %><rect x=\"<%=tempp%>\" y=\"180\"  width=\"10\" height=\"220\" fill=\"none\"\n"
+                + "                      style=\"stroke:rgb(0,0,0);stroke-width:3\"/>\n"
+                + "                <rect x=\"10\" y=\"<%=" + carport.getLength() + "  + 10.5%>\"  width=\"<%=tempp - 10%>\" height=\"1\" fill=\"#000000\" /> <%\n"
+                + "                            tempp = tempp - 120;\n"
+                + "                        } else {\n"
+                + "                            break;\n"
+                + "                        }\n"
+                + "                    }\n"
+                + "                %>\n"
+                + "\n"
+                + "                <rect x=\"0\" y=\"170\" width=\"<%=" + carport.getLength() + "  + 10%>\" height=\"10\" fill=\"#none\"\n"
+                + "                      style=\"stroke:rgb(0,0,0);stroke-width:3\"/>\n"
+                + "                <%if(angle != 1){ %>\n"
+                + "                <rect x=\"0\" y=\"70\" width=\"<%=" + carport.getLength() + "  + 10%>\" height=\"100\" fill=\"#none\"\n"
+                + "                      style=\"stroke:rgb(0,0,0);stroke-width:3\"/>\n"
+                + "                <%}%>\n"
+                + "\n"
+                + "\n"
+                + "                </svg>   \n"
+                + "                <h2><%=" + carport.getLength() + " %> in cm</h2>\n"
+                + "                <br>\n"
+                + "\n"
+                + "                <h1> Front view</h1>\n"
+                + "                <svg height =\"600\" width =\"<%=" + carport.getWidth() + " + 25%>\">\n"
+                + "\n"
+                + "                %><rect x=\"0\" y=\"180\"  width=\"10\" height=\"220\" fill=\"none\"\n"
+                + "                        style=\"stroke:rgb(0,0,0);stroke-width:3\"/>\n"
+                + "                <rect x=\"<%=" + carport.getWidth() + " - 10%>\" y=\"180\"  width=\"10\" height=\"220\" fill=\"none\"\n"
+                + "                      style=\"stroke:rgb(0,0,0);stroke-width:3\"/>\n"
+                + "                <rect x=\"10\" y=\"<%=" + carport.getLength() + "  + 10.5%>\"  width=\"<%=" + carport.getLength() + "  - 10%>\" height=\"1\" fill=\"#000000\" />\n"
+                + "                <%if(angle != 1){ %>\n"
+                + "                <polygon points=\"<%=" + carport.getWidth() + " / 2%>,0 <%=" + carport.getWidth() + "%>, 170 0,170\" fill=\"none\"\n"
+                + "                         style=\"stroke:rgb(0,0,0);stroke-width:3\"/>\n"
+                + "                <%}%>\n"
+                + "\n"
+                + "                <rect x=\"0\" y=\"170\" width=\"<%=" + carport.getWidth() + "%>\" height=\"10\" fill=\"#none\"\n"
+                + "                      style=\"stroke:rgb(0,0,0);stroke-width:3\"/>\n"
+                + "\n"
+                + "\n"
+                + "                </svg>   \n"
+                + "                <h2><%=" + carport.getWidth() + "%> in cm</h2>\n"
+                + "            </div>\n"
+                + "        </div>";
+
+        return print;
     }
 
 }

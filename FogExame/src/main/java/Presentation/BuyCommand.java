@@ -47,16 +47,18 @@ public class BuyCommand extends Command {
         shoppingcart.add(orders);
         String orderss = HtmlConverter.generateOrdersHTML(shoppingcart);*/
         ArrayList<MaterialList> list = totalpartlist(cp);
+        String html = HtmlConverter.carportAnlgeRooftoHtml(cp);
         String slist = printPartList(list);
         CalcPrice lizz = new CalcPrice();
         ArrayList<MetalParts> mlist = lizz.metalParts(list);
         String smlist = printMetalPartList(mlist);
+        request.setAttribute("table2", html);
         request.setAttribute("mlist", slist);
         request.setAttribute("smlist", smlist);
 //        request.setAttribute("shoppingcart", shoppingcart);
 //        request.setAttribute("order", orderss);
 
-        return "Buying";
+        return "ShoppingCart";
 
     }
 
