@@ -33,6 +33,7 @@
         <input type="hidden" value="<%= widthShed%>" name = "widthShed">
         <input type="hidden" value="<%= angle%>" name = "angle">
         </form>
+        <button type="button" name="back" onclick="history.back()">back</button> <!-- to got to prior page.-->
         
         
         ${SVG}
