@@ -118,7 +118,7 @@ public class CarportFacadeTest {
     @Test
     public void testGetMaxShedLength() throws Exception {
         int result = CarportFacade.getMaxShedLength();
-        assertEquals(20,result);
+        assertEquals(17,result);
     }
 
     /**
@@ -127,7 +127,7 @@ public class CarportFacadeTest {
     @Test
     public void testGetMaxShedWidth() throws Exception {
         int result = CarportFacade.getMaxShedWidth();
-        assertEquals(19,result);
+        assertEquals(15,result);
     }
 
     /**
