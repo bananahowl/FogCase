@@ -23,11 +23,9 @@ public class dataTest {
         
         CarportMapper datatest = new CarportMapper();
         System.out.println("hello world");
-        System.out.println(datatest.getMatiralName(2));
        
         
         System.out.println("simone a");
-        System.out.println(datatest.getRoofMaterial(3));
         System.out.println("simone b");
         // System.out.println(datatest.getShedHeigth(1));
         System.out.println("simone c");
@@ -36,14 +34,9 @@ public class dataTest {
         System.out.println(datatest.getShedwidth(1));
         System.out.println("simone e");
         System.out.println(datatest.getMaxAngles());
-        System.out.println(CarportFacade.getRoofMaterial(1));
-        System.out.println(CarportFacade.getRoofMaterial(2));
-        System.out.println(CarportFacade.getMatiralName(3));
-        System.out.println(CarportFacade.getmaxmatiralnum());
         System.out.println(CarportFacade.getMaxLength());
         System.out.println(CarportFacade.getMaxAngles());
         System.out.println(CarportFacade.getMaxWidth());
-        System.out.println(CarportFacade.getMaxRoofMaterial());
         System.out.println(CarportFacade.getShedwidth(3));
         System.out.println(CarportFacade.getShedlength(1));
         System.out.println(CarportFacade.getRoofAngle(6));
@@ -53,7 +46,7 @@ public class dataTest {
         System.out.println(CarportFacade.getMaxShedLength());
         
         System.out.println(OrderFacade.getAllOrders());
-        System.out.println(OrderFacade.getOrdersByUser(UserFacade.getUser("frede@hotmail.com", "1234")));
+        System.out.println(OrderFacade.getOrdersByUser(UserFacade.getUser("example@hotmail.com", "1234")));
         
     }
     
