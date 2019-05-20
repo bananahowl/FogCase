@@ -34,9 +34,10 @@ public class BuyCommand extends Command {
     @Override
     String execute(HttpServletRequest request, HttpServletResponse response) throws CarportException {
         if (request.getSession(true).getAttribute("user") == null) {
-            String error = "you have to be logged in before you can finalize your order";
+            String error = "You have to be logged in before you can finalize your order!";
             request.setAttribute("error", error);
-            return "Login";
+            
+            return "index";
 
         } else {
             int length = Integer.parseInt(request.getParameter("length"));

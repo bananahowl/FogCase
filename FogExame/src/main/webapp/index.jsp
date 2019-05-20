@@ -30,7 +30,7 @@
             <div class="column middle">
                 <div class="card">
                     <h2><b>Protect your car with a carport</b></h2>
-                    <h5>Tekst</h5>
+                    <h5>${error}</h5>
 
                     <form action="FrontController" method="GET">
                     <button type="submit" class="btn btn-secondary btn-lg btn-block" name="command" value="customize">Customize Carport</button>
@@ -62,7 +62,9 @@
                             </td>
                         </table>
                         <div class="dropdown-divider"></div>
+                        
                         <a class="dropdown-item" href="Register.jsp">New around here? Register here</a>
+                        
 
                     </form>
                 </div>
@@ -75,7 +77,7 @@
             <div class="row">
                 <div class="column side">
                     <div class="card">
-                        <h2>TEST TEST</h2>
+                        <h2>TEST</h2>
                         </div>
                     </div>
                     <div class="column middle">
