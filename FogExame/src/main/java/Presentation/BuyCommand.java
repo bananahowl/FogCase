@@ -36,22 +36,27 @@ public class BuyCommand extends Command {
         if (request.getSession(true).getAttribute("user") == null) {
             String error = "You have to be logged in before you can finalize your order!";
             request.setAttribute("error", error);
-            
+
             return "index";
 
         } else {
+            
             int length = Integer.parseInt(request.getParameter("length"));
             int width = Integer.parseInt(request.getParameter("width"));
             int lengthShed = Integer.parseInt(request.getParameter("lengthShed"));
             int widthShed = Integer.parseInt(request.getParameter("widthShed"));
             int angle = Integer.parseInt(request.getParameter("angle"));
+            
             int price = CreateCarport.NumbersAngleRoof(length, width, widthShed, lengthShed, angle);
             Carport cp = CreateCarport.createCarportAngleRoof(length, width, widthShed, lengthShed, angle, price);
-            /* User user = (User) request.getSession().getAttribute("user");
-        ArrayList<Order> shoppingcart = new ArrayList();
-        Order orders = OrderFacade.createOrder(user.getUser_id(), cp);
-        shoppingcart.add(orders);
-        String orderss = HtmlConverter.generateOrdersHTML(shoppingcart);*/
+            
+            Carport cpp = CreateCarport.createCarportid(length, width, widthShed, lengthShed, angle, price);
+            User user = (User) request.getSession().getAttribute("user");
+            
+            ArrayList<Order> shoppingcart = new ArrayList();
+            Order orders = OrderFacade.createOrder(user.getUser_id(), cpp);
+            shoppingcart.add(orders);
+            String orderss = HtmlConverter.generateOrdersHTML(shoppingcart);
             ArrayList<MaterialList> list = totalpartlist(cp);
             String slist = printPartList(list);
             CalcPrice lizz = new CalcPrice();
@@ -63,8 +68,8 @@ public class BuyCommand extends Command {
             request.setAttribute("table2", html);
             request.setAttribute("mlist", slist);
             request.setAttribute("smlist", smlist);
-//        request.setAttribute("shoppingcart", shoppingcart);
-//        request.setAttribute("order", orderss);
+            request.setAttribute("shoppingcart", shoppingcart);
+            request.setAttribute("order", orderss);
 
             return "ShoppingCart";
 

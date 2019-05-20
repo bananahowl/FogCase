@@ -13,50 +13,37 @@ import java.util.ArrayList;
 import java.util.List;
 import DataLayer.DataMappers.OrderMapper;
 import DataLayer.DataMappers.UserMapper;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
  * @author fskn
  */
 public class OrderFacade {
+/*
+    public static List<Order> getAllOrders() throws CarportException {
+        return OrderMapper.getAllOrders();
+    }
 
-    public static Order createOrder(int id, Carport carport) {
+    public static ArrayList<Order> getAllOrdersByUser(User user) throws CarportException {
+        return OrderMapper.getOrdersByUser(user);
+    }
+*/
+    public static Order createOrder(int id, Carport carport) throws CarportException {
 
-        try {
-            Order order = new Order(id, carport, false);
-            OrderMapper.createOrder(order);
-            return order;
-        } catch (CarportException ex) {
-            Logger.getLogger(OrderFacade.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        return null;
+        Order order = new Order(id, carport, false);
+        OrderMapper.createOrder(order);
+        return order;
     }
     
-    public static void deleteorder(int id) {
-        try {
-            OrderMapper.deleteorder(id);
-        } catch (CarportException ex) {
-            Logger.getLogger(OrderFacade.class.getName()).log(Level.SEVERE, null, ex);
-        }
+    public static void deleteorder(int id) throws CarportException{
+        OrderMapper.deleteorder(id);
     }
     
-    public static ArrayList<Order> getOrdersByUser(User user)  {
-        try {
-            return OrderMapper.getOrdersByUser(user);
-        } catch (CarportException ex) {
-            Logger.getLogger(OrderFacade.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        return null;
+    public static ArrayList<Order> getOrdersByUser(User user) throws CarportException {
+        return OrderMapper.getOrdersByUser(user);
     }
     
-    public static List<Order> getAllOrders() {
-        try {
-            return OrderMapper.getAllOrders();
-        } catch (CarportException ex) {
-            Logger.getLogger(OrderFacade.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        return null;
+    public static List<Order> getAllOrders() throws CarportException {
+        return OrderMapper.getAllOrders();
     }
 }
