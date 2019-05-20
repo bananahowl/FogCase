@@ -57,7 +57,6 @@ public class UserMapper {
                 int zipcode = rs.getInt("zipcode");
                 int phone = rs.getInt("phonenumber");
                 User user = new User(firstname, lastname, adress, city, zipcode, phone, email, password);
-                User uuser = new User("Knud", "Mogensen", "Gattet 7", "Lyngby", 2800, 12345678, "Knud@hotmail.dk", "KnudDenStore");
                 user.setUser_id(id);
                 return user;
             } else {

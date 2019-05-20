@@ -150,13 +150,13 @@ public class HtmlConverter {
                 + "    <tr>\n"
                 + "      <th scope=\"col\">#</th>\n"
                 + "      <th scope=\"col\">Profile:</th>"
-                 + "      <th scope=\"col\">Information</th>"
+                + "      <th scope=\"col\">Information</th>"
                 + "    </tr>\n"
                 + "  </thead><tbody>\n"
                 + "    <tr>\n"
                 + "      <th scope=\"row\"></th>\n"
                 + "      <td>ID:</td>\n"
-                + "      <td>"+ user.getUser_id() + "</td>\n"
+                + "      <td>" + user.getUser_id() + "</td>\n"
                 + "    </tr>\n"
                 + "    <tr>\n"
                 + "      <th scope=\"row\"></th>\n"
@@ -200,8 +200,8 @@ public class HtmlConverter {
     }
 
     public static String makeDesign(Carport carport) {
-
-        String print = " <div class =\"grid-container\">\n"
+        
+        String printpart = " <div class =\"grid-container\">\n"
                 + "            <div class ='center'>\n"
                 + "                <h1> Bird view</h1>\n"
                 + "                <svg height =\"" + carport.getWidth() + " + 25\" width =\"" + carport.getLength() + " + 25\">\n"
@@ -211,64 +211,72 @@ public class HtmlConverter {
                 + "\n"
                 + "                <rect x=\"0\" y=\"" + carport.getWidth() + " - 65\" width=\"" + carport.getLength() + "  + 10\" height=\"50\" fill=\"#none\"\n"
                 + "                      style=\"stroke:rgb(0,0,0);stroke-width:3\"/>	\n"
-                + "\n"
-                + "                <% int temp = " + carport.getLength() + ";\n"
-                + "                    for (int i = 0; i < 1000; i++) {\n"
-                + "                        if (temp >= -0) {\n"
-                + "                %><rect x=\"=temp\" y=\"0\"  width=\"10\" height=\"" + carport.getWidth() + " \" fill=\"none\"\n"
-                + "                      style=\"stroke:rgb(0,0,0);stroke-width:3\"/>\n"
-                + "                <rect x=\"10\" y=\"" + carport.getLength() + "  + 10.5\"  width=\"temp - 10\" height=\"1\" fill=\"#000000\" /> <%\n"
-                + "                            temp = temp - 30;\n"
-                + "                        } else {\n"
-                + "                            break;\n"
-                + "                        }\n"
-                + "                    }\n"
-                + "                %>\n"
-                + "                </svg>\n"
+                + "\n";
+        
+        
+        String printpart1 = "";
+        for (int i = 0; i < 1000; i++) {
+            int temp = carport.getLength();
+            if (temp >= -0) {
+                printpart1 +=  "<rect x=\"10\" y=\"" + carport.getLength() + "  + 10.5\"  width=\"" + temp + " - 10\" height=\"1\" fill=\"#000000\" /> \n";
+                temp = temp - 30;
+            } else {
+                break;    
+            }
+            return printpart1;
+        } 
+        String printpart2 = 
+           "    </svg>\n"
                 + "                <h2><%=" + carport.getLength() + " %> in cm</h2>\n"
                 + "                <br>\n"
                 + "                <h2> Side view</h2>\n"
-                + "                <svg height =\"600\" width =\"<%=" + carport.getLength() + " + 25%>\">\n"
-                + "\n"
-                + "                <% int tempp = " + carport.getLength() + " ;\n"
-                + "                    for (int i = 0; i < 1000; i++) {\n"
-                + "                        if (tempp >= -0) {\n"
-                + "                %><rect x=\"<%=tempp%>\" y=\"180\"  width=\"10\" height=\"220\" fill=\"none\"\n"
+                + "                <svg height =\"100\" width =\"<%=" + carport.getLength() + " + 25%>\">\n"
+                + "\n";
+                String printpart3 = "";
+                 int tempp = carport.getLength(); 
+                 for (int i = 0; i < 1000; i++) {
+                    if (tempp >= -0) {
+                printpart3 += "<rect x=\"<%=tempp%>\" y=\"180\"  width=\"10\" height=\"220\" fill=\"none\"\n"
                 + "                      style=\"stroke:rgb(0,0,0);stroke-width:3\"/>\n"
-                + "                <rect x=\"10\" y=\"<%=" + carport.getLength() + "  + 10.5%>\"  width=\"<%=tempp - 10%>\" height=\"1\" fill=\"#000000\" /> <%\n"
-                + "                            tempp = tempp - 120;\n"
-                + "                        } else {\n"
-                + "                            break;\n"
-                + "                        }\n"
-                + "                    }\n"
-                + "                %>\n"
-                + "\n"
-                + "                <rect x=\"0\" y=\"170\" width=\"<%=" + carport.getLength() + "  + 10%>\" height=\"10\" fill=\"#none\"\n"
-                + "                      style=\"stroke:rgb(0,0,0);stroke-width:3\"/>\n"
-                + "                <%if(angle != 1){ %>\n"
-                + "                <rect x=\"0\" y=\"70\" width=\"<%=" + carport.getLength() + "  + 10%>\" height=\"100\" fill=\"#none\"\n"
-                + "                      style=\"stroke:rgb(0,0,0);stroke-width:3\"/>\n"
-                + "                <%}%>\n"
-                + "\n"
-                + "\n"
-                + "                </svg>   \n"
-                + "                <h2><%=" + carport.getLength() + " %> in cm</h2>\n"
+                + "           \n";
+                tempp = tempp - 120;
+                    }
+                else {
+                 break;
+                }
+                return printpart3;
+                 }
+                String printpart4 =  "\n"
+                + "                <rect x=\"0\" y=\"170\" width=\"" + carport.getLength() +" " + "10\" height=\"10\" fill=\"#none\"\n"
+                + "                      style=\"stroke:rgb(0,0,0);stroke-width:3\"/>\n";
+                if(carport.getRoofangle() != 1){ 
+                printpart4 +=            "<rect x=\"0\" y=\"70\" width=\"<%=" + carport.getLength() + "  + 10%>\" height=\"100\" fill=\"#none\"\n"
+                + "                      style=\"stroke:rgb(0,0,0);stroke-width:3\"/>\n";
+                }
+                
+                
+                printpart4 +=" </svg>   \n";
+                
+                String printpart5 =
+                "                <h2><%=" + carport.getLength() + " %> in cm</h2>\n"
                 + "                <br>\n"
                 + "\n"
                 + "                <h1> Front view</h1>\n"
-                + "                <svg height =\"600\" width =\"<%=" + carport.getWidth() + " + 25%>\">\n"
+                + "                <svg height =\"100\" width =\"<%=" + carport.getWidth() + " + 25%>\">\n"
                 + "\n"
                 + "                %><rect x=\"0\" y=\"180\"  width=\"10\" height=\"220\" fill=\"none\"\n"
                 + "                        style=\"stroke:rgb(0,0,0);stroke-width:3\"/>\n"
                 + "                <rect x=\"<%=" + carport.getWidth() + " - 10%>\" y=\"180\"  width=\"10\" height=\"220\" fill=\"none\"\n"
                 + "                      style=\"stroke:rgb(0,0,0);stroke-width:3\"/>\n"
-                + "                <rect x=\"10\" y=\"<%=" + carport.getLength() + "  + 10.5%>\"  width=\"<%=" + carport.getLength() + "  - 10%>\" height=\"1\" fill=\"#000000\" />\n"
-                + "                <%if(angle != 1){ %>\n"
-                + "                <polygon points=\"<%=" + carport.getWidth() + " / 2%>,0 <%=" + carport.getWidth() + "%>, 170 0,170\" fill=\"none\"\n"
-                + "                         style=\"stroke:rgb(0,0,0);stroke-width:3\"/>\n"
-                + "                <%}%>\n"
-                + "\n"
-                + "                <rect x=\"0\" y=\"170\" width=\"<%=" + carport.getWidth() + "%>\" height=\"10\" fill=\"#none\"\n"
+                + "          \n";
+                
+                if(carport.getRoofangle() != 1){ 
+                printpart5 +="                <polygon points=\"<%=" + carport.getWidth() + " / 2%>,0 <%=" + carport.getWidth() + "%>, 170 0,170\" fill=\"none\"\n"
+                + "                         style=\"stroke:rgb(0,0,0);stroke-width:3\"/>\n";
+                }
+                        
+                printpart5 +=
+                 "                <rect x=\"0\" y=\"170\" width=\"<%=" + carport.getWidth() + "%>\" height=\"10\" fill=\"#none\"\n"
                 + "                      style=\"stroke:rgb(0,0,0);stroke-width:3\"/>\n"
                 + "\n"
                 + "\n"
@@ -276,8 +284,8 @@ public class HtmlConverter {
                 + "                <h2><%=" + carport.getWidth() + "%> in cm</h2>\n"
                 + "            </div>\n"
                 + "        </div>";
-
-        return print;
+               String print = printpart + printpart1 + printpart2 + printpart3 + printpart4 + printpart5;
+        return print; // this should return a string which can then show the svg design on the page.
     }
 
 }

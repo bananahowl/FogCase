@@ -57,7 +57,8 @@
                             <input type="hidden" value="<%= widthShed%>" name = "widthShed">
                             <input type="hidden" value="<%= angle%>" name = "angle">
 
-                            <button type="submit" class="btn btn-outline-dark" name="command" value="buy">Create Order</button> 
+                            <button type="submit" class="btn btn-outline-dark" name="command" value="buy">Create Order</button>
+                            <button type="submit" class="btn btn-outline-dark" name="command" value="design"> See carport design  </button>
                         </table>
                     </form>
                 </div>

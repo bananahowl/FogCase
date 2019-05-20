@@ -31,10 +31,12 @@
                 <div class="card">
                     <h2><b>Protect your car with a carport</b></h2>
                     <h5>Tekst</h5>
+
                     <form action="FrontController" method="GET">
                     <button type="submit" class="btn btn-secondary btn-lg btn-block" name="command" value="customize">Customize Carport</button>
                         
                     </form>
+
                 </div>
                 <div class="card">
                     <h2><b>About us </b></h2>
