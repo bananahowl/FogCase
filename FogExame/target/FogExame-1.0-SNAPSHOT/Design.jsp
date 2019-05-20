@@ -72,13 +72,13 @@
                 </div>
                 <div class="card">
                     <h5><b> Side view</b></h5>
-                <svg height ="600" width ="<%=length + 25%>">
+                <svg height ="500" width ="<%=length + 25%>">
                 <% int tempp = length;
                     for (int i = 0; i < 1000; i++) {
                         if (tempp >= -0) {
                 %><rect x="<%=tempp%>" y="180"  width="10" height="220" fill="none"
                       style="stroke:rgb(0,0,0);stroke-width:3"/>
-                <rect x="10" y="<%=length + 10.5%>"  width="<%=tempp - 10%>" height="1" fill="#000000" /> <%
+               <%
                             tempp = tempp - 120;
                         } else {
                             break;
@@ -97,13 +97,13 @@
                 </div>
                 <div class="card">
                 <h5><b>Front view</b></h5>
-                <svg height ="600" width ="<%=width + 25%>">
+                <svg height ="500" width ="<%=width + 25%>">
 
                 %><rect x="0" y="180"  width="10" height="220" fill="none"
                         style="stroke:rgb(0,0,0);stroke-width:3"/>
                 <rect x="<%=width - 10%>" y="180"  width="10" height="220" fill="none"
                       style="stroke:rgb(0,0,0);stroke-width:3"/>
-                <rect x="10" y="<%=length + 10.5%>"  width="<%=length - 10%>" height="1" fill="#000000" />
+                
                 <%if (angle != 1) {%>
                 <polygon points="<%=width / 2%>,0 <%=width%>, 170 0,170" fill="none"
                          style="stroke:rgb(0,0,0);stroke-width:3"/>
