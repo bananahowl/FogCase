@@ -94,7 +94,7 @@ public  class CalcPrice {
             
              amountOfLumber += list.get(i).getAmount();
 
-             System.out.println("Amount of material: " + list.get(i).getAmount());
+             //System.out.println("Amount of material: " + list.get(i).getAmount());
             }
         
          int bracketsAmount = (int )Math.ceil(amountOfBrackets /10);

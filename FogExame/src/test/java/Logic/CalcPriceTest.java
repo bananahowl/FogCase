@@ -35,6 +35,11 @@ public class CalcPriceTest {
     
     @Before
     public void setUp() {
+        int length = 700;
+        int width = 400;
+        int shedWidth = 300;
+        int shedLength = 200;
+        int angleInDegree = 15;
     }
     
     @After
@@ -44,69 +49,95 @@ public class CalcPriceTest {
     /**
      * Test of woodPrice method, of class CalcPrice.
      */
-    /*
+    
    @Test
-    public void testWoodPrice() {
+    public void testWoodPrice() throws Exception {
         System.out.println("woodPrice");
-        ArrayList<MaterialList> list = null;
+        int expResult = 14850;
+        
+        int length = 700;
+        int width = 400;
+        int shedWidth = 200;
+        int shedLength = 300;
+        int angleInDegree = 15;
+        
+        MaterialList shedtrue = CalcPartList.calcShedMats(shedLength, shedWidth);
+        MaterialList spertrue = CalcPartList.calcSper(length , width);
+        MaterialList remtrue = CalcPartList.calcRem(length, width);
+        MaterialList posttrue = CalcPartList.calculatePortPost(width, length);
+        MaterialList rooftrue = CalcPartList.calcRoofSides(width, length, angleInDegree);
+        MaterialList fronttrue = CalcPartList.calcRoofFronts(width, angleInDegree);
+        MaterialList verticaltrue = CalcPartList.calcAngledVerticalSpær(width, length, angleInDegree);
+        MaterialList horizontaltrue = CalcPartList.calcAngledHorizontalSpær(width, length);
+        ArrayList<MaterialList> list = CalcPartList.totalMaterial(shedtrue, remtrue, spertrue, posttrue, 
+                rooftrue, fronttrue, verticaltrue, horizontaltrue);
+       
         CalcPrice instance = new CalcPrice();
-        int expResult = 0;
         int result = instance.woodPrice(list);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
-    /**
-     * Test of printList method, of class CalcPrice.
-     */
-    /*
-    @Test
-    public void testPrintList() {
-        System.out.println("printList");
-        ArrayList<MaterialList> vals = null;
-        CalcPrice instance = new CalcPrice();
-        instance.printList(vals);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
 
-    /**
-     * Test of metalParts method, of class CalcPrice.
-     */
-    /*
  @Test
-    public void testMetalParts() {
+    public void testMetalParts() throws Exception{
         System.out.println("metalParts");
-        ArrayList<MaterialList> list = new ArrayList<MaterialList>
-        (Arrays.asList( 
-                new MaterialList(700, 38, "skurplanker"), new MaterialList(750, 2, "rem"),
-                new MaterialList(430, 14, "spær"), new MaterialList(310, 10, "stolper"),
-                new MaterialList(15, 434, "tagsten"), new MaterialList(60, 14, "trægalver"),
-                new MaterialList(207, 14, "vertikalespær"), new MaterialList(760, 7, "horizontalespær")));
-        CalcPrice instance = new CalcPrice();
-        ArrayList<MetalParts> expResult = null;
-        ArrayList<MetalParts> result = instance.metalParts(list);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }*/
+        int length = 700;
+        int width = 400;
+        int shedWidth = 200;
+        int shedLength = 300;
+        int angleInDegree = 15;
+        
+        ArrayList<MetalParts> explist1 = new ArrayList<MetalParts>();
+        MetalParts beslag =new MetalParts("Beslag, 10 i en pakke", 11, 100) ;
+        MetalParts skruer =new MetalParts("Skruer med møtrik, 100 i en pakke", 3, 50) ;
+        MetalParts søm = new MetalParts("Søm, 100 i en pakke", 7, 50) ;
+        MetalParts bolte = new MetalParts("Bolte, 50 i en pakke", 7, 150);
+        explist1.add(beslag);
+        explist1.add(skruer);
+        explist1.add(bolte);
+        explist1.add(søm);
+        
+        
+        
 
-    /**
-     * Test of metalPartsPrice method, of class CalcPrice.
-     */
-    /*
+        
+        MaterialList shedtrue = CalcPartList.calcShedMats(shedLength, shedWidth);
+        MaterialList spertrue = CalcPartList.calcSper(length , width);
+        MaterialList remtrue = CalcPartList.calcRem(length, width);
+        MaterialList posttrue = CalcPartList.calculatePortPost(width, length);
+        MaterialList rooftrue = CalcPartList.calcRoofSides(width, length, angleInDegree);
+        MaterialList fronttrue = CalcPartList.calcRoofFronts(width, angleInDegree);
+        MaterialList verticaltrue = CalcPartList.calcAngledVerticalSpær(width, length, angleInDegree);
+        MaterialList horizontaltrue = CalcPartList.calcAngledHorizontalSpær(width, length);
+        ArrayList<MaterialList> list = CalcPartList.totalMaterial(shedtrue, remtrue, spertrue, posttrue, 
+                rooftrue, fronttrue, verticaltrue, horizontaltrue);
+        CalcPrice instance = new CalcPrice();
+        ArrayList<MetalParts> result = instance.metalParts(list);
+        assertEquals(explist1, result);
+    }
+
+   
     @Test
     public void testMetalPartsPrice() {
         System.out.println("metalPartsPrice");
-        ArrayList<MetalParts> list = null;
+        double expResult = 2650.0;
+        
+        
+        ArrayList<MetalParts> list = new ArrayList<MetalParts>();
+        MetalParts beslag = new MetalParts("Beslag, 10 i en pakke", 11, 100) ;
+        MetalParts skruer = new MetalParts("Skruer med møtrik, 100 i en pakke", 3, 50) ;
+        MetalParts søm = new MetalParts("Søm, 100 i en pakke", 7, 50) ;
+        MetalParts bolte = new MetalParts("Bolte, 50 i en pakke", 7, 150);
+        list.add(beslag);
+        list.add(skruer);
+        list.add(bolte);
+        list.add(søm);
         CalcPrice instance = new CalcPrice();
-        double expResult = 0.0;
+        
         double result = instance.metalPartsPrice(list);
         assertEquals(expResult, result, 0.0);
-        // TODO review the generated test code and remove the default call to fail.
-        //fail("The test case is a prototype.");
     }
-*/    
+ 
 
 }
