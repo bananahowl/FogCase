@@ -59,6 +59,7 @@
 
                             <button type="submit" class="btn btn-outline-dark" name="command" value="buy">Create Order</button>
                             <button type="submit" class="btn btn-outline-dark" name="command" value="design"> See carport design  </button>
+                            <!--<button type="submit" class="btn btn-outline-dark" name="command" value="materialList">See material list</button> -->
                         </table>
                     </form>
                 </div>
