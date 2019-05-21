@@ -72,29 +72,6 @@ public class CarportFacadeTest {
     /**
      * Test of getRoofMaterial method, of class CarportFacade.
      */
-    @Test
-    public void testGetRoofMaterial() throws Exception {
-        String result = CarportFacade.getRoofMaterial(3);
-        assertEquals("Plast", result);
-    }
-
-    /**
-     * Test of getMatiralName method, of class CarportFacade.
-     */
-    @Test
-    public void testGetMatiralName() throws Exception {
-        String result = CarportFacade.getMatiralName(4);
-        assertEquals("fyr" , result);
-    }
-
-    /**
-     * Test of getmaxmatiralnum method, of class CarportFacade.
-     */
-    @Test
-    public void testGetmaxmatiralnum() throws Exception {
-        int result = CarportFacade.getmaxmatiralnum();
-        assertEquals(4, result);
-    }
 
     /**
      * Test of getMaxLength method, of class CarportFacade.
@@ -125,12 +102,6 @@ public class CarportFacadeTest {
 
     /**
      * Test of getMaxRoofMaterial method, of class CarportFacade.
-     */
-    @Test
-    public void testGetMaxRoofMaterial() throws Exception {
-        int result = CarportFacade.getMaxRoofMaterial();
-        assertEquals(3, result);
-    }
 
     /**
      * Test of getShedwidth method, of class CarportFacade.
@@ -147,7 +118,7 @@ public class CarportFacadeTest {
     @Test
     public void testGetMaxShedLength() throws Exception {
         int result = CarportFacade.getMaxShedLength();
-        assertEquals(20,result);
+        assertEquals(17,result);
     }
 
     /**
@@ -156,7 +127,7 @@ public class CarportFacadeTest {
     @Test
     public void testGetMaxShedWidth() throws Exception {
         int result = CarportFacade.getMaxShedWidth();
-        assertEquals(19,result);
+        assertEquals(15,result);
     }
 
     /**

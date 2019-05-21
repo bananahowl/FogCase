@@ -28,18 +28,6 @@ public class CarportFacade {
         return CarportMapper.getwidth(id);
     }
 
-    public static String getRoofMaterial(int id) throws CarportException, SQLException {
-        return CarportMapper.getRoofMaterial(id);
-    }
-
-    public static String getMatiralName(int id) throws CarportException {
-        return CarportMapper.getMatiralName(id);
-    }
-
-    public static int getmaxmatiralnum() throws CarportException {
-        return CarportMapper.getmaxmatiralnum();
-    }
-
     public static int getMaxLength() throws CarportException {
         return CarportMapper.getMaxLength();
     }
@@ -50,10 +38,6 @@ public class CarportFacade {
 
     public static int getMaxWidth() throws CarportException {
         return CarportMapper.getMaxWidth();
-    }
-
-    public static int getMaxRoofMaterial() throws CarportException {
-        return CarportMapper.getMaxRoofMaterial();
     }
 
     public static int getShedwidth(int id) throws CarportException, SQLException {
