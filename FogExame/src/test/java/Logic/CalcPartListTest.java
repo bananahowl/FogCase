@@ -113,13 +113,15 @@ public class CalcPartListTest {
         int length = 700;
         int width = 400;
         int angleInDegree = 15;
+        int shedWidth = 200;
+        int shedLength = 300;
         ArrayList<MaterialList> expResult = new ArrayList<MaterialList>
         (Arrays.asList( 
-                new MaterialList(220, 38, "skurplanker"), new MaterialList(750, 2, "rem"),
+                new MaterialList(220, 16, "skurplanker"), new MaterialList(750, 2, "rem"),
                 new MaterialList(430, 14, "spær"), new MaterialList(310, 10, "stolper"),
                 new MaterialList(15, 434, "tagsten"), new MaterialList(60, 14, "trægalver"),
                 new MaterialList(207, 14, "vertikalespær"), new MaterialList(760, 7, "horizontalespær")));
-        MaterialList shedtrue = CalcPartList.calcShedMats(length, width);
+        MaterialList shedtrue = CalcPartList.calcShedMats(shedLength, shedWidth);
         MaterialList spertrue = CalcPartList.calcSper(length , width);
         MaterialList remtrue = CalcPartList.calcRem(length, width);
         MaterialList posttrue = CalcPartList.calculatePortPost(width, length);
@@ -259,8 +261,8 @@ public class CalcPartListTest {
         System.out.println("totalwoodprice");
         int length = 700;
         int width = 400;
-        int shedWidth = 300;
-        int shedLength = 200;
+        int shedWidth = 200;
+        int shedLength = 300;
         int angleInDegree = 15;
        
         int expResult = 14460;

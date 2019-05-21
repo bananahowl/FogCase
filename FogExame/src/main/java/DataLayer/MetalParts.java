@@ -20,6 +20,20 @@ public class MetalParts {
     this.amount = amount;
     
     }
+    
+    @Override
+    public boolean equals(Object obj) {
+        MetalParts meta = (MetalParts) obj;
+        boolean status = false;
+        if(this.name.equalsIgnoreCase(meta.name)
+           && this.price == meta.price
+           && this.amount == meta.amount
+           ){
+            status = true;
+        }
+        return status;
+        
+    }
 
     public String getName() {
         return name;
@@ -35,7 +49,8 @@ public class MetalParts {
 
     @Override
     public String toString() {
-        return "MetalParts{" + "name=" + name + ", price=" + price + ", amount=" + amount + '}';
+        return "MetalParts-" + "Name:" + name + " Price:" + price + " Amount:" + amount + '\n';
+        
     }
     
     
