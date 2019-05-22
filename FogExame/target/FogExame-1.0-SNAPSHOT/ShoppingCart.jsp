@@ -26,6 +26,8 @@
             int angle = Integer.parseInt(request.getParameter("angle"));
         %>
         <div class="header">
+            <img src="Images/FogLogo.jpg" alt="logofog" width="30%" height="20%">
+            <br>
             <img src="https://hr-skyen.dk/hr/image.php?companyid=226&id=5973" alt="Fog" width="500" heigth ="100">
             </div>
 
