@@ -16,7 +16,8 @@
     </head>
     <body>
         <div class="header">
-            <img src="https://hr-skyen.dk/hr/image.php?companyid=226&id=5973" alt="Fog" width="500" heigth ="100">
+            <img src="Images/FogLogo.jpg" alt="logofog" width="30%" height="20%">
+            
         </div>
 
         <div class="topnav">
