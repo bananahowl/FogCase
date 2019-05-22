@@ -29,7 +29,7 @@ public class RegisterCommand extends Command {
             session.setAttribute("user", user);
             return "CustomizeCarport";
         } else {
-            throw new CarportException("the two passwords did not match" );
+            throw new CarportException("The two passwords did not match" );
             
         }
     }

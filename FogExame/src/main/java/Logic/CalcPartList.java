@@ -71,13 +71,13 @@ public class CalcPartList {
     public static MaterialList calcShedMats(int length,int width) throws CarportException, SQLException
     {
         //Planks 200cm in heigth(length), 55cm width, thickness idk 
-        
+        int heigth = 220;
 
         int amountOfLumberLength = (length / 55) * 2;
         int amountOfLumberWidth = (width / 55) * 2;
 
         int result = amountOfLumberLength + amountOfLumberWidth;
-        MaterialList list1 = new MaterialList(length, result, "skurplanker");
+        MaterialList list1 = new MaterialList(heigth, result, "skurplanker");
 
         return list1;
     }
@@ -238,8 +238,8 @@ public static ArrayList<MetalParts> addItem(MetalParts val) {
         try {
             
             MaterialList shedtest = calcShedMats(carport.getShed().getWidth(),carport.getShed().getLength());
-            MaterialList spertest = calcSper(carport.getWidth(), carport.getLength());
-            MaterialList remtest  = calcRem(carport.getWidth(), carport.getLength());
+            MaterialList spertest = calcSper(carport.getLength(), carport.getWidth());
+            MaterialList remtest  = calcRem(carport.getLength(), carport.getWidth());
             MaterialList posttest = calculatePortPost(carport.getWidth(), carport.getLength());
             MaterialList rooftest = calcRoofSides(carport.getWidth(), carport.getLength(), carport.getRoofangle());
             MaterialList fronttest= calcRoofFronts(carport.getWidth(),carport.getRoofangle());
