@@ -27,18 +27,19 @@ public class OrderFacadeTest {
     @Test
     public void testCreateOrder() throws Exception {
         System.out.println("createOrder");
-        Shed shed = new Shed(300,220,500);
-        Shed shedexp = new Shed(300,220,500);
-        int id = 0;
-        Carport carport = new Carport(700,220,500,shed,20,5000);
-        Carport carportexp = new Carport(700,220,500,shedexp,20,5000);
-        User user = new User(7,"Knud", "Mogensen", "Gattet 7", "Lyngby", 2800, 12345678, "Knud@hotmail.dk", "KnudDenStore");
-        User userexp = new User(7,"Knud", "Mogensen", "Gattet 7", "Lyngby", 2800, 12345678, "Knud@hotmail.dk", "KnudDenStore");
-        Order expResult = new Order(id,carportexp, userexp, false);
-        Order result = OrderFacade.createOrder(id, carport, user);
-        OrderFacade.deleteorder(7);
+        Shed shedexp = new Shed(180,220,270);
+        Shed shed = new Shed(3,1,4);
+        int id = 3;
+        Carport carportexp = new Carport(720,220,720,shed,20,7600);
+        Carport carport = new Carport(16,1,17,shedexp,3,7600);
+        Order expResult = new Order(id,carportexp, false);
+        Order result = OrderFacade.createOrder(id, carport);
+        //OrderFacade.deleteorder(3);
         assertEquals(expResult, result);
-        //OrderFacade.deleteorder(7);
+        
+        
+        
+        //OrderFacade.deleteorder(3);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
