@@ -21,7 +21,6 @@ abstract class Command {
         
         commands.put("customize", new CustomizeCommand());
         commands.put("design", new DesignCommand());
-        
         commands.put("buy", new BuyCommand());
         /*
         commands.put( "createOrder", new CreateOrder());

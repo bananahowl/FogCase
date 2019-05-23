@@ -24,7 +24,7 @@ import static org.junit.Assert.*;
 public class CarportFacadeTest {
     
     public CarportFacadeTest() {
-    }/*
+    }
     
     @BeforeClass
     public static void setUpClass() {
@@ -116,5 +116,5 @@ public class CarportFacadeTest {
         int result = CarportFacade.getRoofAngle(4);
         assertEquals(30, result);
     }
-*/
+
 }

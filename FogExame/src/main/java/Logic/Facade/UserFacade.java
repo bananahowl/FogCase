@@ -22,6 +22,8 @@ public class UserFacade {
         try {
             User user = new User(firstname, lastname, adress, city, zipcode, phone, email, password);
             UserMapper.createUser(user);
+            User userWithID = getUser(email, password);
+            user.setUser_id(userWithID.getUser_id());
             return user;
         } catch (CarportException ex) {
             Logger.getLogger(UserFacade.class.getName()).log(Level.SEVERE, null, ex);

@@ -37,8 +37,6 @@
         <div class="header" style="text-align: center; margin: 0 auto;">
             <img src="Images/Fog.png" alt="logofog" width="10%" height="10%">
         </div>
-        <button type="button" name="back" onclick="history.back()">back</button> <!-- to got to prior page.-->
-
 
         ${SVG}
 

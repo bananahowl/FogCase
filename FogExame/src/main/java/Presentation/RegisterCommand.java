@@ -27,9 +27,11 @@ public class RegisterCommand extends Command {
             User user = UserFacade.createUser(firstname, lastname, adress, city, zipcode, phone, email, password1);
             HttpSession session = request.getSession();
             session.setAttribute("user", user);
+            String html = HtmlConverter.showLoggedInUser(user);
+            session.setAttribute("userbox", html);
             return "CustomizeCarport";
         } else {
-            throw new CarportException("the two passwords did not match" );
+            throw new CarportException("The two passwords did not match" );
             
         }
     }

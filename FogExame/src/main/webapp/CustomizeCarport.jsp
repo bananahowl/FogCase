@@ -31,6 +31,8 @@
                 </div>
                 <div class="column middle">
                     <div class="card">
+                        <h2><b>PLEASE FILL OUT THE SECTION BELOW:</b></h2>
+                        <br><br>
                         <form action="FrontController" method="GET">
                             <table class="table">
                                 <thead class="thead-light">
@@ -61,16 +63,12 @@
                                                 <% for (int i = 1; i < cf.getMaxAngles() + 1; i++) {%>
                                                 <option value=<%=i%>><%= cf.getRoofAngle(i)%></option><% }%></td>
 
-                                        <td><button type="submit" class="btn btn-outline-dark" name="command" value="calculate">Calculate </button></td>
+                                        <td><button type="submit" class="btn btn-success" name="command" value="calculate">Calculate </button></td>
                                         <td><span id="errorContainer"></span></td>
                                     </tr>
                                 </tbody>
                             </table>
                         </form>
-                    </div>
-                    <div class="column side">
-                        <div class="card">
-                        </div>
                     </div>
                 </div>
             </div>

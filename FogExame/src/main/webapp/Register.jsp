@@ -89,7 +89,7 @@
                                             <input type="password" name="password2" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                                         </div>
                                         
-                                        <button type="submit" class="btn btn-outline-dark" name="command" value="register">Register</button>
+                                        <button type="submit" class="btn btn-success" name="command" value="register">Register</button>
                                 </table>
                             </form>
                         </div>

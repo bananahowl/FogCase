@@ -46,4 +46,9 @@ public class OrderFacade {
     public static List<Order> getAllOrders() throws CarportException {
         return OrderMapper.getAllOrders();
     }
+    
+    public static Order readOrder(int id) throws CarportException {
+        Order orde = OrderMapper.readOrder(id);
+        return orde;
+    }
 }
