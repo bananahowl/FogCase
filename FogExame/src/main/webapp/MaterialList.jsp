@@ -24,7 +24,8 @@
     </head>
     <body>
         <div class="header">
-            <img src="https://media.licdn.com/dms/image/C4E0BAQGleVi1XAFxBg/company-logo_200_200/0?e=2159024400&v=beta&t=qQ2ebmGf9u4b45tNF9OyVrcy7NGpnwLXZkLrOky6ibM" alt="Fog" width="200" height="200">
+            <img src="Fog.png" alt="Fogg" alt="Fog" width="200" height="200">
+            <br>
         </div>
 
         <div class="topnav">

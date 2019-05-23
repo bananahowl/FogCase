@@ -26,29 +26,17 @@ public class MaterialList {
     public String toString() {
         return "MaterialList-" + " Length:" + length + " Amount:" + amount + " Description: " + description + "\n";
     }
-
     @Override
     public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
+        MaterialList mat = (MaterialList) obj;
+        boolean status = false;
+        if(this.length == mat.length
+           && this.amount == mat.amount
+           && this.description.equalsIgnoreCase(mat.description)){
+            status = true;
         }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final MaterialList other = (MaterialList) obj;
-        if (this.length != other.length) {
-            return false;
-        }
-        if (this.amount != other.amount) {
-            return false;
-        }
-        if (!Objects.equals(this.description, other.description)) {
-            return false;
-        }
-        return true;
+        return status;
+        
     }
 
     public int getLength() {

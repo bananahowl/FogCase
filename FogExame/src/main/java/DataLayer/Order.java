@@ -33,31 +33,17 @@ public class Order {
         return hash;
     }
 
-    @Override
+   @Override
     public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
+        Order ord = (Order) obj;
+        boolean status = false;
+        if(this.order_id == ord.order_id
+           && this.carport == ord.carport
+           && this.shipped == ord.shipped){
+            status = true;
         }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Order other = (Order) obj;
-        if (this.order_id != other.order_id) {
-            return false;
-        }
-        if (this.shipped != other.shipped) {
-            return false;
-        }
-        if (!Objects.equals(this.carport, other.carport)) {
-            return false;
-        }
-      
-        return true;
+        return status;
     }
-
 
     public int getOrder_id() {
         return order_id;
