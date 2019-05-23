@@ -121,4 +121,51 @@ public class OrderMapper {
         }
         return orders;
     }
+    
+    public static void readAllOrders(int id) throws CarportException {
+        try {
+            Connection con = Connector.connection();
+            String SQL = "select * from orderTable; ";
+            PreparedStatement ps = con.prepareStatement(SQL);
+            ps.setInt(1, id);
+            ps.executeQuery(SQL);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(OrderMapper.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(OrderMapper.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }
+    
+        public static Order readOrder(int id) throws CarportException {
+        Order result = null;
+            try {
+            Connection con = Connector.connection();
+            String SQL = "select * from orderTable where user_id = ? ";
+            PreparedStatement ps = con.prepareStatement(SQL);
+            ps.setInt(1, id);
+        ResultSet rs = ps.executeQuery();
+
+            while (rs.next()) {
+                int orderID = rs.getInt("order_id");
+                int clength = rs.getInt("cLength");
+                int cwidth = rs.getInt("cWidth");
+                int cheight = rs.getInt("cHeigth");
+                int slength = rs.getInt("sLength");
+                int swidth = rs.getInt("sWidth");
+                int angle = rs.getInt("angle");
+                int price = rs.getInt("price");
+                Shed shed = new Shed(220, slength, swidth);
+                Carport carport = new Carport(clength, cwidth, cheight, shed, angle, price);
+                boolean shipped = rs.getBoolean("shipped");
+                result = new Order(orderID, carport, shipped);
+            }
+        } catch (ClassNotFoundException | SQLException ex) {
+
+            throw new CarportException(ex.getMessage());
+        }
+        return result;
+
+    }
+    
 }

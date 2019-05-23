@@ -22,8 +22,8 @@ import static org.junit.Assert.*;
  * @author frizz
  */
 public class OrderFacadeTest {
-/*
-    
+
+    /*
     @Test
     public void testCreateOrder() throws Exception {
         System.out.println("createOrder");
@@ -31,9 +31,10 @@ public class OrderFacadeTest {
         Shed shed = new Shed(3,1,4);
         int id = 3;
         Carport carportexp = new Carport(720,220,720,shed,20,7600);
-        Carport carport = new Carport(16,1,17,shedexp,3,7600);
+        Carport carport = new Carport(15,1,17,shedexp,3,7600);
         Order expResult = new Order(id,carportexp, false);
-        Order result = OrderFacade.createOrder(id, carport);
+        OrderFacade.createOrder(id, carport);
+        Order result = OrderFacade.readOrder(3);
         //OrderFacade.deleteorder(3);
         assertEquals(expResult, result);
         
