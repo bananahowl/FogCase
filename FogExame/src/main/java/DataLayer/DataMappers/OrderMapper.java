@@ -55,10 +55,8 @@ public class OrderMapper {
             PreparedStatement ps = con.prepareStatement(SQL);
             ps.setInt(1, id);
             ps.executeQuery(SQL);
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(OrderMapper.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (SQLException ex) {
-            Logger.getLogger(OrderMapper.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException | SQLException ex) {
+            throw new CarportException (ex.getMessage());
         }
 
     }
@@ -116,7 +114,6 @@ public class OrderMapper {
                 orders.add(new Order(orderID, carport, shipped));
             }
         } catch (ClassNotFoundException | SQLException ex) {
-
             throw new CarportException(ex.getMessage());
         }
         return orders;

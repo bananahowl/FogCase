@@ -36,9 +36,7 @@ public class CreateCarport {
             int c = getRoofAngle(angle);
             Carport carport = new Carport(a, 220, b, shed, c,price);
             return carport;
-        } catch (CarportException ex) {
-            Logger.getLogger(CarportFacade.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (SQLException ex) {
+        } catch (CarportException | SQLException ex) {
             Logger.getLogger(CarportFacade.class.getName()).log(Level.SEVERE, null, ex);
         }
         return null;
@@ -63,9 +61,7 @@ public class CreateCarport {
             int e = getRoofAngle(angle);
             int price = CalcPartList.totalwoodprice(b, a, d, c, e);
             return price;
-        } catch (CarportException ex) {
-            Logger.getLogger(CarportFacade.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (SQLException ex) {
+        } catch (CarportException | SQLException ex) {
             Logger.getLogger(CarportFacade.class.getName()).log(Level.SEVERE, null, ex);
         }
         return 0;
