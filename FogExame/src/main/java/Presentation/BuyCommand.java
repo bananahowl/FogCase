@@ -35,7 +35,7 @@ public class BuyCommand extends Command {
     String execute(HttpServletRequest request, HttpServletResponse response) throws CarportException {
         if (request.getSession(true).getAttribute("user") == null) {
             String error = "You have to be logged in before you can finalize your order!";
-            request.setAttribute("error", error);
+            request.setAttribute("errors", error);
 
             return "index";
 
@@ -46,13 +46,10 @@ public class BuyCommand extends Command {
             int lengthShed = Integer.parseInt(request.getParameter("lengthShed"));
             int widthShed = Integer.parseInt(request.getParameter("widthShed"));
             int angle = Integer.parseInt(request.getParameter("angle"));
-            
             int price = CreateCarport.NumbersAngleRoof(length, width, widthShed, lengthShed, angle);
             Carport cp = CreateCarport.createCarportAngleRoof(length, width, widthShed, lengthShed, angle, price);
-            
             Carport cpp = CreateCarport.createCarportid(length, width, widthShed, lengthShed, angle, price);
             User user = (User) request.getSession().getAttribute("user");
-            
             ArrayList<Order> shoppingcart = new ArrayList();
             Order orders = OrderFacade.createOrder(user.getUser_id(), cpp);
             shoppingcart.add(orders);

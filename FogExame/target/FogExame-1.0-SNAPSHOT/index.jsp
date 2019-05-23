@@ -30,7 +30,7 @@
             <div class="column middle">
                 <div class="card">
                     <h2><b>Protect your car with a carport</b></h2>
-                    <h5>${error}</h5>
+                    <h5>${errors}</h5>
 
                     <form action="FrontController" method="GET">
                     <button type="submit" class="btn btn-secondary btn-lg btn-block" name="command" value="customize">Customize Carport</button>
