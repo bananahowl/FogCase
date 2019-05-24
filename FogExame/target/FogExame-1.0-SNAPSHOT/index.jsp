@@ -103,6 +103,7 @@
                                 </div>
                                 <button type="submit" class="btn btn-success" value="Login">Sign in</button>
                             </td>
+                            ${error}
                         </table>
                         <div class="dropdown-divider"></div>
 

@@ -40,8 +40,17 @@ public class UserFacade {
         }
         return null;
 
+            
        
     }
     
+    public static String doesUserExist (String email){
+        try {
+            return UserMapper.checkIfExists(email);
+        } catch (CarportException ex) {
+            Logger.getLogger(UserFacade.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
+    }
 
 }
