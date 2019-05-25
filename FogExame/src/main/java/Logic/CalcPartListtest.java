@@ -85,6 +85,7 @@ public class CalcPartListtest {
         System.out.println("______x____XX_____x___XXX__");
         System.out.println(test.metalPartsPrice(metaldele));
         CalcPartList tre = new CalcPartList();
+        CalcPrice cp = new CalcPrice();
         Shed sh = new Shed(300, 220, 200);
         Carport carpot = new Carport(700,220,400, sh, 15,0);
         System.out.println("xxxxx");
@@ -92,7 +93,9 @@ public class CalcPartListtest {
 
         System.out.println("xx");
         System.out.println("___________________________");
-        System.out.println(tre.totalwoodprice(300, 200, 400, 700, 15));
+        System.out.println(tre.totalcarportprice(300, 200, 400, 700, 15));
+        
+        
         System.out.println("_____________________________");
 
     }

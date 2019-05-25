@@ -253,7 +253,7 @@ public class CalcPartListTest {
     }
 */
     /**
-     * Test of totalwoodprice method, of class CalcPartList.
+     * Test of totalcarportprice method, of class CalcPartList.
      */
 
     @Test
@@ -266,7 +266,7 @@ public class CalcPartListTest {
         int angleInDegree = 15;
        
         int expResult = 14460;
-        int result = CalcPartList.totalwoodprice(shedWidth, shedLength, width, length, angleInDegree);
+        int result = CalcPartList.totalcarportprice(shedWidth, shedLength, width, length, angleInDegree);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");

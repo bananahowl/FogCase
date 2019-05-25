@@ -11,6 +11,14 @@ import java.util.Objects;
  *
  * @author frizz
  */
+/**
+         * MaterialList class is used in a larger scale with it being a foundation( with
+         * other instance classes) <br> MaterialList class is used to be able to store
+         * the tree values which is used in the carport,
+         * @param  name: the name of the part
+         * @param amount:the amount of a certain part
+         * @param  price: the price for that part
+         */
 public class MaterialList {
     private int length;
     private int amount;

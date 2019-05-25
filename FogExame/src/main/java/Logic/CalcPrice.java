@@ -82,13 +82,13 @@ public  class CalcPrice {
             amountOfBolts += list.get(i).getAmount() *2;
             }
             
-            if(list.get(i).getDescription() == "vertikalespær"){
+            if(list.get(i).getDescription().equals("vertikalespær")){
             amountOfBrackets += list.get(i).getAmount() *6;
             amountOfScews += list.get(i).getAmount() *18;
             amountOfBolts += list.get(i).getAmount() *18;
             }
             
-            if(list.get(i).getDescription() == "horizontalespær"){
+            if(list.get(i).getDescription().equals("horizontalespær")){
             amountOfNails += 2*(list.get(i).getAmount() *list.get(i-1).getAmount() *2);
             }
             

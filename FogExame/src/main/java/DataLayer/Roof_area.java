@@ -17,6 +17,16 @@ public class Roof_area {
     private int height;
     private int degree; 
 
+    /**
+         * Roof_Area class is used in a object class used by other methods as parameters ( with
+         * other instance classes) <br> Metalparts class is used to be able to store
+         * metal parts which is used in the carport,
+         * @param  id: the id of the roof area instance 
+         * @param width: the widht, value must be a int
+         * @param  length: the lenght, value must be a int
+         * @param height : the height, value must be a int
+         * @param degree : the degree, value must be a int
+         */
     public Roof_area(int id, int width, int length, int height, int degree) {
         this.id = id;
         this.width = width;
