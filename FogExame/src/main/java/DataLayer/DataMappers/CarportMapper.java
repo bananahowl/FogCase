@@ -129,7 +129,7 @@ public class CarportMapper {
         }
     }
 
-    public static int getlength(int id) throws CarportException, SQLException {
+    public static int getlength(int id) throws CarportException  {
         try {
             Connection conn = Connector.connection();
             String query = "select lengthvalue from cLength where lengthid = ?";
@@ -143,12 +143,12 @@ public class CarportMapper {
             } else {
                 throw new CarportException("Error");
             }
-        } catch (ClassNotFoundException ex) {
+        } catch (ClassNotFoundException | SQLException ex) {
             throw new CarportException(ex.getMessage());
         }
     }
 
-    public static int getShedwidth(int id) throws CarportException, SQLException {
+    public static int getShedwidth(int id) throws CarportException {
         try {
             Connection conn = Connector.connection();
             String query = "select shedwidthvalue from shedwidth where shedwidthid =?";
@@ -162,12 +162,12 @@ public class CarportMapper {
             } else {
                 throw new CarportException("Error");
             }
-        } catch (ClassNotFoundException ex) {
+        } catch (ClassNotFoundException | SQLException ex) {
             throw new CarportException(ex.getMessage());
         }
     }
 
-    public static int getShedlength(int id) throws CarportException, SQLException {
+    public static int getShedlength(int id) throws CarportException {
         try {
             Connection conn = Connector.connection();
             String query = "select shedlengthvalue from shedlength where shedlengthid = ?";
@@ -181,12 +181,12 @@ public class CarportMapper {
             } else {
                 throw new CarportException("Error");
             }
-        } catch (ClassNotFoundException ex) {
+        } catch (ClassNotFoundException| SQLException ex) {
             throw new CarportException(ex.getMessage());
         }
     }
 
-    public static int getRoofAngle(int id) throws CarportException, SQLException {
+    public static int getRoofAngle(int id) throws CarportException {
         try {
             Connection conn = Connector.connection();
 
@@ -200,7 +200,7 @@ public class CarportMapper {
             } else {
                 throw new CarportException("Error");
             }
-        } catch (ClassNotFoundException ex) {
+        } catch (ClassNotFoundException | SQLException ex) {
             throw new CarportException(ex.getMessage());
         }
     }
