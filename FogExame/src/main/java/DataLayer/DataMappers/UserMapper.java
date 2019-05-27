@@ -13,6 +13,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -65,5 +67,63 @@ public class UserMapper {
         } catch (SQLException |ClassNotFoundException ex) {
             throw new CarportException(ex.getMessage());
         }
+    }
+    
+    public static void deleteUser(int id) throws CarportException {
+        try {
+            Connection con = Connector.connection();
+            String SQL = "delete from user where userID = ? ;";
+            PreparedStatement ps = con.prepareStatement(SQL);
+            ps.setInt(1, id);
+            ps.executeQuery(SQL);
+        } catch (ClassNotFoundException | SQLException ex) {
+            throw new CarportException (ex.getMessage());
+        }
+
+    }
+    
+    public static void readAllUsers() throws CarportException {
+        
+        try {
+            Connection con = Connector.connection();
+            String SQL = "select * from orderTable; ";
+            PreparedStatement ps = con.prepareStatement(SQL);
+            
+            ps.executeQuery(SQL);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(UserMapper.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(UserMapper.class.getName()).log(Level.SEVERE, null, ex);
+        }
+      
+
+    }
+    
+        public static User readUser(int id) throws CarportException {
+        User result = null;
+            try {
+            Connection con = Connector.connection();
+            String SQL = "select * from user where userID = ? ";
+            PreparedStatement ps = con.prepareStatement(SQL);
+            ps.setInt(1, id);
+        ResultSet rs = ps.executeQuery();
+
+            while (rs.next()) {
+                String firstname = rs.getString("firstname");
+                String lastname = rs.getString("lastname");
+                String adress = rs.getString("adress");
+                String city = rs.getString("city");
+                int zipcode = rs.getInt("zipcode");
+                int phone = rs.getInt("phonenumber");
+                String email = rs.getString("email");
+                String password = rs.getString("kodeord");
+                result = new User(firstname, lastname, adress, city, zipcode, phone, email, password);
+            }
+        } catch (ClassNotFoundException | SQLException ex) {
+
+            throw new CarportException(ex.getMessage());
+        }
+        return result;
+
     }
 }

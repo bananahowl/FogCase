@@ -23,7 +23,7 @@ import static org.junit.Assert.*;
  */
 public class OrderFacadeTest {
 
-    /*
+    
     @Test
     public void testCreateOrder() throws Exception {
         System.out.println("createOrder");
@@ -34,8 +34,8 @@ public class OrderFacadeTest {
         Carport carport = new Carport(15,1,17,shedexp,3,7600);
         Order expResult = new Order(id,carportexp, false);
         OrderFacade.createOrder(id, carport);
-        Order result = OrderFacade.readOrder(3);
-        //OrderFacade.deleteorder(3);
+        Order result = OrderFacade.readOrder(39);
+        //OrderFacade.deleteorder(39);
         assertEquals(expResult, result);
         
         
@@ -44,5 +44,5 @@ public class OrderFacadeTest {
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
-    */
+    
 }

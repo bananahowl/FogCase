@@ -29,7 +29,6 @@ public class OrderFacade {
     }
 */
     public static Order createOrder(int id, Carport carport) throws CarportException {
-
         Order order = new Order(id, carport, false);
         OrderMapper.createOrder(order);
         return order;

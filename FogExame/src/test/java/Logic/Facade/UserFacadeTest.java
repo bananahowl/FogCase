@@ -40,23 +40,24 @@ public class UserFacadeTest {
 
     /**
      * Test of createUser method, of class UserFacade.
-     *//*
+     */
     @Test
     public void testCreateUser() throws Exception {
         System.out.println("createUser");
-        String firstname = "";
-        String lastname = "";
-        String adress = "";
-        String city = "";
-        int zipcode = 0;
-        int phone = 0;
-        String email = "";
-        String password = "";
-        User expResult = null;
-        User result = UserFacade.createUser(firstname, lastname, adress, city, zipcode, phone, email, password);
+        String firstname = "Mikkeltest";
+        String lastname = "Mikkelsen";
+        String adress = "Gydevej 7";
+        String city = "Farum";
+        int zipcode = 3520;
+        int phone = 12345678;
+        String email = "Mikkel@hotmail.com";
+        String password = "1234";
+        User expResult = new User("Mikkeltest", "Mikkelsen", "Gydevej 7", "Farum", 3520, 12345678, "Mikkel@hotmail.com", "1234");
+        UserFacade.createUser(firstname, lastname, adress, city, zipcode, phone, email, password);
+        User result = UserFacade.readUser(18);
+        UserFacade.deleteUser(18); // den sletter ikke,kan ikke se hvorfor queryen virker fint i sql
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**

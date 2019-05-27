@@ -32,7 +32,7 @@ public class OrderMapper {
             Connection con = Connector.connection();
             String SQL = "insert into orderTable (user_id, cLength, cWidth, cHeigth, sLength, sWidth, angle, price, shipped) values (?,?,?,?,?,?,?,?,?)";
             PreparedStatement ps = con.prepareStatement(SQL, Statement.RETURN_GENERATED_KEYS);
-            ps.setInt(1, order.getOrder_id());
+            ps.setInt(1, 3);
             ps.setInt(2, order.getCarport().getLength());
             ps.setInt(3, order.getCarport().getWidth());
             ps.setInt(4, order.getCarport().getHeigth());
@@ -65,7 +65,7 @@ public class OrderMapper {
         ArrayList<Order> orders = new ArrayList();
         try {
             Connection con = Connector.connection();
-            String SQL = "select order_id, cLength, cWidth, cHeigth, sLength, sWidth, angle, price, shipped from orderTable where user_id = ?;";
+            String SQL = "select user_id, cLength, cWidth, cHeigth, sLength, sWidth, angle, price, shipped from orderTable where user_id = ?;";
             PreparedStatement ps = con.prepareStatement(SQL);
             ps.setInt(1, user.getUser_id());
             ResultSet rs = ps.executeQuery();
@@ -119,12 +119,12 @@ public class OrderMapper {
         return orders;
     }
     
-    public static void readAllOrders(int id) throws CarportException {
+    public static void readAllOrders() throws CarportException {
         try {
             Connection con = Connector.connection();
             String SQL = "select * from orderTable; ";
             PreparedStatement ps = con.prepareStatement(SQL);
-            ps.setInt(1, id);
+            
             ps.executeQuery(SQL);
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(OrderMapper.class.getName()).log(Level.SEVERE, null, ex);

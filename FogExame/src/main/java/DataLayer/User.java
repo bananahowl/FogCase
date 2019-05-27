@@ -32,6 +32,24 @@ public class User {
         this.adress = adress;
         this.phone = phone;
     }
+    
+    @Override
+    public boolean equals(Object obj) {
+        User us = (User) obj;
+        boolean status = false;
+        if(this.firstname.equalsIgnoreCase(us.firstname)
+           && this.lastname.equalsIgnoreCase(us.lastname)
+           && this.adress.equalsIgnoreCase(us.adress)
+           && this.city.equalsIgnoreCase(us.city)
+           && this.zipcode == us.zipcode
+           && this.phone == us.phone
+           && this.email.equalsIgnoreCase(us.email)
+           && this.password.equalsIgnoreCase(us.password)){
+            status = true;
+        }
+        return status;
+        
+    }
 
     public int getUser_id() {
         return user_id;
@@ -107,7 +125,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" + "user_id=" + user_id + ", firstname=" + firstname + ", lastname=" + lastname + ", adress=" + adress + ", city=" + city + ", zipcode=" + zipcode + ", phone=" + phone + ", email=" + email + ", password=" + password + '}';
+        return "User-" + "user_id:" + user_id + " firstname:" + firstname + " lastname:" + lastname + " adress:" + adress + " city:" + city + " zipcode:" + zipcode + " phone:" + phone + " email:" + email + " password:" + password + '\n';
     }
     
 }

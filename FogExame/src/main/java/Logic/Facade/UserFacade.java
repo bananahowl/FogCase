@@ -9,6 +9,7 @@ import DataLayer.DataMappers.UserMapper;
 import DataLayer.User;
 import Logic.CarportException;
 import java.sql.SQLException;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -37,9 +38,20 @@ public class UserFacade {
             Logger.getLogger(UserFacade.class.getName()).log(Level.SEVERE, null, ex);
         }
         return null;
-
-       
     }
     
+    public static void deleteUser(int id) throws CarportException{
+        UserMapper.readUser(id);
+    }
+    
+    /*public static List<User> readAllUsers(){
+        
+    }
+      */
+    
+    public static User readUser(int id) throws CarportException{
+        User us = UserMapper.readUser(id);
+        return us;
+    }
 
 }
