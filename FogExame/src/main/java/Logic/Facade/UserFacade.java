@@ -23,6 +23,8 @@ public class UserFacade {
         try {
             User user = new User(firstname, lastname, adress, city, zipcode, phone, email, password);
             UserMapper.createUser(user);
+            User userWithID = getUser(email, password);
+            user.setUser_id(userWithID.getUser_id());
             return user;
         } catch (CarportException ex) {
             Logger.getLogger(UserFacade.class.getName()).log(Level.SEVERE, null, ex);
@@ -38,6 +40,7 @@ public class UserFacade {
             Logger.getLogger(UserFacade.class.getName()).log(Level.SEVERE, null, ex);
         }
         return null;
+
     }
     
     public static void deleteUser(int id) throws CarportException{
@@ -52,6 +55,17 @@ public class UserFacade {
     public static User readUser(int id) throws CarportException{
         User us = UserMapper.readUser(id);
         return us;
+    
+    }
+    
+    public static String doesUserExist (String email){
+        try {
+            return UserMapper.checkIfExists(email);
+        } catch (CarportException ex) {
+            Logger.getLogger(UserFacade.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
+
     }
 
 }

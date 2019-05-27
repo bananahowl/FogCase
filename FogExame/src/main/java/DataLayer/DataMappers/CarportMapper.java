@@ -24,7 +24,7 @@ public class CarportMapper {
     public static int getMaxLength() throws CarportException {
         try {
             Connection con = Connector.connection();
-            String SQL = "select max(lengthid) from cLength;";
+            String SQL = "select * from maxLength;";
             PreparedStatement ps = con.prepareStatement(SQL);
             ResultSet rs = ps.executeQuery();
 
@@ -42,7 +42,7 @@ public class CarportMapper {
     public static int getMaxAngles() throws CarportException {
         try {
             Connection con = Connector.connection();
-            String SQL = "select max(degreeid) from angle;";
+            String SQL = "select * from maxAngle;";
             PreparedStatement ps = con.prepareStatement(SQL);
             ResultSet rs = ps.executeQuery();
 
@@ -60,7 +60,7 @@ public class CarportMapper {
     public static int getMaxWidth() throws CarportException {
         try {
             Connection con = Connector.connection();
-            String SQL = "select max(widthid) from cWidth;";
+            String SQL = "select * from maxWidth;";
             PreparedStatement ps = con.prepareStatement(SQL);
             ResultSet rs = ps.executeQuery();
 
@@ -78,7 +78,7 @@ public class CarportMapper {
     public static int getMaxShedWidth() throws CarportException {
         try {
             Connection con = Connector.connection();
-            String SQL = "select max(shedwidthid) from shedwidth;";
+            String SQL = "select * from maxShedWidth;";
             PreparedStatement ps = con.prepareStatement(SQL);
             ResultSet rs = ps.executeQuery();
 
@@ -96,7 +96,7 @@ public class CarportMapper {
     public static int getMaxShedLength() throws CarportException {
         try {
             Connection con = Connector.connection();
-            String SQL = "select max(shedlengthid) from shedlength;";
+            String SQL = "select * from maxShedLength;";
             PreparedStatement ps = con.prepareStatement(SQL);
             ResultSet rs = ps.executeQuery();
 
@@ -115,8 +115,6 @@ public class CarportMapper {
         try {
             Connection con = Connector.connection();
             String SQL = "SELECT widthValue FROM cWidth WHERE widthid = ? ";
-
-            //+ id +""; 
             PreparedStatement ps = con.prepareStatement(SQL);
             ps.setInt(1, id);
             ResultSet rs = ps.executeQuery();

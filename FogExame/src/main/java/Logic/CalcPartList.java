@@ -198,7 +198,7 @@ public static ArrayList<MetalParts> addItem(MetalParts val) {
     }
 
 
-    public static int totalwoodprice(int shedWidth, int shedLength, int width, int length, int angle)
+    public static int totalcarportprice(int shedWidth, int shedLength, int width, int length, int angle)
     {
         try {
             CalcPrice price = new CalcPrice();
@@ -222,7 +222,11 @@ public static ArrayList<MetalParts> addItem(MetalParts val) {
             duperlist.add(verticaltest);
             duperlist.add(horizontaltest);
             
-            int pricetotal = price.woodPrice(duperlist);
+             int priceWood = price.woodPrice(duperlist);
+            
+           ArrayList<MetalParts> listMetal = price.metalParts(duperlist);
+            int priceMetal = (int)price.metalPartsPrice(listMetal); 
+            int pricetotal = priceWood + priceMetal;
             
             return pricetotal;
         } catch (CarportException | SQLException ex) {
@@ -231,6 +235,7 @@ public static ArrayList<MetalParts> addItem(MetalParts val) {
         return 0;
         
     }
+    
    
     public static ArrayList<MaterialList> totalpartlist(Carport carport)/*int shedWidth, int shedLength, int width, int length, int angle)*/
     {

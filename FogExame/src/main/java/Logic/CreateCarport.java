@@ -59,7 +59,7 @@ public class CreateCarport {
             int c =  getShedlength(lengthShed);
             int d =    getShedwidth(widthShed);
             int e = getRoofAngle(angle);
-            int price = CalcPartList.totalwoodprice(b, a, d, c, e);
+            int price = CalcPartList.totalcarportprice(b, a, d, c, e);
             return price;
         } catch (CarportException | SQLException ex) {
             Logger.getLogger(CarportFacade.class.getName()).log(Level.SEVERE, null, ex);

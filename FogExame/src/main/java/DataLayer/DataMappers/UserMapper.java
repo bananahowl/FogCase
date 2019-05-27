@@ -68,6 +68,7 @@ public class UserMapper {
             throw new CarportException(ex.getMessage());
         }
     }
+
     
     public static void deleteUser(int id) throws CarportException {
         try {
@@ -124,6 +125,25 @@ public class UserMapper {
             throw new CarportException(ex.getMessage());
         }
         return result;
+        }
+
+    public static String checkIfExists(String email) throws CarportException {
+        try {
+            Connection conn = Connector.connection();
+            String query = "SELECT * FROM user "
+                    + "WHERE email=?";
+            PreparedStatement ps = conn.prepareStatement(query);
+            ps.setString(1, email);
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) {
+                String emailFromDB = rs.getString("email");
+                return emailFromDB;
+            } else {
+                return null;
+            }
+        } catch (SQLException |ClassNotFoundException ex) {
+            throw new CarportException(ex.getMessage());
+        }
 
     }
 }

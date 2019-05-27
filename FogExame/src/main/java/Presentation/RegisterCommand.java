@@ -24,10 +24,17 @@ public class RegisterCommand extends Command {
         String password1 = request.getParameter( "password1" );
         String password2 = request.getParameter( "password2" );
         if ( password1.equals( password2 ) ) {
+            if(UserFacade.doesUserExist(email)!=null){
+             throw new CarportException("You are already registered with this email" );
+            }
+            else{
             User user = UserFacade.createUser(firstname, lastname, adress, city, zipcode, phone, email, password1);
             HttpSession session = request.getSession();
             session.setAttribute("user", user);
+            String html = HtmlConverter.showLoggedInUser(user);
+            session.setAttribute("userbox", html);
             return "CustomizeCarport";
+            }
         } else {
             throw new CarportException("The two passwords did not match" );
             

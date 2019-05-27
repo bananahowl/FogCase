@@ -33,6 +33,7 @@
             </div>
             <div class="column middle">
                 <div class="card">
+
                     <h2><b>PROTECT THE CAR WITH A CARPORT</b></h2>
                     <br><p1>It can be described as a partially closed cover of the car, which is either free standing or built as part of the house. </p1>
                     <p1>For most, and especially those who love cars, it is indispensable. With a carport you can completely relax.</p1>
@@ -54,7 +55,7 @@
                     <p1>It is a good idea to assess whether you need a utility room where you can store bicycles, garden tools and the like. </p1>
                     <p1>It is nice to have the opportunity to put things away in a locked room.</p1>
                     <br><br><br>
-                    <h5>${error}</h5>
+                    <h5>${errors}</h5>
                     <form action="FrontController" method="GET">
                         <button type="submit" class="btn btn-secondary btn-lg btn-block" name="command" value="customize">Customize Carport</button>
 
@@ -102,6 +103,7 @@
                                 </div>
                                 <button type="submit" class="btn btn-success" value="Login">Sign in</button>
                             </td>
+                            ${error}
                         </table>
                         <div class="dropdown-divider"></div>
 

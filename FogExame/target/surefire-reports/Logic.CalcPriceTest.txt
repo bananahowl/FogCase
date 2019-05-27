@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: Logic.CalcPriceTest
 -------------------------------------------------------------------------------
+<<<<<<< HEAD
 Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 sec
+=======
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+>>>>>>> fb463879b3e08742ba0c84ab3d2593667e2e06b9
