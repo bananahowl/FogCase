@@ -11,17 +11,6 @@ You must install following:
 
 To access the database in MYSQL Workbench please contact Frederik Løwe Lassen.
 
-
-## Configuration 
-
-
-## Pitfalls
-The following tests require a connection to the FogCase database.
-
-* CarportFacadeTest
-* OrderFacadeTest
-* UserFacadeTest
-
 ## Authors
 
 * Emil Skovbo
