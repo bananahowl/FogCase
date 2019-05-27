@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="11" failures="0" name="Logic.CalcPartListTest" time="0.208" errors="0" skipped="0">
+<testsuite tests="11" failures="0" name="Logic.CalcPartListTest" time="0.176" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_181\jre\bin"/>
@@ -26,6 +26,7 @@
 "/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
+    <property name="netbeans.deploy.debugmode" value="true"/>
     <property name="os.name" value="Windows 10"/>
     <property name="maven.ext.class.path" value="C:\Program Files\NetBeans 8.2\java\maven-nblib\netbeans-eventspy.jar"/>
     <property name="classworlds.conf" value="C:\Program Files\NetBeans 8.2\java\maven\bin\m2.conf"/>
@@ -45,7 +46,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_181\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dnetbeans.deploy=true -Dnetbeans.deploy.clientUrlPart=/index.jsp -Dmaven.ext.class.path=C:\Program Files\NetBeans 8.2\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 package"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dnetbeans.deploy.clientUrlPart=/index.jsp -Dnetbeans.deploy.debugmode=true -Dnetbeans.deploy=true -Dmaven.ext.class.path=C:\Program Files\NetBeans 8.2\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 package"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="da"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -63,12 +64,12 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="Logic.CalcPartListTest" name="testTotalMaterial" time="0.044"/>
-  <testcase classname="Logic.CalcPartListTest" name="testCalcAngledVerticalSper" time="0.004"/>
-  <testcase classname="Logic.CalcPartListTest" name="testTotalpartlist" time="0.004"/>
+  <testcase classname="Logic.CalcPartListTest" name="testTotalMaterial" time="0.012"/>
+  <testcase classname="Logic.CalcPartListTest" name="testCalcAngledVerticalSper" time="0"/>
+  <testcase classname="Logic.CalcPartListTest" name="testTotalpartlist" time="0"/>
   <testcase classname="Logic.CalcPartListTest" name="testCalcShedMats" time="0"/>
   <testcase classname="Logic.CalcPartListTest" name="testCalcAngledHorizontalSper" time="0"/>
-  <testcase classname="Logic.CalcPartListTest" name="testTotalwoodprice" time="0.016"/>
+  <testcase classname="Logic.CalcPartListTest" name="testTotalwoodprice" time="0.004"/>
   <testcase classname="Logic.CalcPartListTest" name="testCalcRem" time="0"/>
   <testcase classname="Logic.CalcPartListTest" name="testCalcRoofSides" time="0"/>
   <testcase classname="Logic.CalcPartListTest" name="testCalcSper" time="0"/>

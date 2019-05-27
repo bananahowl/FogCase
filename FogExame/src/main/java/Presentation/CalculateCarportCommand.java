@@ -35,7 +35,7 @@ public class CalculateCarportCommand extends Command {
         int widthShed = Integer.parseInt(request.getParameter("widthShed"));
         int angle = Integer.parseInt(request.getParameter("angle"));
         
-            int price = CreateCarport.NumbersAngleRoof(width, length, width, length, angle);
+            int price = CreateCarport.NumbersAngleRoof(length, width, widthShed, lengthShed, angle);
             Carport cp = CreateCarport.createCarportAngleRoof(length, width,  widthShed,lengthShed, angle, price);
             String html = HtmlConverter.carportAnlgeRooftoHtml(cp);            
             ArrayList<MaterialList> list = totalpartlist(cp);

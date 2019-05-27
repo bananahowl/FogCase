@@ -20,7 +20,19 @@ public class User {
     private int phone;
     private String email; 
     private String password;
-
+         /**
+          * <h1> The user class </h1>
+         * User class is used to be able to temp. store and send the value to the database  
+         *  <br> The class itself is more the beable to get the users register into and store it to future use
+         * @param firstname :  STRING the first name of the user
+         * @param  lastname: STRING the last name of the user
+         * @param adress : STRING the adress of the user
+         * @param  city : STRING the living city of the user
+         * @param zipcode : INT zipcode to the users location
+         * @param phone : INT the phone number of the user
+         * @param email : STRING the email of the user
+         * @param password : STRING the password for the user
+         */
     public User(String firstname, String lastname, String adress, String city, int zipcode, int phone, String email, String password) {
         
         this.firstname = firstname;
