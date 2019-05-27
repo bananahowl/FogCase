@@ -56,8 +56,8 @@ public class CreateCarport {
         try {
             int a = getCarportLength(length);
             int b = getCarportWidth(width);
-            int c =  getShedlength(lengthShed);
-            int d =    getShedwidth(widthShed);
+            int c = getShedlength(lengthShed);
+            int d = getShedwidth(widthShed);
             int e = getRoofAngle(angle);
             int price = CalcPartList.totalcarportprice(b, a, d, c, e);
             return price;

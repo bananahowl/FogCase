@@ -48,7 +48,6 @@ C:\Users\emils\Desktop\2semester\FogCase\FogExame\src\main\java\Presentation\Reg
 C:\Users\emils\Desktop\2semester\FogCase\FogExame\src\main\java\Presentation\UnknownCommand.java
 C:\Users\emils\Desktop\2semester\FogCase\FogExame\src\main\java\Logic\CalcPartList.java
 C:\Users\emils\Desktop\2semester\FogCase\FogExame\src\main\java\DataLayer\DataMappers\CarportMapper.java
-C:\Users\emils\Desktop\2semester\FogCase\FogExame\src\main\java\Presentation\GetMyOrders.java
 C:\Users\emils\Desktop\2semester\FogCase\FogExame\src\main\java\Logic\CreateCarport.java
 C:\Users\emils\Desktop\2semester\FogCase\FogExame\src\main\java\Logic\Facade\CarportFacade.java
 C:\Users\emils\Desktop\2semester\FogCase\FogExame\src\main\java\Presentation\FrontController.java
@@ -62,7 +61,6 @@ C:\Users\emils\Desktop\2semester\FogCase\FogExame\src\main\java\DataLayer\Carpor
 C:\Users\emils\Desktop\2semester\FogCase\FogExame\src\main\java\DataLayer\MaterialList.java
 C:\Users\emils\Desktop\2semester\FogCase\FogExame\src\main\java\Presentation\BuyCommand.java
 C:\Users\emils\Desktop\2semester\FogCase\FogExame\src\main\java\Presentation\ShoppingCartCommand.java
-C:\Users\emils\Desktop\2semester\FogCase\FogExame\src\main\java\Presentation\CreateOrder.java
 C:\Users\emils\Desktop\2semester\FogCase\FogExame\src\main\java\DataLayer\Connector.java
 C:\Users\emils\Desktop\2semester\FogCase\FogExame\src\main\java\DataLayer\Order.java
 C:\Users\emils\Desktop\2semester\FogCase\FogExame\src\main\java\DataLayer\Materials.java
@@ -74,4 +72,4 @@ C:\Users\emils\Desktop\2semester\FogCase\FogExame\src\main\java\DataLayer\User.j
 C:\Users\emils\Desktop\2semester\FogCase\FogExame\src\main\java\Presentation\Command.java
 C:\Users\emils\Desktop\2semester\FogCase\FogExame\src\main\java\Logic\CalcPartListtest.java
 C:\Users\emils\Desktop\2semester\FogCase\FogExame\src\main\java\DataLayer\dataTest.java
->>>>>>> fb463879b3e08742ba0c84ab3d2593667e2e06b9
+>>>>>>> 89c56705344880a68e0744faa810132907afe2ef

@@ -1,8 +1,13 @@
 -------------------------------------------------------------------------------
 Test set: Logic.Facade.OrderFacadeTest
 -------------------------------------------------------------------------------
+<<<<<<< HEAD
 Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.133 sec <<< FAILURE!
 testCreateOrder(Logic.Facade.OrderFacadeTest)  Time elapsed: 1.042 sec  <<< ERROR!
+=======
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.056 sec <<< FAILURE!
+testCreateOrder(Logic.Facade.OrderFacadeTest)  Time elapsed: 0.052 sec  <<< ERROR!
+>>>>>>> 8c9ada4d57ecb8b1790579e354a24aed9824627d
 Logic.CarportException: Cannot add or update a child row: a foreign key constraint fails
 	at DataLayer.DataMappers.OrderMapper.createOrder(OrderMapper.java:46)
 	at Logic.Facade.OrderFacade.createOrder(OrderFacade.java:33)
