@@ -85,3 +85,18 @@ insert into shedwidth(shedwidthvalue) values
 insert into angle(degreevalue) values
 (0),(15),(20),(30),(35),(40),(45);
 
+CREATE VIEW maxLength AS
+SELECT MAX(lengthid) FROM cLength;
+
+CREATE VIEW maxWidth AS
+select max(widthid) from cWidth;
+
+CREATE VIEW maxShedWidth AS
+select max(shedwidthid) from shedwidth;
+
+CREATE VIEW maxShedLength AS
+select max(shedlengthid) from shedlength;
+
+CREATE VIEW maxAngle AS
+select max(degreeid) from angle;
+
