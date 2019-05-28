@@ -16,17 +16,11 @@
     </head>
     <body>
         <div class="header">
-
             <img src="Images/FogLogo.jpg" alt="logofog" width="30%" height="20%">
-
-            <!--<img src="https://hr-skyen.dk/hr/image.php?companyid=226&id=5973" alt="Fog" width="500" heigth ="100"> -->
         </div>
-
         <div class="topnav">
             <a href="index.jsp">Home</a>
-
         </div>
-
         <div class="row">
             <div class="column side">
                 <h1></h1>
@@ -106,10 +100,7 @@
                             ${error}
                         </table>
                         <div class="dropdown-divider"></div>
-
                         <a class="dropdown-item" href="Register.jsp">New around here? Register here</a>
-
-
                     </form>
                 </div>
             </div>
