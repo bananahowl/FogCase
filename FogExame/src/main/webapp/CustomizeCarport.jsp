@@ -1,7 +1,7 @@
 <%-- 
     Document   : CarportFlatRoof
     Created on : 26-04-2019, 20:28:13
-    Author     : fskn
+    Author     : fskn, Emil
 --%>
 
 <%@page import="Logic.Facade.CarportFacade"%>
@@ -33,7 +33,7 @@
                     <div class="card">
                         <h2><b>PLEASE FILL OUT THE SECTION BELOW:</b></h2>
                         <br><br>
-                        <form action="FrontController" method="GET">
+                        <form action="FrontController" method="POST">
                             <table class="table">
                                 <thead class="thead-light">
                                     <tr>

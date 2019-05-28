@@ -42,7 +42,7 @@
                     ${table2}
                 </div>
                 <div class="card">
-                    <form action= "FrontController" method="GET" > 
+                    <form action= "FrontController" method="POST" > 
                         <table class="first">
                             <input type="hidden" value="<%= lengths%>" name = "length">
                             <input type="hidden" value="<%= widths%>" name = "width">
