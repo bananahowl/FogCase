@@ -18,16 +18,9 @@
 
     </head>
     <body>  
-        <%
-            CarportFacade cf = new CarportFacade();
-            int width = cf.getCarportWidth(Integer.parseInt(request.getParameter("width")));
-            int length = cf.getCarportLength(Integer.parseInt(request.getParameter("length")));
-            //${mlist}
-        %>
         <div class="header">
             <img src="Images/FogLogo.jpg" alt="logofog" width="30%" height="20%">
         </div>
-
         <div class="topnav">
             <a href="index.jsp">Home</a>
         </div>
@@ -39,7 +32,6 @@
                 <div class="card">
                     <h5><b>Carport information:</b></h5>
                     ${table}
-
                 </div>
                 <div class="card">
                     <form action= "FrontController" method="GET" > 
@@ -59,7 +51,6 @@
 
                             <button type="submit" class="btn btn-success" name="command" value="buy">Create Order</button>
                             <button type="submit" class="btn btn-success" name="command" value="design"> See carport design  </button>
-                            <!--<button type="submit" class="btn btn-outline-dark" name="command" value="materialList">See material list</button> -->
                         </table>
                     </form>
                 </div>

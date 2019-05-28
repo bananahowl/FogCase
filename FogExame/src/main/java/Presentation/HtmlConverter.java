@@ -24,20 +24,9 @@ public class HtmlConverter {
                 + "<tr><th>Carport  </th><th>Length   </th><th>Width    </th><th>Height    </th><th>Shed Length    </th><th>Shed Width    </th><th>Angle   </th><th>Price      </th></tr>"
                 + "<tr><th>Size</th><th>" + carport.getLength() + "</th><th>" + carport.getWidth() + "</th><th>220</th><th>" + carport.getShed().getLength() + "</th><th>" + carport.getShed().getWidth() + "</th><th>none</th><th>" + carport.getPrice() + "</th></tr>"
                 + "</table>"
-                //+ "<button type=\"submit\"  name=\"command\" value=\"Shoppingcart\" >Add to Shoppingcart</button>"
                 + "</form>";
         return cartTable;
 
-//                 <table class=table table-striped><thead><tr><th>Name</th><th>Quantity</th><th>Price</th>
-//                    <th>Total</th></tr></thead><tbody><tr>
-//                    <td>  <%=finish%></td><td> <%=quant%></td><td> <%=price%></td><td class=lineprice><%= total%></td><td><form action=Control method=POST>
-//                            <input type=hidden name=origin value=removeLine><input type=hidden name=lineId value=473>
-//                        </form></td></tr><tr><td></td><td></td><td></td>
-//                    <td>
-//                        <form id="checkoutForm" action=Control method=POST><input type=hidden name=origin value=submitInvoice/>
-//                            <input type=submit value=Check out your order></form></td></tr>
-//            </tbody>
-//        </table>
     }
 
     public static String carportAnlgeRooftoHtml(Carport carport) {
@@ -118,7 +107,6 @@ public class HtmlConverter {
                     + " </th><th>  " + list.get(i).getPrice()
                     + "</th> <th> " + list.get(i).getAmount() + "</th></tr>";
         }
-        //"<tr><th>Size</th><th>" + list.get(i).getDescription()+ "</th><th>" + list.get(i).getLength() + "</th><th>" + list.get(i).getAmount() + "</th></tr>";
         String partlistbottom
                 = "</table>"
                 + "<br>"
@@ -198,94 +186,4 @@ public class HtmlConverter {
                 + "</form>";
         return table;
     }
-
-    public static String makeDesign(Carport carport) {
-        
-        String printpart = " <div class =\"grid-container\">\n"
-                + "            <div class ='center'>\n"
-                + "                <h1> Bird view</h1>\n"
-                + "                <svg height =\"" + carport.getWidth() + " + 25\" width =\"" + carport.getLength() + " + 25\">\n"
-                + "\n"
-                + "                <rect x=\"0\" y=\"15\" width=\"" + carport.getLength() + "  + 10\" height=\"50\" fill=\"#none\"\n"
-                + "                      style=\"stroke:rgb(0,0,0);stroke-width:3\"/>\n"
-                + "\n"
-                + "                <rect x=\"0\" y=\"" + carport.getWidth() + " - 65\" width=\"" + carport.getLength() + "  + 10\" height=\"50\" fill=\"#none\"\n"
-                + "                      style=\"stroke:rgb(0,0,0);stroke-width:3\"/>	\n"
-                + "\n";
-        
-        
-        String printpart1 = "";
-        for (int i = 0; i < 1000; i++) {
-            int temp = carport.getLength();
-            if (temp >= -0) {
-                printpart1 +=  "<rect x=\"10\" y=\"" + carport.getLength() + "  + 10.5\"  width=\"" + temp + " - 10\" height=\"1\" fill=\"#000000\" /> \n";
-                temp = temp - 30;
-            } else {
-                break;    
-            }
-            return printpart1;
-        } 
-        String printpart2 = 
-           "    </svg>\n"
-                + "                <h2><%=" + carport.getLength() + " %> in cm</h2>\n"
-                + "                <br>\n"
-                + "                <h2> Side view</h2>\n"
-                + "                <svg height =\"100\" width =\"<%=" + carport.getLength() + " + 25%>\">\n"
-                + "\n";
-                String printpart3 = "";
-                 int tempp = carport.getLength(); 
-                 for (int i = 0; i < 1000; i++) {
-                    if (tempp >= -0) {
-                printpart3 += "<rect x=\"<%=tempp%>\" y=\"180\"  width=\"10\" height=\"220\" fill=\"none\"\n"
-                + "                      style=\"stroke:rgb(0,0,0);stroke-width:3\"/>\n"
-                + "           \n";
-                tempp = tempp - 120;
-                    }
-                else {
-                 break;
-                }
-                return printpart3;
-                 }
-                String printpart4 =  "\n"
-                + "                <rect x=\"0\" y=\"170\" width=\"" + carport.getLength() +" " + "10\" height=\"10\" fill=\"#none\"\n"
-                + "                      style=\"stroke:rgb(0,0,0);stroke-width:3\"/>\n";
-                if(carport.getRoofangle() != 1){ 
-                printpart4 +=            "<rect x=\"0\" y=\"70\" width=\"<%=" + carport.getLength() + "  + 10%>\" height=\"100\" fill=\"#none\"\n"
-                + "                      style=\"stroke:rgb(0,0,0);stroke-width:3\"/>\n";
-                }
-                
-                
-                printpart4 +=" </svg>   \n";
-                
-                String printpart5 =
-                "                <h2><%=" + carport.getLength() + " %> in cm</h2>\n"
-                + "                <br>\n"
-                + "\n"
-                + "                <h1> Front view</h1>\n"
-                + "                <svg height =\"100\" width =\"<%=" + carport.getWidth() + " + 25%>\">\n"
-                + "\n"
-                + "                %><rect x=\"0\" y=\"180\"  width=\"10\" height=\"220\" fill=\"none\"\n"
-                + "                        style=\"stroke:rgb(0,0,0);stroke-width:3\"/>\n"
-                + "                <rect x=\"<%=" + carport.getWidth() + " - 10%>\" y=\"180\"  width=\"10\" height=\"220\" fill=\"none\"\n"
-                + "                      style=\"stroke:rgb(0,0,0);stroke-width:3\"/>\n"
-                + "          \n";
-                
-                if(carport.getRoofangle() != 1){ 
-                printpart5 +="                <polygon points=\"<%=" + carport.getWidth() + " / 2%>,0 <%=" + carport.getWidth() + "%>, 170 0,170\" fill=\"none\"\n"
-                + "                         style=\"stroke:rgb(0,0,0);stroke-width:3\"/>\n";
-                }
-                        
-                printpart5 +=
-                 "                <rect x=\"0\" y=\"170\" width=\"<%=" + carport.getWidth() + "%>\" height=\"10\" fill=\"#none\"\n"
-                + "                      style=\"stroke:rgb(0,0,0);stroke-width:3\"/>\n"
-                + "\n"
-                + "\n"
-                + "                </svg>   \n"
-                + "                <h2><%=" + carport.getWidth() + "%> in cm</h2>\n"
-                + "            </div>\n"
-                + "        </div>";
-               String print = printpart + printpart1 + printpart2 + printpart3 + printpart4 + printpart5;
-        return print; // this should return a string which can then show the svg design on the page.
-    }
-
 }

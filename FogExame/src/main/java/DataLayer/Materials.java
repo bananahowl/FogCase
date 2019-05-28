@@ -14,9 +14,8 @@ public class Materials {
     private double price;
     private String name;
          /**
-         * Materials class is used in a larger scale with it being a foundation( with
-         * other instance classes) <br> Materials class is used to be able to store
-         * the metal parts which is used in the carport,
+         * Materials class is used to be able to store
+         * the wood parts which is used in the carport,
          * @param  id: the id of the material
          * @param  price: the price for the material
          * @param name: the name of the material

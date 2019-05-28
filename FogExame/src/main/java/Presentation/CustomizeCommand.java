@@ -20,11 +20,8 @@ public class CustomizeCommand extends Command {
 
     @Override
     String execute(HttpServletRequest request, HttpServletResponse response) throws CarportException {
-        
-        //add magic code if needed
-        
         return "CustomizeCarport";
-    
+
     }
-    
+
 }

@@ -19,7 +19,6 @@ import java.util.ArrayList;
 public class dataTest {
     
     public static void main(String[] args) throws Exception {
-        ArrayList<Materials> material = new ArrayList();
         
         CarportMapper datatest = new CarportMapper();
         System.out.println("hello world");
@@ -46,7 +45,7 @@ public class dataTest {
         System.out.println(CarportFacade.getMaxShedLength());
         
         System.out.println(OrderFacade.getAllOrders());
-        System.out.println(OrderFacade.getOrdersByUser(UserFacade.getUser("example@hotmail.com", "1234")));
+        //System.out.println(OrderFacade.getOrdersByUser(UserFacade.getUser("example@hotmail.com", "1234")));
         
     }
     

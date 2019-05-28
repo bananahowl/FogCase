@@ -37,10 +37,6 @@
         <div class="header" style="text-align: center; margin: 0 auto;">
             <img src="Images/Fog.png" alt="logofog" width="10%" height="10%">
         </div>
-
-        ${SVG}
-
-
         <div class="row">
             <div class="column side">
                 <h1></h1>

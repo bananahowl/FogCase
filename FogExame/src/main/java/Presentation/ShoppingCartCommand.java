@@ -47,29 +47,14 @@ public class ShoppingCartCommand extends Command {
         int widthShed = Integer.parseInt(request.getParameter("widthShed"));
         int angle = Integer.parseInt(request.getParameter("angle"));
         int price = CreateCarport.NumbersAngleRoof(width, length, width, angle,length);
-        
-        //User user = (User) request.getSession().getAttribute("user");
         Carport cp = CreateCarport.createCarportAngleRoof(length, width, widthShed, lengthShed, angle, price);
-        
-
         ArrayList<MaterialList> list = totalpartlist(cp);
         CalcPrice lizz = new CalcPrice();
         ArrayList<MetalParts> mlist = lizz.metalParts(list);
         String slist = printPartList(list);
         String smlist = printMetalPartList(mlist);
-        
-        /*
-        Order orders = OrderFacade.createOrder(user.getUser_id(), cp);
-        ArrayList<Order> shoppingcart = new ArrayList();
-        shoppingcart.add(orders);
-        String orderss = HtmlConverter.generateOrdersHTML(shoppingcart);
-        */
         request.setAttribute("mlist", slist);
         request.setAttribute("smlist", smlist);
-        /*
-        request.setAttribute("shoppingcart", shoppingcart);
-        request.setAttribute("order", orderss);
-        */
         return "ShoppingCart";
 
     }
