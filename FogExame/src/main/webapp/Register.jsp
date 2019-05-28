@@ -1,7 +1,7 @@
 <%-- 
     Document   : Register
     Created on : 08-05-2019, 12:00:22
-    Author     : fskn
+    Author     : Frederikke, emil
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

@@ -1,7 +1,7 @@
 <%-- 
     Document   : ShoppingCart
     Created on : 30-04-2019, 10:15:23
-    Author     : fskn
+    Author     : Frederikke, ahmed, emil 
 --%>
 
 <%@page import="Logic.Facade.CarportFacade"%>

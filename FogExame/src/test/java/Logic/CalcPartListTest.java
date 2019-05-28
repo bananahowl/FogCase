@@ -7,7 +7,6 @@ package Logic;
 
 import DataLayer.Carport;
 import DataLayer.MaterialList;
-import DataLayer.MetalParts;
 import DataLayer.Shed;
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -10,7 +10,7 @@ package DataLayer;
  * other instance classes) <br> Carport class is used with the Sheed class to
  * make objects of carport.
  *
- * @author Frederik
+ * @author Emil
  */
 public class Carport {
 
@@ -25,8 +25,10 @@ public class Carport {
      * Carport class takes certain input values which is returns a Carport object
      *<br> also importain to take note of is that this class also takes a Custom class Sheed as a input variable.
      * @param length : the length of the carport, INT
+     * @param heigth : the height of the carport INT
      * @param width : the width of the carport, INT
      * @param shed : the shed is a custom class which takes a lenght and width, SHED
+     * @param roofangle : the angle of the carport INT
      * @param price: the price is a value which is instantiated in another class for the carport.
      */
     public Carport(int length, int heigth, int width, Shed shed, int roofangle, int price) {

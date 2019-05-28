@@ -13,7 +13,7 @@ import java.sql.Statement;
 /**
  * The purpose of this class is to send the registred customer in the database and be able to log in to the site afterwards
  * 
- * @author frederikke, frederik
+ * @author frederikke, frederik, emil 
  */
 public class UserMapper {
 

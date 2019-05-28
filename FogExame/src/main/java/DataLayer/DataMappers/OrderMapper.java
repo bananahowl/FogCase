@@ -5,18 +5,14 @@ import DataLayer.Carport;
 import DataLayer.Connector;
 import DataLayer.Order;
 import DataLayer.Shed;
-import DataLayer.User;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import Logic.CarportException;
-import java.util.ArrayList;
-import java.util.List;
+
 /**
- *  This ordermapper is used to send order up to the database and therefore we will be able to get them after they are created
- * @author
  * @author frederikke, frederik, emil
  */
 public class OrderMapper {

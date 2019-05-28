@@ -1,23 +1,12 @@
 package Logic;
 
 import DataLayer.Carport;
-import DataLayer.DataMappers.CarportMapper;
-import DataLayer.DataMappers.CarportMapper;
 import DataLayer.MaterialList;
 import DataLayer.MetalParts;
-
-import java.sql.SQLException;
-import Logic.CarportException;
-import Logic.Facade.CarportFacade;
-import java.sql.SQLException;
-import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 /**
  *
- * @author frederik
+ * @author frederik, ahmed
  */
 public class CalcPartList {
 

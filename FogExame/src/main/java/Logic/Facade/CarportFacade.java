@@ -7,12 +7,10 @@ package Logic.Facade;
 
 import DataLayer.DataMappers.CarportMapper;
 import Logic.CarportException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
- * @author fskn
+ * @author frederikke, emil 
  */
 public class CarportFacade {
 
