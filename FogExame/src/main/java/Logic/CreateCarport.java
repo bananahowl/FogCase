@@ -16,7 +16,7 @@ import static Logic.Facade.CarportFacade.getShedwidth;
 
 /**
  *
- * @author fskn, Emil
+ * @author simone, ahmed, emil
  */
 public class CreateCarport {
 

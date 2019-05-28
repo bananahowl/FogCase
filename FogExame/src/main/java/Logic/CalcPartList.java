@@ -17,7 +17,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author frederik
+ * @author frederik, ahmed
  */
 public class CalcPartList {
 
