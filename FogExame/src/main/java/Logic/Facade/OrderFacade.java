@@ -18,9 +18,11 @@ import java.util.logging.Logger;
  */
 public class OrderFacade {
 
-    /**
-     * This method creates an order in the database and connects the user an order. 
-     * @param order
+    /** This method creates an order in the database and connects the user an order. 
+     * 
+     * @param id
+     * @param carport
+     * @return Order object
      */
     public static Order createOrder(int id, Carport carport) {
         try {
@@ -33,6 +35,10 @@ public class OrderFacade {
         return null;
     }
 
+    /** deletes an order
+     * 
+     * @param id 
+     */
     public static void deleteorder(int id) {
         try {
             OrderMapper.deleteorder(id);
@@ -40,11 +46,15 @@ public class OrderFacade {
              ex.printStackTrace();
         }
     }
-
+/** reads an order
+ * 
+ * @param id
+ * @return Order
+ */
     public static Order readOrder(int id) {
         try {
-            Order orde = OrderMapper.readOrder(id);
-            return orde;
+            Order order = OrderMapper.readOrder(id);
+            return order;
         } catch (CarportException ex) {
              ex.printStackTrace();
         }

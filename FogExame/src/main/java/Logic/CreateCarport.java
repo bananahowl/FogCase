@@ -20,6 +20,16 @@ import static Logic.Facade.CarportFacade.getShedwidth;
  */
 public class CreateCarport {
 
+    /** this method creates a carport object by useing all the parimiters to get the right measurements 
+     * 
+     * @param length
+     * @param width
+     * @param widthShed
+     * @param lengthShed
+     * @param angle
+     * @param price
+     * @return Carport
+     */
     public static Carport createCarportAngleRoof(int length, int width, int widthShed, int lengthShed, int angle, int price) {
         Shed shed = new Shed(0, 220, 0);
         if (widthShed != 1 && lengthShed != 1) {
@@ -32,13 +42,30 @@ public class CreateCarport {
         Carport carport = new Carport(a, 220, b, shed, c, price);
         return carport;
     }
-
+/** this method creates a carport object by useing all the parimiters to create a carpot of IDs
+ * 
+ * @param length
+ * @param width
+ * @param widthShed
+ * @param lengthShed
+ * @param angle
+ * @param price
+ * @return Carport of IDs
+ */
     public static Carport createCarportid(int length, int width, int widthShed, int lengthShed, int angle, int price) {
         Shed shed = new Shed(lengthShed, 220, widthShed);
         Carport carport = new Carport(length, 1, width, shed, angle, price);
         return carport;
     }
-
+/** this method calculates a price by useing all the parimiters
+ * 
+ * @param length
+ * @param width
+ * @param widthShed
+ * @param lengthShed
+ * @param angle
+ * @return price
+ */
     public static int NumbersAngleRoof(int length, int width, int widthShed, int lengthShed, int angle) {
         int a = getCarportLength(length);
         int b = getCarportWidth(width);
@@ -48,7 +75,13 @@ public class CreateCarport {
         int price = CalcPartList.totalcarportprice(b, a, d, c, e);
         return price;
     }
-
+/** this method creates a metal parts objekt
+ * 
+ * @param name
+ * @param amount
+ * @param price
+ * @return metalparts
+ */
     public static MetalParts Partscalc(String name, int amount, double price) {
         MetalParts test = new MetalParts(name, amount, price);
         return test;
