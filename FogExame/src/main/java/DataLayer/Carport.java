@@ -6,10 +6,14 @@
 package DataLayer;
 
 /**
+ * Carport class is used in a larger scale with it being a foundation( with
+ * other instance classes) <br> Carport class is used with the Sheed class to
+ * make objects of carport.
  *
- * @author frizz
+ * @author Frederik
  */
 public class Carport {
+
     private int length;
     private int heigth;
     private int width;
@@ -17,6 +21,14 @@ public class Carport {
     private int roofangle;
     private int price;
 
+    /**
+     * Carport class takes certain input values which is returns a Carport object
+     *<br> also importain to take note of is that this class also takes a Custom class Sheed as a input variable.
+     * @param length : the length of the carport, INT
+     * @param width : the width of the carport, INT
+     * @param shed : the shed is a custom class which takes a lenght and width, SHED
+     * @param price: the price is a value which is instantiated in another class for the carport.
+     */
     public Carport(int length, int heigth, int width, Shed shed, int roofangle, int price) {
         this.length = length;
         this.heigth = heigth;
@@ -74,6 +86,4 @@ public class Carport {
         this.price = price;
     }
 
-
-    
 }

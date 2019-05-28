@@ -19,8 +19,7 @@ public class MetalParts {
     private double price;
     
 /**
-         * MetalParts class is used in a larger scale with it being a foundation( with
-         * other instance classes) <br> Metalparts class is used to be able to store
+         * Metalparts class is used to be able to store
          * metal parts which is used in the carport,
          * @param  name: the name of the part
          * @param amount:the amount of a certain part
@@ -35,7 +34,7 @@ public class MetalParts {
     }
     /**
      * Returns true if the object is equals to a MetalParts obeject
-     * @return material name
+     * @return a codition which is either true or false.
      */
     @Override
     public boolean equals(Object obj) {
