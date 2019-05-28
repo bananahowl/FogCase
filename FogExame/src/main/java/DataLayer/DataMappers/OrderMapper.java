@@ -23,7 +23,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author fskn
+ * @author fskn, frederik
  */
 public class OrderMapper {
 
