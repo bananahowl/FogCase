@@ -34,16 +34,13 @@ public class CalculateCarportCommand extends Command {
         int lengthShed = Integer.parseInt(request.getParameter("lengthShed"));
         int widthShed = Integer.parseInt(request.getParameter("widthShed"));
         int angle = Integer.parseInt(request.getParameter("angle"));
-            int price = CreateCarport.NumbersAngleRoof(length, width, widthShed, lengthShed, angle);
-            Carport cp = CreateCarport.createCarportAngleRoof(length, width,  widthShed,lengthShed, angle, price);
-            String html = HtmlConverter.carportAnlgeRooftoHtml(cp);            
-            ArrayList<MaterialList> list = totalpartlist(cp);
-            String slist = printPartList(list);
-            request.setAttribute("mlist", slist);
-            request.setAttribute("carport", cp);
-            request.setAttribute("price", price);
-            request.setAttribute("table", html);
-            request.setAttribute("carportwidth", width);
-            return "Order";
-        }
+        int price = CreateCarport.NumbersAngleRoof(length, width, widthShed, lengthShed, angle);
+        Carport cp = CreateCarport.createCarportAngleRoof(length, width, widthShed, lengthShed, angle, price);
+        String html = HtmlConverter.carportAnlgeRooftoHtml(cp);
+        ArrayList<MaterialList> list = totalpartlist(cp);
+        String slist = printPartList(list);
+        request.setAttribute("mlist", slist);
+        request.setAttribute("table", html);
+        return "Order";
+    }
 }
