@@ -2,6 +2,7 @@
 Test set: Logic.CalcPartListTest
 -------------------------------------------------------------------------------
 <<<<<<< HEAD
+<<<<<<< HEAD
 Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.063 sec
 =======
 <<<<<<< HEAD
@@ -10,3 +11,6 @@ Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.476 sec
 Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.078 sec
 >>>>>>> 89c56705344880a68e0744faa810132907afe2ef
 >>>>>>> 8c9ada4d57ecb8b1790579e354a24aed9824627d
+=======
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.168 sec
+>>>>>>> fd2205edbefe5a380f21379abf5b86f1cbb7929c
