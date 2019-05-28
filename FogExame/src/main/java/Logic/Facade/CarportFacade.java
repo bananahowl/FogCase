@@ -6,9 +6,9 @@
 package Logic.Facade;
 
 import DataLayer.DataMappers.CarportMapper;
-import DataLayer.MetalParts;
 import Logic.CarportException;
-import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -16,47 +16,102 @@ import java.sql.SQLException;
  */
 public class CarportFacade {
 
-    public static int getLengthShed(int id) throws CarportException, SQLException {
-        return CarportMapper.getShedlength(id);
+    public static int getLengthShed(int id)  {
+        try {
+            return CarportMapper.getShedlength(id);
+        } catch (CarportException ex) {
+            Logger.getLogger(CarportFacade.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return 0;
     }
 
-    public static int getCarportLength(int id) throws CarportException, SQLException {
-        return CarportMapper.getlength(id);
+    public static int getCarportLength(int id)  {
+        try {
+            return CarportMapper.getlength(id);
+        } catch (CarportException ex) {
+            Logger.getLogger(CarportFacade.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return 0;
     }
 
-    public static int getCarportWidth(int id) throws CarportException, SQLException {
-        return CarportMapper.getwidth(id);
+    public static int getCarportWidth(int id) {
+        try {
+            return CarportMapper.getwidth(id);
+        } catch (CarportException ex) {
+            Logger.getLogger(CarportFacade.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return 0;
     }
 
-    public static int getMaxLength() throws CarportException {
-        return CarportMapper.getMaxLength();
+    public static int getMaxLength() {
+        try {
+            return CarportMapper.getMaxLength();
+        } catch (CarportException ex) {
+            Logger.getLogger(CarportFacade.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return 0;
     }
 
-    public static int getMaxAngles() throws CarportException {
-        return CarportMapper.getMaxAngles();
+    public static int getMaxAngles() {
+        try {
+            return CarportMapper.getMaxAngles();
+        } catch (CarportException ex) {
+            Logger.getLogger(CarportFacade.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return 0;
     }
 
-    public static int getMaxWidth() throws CarportException {
-        return CarportMapper.getMaxWidth();
+    public static int getMaxWidth(){
+        try {
+            return CarportMapper.getMaxWidth();
+        } catch (CarportException ex) {
+            Logger.getLogger(CarportFacade.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return 0;
     }
 
-    public static int getShedwidth(int id) throws CarportException, SQLException {
-        return CarportMapper.getShedwidth(id);
+    public static int getShedwidth(int id) {
+        try {
+            return CarportMapper.getShedwidth(id);
+        } catch (CarportException ex) {
+            Logger.getLogger(CarportFacade.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return 0;
     }
 
-    public static int getMaxShedLength() throws CarportException {
-        return CarportMapper.getMaxShedLength();
+    public static int getMaxShedLength() {
+        try {
+            return CarportMapper.getMaxShedLength();
+        } catch (CarportException ex) {
+            Logger.getLogger(CarportFacade.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return 0;
     }
 
-    public static int getMaxShedWidth() throws CarportException {
-        return CarportMapper.getMaxShedWidth();
+    public static int getMaxShedWidth() {
+        try {
+            return CarportMapper.getMaxShedWidth();
+        } catch (CarportException ex) {
+            Logger.getLogger(CarportFacade.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return 0;
     }
 
-    public static int getShedlength(int id) throws CarportException, SQLException {
-        return CarportMapper.getShedlength(id);
+    public static int getShedlength(int id) {
+        try {
+            return CarportMapper.getShedlength(id);
+        } catch (CarportException ex) {
+            Logger.getLogger(CarportFacade.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return 0;
     }
 
-    public static int getRoofAngle(int id) throws CarportException, SQLException {
-        return CarportMapper.getRoofAngle(id);
+    public static int getRoofAngle(int id) {
+        try {
+            return CarportMapper.getRoofAngle(id);
+        } catch (CarportException ex) {
+            Logger.getLogger(CarportFacade.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return 0;
     }
 }
