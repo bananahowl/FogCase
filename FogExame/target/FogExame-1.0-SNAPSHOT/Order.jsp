@@ -1,7 +1,11 @@
 <%-- 
     Document   : Shed
     Created on : 26-04-2019, 11:27:29
+<<<<<<< HEAD
+    Author     : fskn,Emil
+=======
     Author     : Frederikke, emil
+>>>>>>> 0415e3a92b1a0f99c6c04001bee854c4518a8de7
 --%>
 
 <%@page import="Logic.Facade.CarportFacade"%>

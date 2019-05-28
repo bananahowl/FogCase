@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+<<<<<<< HEAD
 <testsuite tests="1" failures="0" name="Logic.Facade.UserFacadeTest" time="0.078" errors="0" skipped="0">
+=======
+<testsuite tests="1" failures="0" name="Logic.Facade.UserFacadeTest" time="0.072" errors="0" skipped="0">
+>>>>>>> 562710ed55c34d44512643d04f3b0a8bd96f31a6
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_191\jre\bin"/>
@@ -15,13 +19,22 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+<<<<<<< HEAD
     <property name="user.dir" value="C:\Users\fskn\Documents\2 semester\NetbeansProjekter\Fog-case\FogCase\FogExame"/>
     <property name="java.runtime.version" value="1.8.0_191-b12"/>
+=======
+    <property name="user.dir" value="C:\Users\emils\Desktop\2semester\FogCase\FogExame"/>
+    <property name="java.runtime.version" value="1.8.0_181-b13"/>
+>>>>>>> 562710ed55c34d44512643d04f3b0a8bd96f31a6
     <property name="netbeans.deploy" value="true"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_191\jre\lib\endorsed"/>
     <property name="os.arch" value="amd64"/>
+<<<<<<< HEAD
     <property name="java.io.tmpdir" value="C:\Users\fskn\AppData\Local\Temp\"/>
+=======
+    <property name="java.io.tmpdir" value="C:\Users\emils\AppData\Local\Temp\"/>
+>>>>>>> 562710ed55c34d44512643d04f3b0a8bd96f31a6
     <property name="line.separator" value="
 "/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
@@ -30,17 +43,29 @@
     <property name="maven.ext.class.path" value="C:\Program Files\NetBeans 8.2\java\maven-nblib\netbeans-eventspy.jar"/>
     <property name="classworlds.conf" value="C:\Program Files\NetBeans 8.2\java\maven\bin\m2.conf"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
+<<<<<<< HEAD
     <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_191\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Git\cmd;C:\Program Files\PuTTY\;C:\Users\fskn\AppData\Local\Microsoft\WindowsApps C:\Program Files\Java\jdk1.8.0_191\bin;;."/>
+=======
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_181\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Airtame;C:\Program Files\IDM Computer Solutions\UltraEdit;C:\Program Files\Git\cmd;C:\Windows\Airtame;C:\Program Files\PuTTY\;C:\Users\emils\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Java\jdk1.8.0_181\bin;;."/>
+>>>>>>> 562710ed55c34d44512643d04f3b0a8bd96f31a6
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="os.version" value="10.0"/>
+<<<<<<< HEAD
     <property name="user.home" value="C:\Users\fskn"/>
+=======
+    <property name="user.home" value="C:\Users\emils"/>
+>>>>>>> 562710ed55c34d44512643d04f3b0a8bd96f31a6
     <property name="user.timezone" value="Europe/Paris"/>
     <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
     <property name="java.specification.version" value="1.8"/>
     <property name="file.encoding" value="UTF-8"/>
+<<<<<<< HEAD
     <property name="user.name" value="fskn"/>
+=======
+    <property name="user.name" value="emils"/>
+>>>>>>> 562710ed55c34d44512643d04f3b0a8bd96f31a6
     <property name="java.class.path" value="C:\Program Files\NetBeans 8.2\java\maven\boot\plexus-classworlds-2.4.jar"/>
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
@@ -62,5 +87,9 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
+<<<<<<< HEAD
   <testcase classname="Logic.Facade.UserFacadeTest" name="testCreateUser" time="0.078"/>
+=======
+  <testcase classname="Logic.Facade.UserFacadeTest" name="testCreateUser" time="0.064"/>
+>>>>>>> 562710ed55c34d44512643d04f3b0a8bd96f31a6
 </testsuite>

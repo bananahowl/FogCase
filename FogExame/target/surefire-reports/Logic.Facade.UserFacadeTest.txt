@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: Logic.Facade.UserFacadeTest
 -------------------------------------------------------------------------------
+<<<<<<< HEAD
 Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.078 sec
+=======
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.064 sec
+>>>>>>> 562710ed55c34d44512643d04f3b0a8bd96f31a6

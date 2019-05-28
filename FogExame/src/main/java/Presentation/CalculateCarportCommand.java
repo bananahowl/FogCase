@@ -17,6 +17,7 @@ import java.util.ArrayList;
 
 /**
  *
+
  * @author emil, frederik
  */
 public class CalculateCarportCommand extends Command {

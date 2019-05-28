@@ -10,10 +10,19 @@ import Logic.CarportException;
 
 /**
  *
+<<<<<<< HEAD
+ * @author fskn, Emil
+=======
  * @author frederikke, emil 
+>>>>>>> 0415e3a92b1a0f99c6c04001bee854c4518a8de7
  */
 public class CarportFacade {
 
+    /**
+     * This method get the shedlengthvalue when selecting an id in the database and uses the CarportException to check for errors
+     * @param id
+     * @return the shedlengthvalue from id 
+     */
     public static int getLengthShed(int id) {
         try {
             return CarportMapper.getShedlength(id);
@@ -22,7 +31,11 @@ public class CarportFacade {
         }
         return 0;
     }
-
+    /**
+     * This method get the lengthvalue when selecting an id in the database and uses the CarportException to check for errors
+     * @param id
+     * @return the lengthvalue from the id
+     */
     public static int getCarportLength(int id) {
         try {
             return CarportMapper.getlength(id);
@@ -31,7 +44,11 @@ public class CarportFacade {
         }
         return 0;
     }
-
+    /**
+     * This method get the widthvalue when selecting an id in the database and uses the CarportException to check for errors
+     * @param id
+     * @return the widthvalue from the id
+     */
     public static int getCarportWidth(int id) {
         try {
             return CarportMapper.getwidth(id);
@@ -40,7 +57,10 @@ public class CarportFacade {
         }
         return 0;
     }
-
+    /**
+     * This method get the maksimum number of length id representing in the database and uses the CarportException to check for errors. 
+     * @return the amount of lengthid's
+     */
     public static int getMaxLength() {
         try {
             return CarportMapper.getMaxLength();
@@ -49,7 +69,11 @@ public class CarportFacade {
         }
         return 0;
     }
-
+    /**
+     * This method get the maksimum number of angle id representing in the database and uses the CarportException to check for errors.
+     * @return the amount of angleid's
+     */
+    
     public static int getMaxAngles() {
         try {
             return CarportMapper.getMaxAngles();

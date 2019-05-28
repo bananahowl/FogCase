@@ -10,7 +10,14 @@ import javax.servlet.http.HttpServletResponse;
  * The command class uses a HashMap which takes a string values as a id, and a Command, <br>
  * which is a abstract class that is used to redirect to a certain JSP page, for more info on how that work just look in any of the other command classes. 
  * This string value is used int the jsp pages to be able to use these methods and call on the certain hashmap, and get redirected to the certain command method.
+<<<<<<< HEAD
+ * 
+ *
+ * 
+ * @author Emil
+=======
  * Author: Emil, 
+>>>>>>> 0415e3a92b1a0f99c6c04001bee854c4518a8de7
  */
 abstract class Command {
 
