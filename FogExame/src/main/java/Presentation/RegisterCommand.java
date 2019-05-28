@@ -23,13 +23,37 @@ public class RegisterCommand extends Command {
      */
     @Override
     String execute(HttpServletRequest request, HttpServletResponse response) throws CarportException {
+        int zipcode = 0;
+        int phone = 0;
         String firstname = request.getParameter("firstname");
+        if (!firstname.matches("[a-zA-Z]+")){
+          throw new CarportException("Name can only contain letters");  
+        };
         String lastname = request.getParameter("lastname");
+         if (!lastname.matches("[a-zA-Z]+")){
+          throw new CarportException("Name can only contain letters");  
+        };
         String adress = request.getParameter("adress");
+        
         String city = request.getParameter("city");
-        int zipcode = Integer.parseInt(request.getParameter("zipcode"));
-        int phone = Integer.parseInt(request.getParameter("phonenumber"));
+         if (!city.matches("[a-zA-Z]+")){
+          throw new CarportException("City can only contain letters");  
+        };
+        try{
+        zipcode += Integer.parseInt(request.getParameter("zipcode"));
+        }catch (NumberFormatException ex) {
+        throw new CarportException("There can only be numbers in zipcodes!");
+        }
+        try{
+        phone = Integer.parseInt(request.getParameter("phonenumber"));
+        }catch (NumberFormatException ex) {
+        throw new CarportException("There can only be numbers in phoneNUMBERS!");
+        }
+        
         String email = request.getParameter("email");
+        if(!User.isValid(email)){
+            throw new CarportException("Not a valid email!");
+        }
         String password1 = request.getParameter("password1");
         String password2 = request.getParameter("password2");
         if (password1.equals(password2)) {
