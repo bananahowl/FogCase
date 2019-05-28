@@ -9,7 +9,7 @@ import java.util.Objects;
 
 /**
  *
- * @author frizz
+ * @author frederik
  */
 /**
  * MaterialList class is used to be able to store the list of total material values which is used

@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author ahmed
+ * @author ahmed, frederik
  */
 public class CalcPrice {
 

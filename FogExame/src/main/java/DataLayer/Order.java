@@ -11,7 +11,7 @@ import java.util.Objects;
  * the Order class is used to make able to make order of a carport and is used
  * in relation with the user part.
  *
- * @author emils
+ * @author emils, frederik
  */
 public class Order {
 

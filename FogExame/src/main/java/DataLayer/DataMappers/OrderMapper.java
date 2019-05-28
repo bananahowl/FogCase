@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 /**
  *
- * @author fskn
+ * @author fskn, frederik
  */
 public class OrderMapper {
 

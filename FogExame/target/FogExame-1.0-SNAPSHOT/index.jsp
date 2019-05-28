@@ -50,11 +50,7 @@
                     <p1>It is nice to have the opportunity to put things away in a locked room.</p1>
                     <br><br><br>
                     <h5>${errors}</h5>
-<<<<<<< HEAD
                     <form action="FrontController" method="POST">
-=======
-                    <form action="FrontController" method="GET">
->>>>>>> b2d754a756d043a3dc705244aa710911486ca10e
                         <button type="submit" class="btn btn-secondary btn-lg btn-block" name="command" value="customize">Customize Carport</button>
 
                     </form>
@@ -86,11 +82,7 @@
             </div>
             <div class="column side">
                 <div class="card">
-<<<<<<< HEAD
                     <form name="login" action="FrontController" method="POST">
-=======
-                    <form name="login" action="FrontController" method="GET">
->>>>>>> b2d754a756d043a3dc705244aa710911486ca10e
                         <table>
                             <h5><b>Sign in</b></h5>
                             <td>
