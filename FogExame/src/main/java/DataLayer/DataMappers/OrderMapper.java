@@ -15,7 +15,7 @@ import Logic.CarportException;
 import java.util.ArrayList;
 import java.util.List;
 /**
- *
+ *  This ordermapper is used to send order up to the database and therefore we will be able to get them after they are created
  * @author
  * @author frederikke, frederik, emil
  */

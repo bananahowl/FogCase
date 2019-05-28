@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package DataLayer.DataMappers;
 
 import DataLayer.Connector;
@@ -13,15 +9,19 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
- *
- * @author fskn, frederik
+ * The purpose of this class is to send the registred customer in the database and be able to log in to the site afterwards
+ * 
+ * @author frederikke, frederik
  */
 public class UserMapper {
 
+    /**
+     * This method registrer an user in the database when a user is type their information in on the site
+     * @param user
+     * @throws CarportException 
+     */
     public static void createUser(User user) throws CarportException {
         try {
             Connection con = Connector.connection();
@@ -41,6 +41,13 @@ public class UserMapper {
         }
     }
 
+    /** 
+     * This method is used to login in a user to the site
+     * @param email
+     * @param password
+     * @return the user if the user exists in the database
+     * @throws CarportException 
+     */
     public static User login(String email, String password) throws CarportException {
         try {
             Connection conn = Connector.connection();
@@ -69,6 +76,11 @@ public class UserMapper {
         }
     }
 
+    /**
+     * This method can delete a user in the database
+     * @param id
+     * @throws CarportException 
+     */
     public static void deleteUser(int id) throws CarportException {
         try {
             Connection con = Connector.connection();
@@ -82,6 +94,12 @@ public class UserMapper {
 
     }
 
+    /**
+     * This method can get a speficic user in the database by typing their id
+     * @param id
+     * @return a specific user 
+     * @throws CarportException 
+     */
     public static User readUser(int id) throws CarportException {
         User result = null;
         try {
@@ -107,6 +125,12 @@ public class UserMapper {
         return result;
     }
 
+    /** 
+     * This method checks if the email already exists in the database when the user is trying to create a user on the site
+     * @param email
+     * @return the email 
+     * @throws CarportException 
+     */
     public static String checkIfExists(String email) throws CarportException {
         try {
             Connection conn = Connector.connection();
