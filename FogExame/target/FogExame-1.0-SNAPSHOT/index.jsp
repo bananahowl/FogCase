@@ -1,7 +1,7 @@
 <%-- 
     Document   : index
     Created on : 02-05-2019, 14:08:38
-    Author     : Emil
+    Author     : emil, frederikke
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

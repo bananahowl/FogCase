@@ -13,7 +13,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author fskn, Emil
+ * @author frederikke, emil 
  */
 public class UserFacade {
 

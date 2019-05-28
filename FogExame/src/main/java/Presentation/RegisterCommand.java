@@ -11,7 +11,7 @@ import javax.servlet.http.HttpSession;
 
 /**
  *
- * @author frederik, Emil
+ * @author frederik, frederikke, emil
  */
 public class RegisterCommand extends Command {
     /**

@@ -1,7 +1,11 @@
 <%-- 
     Document   : Register
     Created on : 08-05-2019, 12:00:22
+<<<<<<< HEAD
     Author     : fskn,Emil
+=======
+    Author     : Frederikke, emil
+>>>>>>> 0415e3a92b1a0f99c6c04001bee854c4518a8de7
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

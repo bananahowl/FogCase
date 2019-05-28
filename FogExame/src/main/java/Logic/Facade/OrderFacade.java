@@ -17,7 +17,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author fskn
+ * @author frederikke, emil 
  */
 public class OrderFacade {
 

@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author ahmed
+ * @author ahmed, emil, frederikke
  */
 public class dataTest {
     

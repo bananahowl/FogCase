@@ -28,7 +28,11 @@ import javax.servlet.http.HttpServletResponse;
  * it can also certain values which is sent to the with the setAttribute method, and is sent to the jsp the command returns to redirect to.
  * the string is return to the frontcontroller, which it use to redirect to certain jsp page with string name, 
  * and the values instanced in the command class get send there too with a setAttribute of the values.
+<<<<<<< HEAD
  * @author ahmed, Emil
+=======
+ * @author ahmed, emil 
+>>>>>>> 0415e3a92b1a0f99c6c04001bee854c4518a8de7
  */
 public class BuyCommand extends Command {
 
