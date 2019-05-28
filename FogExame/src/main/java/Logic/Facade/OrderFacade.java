@@ -20,15 +20,7 @@ import java.util.logging.Logger;
  * @author fskn
  */
 public class OrderFacade {
-/*
-    public static List<Order> getAllOrders() throws CarportException {
-        return OrderMapper.getAllOrders();
-    }
 
-    public static ArrayList<Order> getAllOrdersByUser(User user) throws CarportException {
-        return OrderMapper.getOrdersByUser(user);
-    }
-*/
     public static Order createOrder(int id, Carport carport) {
         try {
             Order order = new Order(id, carport, false);
@@ -39,6 +31,7 @@ public class OrderFacade {
         }
         return null;
     }
+
     public static void deleteorder(int id) {
         try {
             OrderMapper.deleteorder(id);
@@ -46,7 +39,7 @@ public class OrderFacade {
             Logger.getLogger(OrderFacade.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
+
     public static ArrayList<Order> getOrdersByUser(User user) {
         try {
             return OrderMapper.getOrdersByUser(user);
@@ -55,8 +48,8 @@ public class OrderFacade {
         }
         return null;
     }
-    
-    public static List<Order> getAllOrders()  {
+
+    public static List<Order> getAllOrders() {
         try {
             return OrderMapper.getAllOrders();
         } catch (CarportException ex) {
@@ -64,7 +57,7 @@ public class OrderFacade {
         }
         return null;
     }
-    
+
     public static Order readOrder(int id) {
         try {
             Order orde = OrderMapper.readOrder(id);
