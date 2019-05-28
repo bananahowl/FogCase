@@ -43,8 +43,6 @@ public class dataTest {
         System.out.println(CarportFacade.getCarportWidth(1));
         System.out.println(CarportFacade.getMaxShedWidth());
         System.out.println(CarportFacade.getMaxShedLength());
-        
-        System.out.println(OrderFacade.getAllOrders());
         //System.out.println(OrderFacade.getOrdersByUser(UserFacade.getUser("example@hotmail.com", "1234")));
         
     }
