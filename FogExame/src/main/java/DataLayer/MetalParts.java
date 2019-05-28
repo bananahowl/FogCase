@@ -9,7 +9,7 @@ package DataLayer;
  * <h1> MetalParts class </h1>
  *
  *
- * @author frizz
+ * @author frederik
  * @since 26-04-2019
  */
 public class MetalParts {
@@ -72,8 +72,8 @@ public class MetalParts {
         return amount;
     }
     /**
-     * Returns a toString of MetalParts instances 
-     * @return material name
+     * The toSting is used to be able to show what is stored in the objekt, <br>
+     * @return  a string value with all the parameters of the object
      */
     @Override
     public String toString() {

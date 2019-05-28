@@ -6,14 +6,21 @@
 package DataLayer;
 
 /**
- *
- * @author frizz
+ *The Shed is used with carport to be able to make a caport obeject <br>
+ * the Shed class on its own is not much but it is when it is used with the carport it potential shows
+ * @author frederik
  */
+
 public class Shed {
     private int length;
     private int heigth;
     private int width;
-
+    /**
+     * The Shed class takes three parameters as value to be able to make a instance <br>
+     * @param length : INT, a lenth on the shed
+     * @param heigth : INT, a height on the shed
+     * @param width : INT, a width in the shed
+     */
     public Shed(int length, int heigth, int width) {
         this.length = length;
         this.heigth = heigth;

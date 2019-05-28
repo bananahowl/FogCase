@@ -6,35 +6,40 @@
 package DataLayer;
 
 /**
+ * <h1> The user class </h1>
+ * User class is used to be able to temp. store and send the value to the
+ * database
+ * <br> The class itself is more the beable to get the users register into and
+ * store it to future use
  *
  * @author emils
  */
 public class User {
-  
+
     private int user_id;
-    private String firstname; 
+    private String firstname;
     private String lastname;
-    private String adress; 
+    private String adress;
     private String city;
     private int zipcode;
     private int phone;
-    private String email; 
+    private String email;
     private String password;
-         /**
-          * <h1> The user class </h1>
-         * User class is used to be able to temp. store and send the value to the database  
-         *  <br> The class itself is more the beable to get the users register into and store it to future use
-         * @param firstname :  STRING the first name of the user
-         * @param  lastname: STRING the last name of the user
-         * @param adress : STRING the adress of the user
-         * @param  city : STRING the living city of the user
-         * @param zipcode : INT zipcode to the users location
-         * @param phone : INT the phone number of the user
-         * @param email : STRING the email of the user
-         * @param password : STRING the password for the user
-         */
+
+    /**
+     * the User class takes several values to make a object
+     *
+     * @param firstname : STRING the first name of the user
+     * @param lastname: STRING the last name of the user
+     * @param adress : STRING the adress of the user
+     * @param city : STRING the living city of the user
+     * @param zipcode : INT zipcode to the users location
+     * @param phone : INT the phone number of the user
+     * @param email : STRING the email of the user
+     * @param password : STRING the password for the user
+     */
     public User(String firstname, String lastname, String adress, String city, int zipcode, int phone, String email, String password) {
-        
+
         this.firstname = firstname;
         this.lastname = lastname;
         this.password = password;
@@ -44,23 +49,28 @@ public class User {
         this.adress = adress;
         this.phone = phone;
     }
-    
+
+    /**
+     * Returns true if the object is equals to a MetalParts obeject
+     *
+     * @return a codition which is either true or false.
+     */
     @Override
     public boolean equals(Object obj) {
         User us = (User) obj;
         boolean status = false;
-        if(this.firstname.equalsIgnoreCase(us.firstname)
-           && this.lastname.equalsIgnoreCase(us.lastname)
-           && this.adress.equalsIgnoreCase(us.adress)
-           && this.city.equalsIgnoreCase(us.city)
-           && this.zipcode == us.zipcode
-           && this.phone == us.phone
-           && this.email.equalsIgnoreCase(us.email)
-           && this.password.equalsIgnoreCase(us.password)){
+        if (this.firstname.equalsIgnoreCase(us.firstname)
+                && this.lastname.equalsIgnoreCase(us.lastname)
+                && this.adress.equalsIgnoreCase(us.adress)
+                && this.city.equalsIgnoreCase(us.city)
+                && this.zipcode == us.zipcode
+                && this.phone == us.phone
+                && this.email.equalsIgnoreCase(us.email)
+                && this.password.equalsIgnoreCase(us.password)) {
             status = true;
         }
         return status;
-        
+
     }
 
     public int getUser_id() {
@@ -139,5 +149,5 @@ public class User {
     public String toString() {
         return "User-" + "user_id:" + user_id + " firstname:" + firstname + " lastname:" + lastname + " adress:" + adress + " city:" + city + " zipcode:" + zipcode + " phone:" + phone + " email:" + email + " password:" + password + '\n';
     }
-    
+
 }
