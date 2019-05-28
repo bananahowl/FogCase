@@ -23,14 +23,27 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- *
+ * The BuyCommand is used with realtion with the frontcontroller to work,
+ * this class returns as the basic always a string <br>
+ * it can also certain values which is sent to the with the setAttribute method, and is sent to the jsp the command returns to redirect to.
+ * the string is return to the frontcontroller, which it use to redirect to certain jsp page with string name, 
+ * and the values instanced in the command class get send there too with a setAttribute of the values.
  * @author ahmed
  */
 public class BuyCommand extends Command {
 
     public BuyCommand() {
     }
-
+    /**
+     *
+     * This execute class return as a minimum a string value which it returns to frontcontroller uses to direct to the JSP page of that name. <br>
+     * There can also here that cetain attributes gets set, these values are either string of values.
+     * These values is gotton from makeing intances of method from the logic layer. <br>
+     * @param request servlet request
+     * @param response servlet response
+     * @throws CarportException
+     * @return a string value of the jsp page which the frontcontroller recirect to.
+     */
     @Override
     String execute(HttpServletRequest request, HttpServletResponse response) throws CarportException {
         if (request.getSession(true).getAttribute("user") == null) {

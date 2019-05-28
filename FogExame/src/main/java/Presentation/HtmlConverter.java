@@ -13,11 +13,18 @@ import DataLayer.User;
 import java.util.ArrayList;
 
 /**
- *
+ *This class is used to make methods which can be used to eaisly be able to make 
+ * java code work with html.
+ * And its better code wise to make the java as little as possible shown in the presentation layer. 
+ * that is why this method has been made, to take care of that part without having java code on the JSP pages.
  * @author emils
  */
 public class HtmlConverter {
-
+    /**
+     * This method creates a string which has html code that displays a  flaat roof carport 
+     * with the values lenght, width, shed lenght, shed width and angle.
+     * @return a string with HTML code for displaying a carport. 
+     */
     public static String carportFlatRooftoHtml(Carport carport) {
         String cartTable = "<form action=\"FrontController\" method=\"GET\">"
                 + "<table id=\"carport\">"
@@ -28,7 +35,11 @@ public class HtmlConverter {
         return cartTable;
 
     }
-
+    /**
+     * This method creates a string which has html code that displays a  flaat roof carport 
+     * with the values lenght, width, shed lenght, shed width and angle.
+     * @return a string with HTML code for displaying a carport. 
+     */
     public static String carportAnlgeRooftoHtml(Carport carport) {
         String cartTable = "<form action=\"FrontController\" method=\"GET\">"
                 + "<table class=first>"
@@ -71,7 +82,12 @@ public class HtmlConverter {
         return cartTable;
 
     }
-
+    /**
+     * This method creates a string which has html code that displays a 
+     * material list for that wood parts of the carport, it shows  in a table format a list of
+     * all the wood parts needed to make a carport. 
+     *  @return a string html code for a table with wood carport parts.
+     */
     public static String printPartList(ArrayList<MaterialList> list) {
 
         String partlisttop = "<form action=\"FrontController\" method=\"GET\">"
@@ -94,7 +110,12 @@ public class HtmlConverter {
 
         return totalParts;
     }
-
+    /**
+     * This method creates a string which has html code that displays a 
+     * material list for that wood parts of the carport, it shows  in a table format a list of
+     * all the metal parts needed to make a carport. 
+     * @return a string html code for a table with metal carport parts.
+     */
     public static String printMetalPartList(ArrayList<MetalParts> list) {
 
         String partlisttop = "<form action=\"FrontController\" method=\"GET\">"
@@ -115,7 +136,7 @@ public class HtmlConverter {
         String totalParts = partlisttop + partlistmid + partlistbottom;
         return totalParts;
     }
-
+    
     public static String generateOrdersHTML(ArrayList<Order> orders) {
         String cartTable = "<table class =second>"
                 + "<tr><th>Order ID </th><th>Length </th><th>Width </th><th>Shed length </th><th>Shed width </th><th>User </th><th>Shipped\t</th></tr>";

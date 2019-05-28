@@ -24,7 +24,10 @@ public class FrontController extends HttpServlet {
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
-     *
+     * It use the Command class to be able to redircet to the certian jsp page with use of the String value which is gotton from the the request value.
+     * <br> When the value is gotton is return which is a string value from the command methods, that value is used to redirect to the certain jsp page, 
+     * by using that string value and adding JSP at the end. that string is used to forward using request. <br>
+     * However if a error happends during the working of the code, the request forwards to the index page.
      * @param request servlet request
      * @param response servlet response
      * @throws ServletException if a servlet-specific error occurs
