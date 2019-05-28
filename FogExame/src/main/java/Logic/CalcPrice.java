@@ -1,4 +1,3 @@
-
 package Logic;
 
 import DataLayer.MaterialList;
@@ -6,15 +5,21 @@ import DataLayer.MetalParts;
 import java.util.ArrayList;
 
 /**
- *This class does the calculation for the price of the carport, it uses other classes from the project to make that possible <br>
- * This class have also the creation of the list of metal parts which are neede for a carport.
+ * <h1> CalcPrice </h1> <br>
+ * This class does the calculation for the price of the carport, it uses several
+ * other classes and method.<br>
+ * This class have also the creation of the list for the metal parts which are
+ * used for a carport.
+ *
  * @author ahmed, frederik
  */
 public class CalcPrice {
+
     /**
-     * this method calculates the price for the wood parts of the carport.
-     * It should be noted that sevaral values are hard coded, and does not change 
+     * this method calculates the price for the wood parts of the carport. It
+     * should be noted that sevaral values are hard coded, and does not change
      * on certain conditions.
+     *
      * @param list : it is a arrayList of MaterialList object.
      * @return the method returns a price in INT.
      */
@@ -28,11 +33,21 @@ public class CalcPrice {
         return total;
     }
 
+    /**
+     * This method print out the values in the arrayList.
+     */
     public void printList(ArrayList<MaterialList> vals) {
         for (int i = 0; i < vals.size(); i++) {
         }
     }
 
+    /**
+     * This method creates the arrayList for the metalparts by using the
+     * arrayList for the tree parts.
+     *
+     * @param list the method taks a Arraylist of the MaterialList object
+     * @return a Arraylist of Metal Parts. MetalParts
+     */
     public ArrayList<MetalParts> metalParts(ArrayList<MaterialList> list) {
         ArrayList<MetalParts> partslist = new ArrayList();
         int amountOfLumber = 0;
@@ -83,6 +98,12 @@ public class CalcPrice {
         return partslist;
     }
 
+    /**
+     * This method calculates the price for the metal parts of the carport.
+     *
+     * @param list : the method takes a ArrayList of MetalParts
+     * @return : returns a price for the metalparts INT
+     */
     public double metalPartsPrice(ArrayList<MetalParts> list) {
         double totalprice = 0;
         for (int i = 0; i < list.size(); i++) {

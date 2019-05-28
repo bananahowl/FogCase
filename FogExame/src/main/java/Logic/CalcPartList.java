@@ -4,6 +4,7 @@ import DataLayer.Carport;
 import DataLayer.MaterialList;
 import DataLayer.MetalParts;
 import java.util.ArrayList;
+
 /**
  * <h1> CalcPartList</h1><br>
  *
@@ -17,8 +18,9 @@ import java.util.ArrayList;
 public class CalcPartList {
 
     /**
-     * this method calculate the side for the roof. It is made to be use by a
-     * carport object class.
+     * this method calculate the side for the carport roof. It is made to be use
+     * by a carport object class. the value get added to a Arraylist of
+     * MaterialList.
      *
      * @param width : the width of the carport INT
      * @param length : the lenght of the carport INT
@@ -42,6 +44,12 @@ public class CalcPartList {
     }
 
     /**
+     * this method calculate the front part of the roof. the parameter is made
+     * to be gotton from the a carport object.
+     *
+     * @return MaterialList returns a instance of the MaterialList.
+     * @param width : the widht of the carport
+     * @param angleInDegree : the angle of the carport.
      *
      */
     public static MaterialList calcRoofFronts(int width, int angleInDegree) {
@@ -62,6 +70,15 @@ public class CalcPartList {
         return list1;
     }
 
+    /**
+     * this method calculate the carport part of the shed. the parameter is made
+     * to be gotton from the a carport object.
+     *
+     * @return MaterialList returns a instance of the MaterialList.
+     * @param width : the widht of the carport
+     * @param length : the length of the carport.
+     *
+     */
     public static MaterialList calcShedMats(int length, int width) {
         //Planks 200cm in heigth(length), 55cm width
         int heigth = 220;
@@ -72,6 +89,23 @@ public class CalcPartList {
         return list1;
     }
 
+    /**
+     * this method make a ArrayList cotaining all the parts from the
+     * MaterialList methods which are in this class. These valuse get add as
+     * parameters , and get added in a arraylist which gets return as value from
+     * this method.
+     *
+     * @param shed : the shed of the carport
+     * @param rem : the rem for the caport
+     * @param spær : the spær for the caport
+     * @param post : the post of the post
+     * @param roof : the roof of the post
+     * @param front : the fron of the post
+     * @param vertical : the vertical of the carport
+     * @param horizontal : the horizontal of the carport
+     * @return MaterialList the ArrayList of all the part of the carport for the
+     * wood parts
+     */
     public static ArrayList<MaterialList> totalMaterial(MaterialList shed, MaterialList rem, MaterialList spær, MaterialList post, MaterialList roof, MaterialList front, MaterialList vertical, MaterialList horizontal) {
         ArrayList<MaterialList> list1 = new ArrayList<MaterialList>();
         list1.add(shed);
@@ -85,6 +119,14 @@ public class CalcPartList {
         return list1;
     }
 
+    /**
+     * this method calculate the carport part of the sper. the parameter is made
+     * to be gotton from the a carport object.
+     *
+     * @param width : the widht of the carport
+     * @param length : the length of the carport.
+     * @return MaterialList returns a instance of the MaterialList.
+     */
     public static MaterialList calcSper(int length, int width) {
         int gap = 50;
         int amountOfLumberSper = Math.round((length / gap));
@@ -93,6 +135,14 @@ public class CalcPartList {
         return list1;
     }
 
+    /**
+     * this method calculate the carport part of the rem. the parameter is made
+     * to be gotton from the a carport object.
+     *
+     * @param width : the widht of the carport
+     * @param length : the length of the carport.
+     * @return MaterialList returns a instance of the MaterialList.
+     */
     public static MaterialList calcRem(int length, int width) {
         int amountOfLumberRem = Math.round(2);
         int lengthOfLumberRem = length + 50;
@@ -101,6 +151,14 @@ public class CalcPartList {
         return list1;
     }
 
+    /**
+     * this method calculate the carport part of the post. the parameter is made
+     * to be gotton from the a carport object.
+     *
+     * @param width : the widht of the carport
+     * @param length : the length of the carport.
+     * @return MaterialList returns a instance of the MaterialList.
+     */
     public static MaterialList calculatePortPost(int width, int length) {
         int gap = 75;
         int postamount = 0;
@@ -114,6 +172,14 @@ public class CalcPartList {
         return list1;
     }
 
+    /**
+     * this method calculate the carport part of the vertical sper for the roof.
+     * the parameter is made to be gotton from the a carport object.
+     *
+     * @param width : the widht of the carport
+     * @param length : the length of the carport.
+     * @return MaterialList returns a instance of the MaterialList.
+     */
     public static MaterialList calcAngledVerticalSpær(int width, int length, int angleInDegree) {
         double angleInRadian = Math.toRadians(angleInDegree);
         double angleTop = 180 - angleInDegree - angleInDegree;
@@ -129,6 +195,14 @@ public class CalcPartList {
         return list1;
     }
 
+    /**
+     * this method calculate the carport part of the horizontal sper for the
+     * roof. the parameter is made to be gotton from the a carport object.
+     *
+     * @param width : the widht of the carport
+     * @param length : the length of the carport.
+     * @return MaterialList returns a instance of the MaterialList.
+     */
     public static MaterialList calcAngledHorizontalSpær(int width, int length) {
         //Denne metode giver length og amount selvom der ikke er tag. Har fikset det på de andre metoder men ikke denne.
         int gap = 100;
@@ -139,6 +213,13 @@ public class CalcPartList {
     }
 
     // metode som beregner antal søm til mængden af stolper
+    /**
+     * this method calculate the amount of nail used for the post, the parameter
+     * is made to be gotton from the a carport object.
+     *
+     * @param amount : the amont of post of the carport INT
+     * @return MaterialList returns a instance of the MaterialList.
+     */
     public int calcPostNail(int amount) {
         int total = 0;
         int postNail = 2;
@@ -148,12 +229,32 @@ public class CalcPartList {
         return total;
     }
 
+    /**
+     * this method add the MetalPars to a arrayList.
+     *
+     * @param val : the parameter the method takes is of MetalParts
+     * @return MaterialList returns a arraylist with the metalparts.
+     */
     public static ArrayList<MetalParts> addItem(MetalParts val) {
         ArrayList<MetalParts> items = new ArrayList();
         items.add(val);
         return items;
     }
 
+    /**
+     * this method calculates the total price of both the wood and the metal.
+     * <br>
+     * The method takes a a carport as a paramenter, where it then uses the
+     * other methods from above and from calcPrice class to calculate the total
+     * price for the carport.
+     *
+     * @param shedWidth : the width of the shed.
+     * @param shedLength : the lenght of the shed.
+     * @param width : the widht of the carport.
+     * @param length : the lenght of the carport.
+     * @param angle : the angle of the carport.
+     * @return MaterialList returns a arraylist with the metalparts.
+     */
     public static int totalcarportprice(int shedWidth, int shedLength, int width, int length, int angle) {
         CalcPrice price = new CalcPrice();
         MaterialList shedtest = calcShedMats(shedWidth, shedLength);
@@ -180,6 +281,13 @@ public class CalcPartList {
         return pricetotal;
     }
 
+    /**
+     * This method creates the arrayList for the wood parts by using a carport
+     * object.
+     *
+     * @param carport : the method takes a Carport object as a parameter.
+     * @return a Arraylist of wood parts . MaterialList
+     */
     public static ArrayList<MaterialList> totalpartlist(Carport carport) {
         MaterialList shedtest = calcShedMats(carport.getShed().getWidth(), carport.getShed().getLength());
         MaterialList spertest = calcSper(carport.getLength(), carport.getWidth());
