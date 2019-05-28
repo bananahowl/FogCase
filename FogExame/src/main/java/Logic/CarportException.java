@@ -3,7 +3,7 @@ package Logic;
 /**
  * The purpose of LoginSampleException is to...
  *
- * @author emil
+ * @author Emil
  */
 public class CarportException extends Exception {
 

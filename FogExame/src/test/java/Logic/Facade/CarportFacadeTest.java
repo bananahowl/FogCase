@@ -4,12 +4,6 @@
  * and open the template in the editor.
  */
 package Logic.Facade;
-
-import DataLayer.Carport;
-
-import DataLayer.DataMappers.CarportMapper;
-import DataLayer.MetalParts;
-import DataLayer.Shed;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -19,7 +13,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author fskn
+ * @author Frederikke
  */
 public class CarportFacadeTest {
     

@@ -13,7 +13,6 @@ import java.sql.Statement;
 import Logic.CarportException;
 
 /**
- *
  * @author frederikke, frederik, emil
  */
 public class OrderMapper {

@@ -1,7 +1,7 @@
 <%-- 
     Document   : Design
     Created on : 16-05-2019, 11:27:49
-    Author     : ahmed, frederik
+    Author     : ahmed, frederik, frederikke, emil 
 --%>
 
 <%@page import="Logic.Facade.CarportFacade"%>

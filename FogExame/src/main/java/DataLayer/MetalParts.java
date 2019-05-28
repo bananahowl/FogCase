@@ -9,7 +9,7 @@ package DataLayer;
  * <h1> MetalParts class </h1>
  *
  *
- * @author frederi, ahmed
+ * @author frederik, ahmed
  * @since 26-04-2019
  */
 public class MetalParts {
