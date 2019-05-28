@@ -1,6 +1,7 @@
 -------------------------------------------------------------------------------
 Test set: Logic.CalcPriceTest
 -------------------------------------------------------------------------------
+<<<<<<< HEAD
 Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.188 sec <<< FAILURE!
 testMetalParts(Logic.CalcPriceTest)  Time elapsed: 0.012 sec  <<< FAILURE!
 java.lang.AssertionError: expected:<[MetalParts-Name:Beslag, 10 i en pakke Price:100.0 Amount:11
@@ -50,3 +51,6 @@ java.lang.AssertionError: expected:<[MetalParts-Name:Beslag, 10 i en pakke Price
 	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
 	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+=======
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.371 sec
+>>>>>>> 280fb7fbd9fa957bbd060759cdc592b5759eb839

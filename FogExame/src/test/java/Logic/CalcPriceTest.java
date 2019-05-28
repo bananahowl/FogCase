@@ -91,7 +91,7 @@ public class CalcPriceTest {
         ArrayList<MetalParts> explist1 = new ArrayList<MetalParts>();
         MetalParts beslag =new MetalParts("Beslag, 10 i en pakke", 11, 100) ;
         MetalParts skruer =new MetalParts("Skruer med møtrik, 100 i en pakke", 3, 50) ;
-        MetalParts søm = new MetalParts("Søm, 100 i en pakke", 7, 50) ;
+        MetalParts søm = new MetalParts("Søm, 100 i en pakke", 4, 50) ;
         MetalParts bolte = new MetalParts("Bolte, 50 i en pakke", 7, 150);
         explist1.add(beslag);
         explist1.add(skruer);
