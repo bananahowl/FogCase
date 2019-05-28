@@ -19,7 +19,7 @@ import java.util.ArrayList;
  * has been made, to take care of that part without having java code on the JSP
  * pages.
  *
- * @author emils
+ * @author emils, ahmed 
  */
 public class HtmlConverter {
 

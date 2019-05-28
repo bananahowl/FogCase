@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<testsuite tests="3" failures="1" name="Logic.CalcPriceTest" time="0.208" errors="0" skipped="0">
+=======
+<testsuite tests="3" failures="0" name="Logic.CalcPriceTest" time="0.37" errors="0" skipped="0">
+>>>>>>> 280fb7fbd9fa957bbd060759cdc592b5759eb839
+=======
 <testsuite tests="3" failures="0" name="Logic.CalcPriceTest" time="0.03" errors="0" skipped="0">
+>>>>>>> b2d754a756d043a3dc705244aa710911486ca10e
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_181\jre\bin"/>

@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *This clss is used if the command is not used or set in the froncontroller this called on.
- * @author emils
+ * @author Emil
  */
 
 public class UnknownCommand extends Command {

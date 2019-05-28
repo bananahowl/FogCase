@@ -16,20 +16,20 @@ import java.util.logging.Logger;
  */
 public class CarportFacade {
 
-    public static int getLengthShed(int id)  {
+    public static int getLengthShed(int id) {
         try {
             return CarportMapper.getShedlength(id);
         } catch (CarportException ex) {
-            Logger.getLogger(CarportFacade.class.getName()).log(Level.SEVERE, null, ex);
+            ex.printStackTrace();
         }
         return 0;
     }
 
-    public static int getCarportLength(int id)  {
+    public static int getCarportLength(int id) {
         try {
             return CarportMapper.getlength(id);
         } catch (CarportException ex) {
-            Logger.getLogger(CarportFacade.class.getName()).log(Level.SEVERE, null, ex);
+            ex.printStackTrace();
         }
         return 0;
     }
@@ -38,7 +38,7 @@ public class CarportFacade {
         try {
             return CarportMapper.getwidth(id);
         } catch (CarportException ex) {
-            Logger.getLogger(CarportFacade.class.getName()).log(Level.SEVERE, null, ex);
+            ex.printStackTrace();
         }
         return 0;
     }
@@ -47,7 +47,7 @@ public class CarportFacade {
         try {
             return CarportMapper.getMaxLength();
         } catch (CarportException ex) {
-            Logger.getLogger(CarportFacade.class.getName()).log(Level.SEVERE, null, ex);
+
         }
         return 0;
     }
@@ -56,16 +56,16 @@ public class CarportFacade {
         try {
             return CarportMapper.getMaxAngles();
         } catch (CarportException ex) {
-            Logger.getLogger(CarportFacade.class.getName()).log(Level.SEVERE, null, ex);
+            ex.printStackTrace();
         }
         return 0;
     }
 
-    public static int getMaxWidth(){
+    public static int getMaxWidth() {
         try {
             return CarportMapper.getMaxWidth();
         } catch (CarportException ex) {
-            Logger.getLogger(CarportFacade.class.getName()).log(Level.SEVERE, null, ex);
+            ex.printStackTrace();
         }
         return 0;
     }
@@ -74,7 +74,7 @@ public class CarportFacade {
         try {
             return CarportMapper.getShedwidth(id);
         } catch (CarportException ex) {
-            Logger.getLogger(CarportFacade.class.getName()).log(Level.SEVERE, null, ex);
+            ex.printStackTrace();
         }
         return 0;
     }
@@ -83,7 +83,7 @@ public class CarportFacade {
         try {
             return CarportMapper.getMaxShedLength();
         } catch (CarportException ex) {
-            Logger.getLogger(CarportFacade.class.getName()).log(Level.SEVERE, null, ex);
+            ex.printStackTrace();
         }
         return 0;
     }
@@ -92,7 +92,7 @@ public class CarportFacade {
         try {
             return CarportMapper.getMaxShedWidth();
         } catch (CarportException ex) {
-            Logger.getLogger(CarportFacade.class.getName()).log(Level.SEVERE, null, ex);
+            ex.printStackTrace();
         }
         return 0;
     }
@@ -101,7 +101,7 @@ public class CarportFacade {
         try {
             return CarportMapper.getShedlength(id);
         } catch (CarportException ex) {
-            Logger.getLogger(CarportFacade.class.getName()).log(Level.SEVERE, null, ex);
+            ex.printStackTrace();
         }
         return 0;
     }
@@ -110,7 +110,7 @@ public class CarportFacade {
         try {
             return CarportMapper.getRoofAngle(id);
         } catch (CarportException ex) {
-            Logger.getLogger(CarportFacade.class.getName()).log(Level.SEVERE, null, ex);
+            ex.printStackTrace();
         }
         return 0;
     }

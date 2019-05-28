@@ -10,7 +10,7 @@ import java.util.Objects;
 /**
  *
  * @author frederik, ahmed
- */
+*/
 /**
  * MaterialList class is used to be able to store the list of total material values which is used
  * in the carport <br>
