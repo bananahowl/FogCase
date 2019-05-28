@@ -12,11 +12,18 @@ import DataLayer.MetalParts;
 import java.util.ArrayList;
 
 /**
- *
+ *This class does the calculation for the price of the carport, it uses other classes from the project to make that possible <br>
+ * This class have also the creation of the list of metal parts which are neede for a carport.
  * @author ahmed, frederik
  */
 public class CalcPrice {
-
+    /**
+     * this method calculates the price for the wood parts of the carport.
+     * It should be noted that sevaral values are hard coded, and does not change 
+     * on certain conditions.
+     * @param list : it is a arrayList of MaterialList object.
+     * @return the method returns a price in INT.
+     */
     public int woodPrice(ArrayList<MaterialList> list) {
         int lenghtVal = 10;
         int price = 5;
