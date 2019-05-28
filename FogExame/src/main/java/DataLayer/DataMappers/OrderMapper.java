@@ -18,9 +18,6 @@ import java.sql.Statement;
 import Logic.CarportException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 /**
  *
  * @author fskn
@@ -40,13 +37,12 @@ public class OrderMapper {
             ps.setInt(6, order.getCarport().getShed().getWidth());
             ps.setInt(7, order.getCarport().getRoofangle());
             ps.setInt(8, order.getCarport().getPrice());
-            ps.setInt(9, 0);    
+            ps.setInt(9, 0);
             ps.executeUpdate();
         } catch (SQLException | ClassNotFoundException ex) {
             throw new CarportException(ex.getMessage());
         }
     }
-        
 
     public static void deleteorder(int id) throws CarportException {
         try {
@@ -56,7 +52,7 @@ public class OrderMapper {
             ps.setInt(1, id);
             ps.executeQuery(SQL);
         } catch (ClassNotFoundException | SQLException ex) {
-            throw new CarportException (ex.getMessage());
+            throw new CarportException(ex.getMessage());
         }
 
     }
@@ -94,8 +90,8 @@ public class OrderMapper {
         ArrayList<Order> orders = new ArrayList();
         try {
             Connection con = Connector.connection();
-            String SQL = "select user.userID, order_id, cLength, cWidth, cHeigth, sLength, sWidth, angle, price, shipped from orderTable\n" +
-"               join Fogdatabase.user where user.userID = orderTable.user_id;;";
+            String SQL = "select user.userID, order_id, cLength, cWidth, cHeigth, sLength, sWidth, angle, price, shipped from orderTable\n"
+                    + "               join Fogdatabase.user where user.userID = orderTable.user_id;;";
             PreparedStatement ps = con.prepareStatement(SQL);
             ResultSet rs = ps.executeQuery();
 
@@ -118,30 +114,15 @@ public class OrderMapper {
         }
         return orders;
     }
-    
-    public static void readAllOrders() throws CarportException {
-        try {
-            Connection con = Connector.connection();
-            String SQL = "select * from orderTable; ";
-            PreparedStatement ps = con.prepareStatement(SQL);
-            
-            ps.executeQuery(SQL);
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(OrderMapper.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (SQLException ex) {
-            Logger.getLogger(OrderMapper.class.getName()).log(Level.SEVERE, null, ex);
-        }
 
-    }
-    
-        public static Order readOrder(int id) throws CarportException {
+    public static Order readOrder(int id) throws CarportException {
         Order result = null;
-            try {
+        try {
             Connection con = Connector.connection();
             String SQL = "select * from orderTable where user_id = ? ";
             PreparedStatement ps = con.prepareStatement(SQL);
             ps.setInt(1, id);
-        ResultSet rs = ps.executeQuery();
+            ResultSet rs = ps.executeQuery();
 
             while (rs.next()) {
                 int orderID = rs.getInt("order_id");
@@ -162,7 +143,5 @@ public class OrderMapper {
             throw new CarportException(ex.getMessage());
         }
         return result;
-
     }
-    
 }

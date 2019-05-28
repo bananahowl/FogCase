@@ -1,23 +1,18 @@
 package DataLayer.DataMappers;
 
 import DataLayer.Connector;
-import DataLayer.User;
 import Logic.CarportException;
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.List;
+
 
 /**
  * The purpose of UserMapper is to...
  *
  * @author kasper
  */
-import Logic.CarportException;
-
-import java.sql.Connection;
 
 public class CarportMapper {
 
@@ -118,6 +113,7 @@ public class CarportMapper {
             PreparedStatement ps = con.prepareStatement(SQL);
             ps.setInt(1, id);
             ResultSet rs = ps.executeQuery();
+            
             if (rs.next()) {
                 int width = rs.getInt("widthValue");
                 return width;
@@ -189,7 +185,6 @@ public class CarportMapper {
     public static int getRoofAngle(int id) throws CarportException {
         try {
             Connection conn = Connector.connection();
-
             String query = "select degreevalue from angle where degreeid = ?";
             PreparedStatement ps = conn.prepareStatement(query);
             ps.setInt(1, id);
@@ -204,5 +199,4 @@ public class CarportMapper {
             throw new CarportException(ex.getMessage());
         }
     }
-
 }

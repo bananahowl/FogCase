@@ -1,7 +1,7 @@
 -------------------------------------------------------------------------------
 Test set: Logic.CalcPriceTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.164 sec <<< FAILURE!
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.188 sec <<< FAILURE!
 testMetalParts(Logic.CalcPriceTest)  Time elapsed: 0.012 sec  <<< FAILURE!
 java.lang.AssertionError: expected:<[MetalParts-Name:Beslag, 10 i en pakke Price:100.0 Amount:11
 , MetalParts-Name:Skruer med møtrik, 100 i en pakke Price:50.0 Amount:3
