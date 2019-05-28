@@ -17,3 +17,6 @@ To access the database in MYSQL Workbench please contact Frederik Løwe Lassen.
 * Ahmed Othman
 * Frederik Løwe Lassen
 * Frederikke Simone Koefoed Nilsson
+
+Link to deployed projekt: http://167.99.209.26:8080/FogExame-1.0-SNAPSHOT/
+
