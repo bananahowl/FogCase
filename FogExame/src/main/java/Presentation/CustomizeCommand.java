@@ -17,7 +17,16 @@ public class CustomizeCommand extends Command {
 
     public CustomizeCommand() {
     }
-
+    /**
+     *
+     * This execute class return as a minimum a string value which it returns to frontcontroller uses to direct to the JSP page of that name. <br>
+     * There can also here that cetain attributes gets set, these values are either string of values.
+     * These values is gotton from makeing intances of method from the logic layer. <br>
+     * @param request servlet request
+     * @param response servlet response
+     * @throws CarportException
+     * @return a string value of the jsp page which the frontcontroller recirect to.
+     */
     @Override
     String execute(HttpServletRequest request, HttpServletResponse response) throws CarportException {
         return "CustomizeCarport";
