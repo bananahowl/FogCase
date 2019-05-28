@@ -47,23 +47,6 @@ public class OrderFacade {
         }
     }
     
-    public static ArrayList<Order> getOrdersByUser(User user) {
-        try {
-            return OrderMapper.getOrdersByUser(user);
-        } catch (CarportException ex) {
-            Logger.getLogger(OrderFacade.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        return null;
-    }
-    
-    public static List<Order> getAllOrders()  {
-        try {
-            return OrderMapper.getAllOrders();
-        } catch (CarportException ex) {
-            Logger.getLogger(OrderFacade.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        return null;
-    }
     
     public static Order readOrder(int id) {
         try {

@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package DataLayer.DataMappers;
 
 import DataLayer.Carport;
@@ -23,10 +19,15 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author fskn
+ * @author
  */
 public class OrderMapper {
 
+    /**
+     * This method creates an order in the database and connects the user an order. 
+     * @param order
+     * @throws CarportException 
+     */
     public static void createOrder(Order order) throws CarportException {
         try {
             Connection con = Connector.connection();
@@ -47,6 +48,11 @@ public class OrderMapper {
         }
     }
         
+    /**
+     * This method is able to delete a order from the database.
+     * @param id
+     * @throws CarportException 
+     */
 
     public static void deleteorder(int id) throws CarportException {
         try {
@@ -60,79 +66,13 @@ public class OrderMapper {
         }
 
     }
-
-    public static ArrayList<Order> getOrdersByUser(User user) throws CarportException {
-        ArrayList<Order> orders = new ArrayList();
-        try {
-            Connection con = Connector.connection();
-            String SQL = "select user_id, cLength, cWidth, cHeigth, sLength, sWidth, angle, price, shipped from orderTable where user_id = ?;";
-            PreparedStatement ps = con.prepareStatement(SQL);
-            ps.setInt(1, user.getUser_id());
-            ResultSet rs = ps.executeQuery();
-
-            while (rs.next()) {
-                int orderID = rs.getInt("order_id");
-                int clength = rs.getInt("cLength");
-                int cwidth = rs.getInt("cWidth");
-                int cheight = rs.getInt("cHeigth");
-                int slength = rs.getInt("sLength");
-                int swidth = rs.getInt("sWidth");
-                int angle = rs.getInt("angle");
-                int price = rs.getInt("price");
-                Shed shed = new Shed(220, slength, swidth);
-                Carport carport = new Carport(clength, cwidth, cheight, shed, angle, price);
-                boolean shipped = rs.getBoolean("shipped");
-                orders.add(new Order(orderID, carport, shipped));
-            }
-        } catch (ClassNotFoundException | SQLException ex) {
-            throw new CarportException(ex.getMessage());
-        }
-        return orders;
-    }
-
-    public static List<Order> getAllOrders() throws CarportException {
-        ArrayList<Order> orders = new ArrayList();
-        try {
-            Connection con = Connector.connection();
-            String SQL = "select user.userID, order_id, cLength, cWidth, cHeigth, sLength, sWidth, angle, price, shipped from orderTable\n" +
-"               join Fogdatabase.user where user.userID = orderTable.user_id;;";
-            PreparedStatement ps = con.prepareStatement(SQL);
-            ResultSet rs = ps.executeQuery();
-
-            while (rs.next()) {
-                int orderID = rs.getInt("order_id");
-                int clength = rs.getInt("cLength");
-                int cwidth = rs.getInt("cWidth");
-                int cheight = rs.getInt("cHeigth");
-                int slength = rs.getInt("sLength");
-                int swidth = rs.getInt("sWidth");
-                int angle = rs.getInt("angle");
-                int price = rs.getInt("price");
-                Shed shed = new Shed(220, slength, swidth);
-                Carport carport = new Carport(clength, cwidth, cheight, shed, angle, price);
-                boolean shipped = rs.getBoolean("shipped");
-                orders.add(new Order(orderID, carport, shipped));
-            }
-        } catch (ClassNotFoundException | SQLException ex) {
-            throw new CarportException(ex.getMessage());
-        }
-        return orders;
-    }
     
-    public static void readAllOrders() throws CarportException {
-        try {
-            Connection con = Connector.connection();
-            String SQL = "select * from orderTable; ";
-            PreparedStatement ps = con.prepareStatement(SQL);
-            
-            ps.executeQuery(SQL);
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(OrderMapper.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (SQLException ex) {
-            Logger.getLogger(OrderMapper.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-    }
+    /**
+     * This method get all orders from the given user_id
+     * @param id
+     * @return the orders from specific user
+     * @throws CarportException 
+     */
     
         public static Order readOrder(int id) throws CarportException {
         Order result = null;
