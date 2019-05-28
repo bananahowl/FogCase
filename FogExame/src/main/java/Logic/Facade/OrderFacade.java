@@ -7,10 +7,7 @@ package Logic.Facade;
 
 import DataLayer.Carport;
 import DataLayer.Order;
-import DataLayer.User;
 import Logic.CarportException;
-import java.util.ArrayList;
-import java.util.List;
 import DataLayer.DataMappers.OrderMapper;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -21,13 +18,17 @@ import java.util.logging.Logger;
  */
 public class OrderFacade {
 
+    /**
+     * This method creates an order in the database and connects the user an order. 
+     * @param order
+     */
     public static Order createOrder(int id, Carport carport) {
         try {
             Order order = new Order(id, carport, false);
             OrderMapper.createOrder(order);
             return order;
         } catch (CarportException ex) {
-            Logger.getLogger(OrderFacade.class.getName()).log(Level.SEVERE, null, ex);
+             ex.printStackTrace();
         }
         return null;
     }
@@ -36,7 +37,7 @@ public class OrderFacade {
         try {
             OrderMapper.deleteorder(id);
         } catch (CarportException ex) {
-            Logger.getLogger(OrderFacade.class.getName()).log(Level.SEVERE, null, ex);
+             ex.printStackTrace();
         }
     }
 
@@ -45,7 +46,7 @@ public class OrderFacade {
             Order orde = OrderMapper.readOrder(id);
             return orde;
         } catch (CarportException ex) {
-            Logger.getLogger(OrderFacade.class.getName()).log(Level.SEVERE, null, ex);
+             ex.printStackTrace();
         }
         return null;
     }
