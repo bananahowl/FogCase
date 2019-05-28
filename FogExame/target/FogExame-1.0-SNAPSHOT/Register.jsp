@@ -28,7 +28,11 @@
                     </div>
                     <div class="column middle">
                         <div class="card">
+<<<<<<< HEAD
                             <form action="FrontController" method="POST">
+=======
+                            <form action="FrontController" method="GET">
+>>>>>>> b2d754a756d043a3dc705244aa710911486ca10e
                                 <table>
                                     <td>
                                         <h5><b>Register here</b></h5><br>

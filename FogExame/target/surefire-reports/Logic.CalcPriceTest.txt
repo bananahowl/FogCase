@@ -2,6 +2,7 @@
 Test set: Logic.CalcPriceTest
 -------------------------------------------------------------------------------
 <<<<<<< HEAD
+<<<<<<< HEAD
 Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.188 sec <<< FAILURE!
 testMetalParts(Logic.CalcPriceTest)  Time elapsed: 0.012 sec  <<< FAILURE!
 java.lang.AssertionError: expected:<[MetalParts-Name:Beslag, 10 i en pakke Price:100.0 Amount:11
@@ -54,3 +55,6 @@ java.lang.AssertionError: expected:<[MetalParts-Name:Beslag, 10 i en pakke Price
 =======
 Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.371 sec
 >>>>>>> 280fb7fbd9fa957bbd060759cdc592b5759eb839
+=======
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.032 sec
+>>>>>>> b2d754a756d043a3dc705244aa710911486ca10e
