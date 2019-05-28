@@ -10,7 +10,10 @@ package DataLayer;
  * other instance classes) <br> Carport class is used with the Sheed class to
  * make objects of carport.
 
- * @author Emil
+
+
+ * @author Emil, frederik
+
  */
 public class Carport {
 
