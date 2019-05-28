@@ -17,7 +17,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author emils
+ * @author emils, frederik
  */
 public class CalculateCarportCommand extends Command {
     /**
@@ -35,7 +35,13 @@ public class CalculateCarportCommand extends Command {
         int length = Integer.parseInt(request.getParameter("length"));
         int width = Integer.parseInt(request.getParameter("width"));
         int lengthShed = Integer.parseInt(request.getParameter("lengthShed"));
+            if(lengthShed > length){
+                throw new CarportException("The shed can't be bigger than the carport!");
+            }
         int widthShed = Integer.parseInt(request.getParameter("widthShed"));
+          if(widthShed > width){
+                throw new CarportException("The shed can't be bigger than the carport!");
+            }
         int angle = Integer.parseInt(request.getParameter("angle"));
         int price = CreateCarport.NumbersAngleRoof(length, width, widthShed, lengthShed, angle);
         Carport cp = CreateCarport.createCarportAngleRoof(length, width, widthShed, lengthShed, angle, price);

@@ -1,20 +1,18 @@
 package DataLayer.DataMappers;
 
 import DataLayer.Connector;
+import Logic.CarportException;
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import Logic.CarportException;
-import java.sql.Connection;
 
 /**
  * The purpose of our carportmapper is get different value from the database by using different sql queries in our methods. 
  * We have two basis methods - get the maksimum amount and get width, length, shedlength, shedwidth, angle.
  *
  * @author Frederikke, Emil
- */
-
-
+*/
 public class CarportMapper {
 
     /**
@@ -149,6 +147,7 @@ public class CarportMapper {
             PreparedStatement ps = con.prepareStatement(SQL);
             ps.setInt(1, id);
             ResultSet rs = ps.executeQuery();
+            
             if (rs.next()) {
                 int width = rs.getInt("widthValue");
                 return width;
@@ -245,7 +244,6 @@ public class CarportMapper {
     public static int getRoofAngle(int id) throws CarportException {
         try {
             Connection conn = Connector.connection();
-
             String query = "select degreevalue from angle where degreeid = ?";
             PreparedStatement ps = conn.prepareStatement(query);
             ps.setInt(1, id);
@@ -260,5 +258,4 @@ public class CarportMapper {
             throw new CarportException(ex.getMessage());
         }
     }
-
 }

@@ -5,6 +5,9 @@
  */
 package DataLayer;
 
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+
 /**
  * <h1> The user class </h1>
  * User class is used to be able to temp. store and send the value to the
@@ -12,7 +15,7 @@ package DataLayer;
  * <br> The class itself is more the beable to get the users register into and
  * store it to future use
  *
- * @author emils
+ * @author emils, frederik
  */
 public class User {
 
@@ -51,9 +54,9 @@ public class User {
     }
 
     /**
-     * Returns true if the object is equals to a MetalParts obeject
+     * Returns true if the object is equals to a MetalParts object
      *
-     * @return a codition which is either true or false.
+     * @returns a condition which is either true or false.
      */
     @Override
     public boolean equals(Object obj) {
@@ -70,9 +73,26 @@ public class User {
             status = true;
         }
         return status;
-
     }
-
+    
+      /**
+     * Returns true if the email is valid.
+     *
+     * @returns a condition which is either true or false.
+     */
+    public static boolean isValid(String email) 
+    { 
+        String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\."+ 
+                            "[a-zA-Z0-9_+&*-]+)*@" + 
+                            "(?:[a-zA-Z0-9-]+\\.)+[a-z" + 
+                            "A-Z]{2,7}$"; 
+                              
+        Pattern pat = Pattern.compile(emailRegex); 
+        if (email == null) 
+            return false; 
+        return pat.matcher(email).matches(); 
+    } 
+  
     public int getUser_id() {
         return user_id;
     }

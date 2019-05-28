@@ -19,7 +19,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author frizz
+ * @author frederik
  */
 public class OrderFacadeTest {
 

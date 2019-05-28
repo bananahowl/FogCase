@@ -25,7 +25,7 @@ public class UserFacade {
             user.setUser_id(userWithID.getUser_id());
             return user;
         } catch (CarportException ex) {
-            Logger.getLogger(UserFacade.class.getName()).log(Level.SEVERE, null, ex);
+            ex.printStackTrace();
         }
         return null;
     }
@@ -35,7 +35,7 @@ public class UserFacade {
         try {
             return UserMapper.login(email, password);
         } catch (CarportException ex) {
-            Logger.getLogger(UserFacade.class.getName()).log(Level.SEVERE, null, ex);
+            ex.printStackTrace();
         }
         return null;
 
@@ -45,7 +45,7 @@ public class UserFacade {
         try {
             UserMapper.readUser(id);
         } catch (CarportException ex) {
-            Logger.getLogger(UserFacade.class.getName()).log(Level.SEVERE, null, ex);
+            ex.printStackTrace();
         }
     }
 
@@ -54,7 +54,7 @@ public class UserFacade {
             User us = UserMapper.readUser(id);
             return us;
         } catch (CarportException ex) {
-            Logger.getLogger(UserFacade.class.getName()).log(Level.SEVERE, null, ex);
+            ex.printStackTrace();
         }
         return null;
     }
@@ -63,7 +63,7 @@ public class UserFacade {
         try {
             return UserMapper.checkIfExists(email);
         } catch (CarportException ex) {
-            Logger.getLogger(UserFacade.class.getName()).log(Level.SEVERE, null, ex);
+            ex.printStackTrace();
         }
         return null;
     }

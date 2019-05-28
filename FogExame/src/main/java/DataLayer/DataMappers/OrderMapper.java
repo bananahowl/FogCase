@@ -14,12 +14,10 @@ import java.sql.Statement;
 import Logic.CarportException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 /**
  *
  * @author
+ * @author frederikke, frederik, emil
  */
 public class OrderMapper {
 
@@ -41,13 +39,12 @@ public class OrderMapper {
             ps.setInt(6, order.getCarport().getShed().getWidth());
             ps.setInt(7, order.getCarport().getRoofangle());
             ps.setInt(8, order.getCarport().getPrice());
-            ps.setInt(9, 0);    
+            ps.setInt(9, 0);
             ps.executeUpdate();
         } catch (SQLException | ClassNotFoundException ex) {
             throw new CarportException(ex.getMessage());
         }
     }
-        
     /**
      * This method is able to delete a order from the database.
      * @param id
@@ -62,7 +59,7 @@ public class OrderMapper {
             ps.setInt(1, id);
             ps.executeQuery(SQL);
         } catch (ClassNotFoundException | SQLException ex) {
-            throw new CarportException (ex.getMessage());
+            throw new CarportException(ex.getMessage());
         }
 
     }
@@ -74,14 +71,14 @@ public class OrderMapper {
      * @throws CarportException 
      */
     
-        public static Order readOrder(int id) throws CarportException {
+    public static Order readOrder(int id) throws CarportException {
         Order result = null;
-            try {
+        try {
             Connection con = Connector.connection();
             String SQL = "select * from orderTable where user_id = ? ";
             PreparedStatement ps = con.prepareStatement(SQL);
             ps.setInt(1, id);
-        ResultSet rs = ps.executeQuery();
+            ResultSet rs = ps.executeQuery();
 
             while (rs.next()) {
                 int orderID = rs.getInt("order_id");
@@ -102,7 +99,5 @@ public class OrderMapper {
             throw new CarportException(ex.getMessage());
         }
         return result;
-
     }
-    
 }

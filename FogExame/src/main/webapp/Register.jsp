@@ -28,7 +28,7 @@
                     </div>
                     <div class="column middle">
                         <div class="card">
-                            <form action="FrontController" method="GET">
+                            <form action="FrontController" method="POST">
                                 <table>
                                     <td>
                                         <h5><b>Register here</b></h5><br>

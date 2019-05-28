@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author frizz
+ * @author frederik
  */
 public class CalcPartListtest {
 

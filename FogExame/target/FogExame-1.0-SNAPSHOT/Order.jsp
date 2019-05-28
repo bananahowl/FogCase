@@ -34,7 +34,7 @@
                     ${table}
                 </div>
                 <div class="card">
-                    <form action= "FrontController" method="GET" > 
+                    <form action= "FrontController" method="POST" > 
                         <table class="first">
                             <%
                                 int lengths = Integer.parseInt(request.getParameter("length"));
