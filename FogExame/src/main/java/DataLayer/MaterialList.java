@@ -41,13 +41,17 @@ public class MaterialList {
 
     /**
      * The toSting is used to be able to show what is stored in a MaterialList objekt, <br>
-     *this part is greatly used when making a 
+     *this part is greatly used when making showing the list 
      */
     @Override
     public String toString() {
         return "MaterialList-" + " Length:" + length + " Amount:" + amount + " Description: " + description + "\n";
     }
 
+    /**
+     * A method which checks if the object is equals to a object of the class
+     * @return a codition which is either true or false.
+     */
     @Override
     public boolean equals(Object obj) {
         MaterialList mat = (MaterialList) obj;
