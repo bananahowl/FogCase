@@ -62,7 +62,7 @@ public class CarportMapper {
     }
 
     /**
-     * Thsi method get the maksimum number of widthid representing in the database.
+     * This method get the maksimum number of widthid representing in the database.
      * @return the amount of widthid's.
      * @throws CarportException 
      */

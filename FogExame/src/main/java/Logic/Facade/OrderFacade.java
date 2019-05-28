@@ -7,10 +7,7 @@ package Logic.Facade;
 
 import DataLayer.Carport;
 import DataLayer.Order;
-import DataLayer.User;
 import Logic.CarportException;
-import java.util.ArrayList;
-import java.util.List;
 import DataLayer.DataMappers.OrderMapper;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -21,31 +18,45 @@ import java.util.logging.Logger;
  */
 public class OrderFacade {
 
+    /** This method creates an order in the database and connects the user an order. 
+     * 
+     * @param id
+     * @param carport
+     * @return Order object
+     */
     public static Order createOrder(int id, Carport carport) {
         try {
             Order order = new Order(id, carport, false);
             OrderMapper.createOrder(order);
             return order;
         } catch (CarportException ex) {
-            Logger.getLogger(OrderFacade.class.getName()).log(Level.SEVERE, null, ex);
+             ex.printStackTrace();
         }
         return null;
     }
 
+    /** deletes an order
+     * 
+     * @param id 
+     */
     public static void deleteorder(int id) {
         try {
             OrderMapper.deleteorder(id);
         } catch (CarportException ex) {
-            Logger.getLogger(OrderFacade.class.getName()).log(Level.SEVERE, null, ex);
+             ex.printStackTrace();
         }
     }
-
+/** reads an order
+ * 
+ * @param id
+ * @return Order
+ */
     public static Order readOrder(int id) {
         try {
-            Order orde = OrderMapper.readOrder(id);
-            return orde;
+            Order order = OrderMapper.readOrder(id);
+            return order;
         } catch (CarportException ex) {
-            Logger.getLogger(OrderFacade.class.getName()).log(Level.SEVERE, null, ex);
+             ex.printStackTrace();
         }
         return null;
     }

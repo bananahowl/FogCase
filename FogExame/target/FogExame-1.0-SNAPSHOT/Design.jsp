@@ -111,7 +111,7 @@
                           style="stroke:rgb(0,0,0);stroke-width:3"/>
 
                     </svg>   
-                    <h2><%=width%> in cm</h2>
+                    <h5><%=width%> in cm</h5>
                     <hr>
                 </div>
             </div>
