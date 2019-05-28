@@ -13,7 +13,7 @@ import javax.servlet.http.HttpSession;
 
 /**
  *
- * @author fskn
+ * @author fskn, Emil
  */
 public class LoginCommand extends Command {
     /**

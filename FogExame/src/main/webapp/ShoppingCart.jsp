@@ -1,7 +1,7 @@
 <%-- 
     Document   : ShoppingCart
     Created on : 30-04-2019, 10:15:23
-    Author     : fskn
+    Author     : fskn,Emil
 --%>
 
 <%@page import="Logic.Facade.CarportFacade"%>
@@ -49,7 +49,6 @@
                             <input type="hidden" value="<%= lengthShed%>" name = "lengthShed">
                             <input type="hidden" value="<%= widthShed%>" name = "widthShed">
                             <input type="hidden" value="<%= angle%>" name = "angle">
-
                             <button type="submit" class="btn btn-success" name="command" value="materialList"> MaterialList  </button> 
                             <button type="submit" class="btn btn-success" name="command" value="design"> See carport design  </button> 
                         </table>

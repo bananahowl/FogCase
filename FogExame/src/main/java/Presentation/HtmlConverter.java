@@ -17,7 +17,7 @@ import java.util.ArrayList;
  * java code work with html.
  * And its better code wise to make the java as little as possible shown in the presentation layer. 
  * that is why this method has been made, to take care of that part without having java code on the JSP pages.
- * @author emils
+ * @author Emil
  */
 public class HtmlConverter {
     /**

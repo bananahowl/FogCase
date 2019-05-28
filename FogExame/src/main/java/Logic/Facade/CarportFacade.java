@@ -12,7 +12,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author fskn
+ * @author fskn, Emil
  */
 public class CarportFacade {
 

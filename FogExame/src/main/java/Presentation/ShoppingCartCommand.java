@@ -30,7 +30,7 @@ import javax.servlet.http.HttpSession;
 
 /**
  *
- * @author emils
+ * @author Emil
  */
 public class ShoppingCartCommand extends Command {
     /**

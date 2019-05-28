@@ -15,7 +15,7 @@ import java.util.regex.Matcher;
  * <br> The class itself is more the beable to get the users register into and
  * store it to future use
  *
- * @author emils, frederik
+ * @author Emil, frederik
  */
 public class User {
 

@@ -1,4 +1,3 @@
-DataLayer\Materials.class
 Presentation\CalculateCarportCommand.class
 DataLayer\DataMappers\OrderMapper.class
 DataLayer\Order.class
