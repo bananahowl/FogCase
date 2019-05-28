@@ -34,11 +34,9 @@ public class CreateCarport {
     }
 
     public static Carport createCarportid(int length, int width, int widthShed, int lengthShed, int angle, int price) {
-
         Shed shed = new Shed(lengthShed, 220, widthShed);
         Carport carport = new Carport(length, 1, width, shed, angle, price);
         return carport;
-
     }
 
     public static int NumbersAngleRoof(int length, int width, int widthShed, int lengthShed, int angle) {

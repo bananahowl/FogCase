@@ -90,7 +90,6 @@ public class UserMapper {
             PreparedStatement ps = con.prepareStatement(SQL);
             ps.setInt(1, id);
             ResultSet rs = ps.executeQuery();
-
             while (rs.next()) {
                 String firstname = rs.getString("firstname");
                 String lastname = rs.getString("lastname");
@@ -103,7 +102,6 @@ public class UserMapper {
                 result = new User(firstname, lastname, adress, city, zipcode, phone, email, password);
             }
         } catch (ClassNotFoundException | SQLException ex) {
-
             throw new CarportException(ex.getMessage());
         }
         return result;

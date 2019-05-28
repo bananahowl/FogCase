@@ -49,10 +49,14 @@ public class UserFacade {
         }
     }
 
-    public static User readUser(int id) throws CarportException {
-        User us = UserMapper.readUser(id);
-        return us;
-
+    public static User readUser(int id) {
+        try {
+            User us = UserMapper.readUser(id);
+            return us;
+        } catch (CarportException ex) {
+            Logger.getLogger(UserFacade.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
     }
 
     public static String doesUserExist(String email) {
@@ -62,7 +66,6 @@ public class UserFacade {
             Logger.getLogger(UserFacade.class.getName()).log(Level.SEVERE, null, ex);
         }
         return null;
-
     }
 
 }
