@@ -64,12 +64,11 @@ public class UserMapper {
             } else {
                 throw new CarportException("Error");
             }
-        } catch (SQLException |ClassNotFoundException ex) {
+        } catch (SQLException | ClassNotFoundException ex) {
             throw new CarportException(ex.getMessage());
         }
     }
 
-    
     public static void deleteUser(int id) throws CarportException {
         try {
             Connection con = Connector.connection();
@@ -78,36 +77,19 @@ public class UserMapper {
             ps.setInt(1, id);
             ps.executeQuery(SQL);
         } catch (ClassNotFoundException | SQLException ex) {
-            throw new CarportException (ex.getMessage());
+            throw new CarportException(ex.getMessage());
         }
 
     }
-    
-    public static void readAllUsers() throws CarportException {
-        
-        try {
-            Connection con = Connector.connection();
-            String SQL = "select * from orderTable; ";
-            PreparedStatement ps = con.prepareStatement(SQL);
-            
-            ps.executeQuery(SQL);
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(UserMapper.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (SQLException ex) {
-            Logger.getLogger(UserMapper.class.getName()).log(Level.SEVERE, null, ex);
-        }
-      
 
-    }
-    
-        public static User readUser(int id) throws CarportException {
+    public static User readUser(int id) throws CarportException {
         User result = null;
-            try {
+        try {
             Connection con = Connector.connection();
             String SQL = "select * from user where userID = ? ";
             PreparedStatement ps = con.prepareStatement(SQL);
             ps.setInt(1, id);
-        ResultSet rs = ps.executeQuery();
+            ResultSet rs = ps.executeQuery();
 
             while (rs.next()) {
                 String firstname = rs.getString("firstname");
@@ -125,7 +107,7 @@ public class UserMapper {
             throw new CarportException(ex.getMessage());
         }
         return result;
-        }
+    }
 
     public static String checkIfExists(String email) throws CarportException {
         try {
@@ -141,7 +123,7 @@ public class UserMapper {
             } else {
                 return null;
             }
-        } catch (SQLException |ClassNotFoundException ex) {
+        } catch (SQLException | ClassNotFoundException ex) {
             throw new CarportException(ex.getMessage());
         }
 

@@ -9,7 +9,6 @@ import DataLayer.Carport;
 import DataLayer.MaterialList;
 import DataLayer.MetalParts;
 import DataLayer.Shed;
-import java.sql.SQLException;
 import java.util.ArrayList;
 
 /**
@@ -18,16 +17,13 @@ import java.util.ArrayList;
  */
 public class CalcPartListtest {
 
-    public static void main(String[] args) throws CarportException, SQLException {
+    public static void main(String[] args) {
         //ArrayList answer = CalcPartList.flatRoof();
-
         //System.out.println(answer);
         System.out.println("_____________________");
-
         //int answer1 = CalcPartList.calcShedMats();
         //System.out.println(answer1);
         System.out.println("______________________");
-
         MaterialList shedtest = CalcPartList.calcShedMats(300,200);
         MaterialList spertest = CalcPartList.calcSper(700 , 400);
         MaterialList remtest = CalcPartList.calcRem(700, 400);
@@ -39,16 +35,8 @@ public class CalcPartListtest {
         System.out.println(shedtest);
         ArrayList<MaterialList> superlist = CalcPartList.totalMaterial(shedtest, spertest, remtest, posttest, rooftest, fronttest, verticaltest, horizontaltest);
         System.out.println(superlist);
-/*
-        for (int i = 0; i < superlist.size(); i++) {
-
-            System.out.println(superlist.get(i).getAmount());
-            System.out.println(superlist.get(i).getLength());
-            System.out.println(superlist.get(i).getDescription());
-        }*/
         CalcPrice test = new CalcPrice();
         CalcPartList partTest = new CalcPartList();
-
         String shed = shedtest.toString();
         String spær = spertest.toString();
         String rem = remtest.toString();
@@ -57,7 +45,6 @@ public class CalcPartListtest {
         String front = fronttest.toString();
         String vertical = verticaltest.toString();
         String horizontal = horizontaltest.toString();
-
         System.out.println(shed);
         System.out.println(spær);
         System.out.println(rem);
@@ -66,18 +53,13 @@ public class CalcPartListtest {
         System.out.println(front);
         System.out.println(vertical);
         System.out.println(horizontal);
-
         System.out.println("______________________");
-
         System.out.println(test.woodPrice(superlist));
         System.out.println("________xXX____________X_____");
-
         test.printList(superlist);
-
         System.out.println(verticaltest.getAmount());
         System.out.println("----------------------------");
         System.out.println(partTest.calcPostNail(3));
-
         //test.woodPrice(superlist);
         System.out.println("XXXX______");
         ArrayList<MetalParts> metaldele = test.metalParts(superlist);
@@ -90,16 +72,9 @@ public class CalcPartListtest {
         Carport carpot = new Carport(700,220,400, sh, 15,0);
         System.out.println("xxxxx");
         System.out.println(tre.totalpartlist(carpot));
-
         System.out.println("xx");
         System.out.println("___________________________");
         System.out.println(tre.totalcarportprice(300, 200, 400, 700, 15));
-        
-        
         System.out.println("_____________________________");
-
     }
-    
-    
-
 }
