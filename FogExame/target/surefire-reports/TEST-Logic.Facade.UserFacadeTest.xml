@@ -63,5 +63,5 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="Logic.Facade.UserFacadeTest" name="testCreateUser" time="0.064"/>
+  <testcase classname="Logic.Facade.UserFacadeTest" name="testCreateUser" time="0.068"/>
 </testsuite>

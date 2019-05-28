@@ -36,11 +36,8 @@ public class BuyCommand extends Command {
         if (request.getSession(true).getAttribute("user") == null) {
             String error = "You have to be logged in before you can finalize your order!";
             request.setAttribute("errors", error);
-
             return "index";
-
         } else {
-            
             int length = Integer.parseInt(request.getParameter("length"));
             int width = Integer.parseInt(request.getParameter("width"));
             int lengthShed = Integer.parseInt(request.getParameter("lengthShed"));
@@ -59,15 +56,12 @@ public class BuyCommand extends Command {
             CalcPrice lizz = new CalcPrice();
             ArrayList<MetalParts> mlist = lizz.metalParts(list);
             String smlist = printMetalPartList(mlist);
-            request.setAttribute("mlist", slist);
-            request.setAttribute("smlist", smlist);
             String html = HtmlConverter.carportAnlgeRooftoHtml(cp);
             request.setAttribute("table2", html);
             request.setAttribute("mlist", slist);
             request.setAttribute("smlist", smlist);
             request.setAttribute("shoppingcart", shoppingcart);
             request.setAttribute("order", orderss);
-
             return "ShoppingCart";
 
         }

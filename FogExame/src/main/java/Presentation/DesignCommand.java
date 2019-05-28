@@ -5,9 +5,7 @@
  */
 package Presentation;
 
-import DataLayer.Carport;
 import Logic.CarportException;
-import Logic.CreateCarport;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 

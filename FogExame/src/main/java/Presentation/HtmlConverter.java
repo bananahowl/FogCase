@@ -24,20 +24,9 @@ public class HtmlConverter {
                 + "<tr><th>Carport  </th><th>Length   </th><th>Width    </th><th>Height    </th><th>Shed Length    </th><th>Shed Width    </th><th>Angle   </th><th>Price      </th></tr>"
                 + "<tr><th>Size</th><th>" + carport.getLength() + "</th><th>" + carport.getWidth() + "</th><th>220</th><th>" + carport.getShed().getLength() + "</th><th>" + carport.getShed().getWidth() + "</th><th>none</th><th>" + carport.getPrice() + "</th></tr>"
                 + "</table>"
-                //+ "<button type=\"submit\"  name=\"command\" value=\"Shoppingcart\" >Add to Shoppingcart</button>"
                 + "</form>";
         return cartTable;
 
-//                 <table class=table table-striped><thead><tr><th>Name</th><th>Quantity</th><th>Price</th>
-//                    <th>Total</th></tr></thead><tbody><tr>
-//                    <td>  <%=finish%></td><td> <%=quant%></td><td> <%=price%></td><td class=lineprice><%= total%></td><td><form action=Control method=POST>
-//                            <input type=hidden name=origin value=removeLine><input type=hidden name=lineId value=473>
-//                        </form></td></tr><tr><td></td><td></td><td></td>
-//                    <td>
-//                        <form id="checkoutForm" action=Control method=POST><input type=hidden name=origin value=submitInvoice/>
-//                            <input type=submit value=Check out your order></form></td></tr>
-//            </tbody>
-//        </table>
     }
 
     public static String carportAnlgeRooftoHtml(Carport carport) {
@@ -118,7 +107,6 @@ public class HtmlConverter {
                     + " </th><th>  " + list.get(i).getPrice()
                     + "</th> <th> " + list.get(i).getAmount() + "</th></tr>";
         }
-        //"<tr><th>Size</th><th>" + list.get(i).getDescription()+ "</th><th>" + list.get(i).getLength() + "</th><th>" + list.get(i).getAmount() + "</th></tr>";
         String partlistbottom
                 = "</table>"
                 + "<br>"

@@ -14,10 +14,8 @@ import java.util.Objects;
 public class Order {
     
     private int order_id;
-    
     private Carport carport;
     private boolean shipped;
-    
 /**
          * Order class is used to be able to create a order of a carport
          * <br> Order class takes a Carport instance which is a class special made for this project
