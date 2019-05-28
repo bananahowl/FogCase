@@ -14,18 +14,9 @@ import java.util.Objects;
 public class Order {
     
     private int order_id;
-    
     private Carport carport;
     private boolean shipped;
     
-/**
-         * Order class is used to be able to create a order of a carport
-         * <br> Order class takes a Carport instance which is a class special made for this project
-         * metal parts which is used in the carport,
-         * @param  order_id: the id of the order
-         * @param carport:the carport instance which is validated to the order
-         * @param  shipped : a condition to see if the order is shipped of not
-         */
 
     public Order(int order_id, Carport carport, boolean shipped) {
         this.order_id = order_id;
@@ -33,19 +24,13 @@ public class Order {
         
         this.shipped = shipped;
     }
-    /**
-         * hashCode returns a int value which is 3 in this case, as hash value
-         * 
-         */
+
     @Override
     public int hashCode() {
         int hash = 3;
         return hash;
     }
-/**
-         * equals method here is overrided to be used in relation to the Order class
-         * @param obj takes a object as a parameter which this is case is expected to be a order object
-         */
+
    @Override
     public boolean equals(Object obj) {
         Order ord = (Order) obj;

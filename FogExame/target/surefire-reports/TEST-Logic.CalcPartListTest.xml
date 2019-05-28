@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="11" failures="0" name="Logic.CalcPartListTest" time="0.083" errors="0" skipped="0">
+<testsuite tests="11" failures="0" name="Logic.CalcPartListTest" time="0.095" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_181\jre\bin"/>
@@ -63,15 +63,15 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="Logic.CalcPartListTest" name="testTotalMaterial" time="0.004"/>
+  <testcase classname="Logic.CalcPartListTest" name="testTotalMaterial" time="0.006"/>
   <testcase classname="Logic.CalcPartListTest" name="testCalcAngledVerticalSper" time="0"/>
-  <testcase classname="Logic.CalcPartListTest" name="testTotalpartlist" time="0"/>
+  <testcase classname="Logic.CalcPartListTest" name="testTotalpartlist" time="0.001"/>
   <testcase classname="Logic.CalcPartListTest" name="testCalcShedMats" time="0"/>
   <testcase classname="Logic.CalcPartListTest" name="testCalcAngledHorizontalSper" time="0"/>
-  <testcase classname="Logic.CalcPartListTest" name="testTotalwoodprice" time="0.001"/>
+  <testcase classname="Logic.CalcPartListTest" name="testTotalwoodprice" time="0"/>
   <testcase classname="Logic.CalcPartListTest" name="testCalcRem" time="0"/>
   <testcase classname="Logic.CalcPartListTest" name="testCalcRoofSides" time="0"/>
-  <testcase classname="Logic.CalcPartListTest" name="testCalcSper" time="0.001"/>
+  <testcase classname="Logic.CalcPartListTest" name="testCalcSper" time="0"/>
   <testcase classname="Logic.CalcPartListTest" name="testCalcRoofFronts" time="0"/>
   <testcase classname="Logic.CalcPartListTest" name="testCalculatePortPost" time="0"/>
 </testsuite>
