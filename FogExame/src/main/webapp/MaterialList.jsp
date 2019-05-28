@@ -7,13 +7,6 @@
 <%@page import="Logic.Facade.CarportFacade"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html> 
-<%
-    CarportFacade cf = new CarportFacade();
-    int width = cf.getCarportWidth(Integer.parseInt(request.getParameter("width")));
-    int length = cf.getCarportLength(Integer.parseInt(request.getParameter("length")));
-    // this is a test method to work on the code
-%>
-
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">

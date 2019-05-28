@@ -17,9 +17,7 @@
     <body>
         <div class="header">
             <img src="Images/FogLogo.jpg" alt="logofog" width="30%" height="20%">
-            
         </div>
-
         <div class="topnav">
             <a href="index.jsp">Home</a>
         </div>
@@ -88,14 +86,13 @@
                                             </div>
                                             <input type="password" name="password2" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                                         </div>
-                                        
+
                                         <button type="submit" class="btn btn-success" name="command" value="register">Register</button>
                                 </table>
                             </form>
                         </div>
                         <div class="column side">
                             <div class="card">
-
                             </div>
                         </div>
                     </div>

@@ -17,7 +17,6 @@ Logic\CreateCarport.class
 Presentation\HtmlConverter.class
 Logic\CarportException.class
 Presentation\ShoppingCartCommand.class
-DataLayer\Roof_area.class
 DataLayer\dataTest.class
 Presentation\UnknownCommand.class
 Presentation\BuyCommand.class
@@ -28,7 +27,6 @@ DataLayer\MaterialList.class
 Logic\Facade\OrderFacade.class
 Presentation\FrontController.class
 Presentation\CustomizeCommand.class
-DataLayer\Roof_material.class
 DataLayer\Shed.class
 Logic\Facade\UserFacade.class
 Presentation\Command.class

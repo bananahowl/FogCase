@@ -9,15 +9,9 @@ import DataLayer.Carport;
 import Logic.CarportException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import DataLayer.MaterialList;
-import DataLayer.Order;
-import DataLayer.Shed;
-import DataLayer.User;
-import Logic.CalcPartList;
 import static Logic.CalcPartList.totalpartlist;
 import Logic.CreateCarport;
-import Logic.Facade.OrderFacade;
 import static Presentation.HtmlConverter.printPartList;
 import java.util.ArrayList;
 

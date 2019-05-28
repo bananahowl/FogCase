@@ -19,7 +19,7 @@
         <%CarportFacade cf = new CarportFacade(); %>
         <div class="header">
             <img src="Images/FogLogo.jpg" alt="logofog" width="30%" height="20%">
-            </div>
+        </div>
 
         <div class="topnav">
             <a href="index.jsp">Home</a>
