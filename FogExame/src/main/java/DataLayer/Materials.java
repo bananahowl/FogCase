@@ -7,7 +7,7 @@ package DataLayer;
 
 /**
  *
- * @author frizz
+ * @author frederik, ahmed
  */
 public class Materials {
 
@@ -18,7 +18,7 @@ public class Materials {
     /**
      * Materials class is used to be able to store the wood parts which is used
      * in the carport,
-     *
+     * 
      * @param id: the id of the part
      * @param price :the price of a certain part
      * @param name: the name for that part
