@@ -51,7 +51,7 @@ public class UserFacadeTest {
         User expResult = new User("Mikkeltest", "Mikkelsen", "Gydevej 7", "Farum", 3520, 12345678, "Mikkel@hotmail.com", "1234");
         UserFacade.createUser(firstname, lastname, adress, city, zipcode, phone, email, password);
         User result = UserFacade.readUser(18);
-        UserFacade.deleteUser(18); // den sletter ikke,kan ikke se hvorfor queryen virker fint i sql
+        UserFacade.deleteUser(18);
         assertEquals(expResult, result);
         
     }
