@@ -56,7 +56,8 @@ public class User {
     /**
      * Returns true if the object is equals to a MetalParts object
      *
-     * @returns a condition which is either true or false.
+     * @param obj a object expected to be of User class 
+     * @return a boolean condition which is either true or false.
      */
     @Override
     public boolean equals(Object obj) {
@@ -77,8 +78,9 @@ public class User {
     
       /**
      * Returns true if the email is valid.
-     *
-     * @returns a condition which is either true or false.
+     * 
+     * @param email : a string value for the email
+     * @return a condition which is either true or false.
      */
     public static boolean isValid(String email) 
     { 
